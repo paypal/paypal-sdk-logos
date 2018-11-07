@@ -1,7 +1,7 @@
 {
-  "name": "grumbler",
-  "version": "1.0.3",
-  "description": "Javascript module template.",
+  "name": "paypal-sdk-logos",
+  "version": "1.0.0",
+  "description": "JSX/SVG logos for PayPal.",
   "main": "index.js",
   "scripts": {
     "setup": "npm install && npm run flow-typed",
@@ -48,6 +48,12 @@
   "readmeFilename": "README.md",
   "devDependencies": {
     "flow-bin": "^0.85",
-    "grumbler-scripts": "^3"
+    "grumbler-scripts": "^3",
+    "mocha": "^4"
+  },
+  "dependencies": {
+    "belter": "^1.0.45",
+    "jsx-pragmatic": "^1.0.7",
+    "paypal-sdk-constants": "^1.0.11"
   }
 }

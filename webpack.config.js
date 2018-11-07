@@ -3,8 +3,8 @@
 
 import { getWebpackConfig } from 'grumbler-scripts/config/webpack.config';
 
-const FILE_NAME = 'mylibrary';
-const MODULE_NAME = 'mylibrary';
+const FILE_NAME = 'paypal-sdk-logos';
+const MODULE_NAME = 'paypalLogos';
 
 export const WEBPACK_CONFIG = getWebpackConfig({
     filename:   `${ FILE_NAME }.js`,

@@ -1,38 +1,50 @@
-Grumbler
---------
+PayPal SDK Logos
+----------------
 
-https://medium.com/@bluepnume/introducing-grumbler-an-opinionated-javascript-module-template-612245e06d00
+Logos for PayPal SDKs. 
 
-A template for writing distributable javascript libraries.
+### Render using JSX with HTML
 
-Javascript libraries are fun to write. Setting up all of the boilerplate to get your build up and running is not so fun.
+```javascript
+/** @jsx node */
 
-This module provides a forkable module template, which you can use to kick-start a new javascript library. Once you've done that, feel free to come back and switch out the tooling for whatever you prefer.
+import { PayPalLogo, LOGO_COLOR } from 'paypal-sdk-logos';
+import { node, html } from 'jsx-pragmatic';
 
-Features
---------
+function render() {
+    return (
+        <PayPalLogo logoColor={ LOGO_COLOR.WHITE } nonce={ cspNonce } />
+    ).render(html());
+}
+```
 
-- Build minified and unminified versions of your code, with source maps
-- Use ES2015 out of the box
-- Write headless Karma / Mocha tests, which run in Chrome Headless and other browsers, with code coverage reports
-- Integrate with Travis CI out of the box
-- Write error free, type-safe code with ESLint, Flow-Type, and Flow-Runtime
+### Render using JSX with React
 
-Technologies
-------------
+```javascript
+/** @jsx node */
 
-- babel
-- eslint
-- flowtype
-- flow-runtime
-- karma
-- phantomjs
-- chrome headless
-- mocha
-- istanbul
-- webpack
-- npm
-- travis
+import React from 'react';
+import { PayPalLogo, LOGO_COLOR } from 'paypal-sdk-logos';
+import { node, html } from 'jsx-pragmatic';
+
+function render() {
+    return (
+        <PayPalLogo logoColor={ LOGO_COLOR.WHITE } nonce={ cspNonce } />
+    ).render(react({ React }));
+}
+```
+
+### Render using vanilla JavaScript
+
+```javascript
+import { PayPalLogo, LOGO_COLOR } from 'paypal-sdk-logos';
+import { html } from 'jsx-pragmatic';
+
+function render() {
+    return PayPalLogo({ logoColor: LOGO_COLOR.WHITE, nonce: cspNonce });
+        .render(html());
+}
+```
 
 Quick Start
 -----------
