@@ -25,7 +25,7 @@ function render() {
 
 import React from 'react';
 import { PayPalLogo, LOGO_COLOR } from 'paypal-sdk-logos';
-import { node, html } from 'jsx-pragmatic';
+import { node, react } from 'jsx-pragmatic';
 
 function render() {
     return (
@@ -34,7 +34,7 @@ function render() {
 }
 ```
 
-### Render using vanilla JavaScript
+### Render using vanilla JavaScript and HTML
 
 ```javascript
 import { PayPalLogo, LOGO_COLOR } from 'paypal-sdk-logos';
