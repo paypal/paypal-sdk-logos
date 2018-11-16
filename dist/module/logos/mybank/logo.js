@@ -3,10 +3,8 @@ import { node } from 'jsx-pragmatic/src';
 import { SVGLogo } from '../../lib';
 import { LOGO_COLOR, LOGO } from '../../constants';
 export function MybankLogo(_ref) {
-  var logoColor = _ref.logoColor,
-      nonce = _ref.nonce;
+  var logoColor = _ref.logoColor;
   return node(SVGLogo, {
-    nonce: nonce,
     name: LOGO.MYBANK,
     logoColor: logoColor,
     render: function render() {

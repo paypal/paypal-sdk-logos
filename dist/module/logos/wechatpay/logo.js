@@ -9,8 +9,7 @@ var WECHATPAY_LOGO_COLORS = (_WECHATPAY_LOGO_COLOR = {}, _WECHATPAY_LOGO_COLOR[L
   secondary: '#4D4D4D'
 }, _WECHATPAY_LOGO_COLOR);
 export function WechatpayLogo(_ref) {
-  var logoColor = _ref.logoColor,
-      nonce = _ref.nonce;
+  var logoColor = _ref.logoColor;
 
   if (!WECHATPAY_LOGO_COLORS[logoColor]) {
     throw new Error("No " + logoColor + " wechatpay logo available");
@@ -20,7 +19,6 @@ export function WechatpayLogo(_ref) {
       primary = _WECHATPAY_LOGO_COLOR2.primary,
       secondary = _WECHATPAY_LOGO_COLOR2.secondary;
   return node(SVGLogo, {
-    nonce: nonce,
     name: LOGO.WECHATPAY,
     logoColor: logoColor,
     render: function render() {

@@ -8,8 +8,7 @@ var ZIMPLER_LOGO_COLORS = (_ZIMPLER_LOGO_COLORS = {}, _ZIMPLER_LOGO_COLORS[LOGO_
   primary: '#00A599'
 }, _ZIMPLER_LOGO_COLORS);
 export function ZimplerLogo(_ref) {
-  var logoColor = _ref.logoColor,
-      nonce = _ref.nonce;
+  var logoColor = _ref.logoColor;
 
   if (!ZIMPLER_LOGO_COLORS[logoColor]) {
     throw new Error("No " + logoColor + " zimpler logo available");
@@ -17,7 +16,6 @@ export function ZimplerLogo(_ref) {
 
   var primary = ZIMPLER_LOGO_COLORS[logoColor].primary;
   return node(SVGLogo, {
-    nonce: nonce,
     name: LOGO.ZIMPLER,
     logoColor: logoColor,
     render: function render() {

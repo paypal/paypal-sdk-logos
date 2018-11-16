@@ -9,8 +9,7 @@ var P24_LOGO_COLORS = (_P24_LOGO_COLORS = {}, _P24_LOGO_COLORS[LOGO_COLOR.BLACK]
   secondary: '#b3b1b1'
 }, _P24_LOGO_COLORS);
 export function P24Logo(_ref) {
-  var logoColor = _ref.logoColor,
-      nonce = _ref.nonce;
+  var logoColor = _ref.logoColor;
 
   if (!P24_LOGO_COLORS[logoColor]) {
     throw new Error("No " + logoColor + " p24 logo available");
@@ -20,7 +19,6 @@ export function P24Logo(_ref) {
       primary = _P24_LOGO_COLORS$logo.primary,
       secondary = _P24_LOGO_COLORS$logo.secondary;
   return node(SVGLogo, {
-    nonce: nonce,
     name: LOGO.P24,
     logoColor: logoColor,
     render: function render() {

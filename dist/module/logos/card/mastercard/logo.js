@@ -2,10 +2,8 @@
 import { node } from 'jsx-pragmatic/src';
 import { CARD } from 'paypal-sdk-constants/src';
 import { SVGCardLogo } from '../../../lib';
-export function MastercardLogo(_ref) {
-  var nonce = _ref.nonce;
+export function MastercardLogo() {
   return node(SVGCardLogo, {
-    nonce: nonce,
     name: CARD.MASTERCARD,
     render: function render() {
       return node("svg", {

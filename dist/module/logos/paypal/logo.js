@@ -15,8 +15,7 @@ var PAYPAL_LOGO_COLORS = (_PAYPAL_LOGO_COLORS = {}, _PAYPAL_LOGO_COLORS[LOGO_COL
   secondary: '#636363'
 }, _PAYPAL_LOGO_COLORS);
 export function PayPalLogo(_ref) {
-  var logoColor = _ref.logoColor,
-      nonce = _ref.nonce;
+  var logoColor = _ref.logoColor;
 
   if (!PAYPAL_LOGO_COLORS.hasOwnProperty(logoColor)) {
     throw new Error("No " + logoColor + " paypal logo available");
@@ -26,7 +25,6 @@ export function PayPalLogo(_ref) {
       primary = _PAYPAL_LOGO_COLORS$l.primary,
       secondary = _PAYPAL_LOGO_COLORS$l.secondary;
   return node(SVGLogo, {
-    nonce: nonce,
     name: LOGO.PAYPAL,
     logoColor: logoColor,
     render: function render() {
@@ -59,10 +57,8 @@ export function PayPalLogo(_ref) {
   });
 }
 export function PPLogo(_ref2) {
-  var logoColor = _ref2.logoColor,
-      nonce = _ref2.nonce;
+  var logoColor = _ref2.logoColor;
   return node(SVGLogo, {
-    nonce: nonce,
     name: LOGO.PP,
     logoColor: logoColor,
     render: function render() {

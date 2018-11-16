@@ -10,8 +10,7 @@ var VENMO_LOGO_COLORS = (_VENMO_LOGO_COLORS = {}, _VENMO_LOGO_COLORS[LOGO_COLOR.
   primary: '#ffffff'
 }, _VENMO_LOGO_COLORS);
 export function VenmoLogo(_ref) {
-  var logoColor = _ref.logoColor,
-      nonce = _ref.nonce;
+  var logoColor = _ref.logoColor;
 
   if (!VENMO_LOGO_COLORS[logoColor]) {
     throw new Error("No " + logoColor + " venmo logo available");
@@ -19,7 +18,6 @@ export function VenmoLogo(_ref) {
 
   var primary = VENMO_LOGO_COLORS[logoColor].primary;
   return node(SVGLogo, {
-    nonce: nonce,
     name: LOGO.VENMO,
     logoColor: logoColor,
     render: function render() {

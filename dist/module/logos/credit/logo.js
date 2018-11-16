@@ -11,8 +11,7 @@ var CREDIT_LOGO_COLORS = (_CREDIT_LOGO_COLORS = {}, _CREDIT_LOGO_COLORS[LOGO_COL
 }, _CREDIT_LOGO_COLORS);
 export function CreditLogo(_ref) {
   var logoColor = _ref.logoColor,
-      locale = _ref.locale,
-      nonce = _ref.nonce;
+      locale = _ref.locale;
 
   if (!CREDIT_LOGO_COLORS[logoColor]) {
     throw new Error("No " + logoColor + " credit logo available");
@@ -21,7 +20,6 @@ export function CreditLogo(_ref) {
   var country = locale.country;
   var primary = CREDIT_LOGO_COLORS[logoColor].primary;
   return node(SVGLogo, {
-    nonce: nonce,
     name: LOGO.CREDIT,
     logoColor: logoColor,
     render: function render() {

@@ -2,10 +2,8 @@
 import { node } from 'jsx-pragmatic/src';
 import { SVGLogo } from '../../lib';
 import { LOGO } from '../../constants';
-export function IdealLogo(_ref) {
-  var nonce = _ref.nonce;
+export function IdealLogo() {
   return node(SVGLogo, {
-    nonce: nonce,
     name: LOGO.IDEAL,
     render: function render() {
       return node("svg", {

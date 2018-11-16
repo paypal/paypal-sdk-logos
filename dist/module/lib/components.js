@@ -28,21 +28,17 @@ export function SVG(props) {
 export function SVGLogo(_ref) {
   var render = _ref.render,
       name = _ref.name,
-      logoColor = _ref.logoColor,
-      nonce = _ref.nonce;
+      logoColor = _ref.logoColor;
   return node(SVG, {
     svg: render(),
     alt: name,
-    nonce: nonce,
     class: LOGO_CLASS.LOGO + " " + LOGO_CLASS.LOGO + "-" + name + " " + (logoColor ? LOGO_CLASS.LOGO_COLOR + "-" + logoColor : '')
   });
 }
 export function SVGCardLogo(_ref2) {
   var render = _ref2.render,
-      name = _ref2.name,
-      nonce = _ref2.nonce;
+      name = _ref2.name;
   return node(SVG, {
-    nonce: nonce,
     svg: render(),
     alt: name,
     class: LOGO_CLASS.CARD + " " + LOGO_CLASS.CARD + "-" + name

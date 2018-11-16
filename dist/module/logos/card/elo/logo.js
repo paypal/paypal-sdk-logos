@@ -2,10 +2,8 @@
 import { node } from 'jsx-pragmatic/src';
 import { CARD } from 'paypal-sdk-constants/src';
 import { SVGCardLogo } from '../../../lib';
-export function EloLogo(_ref) {
-  var nonce = _ref.nonce;
+export function EloLogo() {
   return node(SVGCardLogo, {
-    nonce: nonce,
     name: CARD.ELO,
     render: function render() {
       return node("svg", {

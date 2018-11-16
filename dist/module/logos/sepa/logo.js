@@ -12,15 +12,13 @@ var SEPA_LOGO_COLORS = (_SEPA_LOGO_COLORS = {}, _SEPA_LOGO_COLORS[LOGO_COLOR.DEF
   card: '#FFFFFF'
 }, _SEPA_LOGO_COLORS);
 export function SepaLogo(_ref) {
-  var logoColor = _ref.logoColor,
-      nonce = _ref.nonce;
+  var logoColor = _ref.logoColor;
 
   var _ref2 = SEPA_LOGO_COLORS[logoColor] || SEPA_LOGO_COLORS[LOGO_COLOR.DEFAULT],
       main = _ref2.main,
       card = _ref2.card;
 
   return node(SVGLogo, {
-    nonce: nonce,
     name: LOGO.SEPA,
     logoColor: logoColor,
     render: function render() {
