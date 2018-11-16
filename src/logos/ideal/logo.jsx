@@ -7,10 +7,10 @@ import { node, type ElementNode } from 'jsx-pragmatic/src';
 import { SVGLogo } from '../../lib';
 import { LOGO } from '../../constants';
 
-export function IdealLogo({ nonce } : { nonce : string }) : ElementNode {
+export function IdealLogo() : ElementNode {
     return (
         <SVGLogo
-            nonce={ nonce }
+
             name={ LOGO.IDEAL }
             render={ () => {
                 return (

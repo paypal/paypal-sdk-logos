@@ -6,10 +6,10 @@ import { CARD } from 'paypal-sdk-constants/src';
 
 import { SVGCardLogo } from '../../../lib';
 
-export function JcbLogo({ nonce } : { nonce : string }) : ElementNode {
+export function JcbLogo() : ElementNode {
     return (
         <SVGCardLogo
-            nonce={ nonce }
+
             name={ CARD.JCB }
             render={ () => {
                 return (

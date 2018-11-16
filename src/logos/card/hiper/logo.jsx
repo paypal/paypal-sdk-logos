@@ -6,10 +6,10 @@ import { CARD } from 'paypal-sdk-constants/src';
 
 import { SVGCardLogo } from '../../../lib';
 
-export function HiperLogo({ nonce } : { nonce : string }) : ElementNode {
+export function HiperLogo() : ElementNode {
     return (
         <SVGCardLogo
-            nonce={ nonce }
+
             name={ CARD.HIPER }
             render={ () => {
                 return (

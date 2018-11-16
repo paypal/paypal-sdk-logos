@@ -22,7 +22,7 @@ const PAYPAL_LOGO_COLORS : LogoColorMap = {
     }
 };
 
-export function PayPalLogo({ logoColor, nonce } : { logoColor : $Values<typeof LOGO_COLOR>, nonce : string }) : ElementNode {
+export function PayPalLogo({ logoColor } : { logoColor : $Values<typeof LOGO_COLOR> }) : ElementNode {
 
     if (!PAYPAL_LOGO_COLORS.hasOwnProperty(logoColor)) {
         throw new Error(`No ${ logoColor } paypal logo available`);
@@ -32,7 +32,7 @@ export function PayPalLogo({ logoColor, nonce } : { logoColor : $Values<typeof L
 
     return (
         <SVGLogo
-            nonce={ nonce }
+
             name={ LOGO.PAYPAL }
             logoColor={ logoColor }
             render={ () => (
@@ -49,11 +49,11 @@ export function PayPalLogo({ logoColor, nonce } : { logoColor : $Values<typeof L
     );
 }
 
-export function PPLogo({ logoColor, nonce } : { logoColor : $Values<typeof LOGO_COLOR>, nonce : string }) : ElementNode {
+export function PPLogo({ logoColor } : { logoColor : $Values<typeof LOGO_COLOR> }) : ElementNode {
 
     return (
         <SVGLogo
-            nonce={ nonce }
+
             name={ LOGO.PP }
             logoColor={ logoColor }
             render={ () => {

@@ -13,7 +13,7 @@ const ZIMPLER_LOGO_COLORS : LogoColorMap = {
     }
 };
 
-export function ZimplerLogo({ logoColor, nonce } : { logoColor : $Values<typeof LOGO_COLOR>, nonce : string }) : ElementNode {
+export function ZimplerLogo({ logoColor } : { logoColor : $Values<typeof LOGO_COLOR> }) : ElementNode {
 
     if (!ZIMPLER_LOGO_COLORS[logoColor]) {
         throw new Error(`No ${ logoColor } zimpler logo available`);
@@ -23,7 +23,7 @@ export function ZimplerLogo({ logoColor, nonce } : { logoColor : $Values<typeof 
 
     return (
         <SVGLogo
-            nonce={ nonce }
+
             name={ LOGO.ZIMPLER }
             logoColor={ logoColor }
             render={ () => {

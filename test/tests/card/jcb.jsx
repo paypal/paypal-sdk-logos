@@ -4,13 +4,13 @@
 import { node, html } from 'jsx-pragmatic/src';
 
 import { JcbLogo } from '../../../src';
-import { validateSVG, getNonce } from '../common';
+import { validateSVG } from '../common';
 
 describe('jcb logo rendering happy cases', () => {
 
     it('should render the jcb logo', () => {
         const logo = (
-            <JcbLogo nonce={ getNonce() } />
+            <JcbLogo />
         );
 
         const logoHTML = logo.render(html());

@@ -6,10 +6,10 @@ import { CARD } from 'paypal-sdk-constants/src';
 
 import { SVGCardLogo } from '../../../lib';
 
-export function VisaLogo({ nonce } : { nonce : string }) : ElementNode {
+export function VisaLogo() : ElementNode {
     return (
         <SVGCardLogo
-            nonce={ nonce }
+
             name={ CARD.VISA }
             render={ () => {
                 return (

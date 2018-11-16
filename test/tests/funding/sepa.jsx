@@ -4,13 +4,13 @@
 import { node, html } from 'jsx-pragmatic/src';
 
 import { SepaLogo, LOGO_COLOR } from '../../../src';
-import { validateSVG, getNonce } from '../common';
+import { validateSVG } from '../common';
 
 describe('sepa logo rendering happy cases', () => {
 
     it('should render the sepa logo', () => {
         const logo = (
-            <SepaLogo logoColor={ LOGO_COLOR.WHITE } nonce={ getNonce() } />
+            <SepaLogo logoColor={ LOGO_COLOR.WHITE } />
         );
 
         const logoHTML = logo.render(html());

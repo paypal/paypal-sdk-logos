@@ -5,13 +5,13 @@ import { node, html } from 'jsx-pragmatic/src';
 import { noop } from 'belter/src';
 
 import { PPLogo, PayPalLogo, LOGO_COLOR } from '../../../src';
-import { validateSVG, getNonce } from '../common';
+import { validateSVG } from '../common';
 
 describe('paypal logo rendering happy cases', () => {
 
     it('should render the pp logo in white', () => {
         const logo = (
-            <PPLogo logoColor={ LOGO_COLOR.WHITE } nonce={ getNonce() } />
+            <PPLogo logoColor={ LOGO_COLOR.WHITE } />
         );
 
         const logoHTML = logo.render(html());
@@ -21,7 +21,7 @@ describe('paypal logo rendering happy cases', () => {
 
     it('should render the pp logo in blue', () => {
         const logo = (
-            <PPLogo logoColor={ LOGO_COLOR.BLUE } nonce={ getNonce() } />
+            <PPLogo logoColor={ LOGO_COLOR.BLUE } />
         );
 
         const logoHTML = logo.render(html());
@@ -31,7 +31,7 @@ describe('paypal logo rendering happy cases', () => {
 
     it('should render the pp logo in black', () => {
         const logo = (
-            <PPLogo logoColor={ LOGO_COLOR.BLACK } nonce={ getNonce() } />
+            <PPLogo logoColor={ LOGO_COLOR.BLACK } />
         );
 
         const logoHTML = logo.render(html());
@@ -41,7 +41,7 @@ describe('paypal logo rendering happy cases', () => {
 
     it('should render the paypal logo in white', () => {
         const logo = (
-            <PayPalLogo logoColor={ LOGO_COLOR.WHITE } nonce={ getNonce() } />
+            <PayPalLogo logoColor={ LOGO_COLOR.WHITE } />
         );
 
         const logoHTML = logo.render(html());
@@ -51,7 +51,7 @@ describe('paypal logo rendering happy cases', () => {
 
     it('should render the paypal logo in blue', () => {
         const logo = (
-            <PayPalLogo logoColor={ LOGO_COLOR.BLUE } nonce={ getNonce() } />
+            <PayPalLogo logoColor={ LOGO_COLOR.BLUE } />
         );
 
         const logoHTML = logo.render(html());
@@ -61,7 +61,7 @@ describe('paypal logo rendering happy cases', () => {
 
     it('should render the paypal logo in black', () => {
         const logo = (
-            <PayPalLogo logoColor={ LOGO_COLOR.BLACK } nonce={ getNonce() } />
+            <PayPalLogo logoColor={ LOGO_COLOR.BLACK } />
         );
 
         const logoHTML = logo.render(html());
@@ -77,7 +77,7 @@ describe('paypal logo rendering error cases', () => {
         let error;
 
         try {
-            noop(<PPLogo logoColor="turquoise" nonce={ getNonce() } />);
+            noop(<PPLogo logoColor="turquoise" />);
         } catch (err) {
             error = err;
         }
@@ -92,7 +92,7 @@ describe('paypal logo rendering error cases', () => {
         let error;
 
         try {
-            noop(<PayPalLogo logoColor="turquoise" nonce={ getNonce() } />);
+            noop(<PayPalLogo logoColor="turquoise" />);
         } catch (err) {
             error = err;
         }

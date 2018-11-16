@@ -6,11 +6,11 @@ import { node, type ElementNode } from 'jsx-pragmatic/src';
 import { SVGLogo } from '../../lib';
 import { LOGO_COLOR, LOGO } from '../../constants';
 
-export function SofortLogo({ logoColor, nonce } : { logoColor : $Values<typeof LOGO_COLOR>, nonce : string }) : ElementNode {
+export function SofortLogo({ logoColor } : { logoColor : $Values<typeof LOGO_COLOR> }) : ElementNode {
 
     return (
         <SVGLogo
-            nonce={ nonce }
+
             name={ LOGO.SOFORT }
             logoColor={ logoColor }
             render={ () => {

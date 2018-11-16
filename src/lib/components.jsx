@@ -26,21 +26,20 @@ export function SVG(props : { [string] : mixed }) : ElementNode {
     );
 }
 
-export function SVGLogo({ render, name, logoColor, nonce } : { render : () => ElementNode, name : string, logoColor? : $Values<typeof LOGO_COLOR>, nonce : string }) : ElementNode {
+export function SVGLogo({ render, name, logoColor } : { render : () => ElementNode, name : string, logoColor? : $Values<typeof LOGO_COLOR> }) : ElementNode {
     return (
         <SVG
             svg={ render() }
             alt={ name }
-            nonce={ nonce }
             class={ `${ LOGO_CLASS.LOGO } ${ LOGO_CLASS.LOGO }-${ name } ${ logoColor ? `${ LOGO_CLASS.LOGO_COLOR }-${ logoColor }` : '' }` }
         />
     );
 }
 
-export function SVGCardLogo({ render, name, nonce } : { render : () => ElementNode, name : string, nonce : string }) : ElementNode {
+export function SVGCardLogo({ render, name } : { render : () => ElementNode, name : string }) : ElementNode {
     return (
         <SVG
-            nonce={ nonce }
+
             svg={ render() }
             alt={ name }
             class={ `${ LOGO_CLASS.CARD } ${ LOGO_CLASS.CARD }-${ name }` }

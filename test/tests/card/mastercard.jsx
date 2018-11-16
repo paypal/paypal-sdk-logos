@@ -4,13 +4,13 @@
 import { node, html } from 'jsx-pragmatic/src';
 
 import { MastercardLogo } from '../../../src';
-import { validateSVG, getNonce } from '../common';
+import { validateSVG } from '../common';
 
 describe('mastercard logo rendering happy cases', () => {
 
     it('should render the mastercard logo', () => {
         const logo = (
-            <MastercardLogo nonce={ getNonce() } />
+            <MastercardLogo />
         );
 
         const logoHTML = logo.render(html());

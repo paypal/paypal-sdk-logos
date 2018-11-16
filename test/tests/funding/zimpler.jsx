@@ -5,13 +5,13 @@ import { node, html } from 'jsx-pragmatic/src';
 import { noop } from 'belter/src';
 
 import { ZimplerLogo, LOGO_COLOR } from '../../../src';
-import { validateSVG, getNonce } from '../common';
+import { validateSVG } from '../common';
 
 describe('zimpler logo rendering happy cases', () => {
 
     it('should render the zimpler logo', () => {
         const logo = (
-            <ZimplerLogo logoColor={ LOGO_COLOR.BLACK } nonce={ getNonce() } />
+            <ZimplerLogo logoColor={ LOGO_COLOR.BLACK } />
         );
 
         const logoHTML = logo.render(html());
@@ -27,7 +27,7 @@ describe('zimpler logo rendering error cases', () => {
         let error;
 
         try {
-            noop(<ZimplerLogo logoColor="turquoise" nonce={ getNonce() } />);
+            noop(<ZimplerLogo logoColor="turquoise" />);
         } catch (err) {
             error = err;
         }

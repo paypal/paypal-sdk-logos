@@ -13,7 +13,7 @@ import { node, html } from 'jsx-pragmatic';
 
 function render() {
     return (
-        <PayPalLogo logoColor={ LOGO_COLOR.WHITE } nonce={ cspNonce } />
+        <PayPalLogo logoColor={ LOGO_COLOR.WHITE } />
     ).render(html());
 }
 ```
@@ -29,7 +29,7 @@ import { node, react } from 'jsx-pragmatic';
 
 function render() {
     return (
-        <PayPalLogo logoColor={ LOGO_COLOR.WHITE } nonce={ cspNonce } />
+        <PayPalLogo logoColor={ LOGO_COLOR.WHITE } />
     ).render(react({ React }));
 }
 ```
@@ -41,7 +41,7 @@ import { PayPalLogo, LOGO_COLOR } from 'paypal-sdk-logos';
 import { html } from 'jsx-pragmatic';
 
 function render() {
-    return PayPalLogo({ logoColor: LOGO_COLOR.WHITE, nonce: cspNonce });
+    return PayPalLogo({ logoColor: LOGO_COLOR.WHITE });
         .render(html());
 }
 ```

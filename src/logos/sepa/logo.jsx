@@ -18,13 +18,13 @@ const SEPA_LOGO_COLORS : LogoColorMap = {
     }
 };
 
-export function SepaLogo({ logoColor, nonce } : { logoColor : $Values<typeof LOGO_COLOR>, nonce : string }) : ElementNode {
+export function SepaLogo({ logoColor } : { logoColor : $Values<typeof LOGO_COLOR> }) : ElementNode {
 
     const { main, card } = SEPA_LOGO_COLORS[logoColor] || SEPA_LOGO_COLORS[LOGO_COLOR.DEFAULT];
 
     return (
         <SVGLogo
-            nonce={ nonce }
+
             name={ LOGO.SEPA }
             logoColor={ logoColor }
             render={ () => {

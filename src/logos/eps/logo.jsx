@@ -6,10 +6,10 @@ import { node, type ElementNode } from 'jsx-pragmatic/src';
 import { SVGLogo } from '../../lib';
 import { LOGO_COLOR, LOGO } from '../../constants';
 
-export function EpsLogo({ logoColor, nonce } : { logoColor : $Values<typeof LOGO_COLOR>, nonce : string }) : ElementNode {
+export function EpsLogo({ logoColor } : { logoColor : $Values<typeof LOGO_COLOR> }) : ElementNode {
     return (
         <SVGLogo
-            nonce={ nonce }
+
             name={ LOGO.EPS }
             logoColor={ logoColor }
             render={ () => {

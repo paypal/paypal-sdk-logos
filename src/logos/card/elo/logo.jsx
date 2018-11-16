@@ -6,10 +6,10 @@ import { CARD } from 'paypal-sdk-constants/src';
 
 import { SVGCardLogo } from '../../../lib';
 
-export function EloLogo({ nonce } : { nonce : string }) : ElementNode {
+export function EloLogo() : ElementNode {
     return (
         <SVGCardLogo
-            nonce={ nonce }
+
             name={ CARD.ELO }
             render={ () => {
                 return (

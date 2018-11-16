@@ -14,7 +14,7 @@ const P24_LOGO_COLORS : LogoColorMap = {
     }
 };
 
-export function P24Logo({ logoColor, nonce } : { logoColor : $Values<typeof LOGO_COLOR>, nonce : string }) : ElementNode {
+export function P24Logo({ logoColor } : { logoColor : $Values<typeof LOGO_COLOR> }) : ElementNode {
 
     if (!P24_LOGO_COLORS[logoColor]) {
         throw new Error(`No ${ logoColor } p24 logo available`);
@@ -24,7 +24,7 @@ export function P24Logo({ logoColor, nonce } : { logoColor : $Values<typeof LOGO
 
     return (
         <SVGLogo
-            nonce={ nonce }
+
             name={ LOGO.P24 }
             logoColor={ logoColor }
             render={ () => {

@@ -5,13 +5,13 @@ import { node, html } from 'jsx-pragmatic/src';
 import { noop } from 'belter/src';
 
 import { WechatpayLogo, LOGO_COLOR } from '../../../src';
-import { validateSVG, getNonce } from '../common';
+import { validateSVG } from '../common';
 
 describe('wechatpay logo rendering happy cases', () => {
 
     it('should render the wechatpay logo', () => {
         const logo = (
-            <WechatpayLogo logoColor={ LOGO_COLOR.BLACK } nonce={ getNonce() } />
+            <WechatpayLogo logoColor={ LOGO_COLOR.BLACK } />
         );
 
         const logoHTML = logo.render(html());
@@ -27,7 +27,7 @@ describe('wechatpay logo rendering error cases', () => {
         let error;
 
         try {
-            noop(<WechatpayLogo logoColor="turquoise" nonce={ getNonce() } />);
+            noop(<WechatpayLogo logoColor="turquoise" />);
         } catch (err) {
             error = err;
         }

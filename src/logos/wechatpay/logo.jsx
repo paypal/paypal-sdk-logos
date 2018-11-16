@@ -14,7 +14,7 @@ const WECHATPAY_LOGO_COLORS : LogoColorMap = {
     }
 };
 
-export function WechatpayLogo({ logoColor, nonce } : { logoColor : $Values<typeof LOGO_COLOR>, nonce : string }) : ElementNode {
+export function WechatpayLogo({ logoColor } : { logoColor : $Values<typeof LOGO_COLOR> }) : ElementNode {
 
     if (!WECHATPAY_LOGO_COLORS[logoColor]) {
         throw new Error(`No ${ logoColor } wechatpay logo available`);
@@ -24,7 +24,7 @@ export function WechatpayLogo({ logoColor, nonce } : { logoColor : $Values<typeo
 
     return (
         <SVGLogo
-            nonce={ nonce }
+
             name={ LOGO.WECHATPAY }
             logoColor={ logoColor }
             render={ () => {

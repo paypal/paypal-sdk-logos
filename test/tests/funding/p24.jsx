@@ -5,13 +5,13 @@ import { node, html } from 'jsx-pragmatic/src';
 import { noop } from 'belter/src';
 
 import { P24Logo, LOGO_COLOR } from '../../../src';
-import { validateSVG, getNonce } from '../common';
+import { validateSVG } from '../common';
 
 describe('p24 logo rendering happy cases', () => {
 
     it('should render the p24 logo', () => {
         const logo = (
-            <P24Logo logoColor={ LOGO_COLOR.BLACK } nonce={ getNonce() } />
+            <P24Logo logoColor={ LOGO_COLOR.BLACK } />
         );
 
         const logoHTML = logo.render(html());
@@ -27,7 +27,7 @@ describe('p24 logo rendering error cases', () => {
         let error;
 
         try {
-            noop(<P24Logo logoColor="turquoise" nonce={ getNonce() } />);
+            noop(<P24Logo logoColor="turquoise" />);
         } catch (err) {
             error = err;
         }

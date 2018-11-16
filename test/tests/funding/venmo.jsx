@@ -5,13 +5,13 @@ import { node, html } from 'jsx-pragmatic/src';
 import { noop } from 'belter/src';
 
 import { VenmoLogo, LOGO_COLOR } from '../../../src';
-import { validateSVG, getNonce } from '../common';
+import { validateSVG } from '../common';
 
 describe('venmo logo rendering happy cases', () => {
 
     it('should render the venmo logo', () => {
         const logo = (
-            <VenmoLogo logoColor={ LOGO_COLOR.WHITE } nonce={ getNonce() } />
+            <VenmoLogo logoColor={ LOGO_COLOR.WHITE } />
         );
 
         const logoHTML = logo.render(html());
@@ -27,7 +27,7 @@ describe('venmo logo rendering error cases', () => {
         let error;
 
         try {
-            noop(<VenmoLogo logoColor="turquoise" nonce={ getNonce() } />);
+            noop(<VenmoLogo logoColor="turquoise" />);
         } catch (err) {
             error = err;
         }
