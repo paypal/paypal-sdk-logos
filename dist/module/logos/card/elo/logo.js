@@ -1,6 +1,6 @@
 /** @jsx node */
 import { node } from 'jsx-pragmatic/src';
-import { CARD } from 'paypal-sdk-constants/src';
+import { CARD } from '@paypal/sdk-constants/src';
 import { SVGCardLogo } from '../../../lib';
 export function EloLogo() {
   return node(SVGCardLogo, {

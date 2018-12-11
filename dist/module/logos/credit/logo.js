@@ -1,7 +1,7 @@
 var _CREDIT_LOGO_COLORS;
 
 /** @jsx node */
-import { COUNTRY } from 'paypal-sdk-constants/src';
+import { COUNTRY } from '@paypal/sdk-constants/src';
 import { node } from 'jsx-pragmatic/src';
 import { SVGLogo } from '../../lib';
 import { LOGO_COLOR, LOGO } from '../../constants';
