@@ -2,7 +2,7 @@
 /** @jsx node */
 
 import { node, type ElementNode } from 'jsx-pragmatic/src';
-import { CARD } from 'paypal-sdk-constants/src';
+import { CARD } from '@paypal/sdk-constants/src';
 
 import { SVGCardLogo } from '../../../lib';
 

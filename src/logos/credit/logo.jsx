@@ -2,7 +2,7 @@
 /* @flow */
 /** @jsx node */
 
-import { COUNTRY, type LocaleType } from 'paypal-sdk-constants/src';
+import { COUNTRY, type LocaleType } from '@paypal/sdk-constants/src';
 import { node, type ElementNode } from 'jsx-pragmatic/src';
 
 import { SVGLogo } from '../../lib';

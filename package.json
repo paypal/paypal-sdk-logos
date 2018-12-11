@@ -1,5 +1,5 @@
 {
-  "name": "paypal-sdk-logos",
+  "name": "@paypal/sdk-logos",
   "version": "1.0.3",
   "description": "JSX/SVG logos for PayPal.",
   "main": "index.js",
@@ -52,8 +52,8 @@
     "mocha": "^4"
   },
   "dependencies": {
+    "@paypal/sdk-constants": "^1.0.11",
     "belter": "^1.0.45",
-    "jsx-pragmatic": "^1.0.7",
-    "paypal-sdk-constants": "^1.0.11"
+    "jsx-pragmatic": "^1.0.7"
   }
 }

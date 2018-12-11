@@ -3,7 +3,7 @@
 
 import { node, html } from 'jsx-pragmatic/src';
 import { noop } from 'belter/src';
-import { COUNTRY, LANG } from 'paypal-sdk-constants/src';
+import { COUNTRY, LANG } from '@paypal/sdk-constants/src';
 
 import { CreditLogo, LOGO_COLOR } from '../../../src';
 import { validateSVG, getLocale } from '../common';

@@ -1,6 +1,6 @@
 /* @flow */
 
-import { COUNTRY, LANG, type LocaleType } from 'paypal-sdk-constants/src';
+import { COUNTRY, LANG, type LocaleType } from '@paypal/sdk-constants/src';
 
 export function validateSVG(htmlString : string) {
 
