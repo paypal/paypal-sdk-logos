@@ -1,11 +1,11 @@
 /* @flow */
 /** @jsx node */
 
-import { node, type ElementNode } from 'jsx-pragmatic/src';
+import { node, type ComponentNode } from 'jsx-pragmatic/src';
 
 import { type LogoColorMap } from '../../types';
 import { LOGO, LOGO_COLOR } from '../../constants';
-import { SVGLogo } from '../../lib';
+import { SVGLogo, type SVGLogoProps } from '../../lib';
 
 const PAYPAL_LOGO_COLORS : LogoColorMap = {
     [ LOGO_COLOR.BLUE ]: {
@@ -22,7 +22,7 @@ const PAYPAL_LOGO_COLORS : LogoColorMap = {
     }
 };
 
-export function PayPalLogo({ logoColor } : { logoColor : $Values<typeof LOGO_COLOR> }) : ElementNode {
+export function PayPalLogo({ logoColor } : { logoColor : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
 
     if (!PAYPAL_LOGO_COLORS.hasOwnProperty(logoColor)) {
         throw new Error(`No ${ logoColor } paypal logo available`);
@@ -49,7 +49,7 @@ export function PayPalLogo({ logoColor } : { logoColor : $Values<typeof LOGO_COL
     );
 }
 
-export function PPLogo({ logoColor } : { logoColor : $Values<typeof LOGO_COLOR> }) : ElementNode {
+export function PPLogo({ logoColor } : { logoColor : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
 
     return (
         <SVGLogo

@@ -2,7 +2,6 @@
 /** @jsx node */
 
 import { node, html } from 'jsx-pragmatic/src';
-import { noop } from 'belter/src';
 
 import { P24Logo, LOGO_COLOR } from '../../../src';
 import { validateSVG } from '../common';
@@ -27,7 +26,7 @@ describe('p24 logo rendering error cases', () => {
         let error;
 
         try {
-            noop(<P24Logo logoColor="turquoise" />);
+            (<P24Logo logoColor="turquoise" />).render(html());
         } catch (err) {
             error = err;
         }

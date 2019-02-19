@@ -3,9 +3,9 @@
 /** @jsx node */
 
 import { COUNTRY, type LocaleType } from '@paypal/sdk-constants/src';
-import { node, type ElementNode } from 'jsx-pragmatic/src';
+import { node, type ComponentNode } from 'jsx-pragmatic/src';
 
-import { SVGLogo } from '../../lib';
+import { SVGLogo, type SVGLogoProps } from '../../lib';
 import { LOGO_COLOR, LOGO } from '../../constants';
 import { type LogoColorMap } from '../../types';
 
@@ -17,7 +17,7 @@ const CREDIT_LOGO_COLORS : LogoColorMap = {
 };
 
 export function CreditLogo({ logoColor, locale } :
-    { logoColor : $Values<typeof LOGO_COLOR>, locale : LocaleType }) : ElementNode {
+    { logoColor : $Values<typeof LOGO_COLOR>, locale : LocaleType }) : ComponentNode<SVGLogoProps> {
 
     if (!CREDIT_LOGO_COLORS[logoColor]) {
         throw new Error(`No ${ logoColor } credit logo available`);

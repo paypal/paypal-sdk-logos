@@ -2,7 +2,6 @@
 /** @jsx node */
 
 import { node, html } from 'jsx-pragmatic/src';
-import { noop } from 'belter/src';
 
 import { PPLogo, PayPalLogo, LOGO_COLOR } from '../../../src';
 import { validateSVG } from '../common';
@@ -77,7 +76,7 @@ describe('paypal logo rendering error cases', () => {
         let error;
 
         try {
-            noop(<PPLogo logoColor="turquoise" />);
+            (<PPLogo logoColor="turquoise" />).render(html());
         } catch (err) {
             error = err;
         }
@@ -92,7 +91,7 @@ describe('paypal logo rendering error cases', () => {
         let error;
 
         try {
-            noop(<PayPalLogo logoColor="turquoise" />);
+            (<PayPalLogo logoColor="turquoise" />).render(html());
         } catch (err) {
             error = err;
         }

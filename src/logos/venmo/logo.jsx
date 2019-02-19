@@ -2,9 +2,9 @@
 /* @flow */
 /** @jsx node */
 
-import { node, type ElementNode } from 'jsx-pragmatic/src';
+import { node, type ComponentNode } from 'jsx-pragmatic/src';
 
-import { SVGLogo } from '../../lib';
+import { SVGLogo, type SVGLogoProps } from '../../lib';
 import { LOGO_COLOR, LOGO } from '../../constants';
 import { type LogoColorMap } from '../../types';
 
@@ -17,7 +17,7 @@ const VENMO_LOGO_COLORS : LogoColorMap = {
     }
 };
 
-export function VenmoLogo({ logoColor } : { logoColor : $Values<typeof LOGO_COLOR> }) : ElementNode {
+export function VenmoLogo({ logoColor } : { logoColor : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
 
     if (!VENMO_LOGO_COLORS[logoColor]) {
         throw new Error(`No ${ logoColor } venmo logo available`);

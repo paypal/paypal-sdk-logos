@@ -2,7 +2,6 @@
 /** @jsx node */
 
 import { node, html } from 'jsx-pragmatic/src';
-import { noop } from 'belter/src';
 
 import { ZimplerLogo, LOGO_COLOR } from '../../../src';
 import { validateSVG } from '../common';
@@ -27,7 +26,7 @@ describe('zimpler logo rendering error cases', () => {
         let error;
 
         try {
-            noop(<ZimplerLogo logoColor="turquoise" />);
+            (<ZimplerLogo logoColor="turquoise" />).render(html());
         } catch (err) {
             error = err;
         }

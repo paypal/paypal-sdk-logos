@@ -2,7 +2,6 @@
 /** @jsx node */
 
 import { node, html } from 'jsx-pragmatic/src';
-import { noop } from 'belter/src';
 
 import { VenmoLogo, LOGO_COLOR } from '../../../src';
 import { validateSVG } from '../common';
@@ -27,7 +26,7 @@ describe('venmo logo rendering error cases', () => {
         let error;
 
         try {
-            noop(<VenmoLogo logoColor="turquoise" />);
+            (<VenmoLogo logoColor="turquoise" />).render(html());
         } catch (err) {
             error = err;
         }

@@ -2,7 +2,6 @@
 /** @jsx node */
 
 import { node, html } from 'jsx-pragmatic/src';
-import { noop } from 'belter/src';
 
 import { WechatpayLogo, LOGO_COLOR } from '../../../src';
 import { validateSVG } from '../common';
@@ -27,7 +26,7 @@ describe('wechatpay logo rendering error cases', () => {
         let error;
 
         try {
-            noop(<WechatpayLogo logoColor="turquoise" />);
+            (<WechatpayLogo logoColor="turquoise" />).render(html());
         } catch (err) {
             error = err;
         }

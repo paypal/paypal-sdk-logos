@@ -54,6 +54,6 @@
   "dependencies": {
     "@paypal/sdk-constants": "^1.0.11",
     "belter": "^1.0.45",
-    "jsx-pragmatic": "^1.0.7"
+    "jsx-pragmatic": "^2"
   }
 }

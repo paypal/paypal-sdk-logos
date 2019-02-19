@@ -2,12 +2,12 @@
 /* @flow */
 /** @jsx node */
 
-import { node, type ElementNode } from 'jsx-pragmatic/src';
+import { node, type ComponentNode } from 'jsx-pragmatic/src';
 
-import { SVGLogo } from '../../lib';
+import { SVGLogo, type SVGLogoProps } from '../../lib';
 import { LOGO } from '../../constants';
 
-export function IdealLogo() : ElementNode {
+export function IdealLogo() : ComponentNode<SVGLogoProps> {
     return (
         <SVGLogo
 

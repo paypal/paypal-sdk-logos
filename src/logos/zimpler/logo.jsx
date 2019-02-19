@@ -1,9 +1,9 @@
 /* @flow */
 /** @jsx node */
 
-import { node, type ElementNode } from 'jsx-pragmatic/src';
+import { node, type ComponentNode } from 'jsx-pragmatic/src';
 
-import { SVGLogo } from '../../lib';
+import { SVGLogo, type SVGLogoProps } from '../../lib';
 import { LOGO_COLOR, LOGO } from '../../constants';
 import { type LogoColorMap } from '../../types';
 
@@ -13,7 +13,7 @@ const ZIMPLER_LOGO_COLORS : LogoColorMap = {
     }
 };
 
-export function ZimplerLogo({ logoColor } : { logoColor : $Values<typeof LOGO_COLOR> }) : ElementNode {
+export function ZimplerLogo({ logoColor } : { logoColor : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
 
     if (!ZIMPLER_LOGO_COLORS[logoColor]) {
         throw new Error(`No ${ logoColor } zimpler logo available`);

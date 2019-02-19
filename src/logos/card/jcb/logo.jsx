@@ -1,12 +1,12 @@
 /* @flow */
 /** @jsx node */
 
-import { node, type ElementNode } from 'jsx-pragmatic/src';
+import { node, type ComponentNode } from 'jsx-pragmatic/src';
 import { CARD } from '@paypal/sdk-constants/src';
 
-import { SVGCardLogo } from '../../../lib';
+import { SVGCardLogo, type SVGCardLogoProps } from '../../../lib';
 
-export function JcbLogo() : ElementNode {
+export function JcbLogo() : ComponentNode<SVGCardLogoProps> {
     return (
         <SVGCardLogo
 

@@ -2,7 +2,6 @@
 /** @jsx node */
 
 import { node, html } from 'jsx-pragmatic/src';
-import { noop } from 'belter/src';
 import { COUNTRY, LANG } from '@paypal/sdk-constants/src';
 
 import { CreditLogo, LOGO_COLOR } from '../../../src';
@@ -47,7 +46,7 @@ describe('credit logo rendering error cases', () => {
         let error;
 
         try {
-            noop(<CreditLogo logoColor="turquoise" locale={ getLocale() } />);
+            (<CreditLogo logoColor="turquoise" locale={ getLocale() } />).render(html());
         } catch (err) {
             error = err;
         }
@@ -62,7 +61,7 @@ describe('credit logo rendering error cases', () => {
         let error;
 
         try {
-            noop(<CreditLogo logoColor={ LOGO_COLOR.WHITE } />);
+            (<CreditLogo logoColor={ LOGO_COLOR.WHITE } />).render(html());
         } catch (err) {
             error = err;
         }
