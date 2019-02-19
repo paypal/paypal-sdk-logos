@@ -3,7 +3,7 @@ import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/esm/objectWith
 
 /** @jsx node */
 import { svgToBase64 } from 'belter/src';
-import { node, html, ElementNode } from 'jsx-pragmatic/src';
+import { node, html } from 'jsx-pragmatic/src';
 import { LOGO_CLASS, LOGO_COLOR } from '../constants';
 export function SVG(props) {
   var svg = props.svg,
@@ -13,9 +13,7 @@ export function SVG(props) {
     throw new TypeError("Expected svg prop");
   }
 
-  if (svg instanceof ElementNode) {
-    svg = svg.render(html());
-  }
+  svg = svg.render(html());
 
   if (typeof svg !== 'string') {
     throw new TypeError("Expected svg prop to be a string or jsx node");
