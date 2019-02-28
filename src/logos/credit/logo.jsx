@@ -10,9 +10,17 @@ import { LOGO_COLOR, LOGO } from '../../constants';
 import { type LogoColorMap } from '../../types';
 
 const CREDIT_LOGO_COLORS : LogoColorMap = {
-    [ LOGO_COLOR.WHITE ]: {
+    [ LOGO_COLOR.BLUE ]: {
+        primary:   '#003087',
+        secondary: '#009cde'
+    },
+    [LOGO_COLOR.WHITE ]: {
         primary:   '#ffffff',
         secondary: '#ffffff'
+    },
+    [ LOGO_COLOR.BLACK ]: {
+        primary:   '#333030',
+        secondary: '#636363'
     }
 };
 
