@@ -1,29 +1,29 @@
-var _PAYPAL_LOGO_COLORS;
+var _LOGO_COLORS;
 
 /** @jsx node */
 import { node } from 'jsx-pragmatic/src';
 import { LOGO, LOGO_COLOR } from '../../constants';
-import { SVGLogo } from '../../lib';
-var PAYPAL_LOGO_COLORS = (_PAYPAL_LOGO_COLORS = {}, _PAYPAL_LOGO_COLORS[LOGO_COLOR.BLUE] = {
+import { SVGLogo, getLogoColors } from '../../lib';
+var LOGO_COLORS = (_LOGO_COLORS = {}, _LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
   primary: '#003087',
   secondary: '#009cde'
-}, _PAYPAL_LOGO_COLORS[LOGO_COLOR.WHITE] = {
+}, _LOGO_COLORS[LOGO_COLOR.BLUE] = {
+  primary: '#003087',
+  secondary: '#009cde'
+}, _LOGO_COLORS[LOGO_COLOR.WHITE] = {
   primary: '#ffffff',
   secondary: '#ffffff'
-}, _PAYPAL_LOGO_COLORS[LOGO_COLOR.BLACK] = {
+}, _LOGO_COLORS[LOGO_COLOR.BLACK] = {
   primary: '#333030',
   secondary: '#636363'
-}, _PAYPAL_LOGO_COLORS);
+}, _LOGO_COLORS);
 export function PayPalLogo(_ref) {
   var logoColor = _ref.logoColor;
 
-  if (!PAYPAL_LOGO_COLORS.hasOwnProperty(logoColor)) {
-    throw new Error("No " + logoColor + " paypal logo available");
-  }
+  var _getLogoColors = getLogoColors(LOGO.PAYPAL, LOGO_COLORS, logoColor),
+      primary = _getLogoColors.primary,
+      secondary = _getLogoColors.secondary;
 
-  var _PAYPAL_LOGO_COLORS$l = PAYPAL_LOGO_COLORS[logoColor],
-      primary = _PAYPAL_LOGO_COLORS$l.primary,
-      secondary = _PAYPAL_LOGO_COLORS$l.secondary;
   return node(SVGLogo, {
     name: LOGO.PAYPAL,
     logoColor: logoColor,

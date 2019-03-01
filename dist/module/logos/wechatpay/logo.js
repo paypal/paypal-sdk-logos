@@ -1,23 +1,23 @@
-var _WECHATPAY_LOGO_COLOR;
+var _LOGO_COLORS;
 
 /** @jsx node */
 import { node } from 'jsx-pragmatic/src';
-import { SVGLogo } from '../../lib';
+import { SVGLogo, getLogoColors } from '../../lib';
 import { LOGO_COLOR, LOGO } from '../../constants';
-var WECHATPAY_LOGO_COLORS = (_WECHATPAY_LOGO_COLOR = {}, _WECHATPAY_LOGO_COLOR[LOGO_COLOR.BLACK] = {
+var LOGO_COLORS = (_LOGO_COLORS = {}, _LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
   primary: '#1AAD19',
   secondary: '#4D4D4D'
-}, _WECHATPAY_LOGO_COLOR);
+}, _LOGO_COLORS[LOGO_COLOR.WHITE] = {
+  primary: '#FFFFFF',
+  secondary: '#FFFFFF'
+}, _LOGO_COLORS);
 export function WechatpayLogo(_ref) {
   var logoColor = _ref.logoColor;
 
-  if (!WECHATPAY_LOGO_COLORS[logoColor]) {
-    throw new Error("No " + logoColor + " wechatpay logo available");
-  }
+  var _getLogoColors = getLogoColors(LOGO.WECHATPAY, LOGO_COLORS, logoColor),
+      primary = _getLogoColors.primary,
+      secondary = _getLogoColors.secondary;
 
-  var _WECHATPAY_LOGO_COLOR2 = WECHATPAY_LOGO_COLORS[logoColor],
-      primary = _WECHATPAY_LOGO_COLOR2.primary,
-      secondary = _WECHATPAY_LOGO_COLOR2.secondary;
   return node(SVGLogo, {
     name: LOGO.WECHATPAY,
     logoColor: logoColor,

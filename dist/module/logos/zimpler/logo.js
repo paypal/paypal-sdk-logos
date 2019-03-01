@@ -1,20 +1,20 @@
-var _ZIMPLER_LOGO_COLORS;
+var _LOGO_COLORS;
 
 /** @jsx node */
 import { node } from 'jsx-pragmatic/src';
-import { SVGLogo } from '../../lib';
+import { SVGLogo, getLogoColors } from '../../lib';
 import { LOGO_COLOR, LOGO } from '../../constants';
-var ZIMPLER_LOGO_COLORS = (_ZIMPLER_LOGO_COLORS = {}, _ZIMPLER_LOGO_COLORS[LOGO_COLOR.BLACK] = {
+var LOGO_COLORS = (_LOGO_COLORS = {}, _LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
   primary: '#00A599'
-}, _ZIMPLER_LOGO_COLORS);
+}, _LOGO_COLORS[LOGO_COLOR.WHITE] = {
+  primary: '#FFFFFF'
+}, _LOGO_COLORS);
 export function ZimplerLogo(_ref) {
   var logoColor = _ref.logoColor;
 
-  if (!ZIMPLER_LOGO_COLORS[logoColor]) {
-    throw new Error("No " + logoColor + " zimpler logo available");
-  }
+  var _getLogoColors = getLogoColors(LOGO.ZIMPLER, LOGO_COLORS, logoColor),
+      primary = _getLogoColors.primary;
 
-  var primary = ZIMPLER_LOGO_COLORS[logoColor].primary;
   return node(SVGLogo, {
     name: LOGO.ZIMPLER,
     logoColor: logoColor,

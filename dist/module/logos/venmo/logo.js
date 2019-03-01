@@ -1,22 +1,22 @@
-var _VENMO_LOGO_COLORS;
+var _LOGO_COLORS;
 
 /** @jsx node */
 import { node } from 'jsx-pragmatic/src';
-import { SVGLogo } from '../../lib';
+import { SVGLogo, getLogoColors } from '../../lib';
 import { LOGO_COLOR, LOGO } from '../../constants';
-var VENMO_LOGO_COLORS = (_VENMO_LOGO_COLORS = {}, _VENMO_LOGO_COLORS[LOGO_COLOR.BLUE] = {
+var LOGO_COLORS = (_LOGO_COLORS = {}, _LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
   primary: '#3D93CE'
-}, _VENMO_LOGO_COLORS[LOGO_COLOR.WHITE] = {
+}, _LOGO_COLORS[LOGO_COLOR.BLUE] = {
+  primary: '#3D93CE'
+}, _LOGO_COLORS[LOGO_COLOR.WHITE] = {
   primary: '#ffffff'
-}, _VENMO_LOGO_COLORS);
+}, _LOGO_COLORS);
 export function VenmoLogo(_ref) {
   var logoColor = _ref.logoColor;
 
-  if (!VENMO_LOGO_COLORS[logoColor]) {
-    throw new Error("No " + logoColor + " venmo logo available");
-  }
+  var _getLogoColors = getLogoColors(LOGO.SOFORT, LOGO_COLORS, logoColor),
+      primary = _getLogoColors.primary;
 
-  var primary = VENMO_LOGO_COLORS[logoColor].primary;
   return node(SVGLogo, {
     name: LOGO.VENMO,
     logoColor: logoColor,

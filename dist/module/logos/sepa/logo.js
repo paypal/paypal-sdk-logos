@@ -1,22 +1,22 @@
-var _SEPA_LOGO_COLORS;
+var _LOGO_COLORS;
 
 /** @jsx node */
 import { node } from 'jsx-pragmatic/src';
-import { SVGLogo } from '../../lib';
+import { SVGLogo, getLogoColors } from '../../lib';
 import { LOGO_COLOR, LOGO } from '../../constants';
-var SEPA_LOGO_COLORS = (_SEPA_LOGO_COLORS = {}, _SEPA_LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
+var LOGO_COLORS = (_LOGO_COLORS = {}, _LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
   main: '#005DA0',
   card: '#AEB1BC'
-}, _SEPA_LOGO_COLORS[LOGO_COLOR.WHITE] = {
+}, _LOGO_COLORS[LOGO_COLOR.WHITE] = {
   main: '#FFFFFF',
   card: '#FFFFFF'
-}, _SEPA_LOGO_COLORS);
+}, _LOGO_COLORS);
 export function SepaLogo(_ref) {
   var logoColor = _ref.logoColor;
 
-  var _ref2 = SEPA_LOGO_COLORS[logoColor] || SEPA_LOGO_COLORS[LOGO_COLOR.DEFAULT],
-      main = _ref2.main,
-      card = _ref2.card;
+  var _getLogoColors = getLogoColors(LOGO.SEPA, LOGO_COLORS, logoColor),
+      main = _getLogoColors.main,
+      card = _getLogoColors.card;
 
   return node(SVGLogo, {
     name: LOGO.SEPA,

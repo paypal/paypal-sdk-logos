@@ -1,23 +1,23 @@
-var _P24_LOGO_COLORS;
+var _LOGO_COLORS;
 
 /** @jsx node */
 import { node } from 'jsx-pragmatic/src';
-import { SVGLogo } from '../../lib';
+import { SVGLogo, getLogoColors } from '../../lib';
 import { LOGO_COLOR, LOGO } from '../../constants';
-var P24_LOGO_COLORS = (_P24_LOGO_COLORS = {}, _P24_LOGO_COLORS[LOGO_COLOR.BLACK] = {
+var LOGO_COLORS = (_LOGO_COLORS = {}, _LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
   primary: '#d03238',
   secondary: '#b3b1b1'
-}, _P24_LOGO_COLORS);
+}, _LOGO_COLORS[LOGO_COLOR.WHITE] = {
+  primary: '#ffffff',
+  secondary: '#ffffff'
+}, _LOGO_COLORS);
 export function P24Logo(_ref) {
   var logoColor = _ref.logoColor;
 
-  if (!P24_LOGO_COLORS[logoColor]) {
-    throw new Error("No " + logoColor + " p24 logo available");
-  }
+  var _getLogoColors = getLogoColors(LOGO.P24, LOGO_COLORS, logoColor),
+      primary = _getLogoColors.primary,
+      secondary = _getLogoColors.secondary;
 
-  var _P24_LOGO_COLORS$logo = P24_LOGO_COLORS[logoColor],
-      primary = _P24_LOGO_COLORS$logo.primary,
-      secondary = _P24_LOGO_COLORS$logo.secondary;
   return node(SVGLogo, {
     name: LOGO.P24,
     logoColor: logoColor,
