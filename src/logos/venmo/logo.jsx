@@ -4,11 +4,14 @@
 
 import { node, type ComponentNode } from 'jsx-pragmatic/src';
 
-import { SVGLogo, type SVGLogoProps } from '../../lib';
+import { SVGLogo, getLogoColors, type SVGLogoProps } from '../../lib';
 import { LOGO_COLOR, LOGO } from '../../constants';
 import { type LogoColorMap } from '../../types';
 
-const VENMO_LOGO_COLORS : LogoColorMap = {
+const LOGO_COLORS : LogoColorMap = {
+    [ LOGO_COLOR.DEFAULT ]: {
+        primary:   '#3D93CE'
+    },
     [ LOGO_COLOR.BLUE ]: {
         primary:   '#3D93CE'
     },
@@ -19,11 +22,7 @@ const VENMO_LOGO_COLORS : LogoColorMap = {
 
 export function VenmoLogo({ logoColor } : { logoColor : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
 
-    if (!VENMO_LOGO_COLORS[logoColor]) {
-        throw new Error(`No ${ logoColor } venmo logo available`);
-    }
-
-    const { primary } = VENMO_LOGO_COLORS[logoColor];
+    const { primary } = getLogoColors(LOGO.SOFORT, LOGO_COLORS, logoColor);
 
     return (
         <SVGLogo

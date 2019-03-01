@@ -3,11 +3,11 @@
 
 import { node, type ComponentNode } from 'jsx-pragmatic/src';
 
-import { SVGLogo, type SVGLogoProps } from '../../lib';
+import { SVGLogo, getLogoColors, type SVGLogoProps } from '../../lib';
 import { LOGO_COLOR, LOGO } from '../../constants';
 import { type LogoColorMap } from '../../types';
 
-const SEPA_LOGO_COLORS : LogoColorMap = {
+const LOGO_COLORS : LogoColorMap = {
     [ LOGO_COLOR.DEFAULT ]:   {
         main: '#005DA0',
         card: '#AEB1BC'
@@ -20,7 +20,7 @@ const SEPA_LOGO_COLORS : LogoColorMap = {
 
 export function SepaLogo({ logoColor } : { logoColor : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
 
-    const { main, card } = SEPA_LOGO_COLORS[logoColor] || SEPA_LOGO_COLORS[LOGO_COLOR.DEFAULT];
+    const { main, card } = getLogoColors(LOGO.SEPA, LOGO_COLORS, logoColor);
 
     return (
         <SVGLogo

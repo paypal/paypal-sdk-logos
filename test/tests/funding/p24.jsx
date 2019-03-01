@@ -3,14 +3,14 @@
 
 import { node, html } from 'jsx-pragmatic/src';
 
-import { P24Logo, LOGO_COLOR } from '../../../src';
+import { P24Logo } from '../../../src';
 import { validateSVG } from '../common';
 
 describe('p24 logo rendering happy cases', () => {
 
     it('should render the p24 logo', () => {
         const logo = (
-            <P24Logo logoColor={ LOGO_COLOR.BLACK } />
+            <P24Logo />
         );
 
         const logoHTML = logo.render(html());

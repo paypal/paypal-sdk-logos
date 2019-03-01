@@ -3,24 +3,24 @@
 
 import { node, type ComponentNode } from 'jsx-pragmatic/src';
 
-import { SVGLogo, type SVGLogoProps } from '../../lib';
+import { SVGLogo, getLogoColors, type SVGLogoProps } from '../../lib';
 import { LOGO_COLOR, LOGO } from '../../constants';
 import { type LogoColorMap } from '../../types';
 
-const P24_LOGO_COLORS : LogoColorMap = {
-    [ LOGO_COLOR.BLACK ]: {
+const LOGO_COLORS : LogoColorMap = {
+    [ LOGO_COLOR.DEFAULT ]: {
         primary:   '#d03238',
         secondary: '#b3b1b1'
+    },
+    [ LOGO_COLOR.WHITE ]: {
+        primary:   '#ffffff',
+        secondary: '#ffffff'
     }
 };
 
 export function P24Logo({ logoColor } : { logoColor : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
 
-    if (!P24_LOGO_COLORS[logoColor]) {
-        throw new Error(`No ${ logoColor } p24 logo available`);
-    }
-
-    const { primary, secondary } = P24_LOGO_COLORS[logoColor];
+    const { primary, secondary } = getLogoColors(LOGO.P24, LOGO_COLORS, logoColor);
 
     return (
         <SVGLogo

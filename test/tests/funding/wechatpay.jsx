@@ -3,14 +3,14 @@
 
 import { node, html } from 'jsx-pragmatic/src';
 
-import { WechatpayLogo, LOGO_COLOR } from '../../../src';
+import { WechatpayLogo } from '../../../src';
 import { validateSVG } from '../common';
 
 describe('wechatpay logo rendering happy cases', () => {
 
     it('should render the wechatpay logo', () => {
         const logo = (
-            <WechatpayLogo logoColor={ LOGO_COLOR.BLACK } />
+            <WechatpayLogo />
         );
 
         const logoHTML = logo.render(html());

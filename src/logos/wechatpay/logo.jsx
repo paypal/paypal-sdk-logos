@@ -3,24 +3,24 @@
 
 import { node, type ComponentNode } from 'jsx-pragmatic/src';
 
-import { SVGLogo, type SVGLogoProps } from '../../lib';
+import { SVGLogo, getLogoColors, type SVGLogoProps } from '../../lib';
 import { LOGO_COLOR, LOGO } from '../../constants';
 import { type LogoColorMap } from '../../types';
 
-const WECHATPAY_LOGO_COLORS : LogoColorMap = {
-    [ LOGO_COLOR.BLACK ]: {
+const LOGO_COLORS : LogoColorMap = {
+    [ LOGO_COLOR.DEFAULT ]: {
         primary:   '#1AAD19',
         secondary: '#4D4D4D'
+    },
+    [ LOGO_COLOR.WHITE ]: {
+        primary:   '#FFFFFF',
+        secondary: '#FFFFFF'
     }
 };
 
 export function WechatpayLogo({ logoColor } : { logoColor : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
 
-    if (!WECHATPAY_LOGO_COLORS[logoColor]) {
-        throw new Error(`No ${ logoColor } wechatpay logo available`);
-    }
-
-    const { primary, secondary } = WECHATPAY_LOGO_COLORS[logoColor];
+    const { primary, secondary } = getLogoColors(LOGO.WECHATPAY, LOGO_COLORS, logoColor);
 
     return (
         <SVGLogo

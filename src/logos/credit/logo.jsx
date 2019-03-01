@@ -5,34 +5,30 @@
 import { COUNTRY, type LocaleType } from '@paypal/sdk-constants/src';
 import { node, type ComponentNode } from 'jsx-pragmatic/src';
 
-import { SVGLogo, type SVGLogoProps } from '../../lib';
+import { SVGLogo, getLogoColors, type SVGLogoProps } from '../../lib';
 import { LOGO_COLOR, LOGO } from '../../constants';
 import { type LogoColorMap } from '../../types';
 
-const CREDIT_LOGO_COLORS : LogoColorMap = {
-    [ LOGO_COLOR.BLUE ]: {
-        primary:   '#003087',
-        secondary: '#009cde'
+const LOGO_COLORS : LogoColorMap = {
+    [ LOGO_COLOR.DEFAULT ]: {
+        primary: '#003087'
     },
-    [LOGO_COLOR.WHITE ]: {
-        primary:   '#ffffff',
-        secondary: '#ffffff'
+    [ LOGO_COLOR.BLUE ]: {
+        primary:   '#003087'
+    },
+    [ LOGO_COLOR.WHITE ]: {
+        primary:   '#ffffff'
     },
     [ LOGO_COLOR.BLACK ]: {
-        primary:   '#333030',
-        secondary: '#636363'
+        primary:   '#333030'
     }
 };
 
 export function CreditLogo({ logoColor, locale } :
     { logoColor : $Values<typeof LOGO_COLOR>, locale : LocaleType }) : ComponentNode<SVGLogoProps> {
 
-    if (!CREDIT_LOGO_COLORS[logoColor]) {
-        throw new Error(`No ${ logoColor } credit logo available`);
-    }
-
+    const { primary } = getLogoColors(LOGO.CREDIT, LOGO_COLORS, logoColor);
     const { country } = locale;
-    const { primary } = CREDIT_LOGO_COLORS[logoColor];
 
     return (
         <SVGLogo

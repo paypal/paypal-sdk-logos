@@ -5,9 +5,13 @@ import { node, type ComponentNode } from 'jsx-pragmatic/src';
 
 import { type LogoColorMap } from '../../types';
 import { LOGO, LOGO_COLOR } from '../../constants';
-import { SVGLogo, type SVGLogoProps } from '../../lib';
+import { SVGLogo, getLogoColors, type SVGLogoProps } from '../../lib';
 
-const PAYPAL_LOGO_COLORS : LogoColorMap = {
+const LOGO_COLORS : LogoColorMap = {
+    [ LOGO_COLOR.DEFAULT ]: {
+        primary:   '#003087',
+        secondary: '#009cde'
+    },
     [ LOGO_COLOR.BLUE ]: {
         primary:   '#003087',
         secondary: '#009cde'
@@ -24,11 +28,7 @@ const PAYPAL_LOGO_COLORS : LogoColorMap = {
 
 export function PayPalLogo({ logoColor } : { logoColor : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
 
-    if (!PAYPAL_LOGO_COLORS.hasOwnProperty(logoColor)) {
-        throw new Error(`No ${ logoColor } paypal logo available`);
-    }
-
-    const { primary, secondary } = PAYPAL_LOGO_COLORS[logoColor];
+    const { primary, secondary } = getLogoColors(LOGO.PAYPAL, LOGO_COLORS, logoColor);
 
     return (
         <SVGLogo
