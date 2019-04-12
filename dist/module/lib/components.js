@@ -2,7 +2,7 @@ import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/esm/objectWithoutPropertiesLoose";
 
 /** @jsx node */
-import { svgToBase64 } from 'belter/src';
+import { svgToBase64, capitalizeFirstLetter } from 'belter/src';
 import { node, html } from 'jsx-pragmatic/src';
 import { LOGO_CLASS, LOGO_COLOR } from '../constants';
 export function SVG(props) {
@@ -26,10 +26,11 @@ export function SVG(props) {
 export function SVGLogo(_ref) {
   var render = _ref.render,
       name = _ref.name,
+      alt = _ref.alt,
       logoColor = _ref.logoColor;
   return node(SVG, {
     svg: render(),
-    alt: name,
+    alt: alt || capitalizeFirstLetter(name),
     class: LOGO_CLASS.LOGO + " " + LOGO_CLASS.LOGO + "-" + name + " " + (logoColor ? LOGO_CLASS.LOGO_COLOR + "-" + logoColor : '')
   });
 }
@@ -38,7 +39,7 @@ export function SVGCardLogo(_ref2) {
       name = _ref2.name;
   return node(SVG, {
     svg: render(),
-    alt: name,
+    alt: capitalizeFirstLetter(name),
     class: LOGO_CLASS.CARD + " " + LOGO_CLASS.CARD + "-" + name
   });
 }

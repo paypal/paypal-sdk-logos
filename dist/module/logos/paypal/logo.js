@@ -26,6 +26,7 @@ export function PayPalLogo(_ref) {
 
   return node(SVGLogo, {
     name: LOGO.PAYPAL,
+    alt: "PayPal",
     logoColor: logoColor,
     render: function render() {
       return node("svg", {
@@ -60,6 +61,7 @@ export function PPLogo(_ref2) {
   var logoColor = _ref2.logoColor;
   return node(SVGLogo, {
     name: LOGO.PP,
+    alt: "PP",
     logoColor: logoColor,
     render: function render() {
       if (logoColor === LOGO_COLOR.BLUE) {
