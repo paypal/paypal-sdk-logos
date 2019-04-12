@@ -1,7 +1,7 @@
 /* @flow */
 /** @jsx node */
 
-import { svgToBase64 } from 'belter/src';
+import { svgToBase64, capitalizeFirstLetter } from 'belter/src';
 import { node, html, type ElementNode, type ComponentNode } from 'jsx-pragmatic/src';
 
 import { LOGO_CLASS, LOGO_COLOR } from '../constants';
@@ -32,14 +32,15 @@ export function SVG(props : SVGProps) : ElementNode {
 export type SVGLogoProps = {|
     render : () => ElementNode,
     name : string,
+    alt? : string,
     logoColor? : $Values<typeof LOGO_COLOR>
 |};
 
-export function SVGLogo({ render, name, logoColor } : SVGLogoProps) : ComponentNode<SVGLogoProps> {
+export function SVGLogo({ render, name, alt, logoColor } : SVGLogoProps) : ComponentNode<SVGLogoProps> {
     return (
         <SVG
             svg={ render() }
-            alt={ name }
+            alt={ alt || capitalizeFirstLetter(name) }
             class={ `${ LOGO_CLASS.LOGO } ${ LOGO_CLASS.LOGO }-${ name } ${ logoColor ? `${ LOGO_CLASS.LOGO_COLOR }-${ logoColor }` : '' }` }
         />
     );
@@ -53,9 +54,8 @@ export type SVGCardLogoProps = {|
 export function SVGCardLogo({ render, name } : SVGCardLogoProps) : ComponentNode<SVGCardLogoProps> {
     return (
         <SVG
-
             svg={ render() }
-            alt={ name }
+            alt={ capitalizeFirstLetter(name) }
             class={ `${ LOGO_CLASS.CARD } ${ LOGO_CLASS.CARD }-${ name }` }
         />
     );

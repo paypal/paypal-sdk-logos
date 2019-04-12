@@ -34,6 +34,7 @@ export function PayPalLogo({ logoColor } : { logoColor : $Values<typeof LOGO_COL
         <SVGLogo
 
             name={ LOGO.PAYPAL }
+            alt='PayPal'
             logoColor={ logoColor }
             render={ () => (
                 <svg width="100" height="32" viewBox="0 0 100 32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet">
@@ -55,6 +56,7 @@ export function PPLogo({ logoColor } : { logoColor : $Values<typeof LOGO_COLOR> 
         <SVGLogo
 
             name={ LOGO.PP }
+            alt='PP'
             logoColor={ logoColor }
             render={ () => {
                 if (logoColor === LOGO_COLOR.BLUE) {
