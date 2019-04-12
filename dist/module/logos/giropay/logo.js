@@ -12,6 +12,10 @@ var LOGO_COLORS = (_LOGO_COLORS = {}, _LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
   primary: '#ffffff',
   secondary: '#ffffff',
   tertiary: '#ffffff'
+}, _LOGO_COLORS[LOGO_COLOR.BLACK] = {
+  primary: '#333030',
+  secondary: '#333030',
+  tertiary: '#333030'
 }, _LOGO_COLORS);
 export function GiropayLogo(_ref) {
   var logoColor = _ref.logoColor;

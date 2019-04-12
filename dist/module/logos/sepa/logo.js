@@ -10,6 +10,9 @@ var LOGO_COLORS = (_LOGO_COLORS = {}, _LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
 }, _LOGO_COLORS[LOGO_COLOR.WHITE] = {
   main: '#FFFFFF',
   card: '#FFFFFF'
+}, _LOGO_COLORS[LOGO_COLOR.BLACK] = {
+  main: '#333030',
+  card: '#333030'
 }, _LOGO_COLORS);
 export function SepaLogo(_ref) {
   var logoColor = _ref.logoColor;

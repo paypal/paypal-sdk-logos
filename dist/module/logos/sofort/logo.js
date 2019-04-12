@@ -8,6 +8,8 @@ var LOGO_COLORS = (_LOGO_COLORS = {}, _LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
   primary: '#000000'
 }, _LOGO_COLORS[LOGO_COLOR.WHITE] = {
   primary: '#ffffff'
+}, _LOGO_COLORS[LOGO_COLOR.BLACK] = {
+  primary: '#333030'
 }, _LOGO_COLORS);
 export function SofortLogo(_ref) {
   var logoColor = _ref.logoColor;

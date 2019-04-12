@@ -10,6 +10,8 @@ var LOGO_COLORS = (_LOGO_COLORS = {}, _LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
   primary: '#3D93CE'
 }, _LOGO_COLORS[LOGO_COLOR.WHITE] = {
   primary: '#ffffff'
+}, _LOGO_COLORS[LOGO_COLOR.BLACK] = {
+  primary: '#333030'
 }, _LOGO_COLORS);
 export function VenmoLogo(_ref) {
   var logoColor = _ref.logoColor;
