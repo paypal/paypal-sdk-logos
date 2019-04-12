@@ -17,6 +17,9 @@ const LOGO_COLORS : LogoColorMap = {
     },
     [ LOGO_COLOR.WHITE ]: {
         primary:   '#ffffff'
+    },
+    [ LOGO_COLOR.BLACK ]: {
+        primary:   '#333030'
     }
 };
 

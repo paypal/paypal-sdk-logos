@@ -15,6 +15,10 @@ const LOGO_COLORS : LogoColorMap = {
     [ LOGO_COLOR.WHITE ]: {
         primary:   '#ffffff',
         secondary: '#ffffff'
+    },
+    [ LOGO_COLOR.BLACK ]: {
+        primary:   '#333030',
+        secondary: '#333030'
     }
 };
 

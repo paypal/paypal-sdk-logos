@@ -15,6 +15,10 @@ const LOGO_COLORS : LogoColorMap = {
     [ LOGO_COLOR.WHITE ]: {
         main: '#FFFFFF',
         card: '#FFFFFF'
+    },
+    [ LOGO_COLOR.BLACK ]: {
+        main: '#333030',
+        card: '#333030'
     }
 };
 
