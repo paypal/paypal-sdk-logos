@@ -22,13 +22,14 @@ const LOGO_COLORS : LogoColorMap = {
     }
 };
 
-export function MybankLogo({ logoColor } : { logoColor : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
+export function MybankLogo({ logoColor, ...props } : { logoColor : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
 
     const { primary, secondary } = getLogoColors(LOGO.MYBANK, LOGO_COLORS, logoColor);
 
     return (
         <SVGLogo
 
+            { ...props }
             name={ LOGO.MYBANK }
             logoColor={ logoColor }
             render={ () => {

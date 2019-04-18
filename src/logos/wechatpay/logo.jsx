@@ -22,13 +22,14 @@ const LOGO_COLORS : LogoColorMap = {
     }
 };
 
-export function WechatpayLogo({ logoColor } : { logoColor : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
+export function WechatpayLogo({ logoColor, ...props } : { logoColor : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
 
     const { primary, secondary } = getLogoColors(LOGO.WECHATPAY, LOGO_COLORS, logoColor);
 
     return (
         <SVGLogo
 
+            { ...props }
             name={ LOGO.WECHATPAY }
             logoColor={ logoColor }
             render={ () => {

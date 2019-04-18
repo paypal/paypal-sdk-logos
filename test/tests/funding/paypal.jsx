@@ -67,6 +67,20 @@ describe('paypal logo rendering happy cases', () => {
 
         validateSVG(logoHTML);
     });
+
+    it('should render the paypal logo in blue with a custom prop', () => {
+        const logo = (
+            <PayPalLogo logoColor={ LOGO_COLOR.BLUE } importance={ 5 } />
+        );
+
+        const logoHTML = logo.render(html());
+
+        if (logoHTML.indexOf('importance="5"') === -1) {
+            throw new Error(`Expected paypal tag to contain importance="5", got ${ logoHTML }`);
+        }
+
+        validateSVG(logoHTML);
+    });
 });
 
 describe('paypal logo rendering error cases', () => {

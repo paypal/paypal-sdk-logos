@@ -26,13 +26,14 @@ const LOGO_COLORS : LogoColorMap = {
     }
 };
 
-export function IdealLogo({ logoColor } : { logoColor : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
+export function IdealLogo({ logoColor, ...props } : { logoColor : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
 
     const { primary, secondary, tertiary } = getLogoColors(LOGO.IDEAL, LOGO_COLORS, logoColor);
 
     return (
         <SVGLogo
 
+            { ...props }
             name={ LOGO.IDEAL }
             render={ () => {
                 return (

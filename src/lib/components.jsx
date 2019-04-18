@@ -36,9 +36,10 @@ export type SVGLogoProps = {|
     logoColor? : $Values<typeof LOGO_COLOR>
 |};
 
-export function SVGLogo({ render, name, alt, logoColor } : SVGLogoProps) : ComponentNode<SVGLogoProps> {
+export function SVGLogo({ render, name, alt, logoColor, ...props } : SVGLogoProps) : ComponentNode<SVGLogoProps> {
     return (
         <SVG
+            { ...props }
             svg={ render() }
             alt={ alt || capitalizeFirstLetter(name) }
             class={ `${ LOGO_CLASS.LOGO } ${ LOGO_CLASS.LOGO }-${ name } ${ logoColor ? `${ LOGO_CLASS.LOGO_COLOR }-${ logoColor }` : '' }` }
@@ -51,9 +52,10 @@ export type SVGCardLogoProps = {|
     name : string
 |};
 
-export function SVGCardLogo({ render, name } : SVGCardLogoProps) : ComponentNode<SVGCardLogoProps> {
+export function SVGCardLogo({ render, name, ...props } : SVGCardLogoProps) : ComponentNode<SVGCardLogoProps> {
     return (
         <SVG
+            { ...props }
             svg={ render() }
             alt={ capitalizeFirstLetter(name) }
             class={ `${ LOGO_CLASS.CARD } ${ LOGO_CLASS.CARD }-${ name }` }

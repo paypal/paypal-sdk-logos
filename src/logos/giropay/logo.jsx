@@ -25,13 +25,14 @@ const LOGO_COLORS : LogoColorMap = {
     }
 };
 
-export function GiropayLogo({ logoColor } : { logoColor : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
+export function GiropayLogo({ logoColor, ...props } : { logoColor : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
 
     const { primary, secondary, tertiary } = getLogoColors(LOGO.GIROPAY, LOGO_COLORS, logoColor);
 
     return (
         <SVGLogo
 
+            { ...props }
             name={ LOGO.GIROPAY }
             logoColor={ logoColor }
             render={ () => {

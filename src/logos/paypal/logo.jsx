@@ -26,13 +26,14 @@ const LOGO_COLORS : LogoColorMap = {
     }
 };
 
-export function PayPalLogo({ logoColor } : { logoColor : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
+export function PayPalLogo({ logoColor, ...props } : { logoColor : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
 
     const { primary, secondary } = getLogoColors(LOGO.PAYPAL, LOGO_COLORS, logoColor);
 
     return (
         <SVGLogo
-
+            { ...props }
+            { ...props }
             name={ LOGO.PAYPAL }
             alt='PayPal'
             logoColor={ logoColor }
@@ -50,11 +51,12 @@ export function PayPalLogo({ logoColor } : { logoColor : $Values<typeof LOGO_COL
     );
 }
 
-export function PPLogo({ logoColor } : { logoColor : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
+export function PPLogo({ logoColor, ...props } : { logoColor : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
 
     return (
         <SVGLogo
-
+            { ...props }
+            { ...props }
             name={ LOGO.PP }
             alt='PP'
             logoColor={ logoColor }

@@ -19,13 +19,14 @@ const LOGO_COLORS : LogoColorMap = {
     }
 };
 
-export function SofortLogo({ logoColor } : { logoColor : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
+export function SofortLogo({ logoColor, ...props } : { logoColor : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
 
     const { primary } = getLogoColors(LOGO.SOFORT, LOGO_COLORS, logoColor);
 
     return (
         <SVGLogo
 
+            { ...props }
             name={ LOGO.SOFORT }
             logoColor={ logoColor }
             render={ () => {

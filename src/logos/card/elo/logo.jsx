@@ -6,10 +6,11 @@ import { CARD } from '@paypal/sdk-constants/src';
 
 import { SVGCardLogo, type SVGCardLogoProps } from '../../../lib';
 
-export function EloLogo() : ComponentNode<SVGCardLogoProps> {
+export function EloLogo({ ...props } : { [string] : mixed } = {}) : ComponentNode<SVGCardLogoProps> {
     return (
         <SVGCardLogo
 
+            { ...props }
             name={ CARD.ELO }
             render={ () => {
                 return (

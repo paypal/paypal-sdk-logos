@@ -22,13 +22,14 @@ const LOGO_COLORS : LogoColorMap = {
     }
 };
 
-export function SepaLogo({ logoColor } : { logoColor : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
+export function SepaLogo({ logoColor, ...props } : { logoColor : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
 
     const { main, card } = getLogoColors(LOGO.SEPA, LOGO_COLORS, logoColor);
 
     return (
         <SVGLogo
 
+            { ...props }
             name={ LOGO.SEPA }
             logoColor={ logoColor }
             render={ () => {

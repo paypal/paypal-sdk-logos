@@ -22,13 +22,14 @@ const LOGO_COLORS : LogoColorMap = {
     }
 };
 
-export function BancontactLogo({ logoColor } : { logoColor : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
+export function BancontactLogo({ logoColor, ...props } : { logoColor : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
 
     const { primary, secondary } = getLogoColors(LOGO.BANCONTACT, LOGO_COLORS, logoColor);
 
     return (
         <SVGLogo
 
+            { ...props }
             name={ LOGO.BANCONTACT }
             logoColor={ logoColor }
             render={ () => {

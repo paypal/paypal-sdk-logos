@@ -6,10 +6,11 @@ import { CARD } from '@paypal/sdk-constants/src';
 
 import { SVGCardLogo, type SVGCardLogoProps } from '../../../lib';
 
-export function VisaLogo() : ComponentNode<SVGCardLogoProps> {
+export function VisaLogo({ ...props } : { [string] : mixed } = {}) : ComponentNode<SVGCardLogoProps> {
     return (
         <SVGCardLogo
 
+            { ...props }
             name={ CARD.VISA }
             render={ () => {
                 return (

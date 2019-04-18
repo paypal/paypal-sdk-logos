@@ -23,13 +23,14 @@ const LOGO_COLORS : LogoColorMap = {
     }
 };
 
-export function VenmoLogo({ logoColor } : { logoColor : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
+export function VenmoLogo({ logoColor, ...props } : { logoColor : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
 
     const { primary } = getLogoColors(LOGO.SOFORT, LOGO_COLORS, logoColor);
 
     return (
         <SVGLogo
 
+            { ...props }
             name={ LOGO.VENMO }
             logoColor={ logoColor }
             render={ () => {

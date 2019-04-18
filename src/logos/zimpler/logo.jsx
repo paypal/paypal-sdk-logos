@@ -19,12 +19,13 @@ const LOGO_COLORS : LogoColorMap = {
     }
 };
 
-export function ZimplerLogo({ logoColor } : { logoColor : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
+export function ZimplerLogo({ logoColor, ...props } : { logoColor : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
 
     const { primary } = getLogoColors(LOGO.ZIMPLER, LOGO_COLORS, logoColor);
 
     return (
         <SVGLogo
+            { ...props }
             name={ LOGO.ZIMPLER }
             logoColor={ logoColor }
             render={ () => {
