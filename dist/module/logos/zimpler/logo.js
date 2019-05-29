@@ -1,3 +1,6 @@
+import _extends from "@babel/runtime/helpers/esm/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/esm/objectWithoutPropertiesLoose";
+
 var _LOGO_COLORS;
 
 /** @jsx node */
@@ -12,12 +15,13 @@ var LOGO_COLORS = (_LOGO_COLORS = {}, _LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
   primary: '#333030'
 }, _LOGO_COLORS);
 export function ZimplerLogo(_ref) {
-  var logoColor = _ref.logoColor;
+  var logoColor = _ref.logoColor,
+      props = _objectWithoutPropertiesLoose(_ref, ["logoColor"]);
 
   var _getLogoColors = getLogoColors(LOGO.ZIMPLER, LOGO_COLORS, logoColor),
       primary = _getLogoColors.primary;
 
-  return node(SVGLogo, {
+  return node(SVGLogo, _extends({}, props, {
     name: LOGO.ZIMPLER,
     logoColor: logoColor,
     render: function render() {
@@ -39,5 +43,5 @@ export function ZimplerLogo(_ref) {
         d: "m 1.0778133,2.4638268 c 0.6835111,0 1.3287556,-0.5401484 1.4332889,-1.2033255 C 2.6153244,0.59732422 2.1502133,0.05748568 1.4670133,0.04787891 c -0.68351108,0 -1.32875552,0.54014843 -1.43328886,1.20332549 -0.11386666,0.672474 0.35124445,1.2126224 1.04408886,1.2126224"
       }))));
     }
-  });
+  }));
 }

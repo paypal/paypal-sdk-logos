@@ -1,9 +1,14 @@
+import _extends from "@babel/runtime/helpers/esm/extends";
+
 /** @jsx node */
 import { node } from 'jsx-pragmatic/src';
 import { CARD } from '@paypal/sdk-constants/src';
 import { SVGCardLogo } from '../../../lib';
-export function EloLogo() {
-  return node(SVGCardLogo, {
+export function EloLogo(_temp) {
+  var _ref = _temp === void 0 ? {} : _temp,
+      props = _extends({}, _ref);
+
+  return node(SVGCardLogo, _extends({}, props, {
     name: CARD.ELO,
     render: function render() {
       return node("svg", {
@@ -46,5 +51,5 @@ export function EloLogo() {
         fill: "rgb(255, 255, 255)"
       })));
     }
-  });
+  }));
 }

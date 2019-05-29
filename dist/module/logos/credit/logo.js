@@ -1,3 +1,6 @@
+import _extends from "@babel/runtime/helpers/esm/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/esm/objectWithoutPropertiesLoose";
+
 var _LOGO_COLORS;
 
 /** @jsx node */
@@ -16,13 +19,14 @@ var LOGO_COLORS = (_LOGO_COLORS = {}, _LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
 }, _LOGO_COLORS);
 export function CreditLogo(_ref) {
   var logoColor = _ref.logoColor,
-      locale = _ref.locale;
+      locale = _ref.locale,
+      props = _objectWithoutPropertiesLoose(_ref, ["logoColor", "locale"]);
 
   var _getLogoColors = getLogoColors(LOGO.CREDIT, LOGO_COLORS, logoColor),
       primary = _getLogoColors.primary;
 
   var country = locale.country;
-  return node(SVGLogo, {
+  return node(SVGLogo, _extends({}, props, {
     name: LOGO.CREDIT,
     logoColor: logoColor,
     render: function render() {
@@ -71,5 +75,5 @@ export function CreditLogo(_ref) {
           }));
       }
     }
-  });
+  }));
 }

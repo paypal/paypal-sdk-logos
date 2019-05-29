@@ -1,9 +1,14 @@
+import _extends from "@babel/runtime/helpers/esm/extends";
+
 /** @jsx node */
 import { node } from 'jsx-pragmatic/src';
 import { CARD } from '@paypal/sdk-constants/src';
 import { SVGCardLogo } from '../../../lib';
-export function JcbLogo() {
-  return node(SVGCardLogo, {
+export function JcbLogo(_temp) {
+  var _ref = _temp === void 0 ? {} : _temp,
+      props = _extends({}, _ref);
+
+  return node(SVGCardLogo, _extends({}, props, {
     name: CARD.JCB,
     render: function render() {
       return node("svg", {
@@ -193,5 +198,5 @@ export function JcbLogo() {
         id: "g6386"
       })));
     }
-  });
+  }));
 }

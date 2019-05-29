@@ -1,3 +1,6 @@
+import _extends from "@babel/runtime/helpers/esm/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/esm/objectWithoutPropertiesLoose";
+
 var _LOGO_COLORS;
 
 /** @jsx node */
@@ -15,13 +18,14 @@ var LOGO_COLORS = (_LOGO_COLORS = {}, _LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
   card: '#333030'
 }, _LOGO_COLORS);
 export function SepaLogo(_ref) {
-  var logoColor = _ref.logoColor;
+  var logoColor = _ref.logoColor,
+      props = _objectWithoutPropertiesLoose(_ref, ["logoColor"]);
 
   var _getLogoColors = getLogoColors(LOGO.SEPA, LOGO_COLORS, logoColor),
       main = _getLogoColors.main,
       card = _getLogoColors.card;
 
-  return node(SVGLogo, {
+  return node(SVGLogo, _extends({}, props, {
     name: LOGO.SEPA,
     logoColor: logoColor,
     render: function render() {
@@ -92,5 +96,5 @@ export function SepaLogo(_ref) {
         points: "161.7,217.2 210.9,217.2 209.9,213.3 161.7,213.3 113.6,213.3 112.5,217.2 \t\t"
       })));
     }
-  });
+  }));
 }

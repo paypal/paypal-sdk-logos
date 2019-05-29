@@ -1,3 +1,6 @@
+import _extends from "@babel/runtime/helpers/esm/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/esm/objectWithoutPropertiesLoose";
+
 var _LOGO_COLORS;
 
 /** @jsx node */
@@ -18,13 +21,14 @@ var LOGO_COLORS = (_LOGO_COLORS = {}, _LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
   secondary: '#636363'
 }, _LOGO_COLORS);
 export function PayPalLogo(_ref) {
-  var logoColor = _ref.logoColor;
+  var logoColor = _ref.logoColor,
+      props = _objectWithoutPropertiesLoose(_ref, ["logoColor"]);
 
   var _getLogoColors = getLogoColors(LOGO.PAYPAL, LOGO_COLORS, logoColor),
       primary = _getLogoColors.primary,
       secondary = _getLogoColors.secondary;
 
-  return node(SVGLogo, {
+  return node(SVGLogo, _extends({}, props, props, {
     name: LOGO.PAYPAL,
     alt: "PayPal",
     logoColor: logoColor,
@@ -55,11 +59,13 @@ export function PayPalLogo(_ref) {
         d: "M 95.1 5.417 L 91.9 25.717 C 91.8 26.117 92.1 26.417 92.5 26.417 L 95.7 26.417 C 96.2 26.417 96.7 26.017 96.8 25.517 L 100 5.617 C 100.1 5.217 99.8 4.917 99.4 4.917 L 95.8 4.917 C 95.4 4.917 95.2 5.117 95.1 5.417 Z"
       }));
     }
-  });
+  }));
 }
 export function PPLogo(_ref2) {
-  var logoColor = _ref2.logoColor;
-  return node(SVGLogo, {
+  var logoColor = _ref2.logoColor,
+      props = _objectWithoutPropertiesLoose(_ref2, ["logoColor"]);
+
+  return node(SVGLogo, _extends({}, props, props, {
     name: LOGO.PP,
     alt: "PP",
     logoColor: logoColor,
@@ -150,5 +156,5 @@ export function PPLogo(_ref2) {
 
       throw new Error("No " + logoColor + " paypal logo available");
     }
-  });
+  }));
 }

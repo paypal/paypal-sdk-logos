@@ -1,3 +1,6 @@
+import _extends from "@babel/runtime/helpers/esm/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/esm/objectWithoutPropertiesLoose";
+
 var _LOGO_COLORS;
 
 /** @jsx node */
@@ -18,14 +21,15 @@ var LOGO_COLORS = (_LOGO_COLORS = {}, _LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
   tertiary: '#333030'
 }, _LOGO_COLORS);
 export function IdealLogo(_ref) {
-  var logoColor = _ref.logoColor;
+  var logoColor = _ref.logoColor,
+      props = _objectWithoutPropertiesLoose(_ref, ["logoColor"]);
 
   var _getLogoColors = getLogoColors(LOGO.IDEAL, LOGO_COLORS, logoColor),
       primary = _getLogoColors.primary,
       secondary = _getLogoColors.secondary,
       tertiary = _getLogoColors.tertiary;
 
-  return node(SVGLogo, {
+  return node(SVGLogo, _extends({}, props, {
     name: LOGO.IDEAL,
     render: function render() {
       return node("svg", {
@@ -101,5 +105,5 @@ export function IdealLogo(_ref) {
         id: "Fill-28"
       })));
     }
-  });
+  }));
 }

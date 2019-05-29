@@ -1,3 +1,6 @@
+import _extends from "@babel/runtime/helpers/esm/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/esm/objectWithoutPropertiesLoose";
+
 var _LOGO_COLORS;
 
 /** @jsx node */
@@ -12,12 +15,13 @@ var LOGO_COLORS = (_LOGO_COLORS = {}, _LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
   primary: '#333030'
 }, _LOGO_COLORS);
 export function SofortLogo(_ref) {
-  var logoColor = _ref.logoColor;
+  var logoColor = _ref.logoColor,
+      props = _objectWithoutPropertiesLoose(_ref, ["logoColor"]);
 
   var _getLogoColors = getLogoColors(LOGO.SOFORT, LOGO_COLORS, logoColor),
       primary = _getLogoColors.primary;
 
-  return node(SVGLogo, {
+  return node(SVGLogo, _extends({}, props, {
     name: LOGO.SOFORT,
     logoColor: logoColor,
     render: function render() {
@@ -66,5 +70,5 @@ export function SofortLogo(_ref) {
         d: "M440,74.9c-7.1,0-12.9,5.8-12.9,12.9c0,7.1,5.8,12.9,12.9,12.9c7.1,0,12.9-5.8,12.9-12.9C452.9,80.6,447.1,74.9,440,74.9z"
       }));
     }
-  });
+  }));
 }

@@ -27,19 +27,23 @@ export function SVGLogo(_ref) {
   var render = _ref.render,
       name = _ref.name,
       alt = _ref.alt,
-      logoColor = _ref.logoColor;
-  return node(SVG, {
+      logoColor = _ref.logoColor,
+      props = _objectWithoutPropertiesLoose(_ref, ["render", "name", "alt", "logoColor"]);
+
+  return node(SVG, _extends({}, props, {
     svg: render(),
     alt: alt || capitalizeFirstLetter(name),
     class: LOGO_CLASS.LOGO + " " + LOGO_CLASS.LOGO + "-" + name + " " + (logoColor ? LOGO_CLASS.LOGO_COLOR + "-" + logoColor : '')
-  });
+  }));
 }
 export function SVGCardLogo(_ref2) {
   var render = _ref2.render,
-      name = _ref2.name;
-  return node(SVG, {
+      name = _ref2.name,
+      props = _objectWithoutPropertiesLoose(_ref2, ["render", "name"]);
+
+  return node(SVG, _extends({}, props, {
     svg: render(),
     alt: capitalizeFirstLetter(name),
     class: LOGO_CLASS.CARD + " " + LOGO_CLASS.CARD + "-" + name
-  });
+  }));
 }

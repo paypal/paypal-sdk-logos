@@ -1,3 +1,6 @@
+import _extends from "@babel/runtime/helpers/esm/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/esm/objectWithoutPropertiesLoose";
+
 var _LOGO_COLORS;
 
 /** @jsx node */
@@ -15,13 +18,14 @@ var LOGO_COLORS = (_LOGO_COLORS = {}, _LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
   secondary: '#333030'
 }, _LOGO_COLORS);
 export function WechatpayLogo(_ref) {
-  var logoColor = _ref.logoColor;
+  var logoColor = _ref.logoColor,
+      props = _objectWithoutPropertiesLoose(_ref, ["logoColor"]);
 
   var _getLogoColors = getLogoColors(LOGO.WECHATPAY, LOGO_COLORS, logoColor),
       primary = _getLogoColors.primary,
       secondary = _getLogoColors.secondary;
 
-  return node(SVGLogo, {
+  return node(SVGLogo, _extends({}, props, {
     name: LOGO.WECHATPAY,
     logoColor: logoColor,
     render: function render() {
@@ -72,5 +76,5 @@ export function WechatpayLogo(_ref) {
         fill: secondary
       })))));
     }
-  });
+  }));
 }
