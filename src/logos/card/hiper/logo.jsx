@@ -6,7 +6,7 @@ import { CARD } from '@paypal/sdk-constants/src';
 
 import { SVGCardLogo, type SVGCardLogoProps } from '../../../lib';
 
-export function HiperLogo({ ...props } : { [string] : mixed } = {}) : ComponentNode<SVGCardLogoProps> {
+export function HiperLogo({ ...props } : { [string] : string } = {}) : ComponentNode<SVGCardLogoProps> {
     return (
         <SVGCardLogo
 
