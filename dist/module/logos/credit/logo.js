@@ -49,7 +49,7 @@ export function CreditLogo(_ref) {
 
         default:
           return node("svg", {
-            width: "100",
+            width: "95",
             height: "32",
             viewBox: "0 0 95 32",
             preserveAspectRatio: "xMinYMin meet",

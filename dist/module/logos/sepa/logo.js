@@ -18,7 +18,8 @@ var LOGO_COLORS = (_LOGO_COLORS = {}, _LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
   card: '#333030'
 }, _LOGO_COLORS);
 export function SepaLogo(_ref) {
-  var logoColor = _ref.logoColor,
+  var _ref$logoColor = _ref.logoColor,
+      logoColor = _ref$logoColor === void 0 ? LOGO_COLOR.DEFAULT : _ref$logoColor,
       props = _objectWithoutPropertiesLoose(_ref, ["logoColor"]);
 
   var _getLogoColors = getLogoColors(LOGO.SEPA, LOGO_COLORS, logoColor),

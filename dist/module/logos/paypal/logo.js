@@ -21,7 +21,8 @@ var LOGO_COLORS = (_LOGO_COLORS = {}, _LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
   secondary: '#636363'
 }, _LOGO_COLORS);
 export function PayPalLogo(_ref) {
-  var logoColor = _ref.logoColor,
+  var _ref$logoColor = _ref.logoColor,
+      logoColor = _ref$logoColor === void 0 ? LOGO_COLOR.DEFAULT : _ref$logoColor,
       props = _objectWithoutPropertiesLoose(_ref, ["logoColor"]);
 
   var _getLogoColors = getLogoColors(LOGO.PAYPAL, LOGO_COLORS, logoColor),
@@ -62,7 +63,8 @@ export function PayPalLogo(_ref) {
   }));
 }
 export function PPLogo(_ref2) {
-  var logoColor = _ref2.logoColor,
+  var _ref2$logoColor = _ref2.logoColor,
+      logoColor = _ref2$logoColor === void 0 ? LOGO_COLOR.DEFAULT : _ref2$logoColor,
       props = _objectWithoutPropertiesLoose(_ref2, ["logoColor"]);
 
   return node(SVGLogo, _extends({}, props, props, {
@@ -70,7 +72,7 @@ export function PPLogo(_ref2) {
     alt: "PP",
     logoColor: logoColor,
     render: function render() {
-      if (logoColor === LOGO_COLOR.BLUE) {
+      if (logoColor === LOGO_COLOR.BLUE || logoColor === LOGO_COLOR.DEFAULT) {
         return node("svg", {
           width: "24",
           height: "32",
