@@ -22,7 +22,7 @@ const LOGO_COLORS : LogoColorMap = {
     }
 };
 
-export function P24Logo({ logoColor, ...props } : { logoColor : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
+export function P24Logo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : { logoColor? : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
 
     const { primary, secondary } = getLogoColors(LOGO.P24, LOGO_COLORS, logoColor);
 

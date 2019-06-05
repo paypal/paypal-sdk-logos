@@ -26,7 +26,7 @@ const LOGO_COLORS : LogoColorMap = {
     }
 };
 
-export function PayPalLogo({ logoColor, ...props } : { logoColor : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
+export function PayPalLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : { logoColor? : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
 
     const { primary, secondary } = getLogoColors(LOGO.PAYPAL, LOGO_COLORS, logoColor);
 
@@ -51,7 +51,7 @@ export function PayPalLogo({ logoColor, ...props } : { logoColor : $Values<typeo
     );
 }
 
-export function PPLogo({ logoColor, ...props } : { logoColor : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
+export function PPLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : { logoColor? : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
 
     return (
         <SVGLogo
@@ -61,7 +61,7 @@ export function PPLogo({ logoColor, ...props } : { logoColor : $Values<typeof LO
             alt='PP'
             logoColor={ logoColor }
             render={ () => {
-                if (logoColor === LOGO_COLOR.BLUE) {
+                if (logoColor === LOGO_COLOR.BLUE || logoColor === LOGO_COLOR.DEFAULT) {
                     return (
                         <svg width="24" height="32" viewBox="0 0 24 32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet">
                             <path fill="#009cde" d="M 20.905 9.5 C 21.185 7.4 20.905 6 19.782 4.7 C 18.564 3.3 16.411 2.6 13.697 2.6 L 5.739 2.6 C 5.271 2.6 4.71 3.1 4.615 3.6 L 1.339 25.8 C 1.339 26.2 1.62 26.7 2.088 26.7 L 6.956 26.7 L 6.675 28.9 C 6.581 29.3 6.862 29.6 7.236 29.6 L 11.356 29.6 C 11.825 29.6 12.292 29.3 12.386 28.8 L 12.386 28.5 L 13.228 23.3 L 13.228 23.1 C 13.322 22.6 13.79 22.2 14.258 22.2 L 14.821 22.2 C 18.845 22.2 21.935 20.5 22.871 15.5 C 23.339 13.4 23.153 11.7 22.029 10.5 C 21.748 10.1 21.279 9.8 20.905 9.5 L 20.905 9.5" />

@@ -22,7 +22,7 @@ const LOGO_COLORS : LogoColorMap = {
     }
 };
 
-export function EpsLogo({ logoColor, ...props } : { logoColor : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
+export function EpsLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : { logoColor? : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
     
     const { primary, secondary } = getLogoColors(LOGO.EPS, LOGO_COLORS, logoColor);
 
