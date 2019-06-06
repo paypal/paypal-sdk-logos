@@ -13,4 +13,4 @@ import './sepa';
 import './sofort';
 import './wechatpay';
 import './zimpler';
-
+import './itau';

@@ -4,6 +4,7 @@ export const LOGO = {
     PP:         ('pp' : 'pp'),
     PAYPAL:     ('paypal' : 'paypal'),
     VENMO:      ('venmo' : 'venmo'),
+    ITAU:       ('itau' : 'itau'),
     CREDIT:     ('credit' : 'credit'),
     IDEAL:      ('ideal' : 'ideal'),
     ELV:        ('elv' : 'elv'),
