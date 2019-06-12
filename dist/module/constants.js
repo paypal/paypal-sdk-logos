@@ -2,6 +2,7 @@ export var LOGO = {
   PP: 'pp',
   PAYPAL: 'paypal',
   VENMO: 'venmo',
+  ITAU: 'itau',
   CREDIT: 'credit',
   IDEAL: 'ideal',
   ELV: 'elv',
