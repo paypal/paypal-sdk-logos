@@ -12,5 +12,6 @@ export * from './paypal';
 export * from './sepa';
 export * from './sofort';
 export * from './venmo';
+export * from './itau';
 export * from './wechatpay';
 export * from './zimpler';
