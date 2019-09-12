@@ -14,7 +14,9 @@ export var LOGO = {
   MYBANK: 'mybank',
   P24: 'p24',
   ZIMPLER: 'zimpler',
-  WECHATPAY: 'wechatpay'
+  WECHATPAY: 'wechatpay',
+  PAYU: 'payu',
+  VERKKOPANKKI: 'verkkopankki'
 };
 export var LOGO_COLOR = {
   BLUE: 'blue',

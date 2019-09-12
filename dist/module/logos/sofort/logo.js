@@ -8,7 +8,7 @@ import { node } from 'jsx-pragmatic/src';
 import { SVGLogo, getLogoColors } from '../../lib';
 import { LOGO_COLOR, LOGO } from '../../constants';
 var LOGO_COLORS = (_LOGO_COLORS = {}, _LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
-  primary: '#000000',
+  primary: '#FFFFFF',
   secondary: '#EB6F93'
 }, _LOGO_COLORS[LOGO_COLOR.WHITE] = {
   primary: '#ffffff',
