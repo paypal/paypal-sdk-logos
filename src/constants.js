@@ -18,7 +18,9 @@ export const LOGO = {
     ZIMPLER:      ('zimpler' : 'zimpler'),
     WECHATPAY:    ('wechatpay' : 'wechatpay'),
     PAYU:         ('payu' : 'payu'),
-    VERKKOPANKKI: ('verkkopankki' : 'verkkopankki')
+    VERKKOPANKKI: ('verkkopankki' : 'verkkopankki'),
+    BLIK:         ('blik' : 'blik'),
+    TRUSTLY:      ('trustly' : 'trustly')
 };
 
 export const LOGO_COLOR = {
