@@ -15,13 +15,13 @@ const LOGO_COLORS : LogoColorMap = {
     },
     [ LOGO_COLOR.WHITE ]: {
         primary:   '#ffffff',
-        secondary: '#000000',
-        tertiary:  '#2C2E2F'
+        secondary: '#ffffff',
+        tertiary:  '#ffffff'
     },
     [ LOGO_COLOR.BLACK ]: {
-        primary:    '#FFFFFF',
-        secondary:  '#003A7D',
-        tertiary:   '#ED1C24'
+        primary:   '#333030',
+        secondary: '#333030',
+        tertiary:  '#333030'
     }
 };
 

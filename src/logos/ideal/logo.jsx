@@ -16,13 +16,13 @@ const LOGO_COLORS : LogoColorMap = {
     },
     [ LOGO_COLOR.WHITE ]: {
         primary:   '#ffffff',
-        secondary: '#B4B4B4',
+        secondary: '#ffffff',
         tertiary:  '#ffffff'
     },
     [ LOGO_COLOR.BLACK ]: {
-        primary:   '#000000',
-        secondary: '#B4B4B4',
-        tertiary:  '#000000'
+        primary:   '#333030',
+        secondary: '#333030',
+        tertiary:  '#333030'
     }
 };
 
@@ -63,7 +63,6 @@ export function IdealLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : { logoC
                             <path d="M19.7677267,0.385376935 L19.7677267,5.23162564 L22.7464104,5.23162564 L22.7464104,5.908404 L18.8963882,5.908404 L18.8963882,0.385376935 L19.7677267,0.385376935 Z M18.5722461,0.0631015253 L18.5722461,6.23067941 L23.0706173,6.23067941 L23.0706173,4.90935023 L20.0919337,4.90935023 L20.0919337,0.0631015253 L18.5722461,0.0631015253 Z" id="Fill-28" />
                         </g>
                     </svg>
-                    
                 );
             } }
         />
