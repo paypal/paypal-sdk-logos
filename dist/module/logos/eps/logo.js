@@ -14,8 +14,8 @@ var LOGO_COLORS = (_LOGO_COLORS = {}, _LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
   primary: '#ffffff',
   secondary: '#ffffff'
 }, _LOGO_COLORS[LOGO_COLOR.BLACK] = {
-  primary: '#333030',
-  secondary: '#333030'
+  primary: '#71706F',
+  secondary: '#C8036F'
 }, _LOGO_COLORS);
 export function EpsLogo(_ref) {
   var _ref$logoColor = _ref.logoColor,

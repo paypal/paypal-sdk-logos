@@ -11,11 +11,11 @@ var LOGO_COLORS = (_LOGO_COLORS = {}, _LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
   primary: '#FFFFFF',
   secondary: '#EB6F93'
 }, _LOGO_COLORS[LOGO_COLOR.WHITE] = {
-  primary: '#ffffff',
+  primary: '#2C2E2F',
   secondary: '#ffffff'
 }, _LOGO_COLORS[LOGO_COLOR.BLACK] = {
-  primary: '#333030',
-  secondary: '#333030'
+  primary: '#EB6F93',
+  secondary: '#FFFFFF'
 }, _LOGO_COLORS);
 export function SofortLogo(_ref) {
   var _ref$logoColor = _ref.logoColor,
