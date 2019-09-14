@@ -15,19 +15,19 @@ var LOGO_COLORS = (_LOGO_COLORS = {}, _LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
   quinary: '#4E4E4E',
   senary: '#1B4482'
 }, _LOGO_COLORS[LOGO_COLOR.WHITE] = {
-  primary: '#000000',
-  secondary: '#000000',
-  tertiary: '#FFFFFF',
-  quaternary: '#FFFFFF',
-  quinary: '#000000',
-  senary: '#000000'
-}, _LOGO_COLORS[LOGO_COLOR.BLACK] = {
   primary: '#FFFFFF',
   secondary: '#FFFFFF',
-  tertiary: '#000000',
-  quaternary: '#000000',
+  tertiary: '#FFFFFF',
+  quaternary: '#FFFFFF',
   quinary: '#FFFFFF',
   senary: '#FFFFFF'
+}, _LOGO_COLORS[LOGO_COLOR.BLACK] = {
+  primary: '#333030',
+  secondary: '#333030',
+  tertiary: '#333030',
+  quaternary: '#333030',
+  quinary: '#333030',
+  senary: '#333030'
 }, _LOGO_COLORS);
 export function VerkkopankkiLogo(_ref) {
   var _ref$logoColor = _ref.logoColor,

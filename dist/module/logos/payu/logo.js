@@ -13,15 +13,15 @@ var LOGO_COLORS = (_LOGO_COLORS = {}, _LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
   tertiary: '#6CC62E',
   quaternary: '#278D30'
 }, _LOGO_COLORS[LOGO_COLOR.WHITE] = {
+  primary: '#ffffff',
+  secondary: '#ffffff',
+  tertiary: '#ffffff',
+  quaternary: '#ffffff'
+}, _LOGO_COLORS[LOGO_COLOR.BLACK] = {
   primary: '#333030',
   secondary: '#333030',
-  tertiary: '#ffffff',
+  tertiary: '#333030',
   quaternary: '#333030'
-}, _LOGO_COLORS[LOGO_COLOR.BLACK] = {
-  primary: '#FFFFFF',
-  secondary: '#FFFFFF',
-  tertiary: '#000000',
-  quaternary: '#FFFFFF'
 }, _LOGO_COLORS);
 export function PayuLogo(_ref) {
   var _ref$logoColor = _ref.logoColor,
