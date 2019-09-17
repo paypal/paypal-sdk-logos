@@ -14,12 +14,12 @@ const LOGO_COLORS : LogoColorMap = {
         secondary:  '#64CC07'
     },
     [ LOGO_COLOR.WHITE ]: {
-        primary:    '#000000',
-        secondary:  '#000000'
-    },
-    [ LOGO_COLOR.BLACK ]: {
         primary:    '#FFFFFF',
         secondary:  '#FFFFFF'
+    },
+    [ LOGO_COLOR.BLACK ]: {
+        primary:    '#000000',
+        secondary:  '#000000'
     }
 };
 
