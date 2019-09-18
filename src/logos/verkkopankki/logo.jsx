@@ -19,11 +19,11 @@ const LOGO_COLORS : LogoColorMap = {
     [ LOGO_COLOR.WHITE ]: {
 
         primary:    '#FFFFFF',
-        secondary:  '#FFFFFF',
-        tertiary:   '#000000',
-        quaternary: '#000000',
-        quinary:    '#FFFFFF',
-        senary:     '#FFFFFF'
+        secondary:  '#CACCC8',
+        tertiary:   '#2D59A1',
+        quaternary: '#1F3364',
+        quinary:    '#4E4E4E',
+        senary:     '#1B4482'
     },
     [ LOGO_COLOR.BLACK ]: {
         primary:    '#000000',
