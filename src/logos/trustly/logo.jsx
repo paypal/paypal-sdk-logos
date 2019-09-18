@@ -25,7 +25,7 @@ const LOGO_COLORS : LogoColorMap = {
 
 export function TrustlyLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : { logoColor? : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
 
-    const { primary, secondary  } = getLogoColors(LOGO.VERKKOPANKKI, LOGO_COLORS, logoColor);
+    const { primary, secondary  } = getLogoColors(LOGO.TRUSTLY, LOGO_COLORS, logoColor);
 
     return (
         <SVGLogo
