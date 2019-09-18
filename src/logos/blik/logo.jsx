@@ -18,20 +18,20 @@ const LOGO_COLORS : LogoColorMap = {
         senary:     '#FFFFFF'
     },
     [ LOGO_COLOR.WHITE ]: {
-        primary:    '#000000',
-        secondary:  '#000000',
-        tertiary:   '#FFFFFF',
-        quaternary: '#FFFFFF',
-        quinary:    '#FFFFFF',
-        senary:     '#FFFFFF'
-    },
-    [ LOGO_COLOR.BLACK ]: {
         primary:    '#FFFFFF',
         secondary:  '#FFFFFF',
         tertiary:   '#000000',
         quaternary: '#000000',
         quinary:    '#000000',
         senary:     '#000000'
+    },
+    [ LOGO_COLOR.BLACK ]: {
+        primary:    '#4D4D4F',
+        secondary:  '#000000',
+        tertiary:   '#FF0000',
+        quaternary: '#E83E49',
+        quinary:    '#FF00FF',
+        senary:     '#FFFFFF'
     }
 };
 

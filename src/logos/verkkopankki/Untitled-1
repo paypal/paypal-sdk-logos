@@ -1,0 +1,34 @@
+window.paypal.Button.render({
+
+env: 'sandbox',
+client : {
+    sandbox:'abcd'
+},
+            commit: true,
+
+            style: {
+                layout: 'vertical',
+                color:'black'
+            },
+            locale: 'en_PL',
+ payment: function(data, actions) {
+                // Make a call to the REST api to create the payment
+                return actions.payment.create({
+                    payment: {
+                        transactions: [
+                            {
+                                amount: { total: '0.01', currency: 'USD' }
+                            }
+                        ]
+                    }
+                });
+            },
+            funding: {
+                allowed: [ window.paypal.FUNDING.BLIK ]
+            },
+            onAuthorize() {
+                throw new Error('Expected onAuthorize to not be called');
+            },
+
+        }, '#paypal-button');
+
