@@ -16,7 +16,10 @@ export var LOGO = {
   ZIMPLER: 'zimpler',
   WECHATPAY: 'wechatpay',
   PAYU: 'payu',
-  VERKKOPANKKI: 'verkkopankki'
+  VERKKOPANKKI: 'verkkopankki',
+  OXXO: 'oxxo',
+  BOLETO: 'boleto',
+  MAXIMA: 'maxima'
 };
 export var LOGO_COLOR = {
   BLUE: 'blue',
