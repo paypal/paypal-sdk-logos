@@ -19,6 +19,8 @@ export const LOGO = {
     WECHATPAY:    ('wechatpay' : 'wechatpay'),
     PAYU:         ('payu' : 'payu'),
     VERKKOPANKKI: ('verkkopankki' : 'verkkopankki'),
+    BLIK:         ('blik' : 'blik'),
+    TRUSTLY:      ('trustly' : 'trustly'),
     OXXO:         ('oxxo' : 'oxxo'),
     BOLETO:       ('boleto' : 'boleto'),
     MAXIMA:       ('maxima' : 'maxima')

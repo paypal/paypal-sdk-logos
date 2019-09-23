@@ -15,15 +15,15 @@ const LOGO_COLORS : LogoColorMap = {
         quaternary: '#278D30'
     },
     [ LOGO_COLOR.WHITE ]: {
-        primary:    '#ffffff',
-        secondary:  '#ffffff',
-        tertiary:   '#ffffff',
-        quaternary: '#ffffff'
+        primary:    '#FFFFFF',
+        secondary:  '#FFFFFF',
+        tertiary:   '#000000',
+        quaternary: '#FFFFFF'
     },
     [ LOGO_COLOR.BLACK ]: {
         primary:    '#333030',
         secondary:  '#333030',
-        tertiary:   '#333030',
+        tertiary:   '#ffffff',
         quaternary: '#333030'
     }
 };
