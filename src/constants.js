@@ -20,7 +20,10 @@ export const LOGO = {
     PAYU:         ('payu' : 'payu'),
     VERKKOPANKKI: ('verkkopankki' : 'verkkopankki'),
     BLIK:         ('blik' : 'blik'),
-    TRUSTLY:      ('trustly' : 'trustly')
+    TRUSTLY:      ('trustly' : 'trustly'),
+    OXXO:         ('oxxo' : 'oxxo'),
+    BOLETO:       ('boleto' : 'boleto'),
+    MAXIMA:       ('maxima' : 'maxima')
 };
 
 export const LOGO_COLOR = {

@@ -15,3 +15,6 @@ export * from './wechatpay';
 export * from './zimpler';
 export * from './payu';
 export * from './verkkopankki';
+export * from './oxxo';
+export * from './boleto';
+export * from './maxima';
