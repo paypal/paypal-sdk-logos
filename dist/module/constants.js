@@ -17,6 +17,8 @@ export var LOGO = {
   WECHATPAY: 'wechatpay',
   PAYU: 'payu',
   VERKKOPANKKI: 'verkkopankki',
+  BLIK: 'blik',
+  TRUSTLY: 'trustly',
   OXXO: 'oxxo',
   BOLETO: 'boleto',
   MAXIMA: 'maxima'

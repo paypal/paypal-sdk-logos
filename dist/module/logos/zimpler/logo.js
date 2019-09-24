@@ -12,7 +12,7 @@ var LOGO_COLORS = (_LOGO_COLORS = {}, _LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
 }, _LOGO_COLORS[LOGO_COLOR.WHITE] = {
   primary: '#FFFFFF'
 }, _LOGO_COLORS[LOGO_COLOR.BLACK] = {
-  primary: '#333030'
+  primary: '#00A599'
 }, _LOGO_COLORS);
 export function ZimplerLogo(_ref) {
   var _ref$logoColor = _ref.logoColor,
