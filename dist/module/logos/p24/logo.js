@@ -14,8 +14,8 @@ var LOGO_COLORS = (_LOGO_COLORS = {}, _LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
   primary: '#ffffff',
   secondary: '#ffffff'
 }, _LOGO_COLORS[LOGO_COLOR.BLACK] = {
-  primary: '#333030',
-  secondary: '#333030'
+  primary: '#d03238',
+  secondary: '#b3b1b1'
 }, _LOGO_COLORS);
 export function P24Logo(_ref) {
   var _ref$logoColor = _ref.logoColor,

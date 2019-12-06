@@ -28,16 +28,6 @@ describe('paypal logo rendering happy cases', () => {
         validateSVG(logoHTML);
     });
 
-    it('should render the pp logo in black', () => {
-        const logo = (
-            <PPLogo logoColor={ LOGO_COLOR.BLACK } />
-        );
-
-        const logoHTML = logo.render(html());
-
-        validateSVG(logoHTML);
-    });
-
     it('should render the paypal logo in white', () => {
         const logo = (
             <PayPalLogo logoColor={ LOGO_COLOR.WHITE } />
@@ -51,16 +41,6 @@ describe('paypal logo rendering happy cases', () => {
     it('should render the paypal logo in blue', () => {
         const logo = (
             <PayPalLogo logoColor={ LOGO_COLOR.BLUE } />
-        );
-
-        const logoHTML = logo.render(html());
-
-        validateSVG(logoHTML);
-    });
-
-    it('should render the paypal logo in black', () => {
-        const logo = (
-            <PayPalLogo logoColor={ LOGO_COLOR.BLACK } />
         );
 
         const logoHTML = logo.render(html());

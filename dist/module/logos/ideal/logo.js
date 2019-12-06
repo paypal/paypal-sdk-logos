@@ -16,9 +16,9 @@ var LOGO_COLORS = (_LOGO_COLORS = {}, _LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
   secondary: '#ffffff',
   tertiary: '#ffffff'
 }, _LOGO_COLORS[LOGO_COLOR.BLACK] = {
-  primary: '#333030',
-  secondary: '#333030',
-  tertiary: '#333030'
+  primary: '#000000',
+  secondary: '#FFFFFF',
+  tertiary: '#CD0067'
 }, _LOGO_COLORS);
 export function IdealLogo(_ref) {
   var _ref$logoColor = _ref.logoColor,

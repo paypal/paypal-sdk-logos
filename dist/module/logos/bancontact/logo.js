@@ -14,8 +14,8 @@ var LOGO_COLORS = (_LOGO_COLORS = {}, _LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
   primary: '#ffffff',
   secondary: '#ffffff'
 }, _LOGO_COLORS[LOGO_COLOR.BLACK] = {
-  primary: '#333030',
-  secondary: '#333030'
+  primary: '#005498',
+  secondary: '#FFD800'
 }, _LOGO_COLORS);
 export function BancontactLogo(_ref) {
   var _ref$logoColor = _ref.logoColor,
