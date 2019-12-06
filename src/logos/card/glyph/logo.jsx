@@ -7,12 +7,12 @@ import { SVGCardLogo, type SVGCardLogoProps } from '../../../lib';
 
 export function GlyphCard({
     ...props
-}: { [string]: string } = {}): ComponentNode<SVGCardLogoProps> {
+} : { [string] : string } = {}) : ComponentNode<SVGCardLogoProps> {
     return (
         <SVGCardLogo
-            {...props}
+            { ...props }
             name=""
-            render={() => {
+            render={ () => {
                 return (
                     <svg width="24px" height="18px" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg">
                         <g
@@ -32,7 +32,7 @@ export function GlyphCard({
                         </g>
                     </svg>
                 );
-            }}
+            } }
         />
     );
 }
