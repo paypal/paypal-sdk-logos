@@ -22,7 +22,7 @@ const LOGO_COLORS : LogoColorMap = {
     }
 };
 
-export function MaximaLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : { logoColor? : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
+export function MaximaLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : {| logoColor? : $Values<typeof LOGO_COLOR> |}) : ComponentNode<SVGLogoProps> {
 
     const { primary, secondary } = getLogoColors(LOGO.MAXIMA, LOGO_COLORS, logoColor);
 

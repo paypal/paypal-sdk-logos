@@ -35,7 +35,7 @@ const LOGO_COLORS : LogoColorMap = {
     }
 };
 
-export function BlikLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : { logoColor? : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
+export function BlikLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : {| logoColor? : $Values<typeof LOGO_COLOR> |}) : ComponentNode<SVGLogoProps> {
 
     const { primary, secondary, tertiary, quaternary, quinary, senary  } = getLogoColors(LOGO.BLIK, LOGO_COLORS, logoColor);
 

@@ -22,7 +22,7 @@ const LOGO_COLORS : LogoColorMap = {
     }
 };
 
-export function BoletoLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : { logoColor? : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
+export function BoletoLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : {| logoColor? : $Values<typeof LOGO_COLOR> |}) : ComponentNode<SVGLogoProps> {
 
     const { primary, secondary } = getLogoColors(LOGO.BOLETO, LOGO_COLORS, logoColor);
 

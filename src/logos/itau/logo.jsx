@@ -23,7 +23,7 @@ const LOGO_COLORS : LogoColorMap = {
     }
 };
 
-export function ItauLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : { logoColor? : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
+export function ItauLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : {| logoColor? : $Values<typeof LOGO_COLOR> |}) : ComponentNode<SVGLogoProps> {
 
     const { primary } = getLogoColors(LOGO.SOFORT, LOGO_COLORS, logoColor);
 
@@ -52,7 +52,7 @@ export function ItauLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : { logoCo
                             fill={ primary } d="M95.2,16.1c0,0-7.6-2-10,3c-1.3,2.8-0.7,5.7,0.8,7.3c0.7,0.7,1.6,1.2,2.6,1.5c2,0.6,5.4,0.4,6.5-0.2l-0.4-2.8
                             c0,0-3.4,1.1-5.2-0.6c-2.2-2.2-0.2-5.7,2.1-5.7c2.3,0,3.1,0.4,3.1,0.4L95.2,16.1z" />
                         <rect
-                            fill={ primary } x="42.3" y="11.7"  width="3.9" height="16.3" />
+                            fill={ primary } x="42.3" y="11.7" width="3.9" height="16.3" />
                         <path
                             fill={ primary } d="M55.7,18.7v-3h-2.1v-4.1h-3.9v4.1h-2v3h2v6.2c0,1.7,1.3,3,3,3l0,0h3.1v-3h-1.1c-0.7,0-1.1-0.5-1.1-1.1l0,0v-5.2
                             L55.7,18.7L55.7,18.7z" />
@@ -100,7 +100,7 @@ export function ItauLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : { logoCo
                             <path
                                 fill="#231F20"  d="M2.2,49L8.5,9.4c0.1-1.1,1.1-1.9,2.2-1.9h16c5.5,0,9.8,1.2,12.2,3.9c1.2,1.4,1.9,3,2.2,4.8
                                 c0.4-3.6-0.2-6.1-2.2-8.4c-2.4-2.8-6.7-4-12.2-4h-16c-1.1,0-2.1,0.8-2.3,1.9L1.8,47.9C1.8,48.3,1.9,48.7,2.2,49z" />
-                            <path fill="#231F20"  d="M12.5,53.2l-0.1,0.6c-0.1,0.4,0.1,0.8,0.4,1.1l0.3-1.7C13.1,53.2,12.5,53.2,12.5,53.2z" />
+                            <path fill="#231F20" d="M12.5,53.2l-0.1,0.6c-0.1,0.4,0.1,0.8,0.4,1.1l0.3-1.7C13.1,53.2,12.5,53.2,12.5,53.2z" />
                         </g>
                         <rect fill={ primary } x="35.5" y="6.7" width="1.1" height="21.5" />
                     </svg>
