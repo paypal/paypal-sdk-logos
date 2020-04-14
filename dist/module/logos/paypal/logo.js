@@ -19,7 +19,8 @@ var PAYPAL_LOGO_COLORS = (_PAYPAL_LOGO_COLORS = {}, _PAYPAL_LOGO_COLORS[LOGO_COL
 }, _PAYPAL_LOGO_COLORS[LOGO_COLOR.BLACK] = {
   primary: '#333030',
   secondary: '#636363'
-}, _PAYPAL_LOGO_COLORS);
+}, _PAYPAL_LOGO_COLORS); // eslint-disable-next-line flowtype/require-exact-type
+
 export function PayPalLogo(_ref) {
   var _ref$logoColor = _ref.logoColor,
       logoColor = _ref$logoColor === void 0 ? LOGO_COLOR.DEFAULT : _ref$logoColor,
@@ -77,7 +78,8 @@ var PP_LOGO_COLORS = (_PP_LOGO_COLORS = {}, _PP_LOGO_COLORS[LOGO_COLOR.DEFAULT] 
   secondary: '#ffffff',
   secondaryOpacity: '0.7',
   tertiary: '#ffffff'
-}, _PP_LOGO_COLORS);
+}, _PP_LOGO_COLORS); // eslint-disable-next-line flowtype/require-exact-type
+
 export function PPLogo(_ref2) {
   var _ref2$logoColor = _ref2.logoColor,
       logoColor = _ref2$logoColor === void 0 ? LOGO_COLOR.DEFAULT : _ref2$logoColor,
