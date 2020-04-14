@@ -25,7 +25,8 @@ const LOGO_COLORS : LogoColorMap = {
     }
 };
 
-export function OxxoLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : {| logoColor? : $Values<typeof LOGO_COLOR> |}) : ComponentNode<SVGLogoProps> {
+// eslint-disable-next-line flowtype/require-exact-type
+export function OxxoLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : { logoColor? : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
 
     const { primary, secondary } = getLogoColors(LOGO.OXXO, LOGO_COLORS, logoColor);
 

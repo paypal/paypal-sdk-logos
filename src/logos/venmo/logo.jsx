@@ -23,7 +23,8 @@ const LOGO_COLORS : LogoColorMap = {
     }
 };
 
-export function VenmoLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : {| logoColor? : $Values<typeof LOGO_COLOR> |}) : ComponentNode<SVGLogoProps> {
+// eslint-disable-next-line flowtype/require-exact-type
+export function VenmoLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : { logoColor? : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
 
     const { primary } = getLogoColors(LOGO.SOFORT, LOGO_COLORS, logoColor);
 

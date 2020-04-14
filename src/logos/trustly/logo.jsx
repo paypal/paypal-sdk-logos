@@ -23,7 +23,8 @@ const LOGO_COLORS : LogoColorMap = {
     }
 };
 
-export function TrustlyLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : {| logoColor? : $Values<typeof LOGO_COLOR> |}) : ComponentNode<SVGLogoProps> {
+// eslint-disable-next-line flowtype/require-exact-type
+export function TrustlyLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : { logoColor? : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
 
     const { primary, secondary  } = getLogoColors(LOGO.TRUSTLY, LOGO_COLORS, logoColor);
 

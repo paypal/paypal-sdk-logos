@@ -26,7 +26,8 @@ const LOGO_COLORS : LogoColorMap = {
     }
 };
 
-export function IdealLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : {| logoColor? : $Values<typeof LOGO_COLOR> |}) : ComponentNode<SVGLogoProps> {
+// eslint-disable-next-line flowtype/require-exact-type
+export function IdealLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : { logoColor? : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
 
     const { primary, secondary, tertiary } = getLogoColors(LOGO.IDEAL, LOGO_COLORS, logoColor);
 
