@@ -64,7 +64,6 @@ export function GiropayLogo(_ref) {
         id: "mask-2",
         fill: secondary
       }, node("polygon", {
-        id: "",
         points: "0 0.017902439 46.0918699 0.017902439 46.0918699 19.8373984 0 19.8373984",
         transform: "matrix(1, 0, 0, 1, 0, 0)"
       })), node("g", {
@@ -86,7 +85,6 @@ export function GiropayLogo(_ref) {
         id: "mask-4",
         fill: secondary
       }, node("polygon", {
-        id: "",
         points: "0 19.9821138 46.0918699 19.9821138 46.0918699 0.162601626 0 0.162601626",
         transform: "matrix(1, 0, 0, 1, 0, 0)"
       })), node("g", {

@@ -79,7 +79,6 @@ export function MybankLogo(_ref) {
         id: "mask-2",
         fill: "white"
       }, node("polygon", {
-        id: "",
         points: "3.086436e-05 0.00960615385 42.6159033 0.00960615385 42.6159033 24 3.086436e-05 24",
         transform: "matrix(1, 0, 0, 1, 0, 0)"
       })), node("g", {

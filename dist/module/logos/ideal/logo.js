@@ -57,7 +57,6 @@ export function IdealLogo(_ref) {
         id: "mask-2",
         fill: tertiary
       }, node("polygon", {
-        id: "",
         points: "39.1898554 33.9678282 0 33.9678282 0 0.001572704 39.1898554 0.001572704",
         transform: "matrix(1, 0, 0, 1, 0, 0)"
       })), node("g", {
