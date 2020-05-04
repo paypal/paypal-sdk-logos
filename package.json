@@ -1,6 +1,6 @@
 {
   "name": "@paypal/sdk-logos",
-  "version": "1.0.22",
+  "version": "1.0.23",
   "description": "JSX/SVG logos for PayPal.",
   "main": "index.js",
   "scripts": {
