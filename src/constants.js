@@ -3,6 +3,7 @@
 export const LOGO = {
     PP:           ('pp' : 'pp'),
     PAYPAL:       ('paypal' : 'paypal'),
+    CARD:         ('card' : 'card'),
     VENMO:        ('venmo' : 'venmo'),
     ITAU:         ('itau' : 'itau'),
     CREDIT:       ('credit' : 'credit'),
