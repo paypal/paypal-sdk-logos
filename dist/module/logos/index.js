@@ -1,4 +1,5 @@
 export * from './bancontact';
+export * from './bank';
 export * from './card';
 export * from './credit';
 export * from './eps';
