@@ -25,7 +25,8 @@ export const LOGO = {
     TRUSTLY:      ('trustly' : 'trustly'),
     OXXO:         ('oxxo' : 'oxxo'),
     BOLETO:       ('boleto' : 'boleto'),
-    MAXIMA:       ('maxima' : 'maxima')
+    MAXIMA:       ('maxima' : 'maxima'),
+    MERCADOPAGO:  ('mercadopago' : 'mercadopago')
 };
 
 export const LOGO_COLOR = {
