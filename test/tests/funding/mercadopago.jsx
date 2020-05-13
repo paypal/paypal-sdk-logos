@@ -17,9 +17,6 @@ describe('Mercado Pago white logo rendering happy cases', () => {
 
         validateSVG(logoHTML);
     });
-});
-
-describe('Mercado Pago black logo rendering happy cases', () => {
 
     it('should render the Mercado Pago BLACK logo', () => {
         const logo = (
@@ -30,9 +27,6 @@ describe('Mercado Pago black logo rendering happy cases', () => {
 
         validateSVG(logoHTML);
     });
-});
-
-describe('Mercado Pago no color specified rendering happy cases', () => {
 
     it('should render the Mercado Pago DEFAULT logo', () => {
         const logo = (
