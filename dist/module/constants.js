@@ -23,7 +23,8 @@ export var LOGO = {
   TRUSTLY: 'trustly',
   OXXO: 'oxxo',
   BOLETO: 'boleto',
-  MAXIMA: 'maxima'
+  MAXIMA: 'maxima',
+  MERCADOPAGO: 'mercadopago'
 };
 export var LOGO_COLOR = {
   BLUE: 'blue',

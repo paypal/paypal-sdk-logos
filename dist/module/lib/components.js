@@ -26,13 +26,12 @@ export function SVG(props) {
 export function SVGLogo(_ref) {
   var render = _ref.render,
       name = _ref.name,
-      alt = _ref.alt,
       logoColor = _ref.logoColor,
-      props = _objectWithoutPropertiesLoose(_ref, ["render", "name", "alt", "logoColor"]);
+      props = _objectWithoutPropertiesLoose(_ref, ["render", "name", "logoColor"]);
 
   return node(SVG, _extends({}, props, {
     svg: render(),
-    alt: alt || capitalizeFirstLetter(name),
+    alt: "",
     class: LOGO_CLASS.LOGO + " " + LOGO_CLASS.LOGO + "-" + name + " " + (logoColor ? LOGO_CLASS.LOGO_COLOR + "-" + logoColor : '')
   }));
 }
