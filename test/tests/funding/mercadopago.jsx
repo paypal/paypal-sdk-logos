@@ -6,29 +6,9 @@ import { node, html } from 'jsx-pragmatic/src';
 import { MercadoPagoLogo, LOGO_COLOR } from '../../../src';
 import { validateSVG } from '../common';
 
-describe('Mercado Pago white logo rendering happy cases', () => {
+describe('mercado pago logo rendering happy cases', () => {
 
-    it('should render the Mercado Pago WHITE logo', () => {
-        const logo = (
-            <MercadoPagoLogo logoColor={ LOGO_COLOR.WHITE } />
-        );
-
-        const logoHTML = logo.render(html());
-
-        validateSVG(logoHTML);
-    });
-
-    it('should render the Mercado Pago BLACK logo', () => {
-        const logo = (
-            <MercadoPagoLogo logoColor={ LOGO_COLOR.BLACK } />
-        );
-
-        const logoHTML = logo.render(html());
-
-        validateSVG(logoHTML);
-    });
-
-    it('should render the Mercado Pago DEFAULT logo', () => {
+    it('should render the mercado pago logo', () => {
         const logo = (
             <MercadoPagoLogo />
         );
@@ -37,11 +17,21 @@ describe('Mercado Pago white logo rendering happy cases', () => {
 
         validateSVG(logoHTML);
     });
+
+    it('should render the mercado pago white logo', () => {
+        const logo = (
+            <MercadoPagoLogo logoColor={ LOGO_COLOR.WHITE } />
+        );
+
+        const logoHTML = logo.render(html());
+
+        validateSVG(logoHTML);
+    });
 });
 
-describe('Mercado Pago logo rendering error cases', () => {
+describe('mercado pago logo rendering error cases', () => {
 
-    it('should error while rendering the Mercado Pago logo with an invalid color', () => {
+    it('should error while rendering the mercado pago logo with an invalid color', () => {
 
         let error;
 
