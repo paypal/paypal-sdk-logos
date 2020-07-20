@@ -1,6 +1,10 @@
 PayPal SDK Logos
 ----------------
 
+[![npm version](https://img.shields.io/npm/v/@paypal/sdk-logos.svg?style=flat-square)](https://www.npmjs.com/package/@paypal/sdk-logos) [![build status](https://img.shields.io/travis/paypal/paypal-sdk-logos/master.svg?style=flat-square)](https://travis-ci.org/paypal/paypal-sdk-logos)
+
+[![dependencies Status](https://david-dm.org/paypal/paypal-sdk-logos/status.svg)](https://david-dm.org/paypal/paypal-sdk-logos) [![devDependencies Status](https://david-dm.org/paypal/paypal-sdk-logos/dev-status.svg)](https://david-dm.org/paypal/paypal-sdk-logos?type=dev)
+
 Logos for PayPal SDKs. 
 
 ### Render using JSX with HTML
