@@ -47,9 +47,9 @@
   ],
   "readmeFilename": "README.md",
   "devDependencies": {
-    "flow-bin": "^0.100.0",
-    "grumbler-scripts": "^3",
-    "mocha": "^4"
+    "flow-bin": "0.100.0",
+    "grumbler-scripts": "3.0.70",
+    "mocha": "4.1.0"
   },
   "dependencies": {
     "@paypal/sdk-constants": "^1.0.11",
