@@ -33,6 +33,7 @@ export function PayPalLogo(_ref) {
   return node(SVGLogo, _extends({}, props, props, {
     name: LOGO.PAYPAL,
     alt: "PayPal",
+    "aria-label": "PayPal",
     logoColor: logoColor,
     render: function render() {
       return node("svg", {
@@ -99,6 +100,7 @@ export function PPLogo(_ref2) {
   return node(SVGLogo, _extends({}, props, props, {
     name: LOGO.PP,
     alt: "PP",
+    "aria-label": "PP",
     logoColor: logoColor,
     render: function render() {
       return node("svg", {
