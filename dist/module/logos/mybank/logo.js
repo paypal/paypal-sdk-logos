@@ -16,7 +16,8 @@ var LOGO_COLORS = (_LOGO_COLORS = {}, _LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
 }, _LOGO_COLORS[LOGO_COLOR.BLACK] = {
   primary: '#1A4B67',
   secondary: '#00C0EE'
-}, _LOGO_COLORS);
+}, _LOGO_COLORS); // eslint-disable-next-line flowtype/require-exact-type
+
 export function MybankLogo(_ref) {
   var _ref$logoColor = _ref.logoColor,
       logoColor = _ref$logoColor === void 0 ? LOGO_COLOR.DEFAULT : _ref$logoColor,
@@ -78,7 +79,6 @@ export function MybankLogo(_ref) {
         id: "mask-2",
         fill: "white"
       }, node("polygon", {
-        id: "",
         points: "3.086436e-05 0.00960615385 42.6159033 0.00960615385 42.6159033 24 3.086436e-05 24",
         transform: "matrix(1, 0, 0, 1, 0, 0)"
       })), node("g", {

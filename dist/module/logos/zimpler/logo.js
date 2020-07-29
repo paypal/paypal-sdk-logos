@@ -13,7 +13,8 @@ var LOGO_COLORS = (_LOGO_COLORS = {}, _LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
   primary: '#FFFFFF'
 }, _LOGO_COLORS[LOGO_COLOR.BLACK] = {
   primary: '#00A599'
-}, _LOGO_COLORS);
+}, _LOGO_COLORS); // eslint-disable-next-line flowtype/require-exact-type
+
 export function ZimplerLogo(_ref) {
   var _ref$logoColor = _ref.logoColor,
       logoColor = _ref$logoColor === void 0 ? LOGO_COLOR.DEFAULT : _ref$logoColor,

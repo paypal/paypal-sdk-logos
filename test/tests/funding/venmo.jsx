@@ -18,21 +18,3 @@ describe('venmo logo rendering happy cases', () => {
         validateSVG(logoHTML);
     });
 });
-
-describe('venmo logo rendering error cases', () => {
-
-    it('should error while rendering the venmo logo with an invalid color', () => {
-
-        let error;
-
-        try {
-            (<VenmoLogo logoColor="turquoise" />).render(html());
-        } catch (err) {
-            error = err;
-        }
-        
-        if (!error) {
-            throw new Error(`Expected error to be thrown`);
-        }
-    });
-});

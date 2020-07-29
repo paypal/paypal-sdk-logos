@@ -16,7 +16,8 @@ var LOGO_COLORS = (_LOGO_COLORS = {}, _LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
 }, _LOGO_COLORS[LOGO_COLOR.BLACK] = {
   primary: '#004A91',
   secondary: '#ED1921'
-}, _LOGO_COLORS);
+}, _LOGO_COLORS); // eslint-disable-next-line flowtype/require-exact-type
+
 export function MaximaLogo(_ref) {
   var _ref$logoColor = _ref.logoColor,
       logoColor = _ref$logoColor === void 0 ? LOGO_COLOR.DEFAULT : _ref$logoColor,

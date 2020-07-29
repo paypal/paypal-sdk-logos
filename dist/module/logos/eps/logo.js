@@ -16,7 +16,8 @@ var LOGO_COLORS = (_LOGO_COLORS = {}, _LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
 }, _LOGO_COLORS[LOGO_COLOR.BLACK] = {
   primary: '#71706F',
   secondary: '#C8036F'
-}, _LOGO_COLORS);
+}, _LOGO_COLORS); // eslint-disable-next-line flowtype/require-exact-type
+
 export function EpsLogo(_ref) {
   var _ref$logoColor = _ref.logoColor,
       logoColor = _ref$logoColor === void 0 ? LOGO_COLOR.DEFAULT : _ref$logoColor,
@@ -70,7 +71,6 @@ export function EpsLogo(_ref) {
         id: "mask-2",
         fill: "#ffffff"
       }, node("polygon", {
-        id: "",
         points: "0 0.0330469345 12.6787834 0.0330469345 12.6787834 12.7180364 0 12.7180364",
         transform: "matrix(1, 0, 0, 1, 0, 0)"
       })), node("g", {
@@ -135,7 +135,6 @@ export function EpsLogo(_ref) {
         id: "mask-4",
         fill: "white"
       }, node("polygon", {
-        id: "",
         points: "0.0103575649 0.00128879493 1.81575683 0.00128879493 1.81575683 2.2832981 0.0103575649 2.2832981",
         transform: "matrix(1, 0, 0, 1, 0, 0)"
       })), node("g", {

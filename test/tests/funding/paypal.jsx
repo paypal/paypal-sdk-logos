@@ -62,36 +62,3 @@ describe('paypal logo rendering happy cases', () => {
         validateSVG(logoHTML);
     });
 });
-
-describe('paypal logo rendering error cases', () => {
-
-    it('should error while rendering the pp logo with an invalid color', () => {
-
-        let error;
-
-        try {
-            (<PPLogo logoColor="turquoise" />).render(html());
-        } catch (err) {
-            error = err;
-        }
-        
-        if (!error) {
-            throw new Error(`Expected error to be thrown`);
-        }
-    });
-
-    it('should error while rendering the paypal logo with an invalid color', () => {
-
-        let error;
-
-        try {
-            (<PayPalLogo logoColor="turquoise" />).render(html());
-        } catch (err) {
-            error = err;
-        }
-        
-        if (!error) {
-            throw new Error(`Expected error to be thrown`);
-        }
-    });
-});

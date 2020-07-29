@@ -3,6 +3,8 @@
 export const LOGO = {
     PP:           ('pp' : 'pp'),
     PAYPAL:       ('paypal' : 'paypal'),
+    CARD:         ('card' : 'card'),
+    BANK:         ('bank' : 'bank'),
     VENMO:        ('venmo' : 'venmo'),
     ITAU:         ('itau' : 'itau'),
     CREDIT:       ('credit' : 'credit'),
@@ -23,7 +25,8 @@ export const LOGO = {
     TRUSTLY:      ('trustly' : 'trustly'),
     OXXO:         ('oxxo' : 'oxxo'),
     BOLETO:       ('boleto' : 'boleto'),
-    MAXIMA:       ('maxima' : 'maxima')
+    MAXIMA:       ('maxima' : 'maxima'),
+    MERCADOPAGO:  ('mercadopago' : 'mercadopago')
 };
 
 export const LOGO_COLOR = {

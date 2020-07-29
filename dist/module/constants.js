@@ -1,6 +1,8 @@
 export var LOGO = {
   PP: 'pp',
   PAYPAL: 'paypal',
+  CARD: 'card',
+  BANK: 'bank',
   VENMO: 'venmo',
   ITAU: 'itau',
   CREDIT: 'credit',
@@ -21,7 +23,8 @@ export var LOGO = {
   TRUSTLY: 'trustly',
   OXXO: 'oxxo',
   BOLETO: 'boleto',
-  MAXIMA: 'maxima'
+  MAXIMA: 'maxima',
+  MERCADOPAGO: 'mercadopago'
 };
 export var LOGO_COLOR = {
   BLUE: 'blue',

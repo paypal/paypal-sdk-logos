@@ -19,7 +19,8 @@ var LOGO_COLORS = (_LOGO_COLORS = {}, _LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
   primary: '#000000',
   secondary: '#FFFFFF',
   tertiary: '#CD0067'
-}, _LOGO_COLORS);
+}, _LOGO_COLORS); // eslint-disable-next-line flowtype/require-exact-type
+
 export function IdealLogo(_ref) {
   var _ref$logoColor = _ref.logoColor,
       logoColor = _ref$logoColor === void 0 ? LOGO_COLOR.DEFAULT : _ref$logoColor,
@@ -56,7 +57,6 @@ export function IdealLogo(_ref) {
         id: "mask-2",
         fill: tertiary
       }, node("polygon", {
-        id: "",
         points: "39.1898554 33.9678282 0 33.9678282 0 0.001572704 39.1898554 0.001572704",
         transform: "matrix(1, 0, 0, 1, 0, 0)"
       })), node("g", {

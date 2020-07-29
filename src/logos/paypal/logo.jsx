@@ -26,6 +26,7 @@ const PAYPAL_LOGO_COLORS : LogoColorMap = {
     }
 };
 
+// eslint-disable-next-line flowtype/require-exact-type
 export function PayPalLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : { logoColor? : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
 
     const { primary, secondary } = getLogoColors(LOGO.PAYPAL, PAYPAL_LOGO_COLORS, logoColor);
@@ -36,6 +37,7 @@ export function PayPalLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : { logo
             { ...props }
             name={ LOGO.PAYPAL }
             alt='PayPal'
+            aria-label='PayPal'
             logoColor={ logoColor }
             render={ () => (
                 <svg width="100" height="32" viewBox="0 0 100 32" preserveAspectRatio="xMinYMin meet" xmlns="http://www.w3.org/2000/svg">
@@ -73,6 +75,7 @@ const PP_LOGO_COLORS : LogoColorMap = {
     }
 };
 
+// eslint-disable-next-line flowtype/require-exact-type
 export function PPLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : { logoColor? : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
 
     const {
@@ -88,6 +91,7 @@ export function PPLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : { logoColo
             { ...props }
             name={ LOGO.PP }
             alt='PP'
+            aria-label='PP'
             logoColor={ logoColor }
             render={ () => {
                 return (

@@ -40,22 +40,6 @@ describe('credit logo rendering happy cases', () => {
 });
 
 describe('credit logo rendering error cases', () => {
-
-    it('should error while rendering the credit logo with an invalid color', () => {
-
-        let error;
-
-        try {
-            (<CreditLogo logoColor="turquoise" locale={ getLocale() } />).render(html());
-        } catch (err) {
-            error = err;
-        }
-        
-        if (!error) {
-            throw new Error(`Expected error to be thrown`);
-        }
-    });
-
     it('should error while rendering the credit logo with no locale passed', () => {
 
         let error;

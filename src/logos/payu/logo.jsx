@@ -28,6 +28,7 @@ const LOGO_COLORS : LogoColorMap = {
     }
 };
 
+// eslint-disable-next-line flowtype/require-exact-type
 export function PayuLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : { logoColor? : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
 
     const { primary, secondary, tertiary, quaternary } = getLogoColors(LOGO.P24, LOGO_COLORS, logoColor);
@@ -40,7 +41,7 @@ export function PayuLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : { logoCo
             logoColor={ logoColor }
             render={ () => {
                 return (
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 385.6 192.4"  width="70" height="32" >
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 385.6 192.4" width="70" height="32" >
                         <style type="text/css" />
                         <g>
                             <path
@@ -70,8 +71,8 @@ export function PayuLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : { logoCo
                                     <g >
                                 
                                         <linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="-487.0462" y1="484.3289" x2="-486.0462" y2="484.3289" gradientTransform="matrix(0 146.8947 146.8947 0 -70972.5312 71622.9766)">
-                                            <stop  offset="0" stop-color={ primary } />
-                                            <stop  offset="1" stop-color={ secondary } />
+                                            <stop offset="0" stop-color={ primary } />
+                                            <stop offset="1" stop-color={ secondary } />
                                         </linearGradient>
                                         <path
                                             style="fill:url(#SVGID_3_)" d="M178.3,192.4c-3.9,0-5.1-2.1-5.8-5.6l-0.3-1.5c-0.3-1.6-0.5-3.3,0.4-4.6c0.9-1.2,2.5-1.5,4.9-1.7
@@ -98,8 +99,8 @@ export function PayuLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : { logoCo
                             <g>
                             
                                 <linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="-487.0462" y1="485.4514" x2="-486.0462" y2="485.4514" gradientTransform="matrix(0 146.8947 146.8947 0 -70972.5312 71622.9766)">
-                                    <stop  offset="0" stop-color={ tertiary } />
-                                    <stop  offset="1" stop-color={ quaternary } />
+                                    <stop offset="0" stop-color={ tertiary } />
+                                    <stop offset="1" stop-color={ quaternary } />
                                 </linearGradient>
                                 <path style="fill:url(#SVGID_4_)" d="M345.6,72.6l-11.3,0c-2.5,0-4.5-2-4.5-4.5l0-20h1.6c10.4,0,14.2,1.7,14.2,11.2V72.6" />
                             </g>

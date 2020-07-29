@@ -25,7 +25,7 @@ const LOGO_COLORS : LogoColorMap = {
 };
 
 export function CreditLogo({ logoColor, locale, ...props } :
-    { logoColor : $Values<typeof LOGO_COLOR>, locale : LocaleType }) : ComponentNode<SVGLogoProps> {
+    {| logoColor : $Values<typeof LOGO_COLOR>, locale : LocaleType |}) : ComponentNode<SVGLogoProps> {
 
     const { primary } = getLogoColors(LOGO.CREDIT, LOGO_COLORS, logoColor);
     const { country } = locale;

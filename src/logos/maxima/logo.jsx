@@ -22,6 +22,7 @@ const LOGO_COLORS : LogoColorMap = {
     }
 };
 
+// eslint-disable-next-line flowtype/require-exact-type
 export function MaximaLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : { logoColor? : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
 
     const { primary, secondary } = getLogoColors(LOGO.MAXIMA, LOGO_COLORS, logoColor);

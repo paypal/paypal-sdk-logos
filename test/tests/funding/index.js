@@ -14,3 +14,4 @@ import './sofort';
 import './wechatpay';
 import './zimpler';
 import './itau';
+import './mercadopago';

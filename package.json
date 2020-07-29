@@ -1,6 +1,6 @@
 {
   "name": "@paypal/sdk-logos",
-  "version": "1.0.18",
+  "version": "1.0.27",
   "description": "JSX/SVG logos for PayPal.",
   "main": "index.js",
   "scripts": {
@@ -47,9 +47,9 @@
   ],
   "readmeFilename": "README.md",
   "devDependencies": {
-    "flow-bin": "^0.100.0",
-    "grumbler-scripts": "^3",
-    "mocha": "^4"
+    "flow-bin": "0.100.0",
+    "grumbler-scripts": "3.0.71",
+    "mocha": "8.0.1"
   },
   "dependencies": {
     "@paypal/sdk-constants": "^1.0.11",

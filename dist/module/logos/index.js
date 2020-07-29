@@ -1,4 +1,5 @@
 export * from './bancontact';
+export * from './bank';
 export * from './card';
 export * from './credit';
 export * from './eps';
@@ -20,3 +21,4 @@ export * from './trustly';
 export * from './oxxo';
 export * from './boleto';
 export * from './maxima';
+export * from './mercadopago';
