@@ -9,19 +9,23 @@ import { type LogoColorMap } from '../../types';
 
 const LOGO_COLORS : LogoColorMap = {
     [ LOGO_COLOR.DEFAULT ]: {
-        primary:   '#ED1C24',
-        secondary: '#ffffff',
-        tertiary:  '#003a7d'
+        primary:    '#ED1C24',
+        secondary:  '#ffffff',
+        tertiary:   '#003a7d',
+        quaternary: '#FFFFFF'
     },
     [ LOGO_COLOR.WHITE ]: {
-        primary:   '#ffffff',
-        secondary: '#ffffff',
-        tertiary:  '#ffffff'
+        primary:    '#FFFFFF',
+        secondary:  '#000000',
+        tertiary:   '#FFFFFF',
+        quaternary: '#FFFFFF'
     },
     [ LOGO_COLOR.BLACK ]: {
-        primary:   '#FFFFFF',
-        secondary: '#000000',
-        tertiary:  '#FFFFFF'
+        primary:    '#ED1C24',
+        secondary:  '#FFFFFF',
+        tertiary:   '#003a7d',
+        quaternary: '#FFFFFF'
+
     }
 };
 
@@ -47,7 +51,7 @@ export function GiropayLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : { log
                         <g id="SPB_&amp;_AltPay_NewAssets" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="matrix(1.614571, 0, 0, 1.614571, -161.457123, -256.816772)">
                             <g id="logo-giropay" transform="translate(100.000000, 159.000000)">
                                 <g id="Group-3" transform="translate(0.000000, 0.144715)">
-                                    <mask id="mask-2" fill={  secondary }>
+                                    <mask id="mask-2" fill={  quaternary }>
                                         <polygon id="" points="0 0.017902439 46.0918699 0.017902439 46.0918699 19.8373984 0 19.8373984" transform="matrix(1, 0, 0, 1, 0, 0)" />
                                     </mask>
                                     <g id="Clip-2" />
@@ -55,7 +59,7 @@ export function GiropayLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : { log
                                 </g>
                                 <path d="M1.46738211,3.84021138 L1.46738211,16.3065528 C1.46738211,17.5338699 2.46738211,18.5288293 3.70087805,18.5288293 L24.1036423,18.5288293 L24.1036423,1.61793496 L3.70087805,1.61793496 C2.46738211,1.61793496 1.46738211,2.61289431 1.46738211,3.84021138" id="Fill-4" fill={  secondary } />
                                 <path d="M5.67102439,10.0205528 C5.67102439,9.34152846 6.00582114,8.77730081 6.64663415,8.77730081 C7.42126829,8.77730081 7.74630894,9.39892683 7.74630894,9.95356098 C7.74630894,10.7187642 7.25866667,11.235187 6.64663415,11.235187 C6.13004878,11.235187 5.67102439,10.795187 5.67102439,10.0205528 Z M9.41053659,7.57226016 L7.8515122,7.57226016 L7.8515122,8.47112195 L7.8324878,8.47112195 C7.46907317,7.85908943 6.87606504,7.45746341 6.13964228,7.45746341 C4.59021138,7.45746341 3.8921626,8.56689431 3.8921626,10.0491707 C3.8921626,11.5221789 4.74321951,12.5550244 6.11102439,12.5550244 C6.79964228,12.5550244 7.37346341,12.2872195 7.78468293,11.7038049 L7.80370732,11.7038049 L7.80370732,11.9716098 C7.80370732,12.9472195 7.26826016,13.4158374 6.27362602,13.4158374 C5.55622764,13.4158374 5.11622764,13.2628293 4.59021138,13.0046179 L4.50419512,14.3626667 C4.90582114,14.5060813 5.58500813,14.6782764 6.40744715,14.6782764 C8.41590244,14.6782764 9.41053659,14.0182764 9.41053659,11.9716098 L9.41053659,7.57226016 Z" id="Fill-6" fill={  primary } />
-                                <mask id="mask-4" fill={  secondary }>
+                                <mask id="mask-4" fill={  quaternary }>
                                     <polygon id="" points="0 19.9821138 46.0918699 19.9821138 46.0918699 0.162601626 0 0.162601626" transform="matrix(1, 0, 0, 1, 0, 0)" />
                                 </mask>
                                 <g id="Clip-9" />
