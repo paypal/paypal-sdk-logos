@@ -10,15 +10,18 @@ import { LOGO_COLOR, LOGO } from '../../constants';
 var LOGO_COLORS = (_LOGO_COLORS = {}, _LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
   primary: '#ED1C24',
   secondary: '#ffffff',
-  tertiary: '#003a7d'
+  tertiary: '#003a7d',
+  quaternary: '#FFFFFF'
 }, _LOGO_COLORS[LOGO_COLOR.WHITE] = {
-  primary: '#ffffff',
-  secondary: '#ffffff',
-  tertiary: '#ffffff'
-}, _LOGO_COLORS[LOGO_COLOR.BLACK] = {
   primary: '#FFFFFF',
   secondary: '#000000',
-  tertiary: '#FFFFFF'
+  tertiary: '#FFFFFF',
+  quaternary: '#FFFFFF'
+}, _LOGO_COLORS[LOGO_COLOR.BLACK] = {
+  primary: '#ED1C24',
+  secondary: '#FFFFFF',
+  tertiary: '#003a7d',
+  quaternary: '#FFFFFF'
 }, _LOGO_COLORS); // eslint-disable-next-line flowtype/require-exact-type
 
 export function GiropayLogo(_ref) {
@@ -29,7 +32,8 @@ export function GiropayLogo(_ref) {
   var _getLogoColors = getLogoColors(LOGO.GIROPAY, LOGO_COLORS, logoColor),
       primary = _getLogoColors.primary,
       secondary = _getLogoColors.secondary,
-      tertiary = _getLogoColors.tertiary;
+      tertiary = _getLogoColors.tertiary,
+      quaternary = _getLogoColors.quaternary;
 
   return node(SVGLogo, _extends({}, props, {
     name: LOGO.GIROPAY,
@@ -62,7 +66,7 @@ export function GiropayLogo(_ref) {
         transform: "translate(0.000000, 0.144715)"
       }, node("mask", {
         id: "mask-2",
-        fill: secondary
+        fill: quaternary
       }, node("polygon", {
         points: "0 0.017902439 46.0918699 0.017902439 46.0918699 19.8373984 0 19.8373984",
         transform: "matrix(1, 0, 0, 1, 0, 0)"
@@ -83,7 +87,7 @@ export function GiropayLogo(_ref) {
         fill: primary
       }), node("mask", {
         id: "mask-4",
-        fill: secondary
+        fill: quaternary
       }, node("polygon", {
         points: "0 19.9821138 46.0918699 19.9821138 46.0918699 0.162601626 0 0.162601626",
         transform: "matrix(1, 0, 0, 1, 0, 0)"
