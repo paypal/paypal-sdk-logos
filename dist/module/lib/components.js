@@ -17,11 +17,14 @@ export function SVG(props) {
 
   if (typeof svg !== 'string') {
     throw new TypeError("Expected svg prop to be a string or jsx node");
-  }
+  } // $FlowFixMe
 
-  return node("img", _extends({
+
+  var svgProps = _extends({
     src: svgToBase64(svg)
-  }, otherProps));
+  }, otherProps);
+
+  return node("img", svgProps);
 }
 export function SVGLogo(_ref) {
   var render = _ref.render,
