@@ -24,8 +24,14 @@ export function SVG(props : SVGProps) : ElementNode {
         throw new TypeError(`Expected svg prop to be a string or jsx node`);
     }
 
+    // $FlowFixMe
+    const svgProps = {
+        src: svgToBase64(svg),
+        ...otherProps
+    };
+
     return (
-        <img src={ svgToBase64(svg) } { ...otherProps } />
+        <img { ...svgProps } />
     );
 }
 
