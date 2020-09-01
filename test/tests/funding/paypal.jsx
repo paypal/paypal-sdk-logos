@@ -3,7 +3,7 @@
 
 import { node, html } from 'jsx-pragmatic/src';
 
-import { PPLogo, PayPalLogo, LOGO_COLOR } from '../../../src';
+import { PPLogo, PPMonochrome, PayPalLogo, LOGO_COLOR } from '../../../src';
 import { validateSVG } from '../common';
 
 describe('paypal logo rendering happy cases', () => {
@@ -21,6 +21,16 @@ describe('paypal logo rendering happy cases', () => {
     it('should render the pp logo in blue', () => {
         const logo = (
             <PPLogo logoColor={ LOGO_COLOR.BLUE } />
+        );
+
+        const logoHTML = logo.render(html());
+
+        validateSVG(logoHTML);
+    });
+
+    it('should render the pp monochrome logo', () => {
+        const logo = (
+            <PPMonochrome logoColor={ LOGO_COLOR.MONOCHROME } />
         );
 
         const logoHTML = logo.render(html());

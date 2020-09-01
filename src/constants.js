@@ -30,10 +30,11 @@ export const LOGO = {
 };
 
 export const LOGO_COLOR = {
-    BLUE:    ('blue' : 'blue'),
-    BLACK:   ('black' : 'black'),
-    WHITE:   ('white' : 'white'),
-    DEFAULT: ('default' : 'default')
+    BLUE:       ('blue' : 'blue'),
+    BLACK:      ('black' : 'black'),
+    WHITE:      ('white' : 'white'),
+    MONOCHROME: ('monochrome' : 'monochrome'),
+    DEFAULT:    ('default' : 'default')
 };
 
 export const LOGO_CLASS = {
