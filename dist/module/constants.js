@@ -30,6 +30,7 @@ export var LOGO_COLOR = {
   BLUE: 'blue',
   BLACK: 'black',
   WHITE: 'white',
+  MONOCHROME: 'monochrome',
   DEFAULT: 'default'
 };
 export var LOGO_CLASS = {
