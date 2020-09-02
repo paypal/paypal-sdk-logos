@@ -35,11 +35,12 @@ export function SVG(props : SVGProps) : ElementNode {
     );
 }
 
-export type SVGLogoProps = {|
+// eslint-disable-next-line flowtype/require-exact-type
+export type SVGLogoProps = {
     render : () => ElementNode,
     name : string,
     logoColor? : $Values<typeof LOGO_COLOR>
-|};
+};
 
 export function SVGLogo({ render, name, logoColor, ...props } : SVGLogoProps) : ComponentNode<SVGLogoProps> {
     return (
@@ -52,10 +53,11 @@ export function SVGLogo({ render, name, logoColor, ...props } : SVGLogoProps) : 
     );
 }
 
-export type SVGCardLogoProps = {|
+// eslint-disable-next-line flowtype/require-exact-type
+export type SVGCardLogoProps = {
     render : () => ElementNode,
     name : string
-|};
+};
 
 export function SVGCardLogo({ render, name, ...props } : SVGCardLogoProps) : ComponentNode<SVGCardLogoProps> {
     return (

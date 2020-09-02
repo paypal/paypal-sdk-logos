@@ -45,6 +45,7 @@ describe('credit logo rendering error cases', () => {
         let error;
 
         try {
+            // $FlowFixMe
             (<CreditLogo logoColor={ LOGO_COLOR.WHITE } />).render(html());
         } catch (err) {
             error = err;
