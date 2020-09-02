@@ -25,7 +25,8 @@ export function SVG(props) {
   }, otherProps);
 
   return node("img", svgProps);
-}
+} // eslint-disable-next-line flowtype/require-exact-type
+
 export function SVGLogo(_ref) {
   var render = _ref.render,
       name = _ref.name,
@@ -37,7 +38,8 @@ export function SVGLogo(_ref) {
     alt: "",
     class: LOGO_CLASS.LOGO + " " + LOGO_CLASS.LOGO + "-" + name + " " + (logoColor ? LOGO_CLASS.LOGO_COLOR + "-" + logoColor : '')
   }));
-}
+} // eslint-disable-next-line flowtype/require-exact-type
+
 export function SVGCardLogo(_ref2) {
   var render = _ref2.render,
       name = _ref2.name,
