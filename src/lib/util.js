@@ -3,7 +3,7 @@
 import { LOGO_COLOR } from '../constants';
 import type { LogoColorMap, LogoColors } from '../types';
 
-export function getLogoColors(name : string, logoColorMap : LogoColorMap, logoColor : ?$Values<typeof LOGO_COLOR>) : LogoColors {
+export function getLogoColors(name : string, logoColorMap : LogoColorMap, logoColor? : ?$Values<typeof LOGO_COLOR>) : LogoColors {
     let colors;
 
     if (logoColor) {

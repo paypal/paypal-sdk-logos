@@ -19,7 +19,7 @@ const LOGO_COLORS : LogoColorMap = {
     }
 };
 
-export function GlyphCard({ logoColor, ...props } : { logoColor : $Values<typeof LOGO_COLOR>, [string] : string } = {}) : ComponentNode<SVGCardLogoProps> {
+export function GlyphCard({ logoColor, ...props } : { logoColor? : $Values<typeof LOGO_COLOR>, [string] : string } = {}) : ComponentNode<SVGCardLogoProps> {
     const { primary } = getLogoColors(LOGO.CARD, LOGO_COLORS, logoColor);
     
     return (
