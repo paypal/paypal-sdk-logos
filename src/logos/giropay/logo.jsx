@@ -36,7 +36,6 @@ export function GiropayLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : { log
 
     return (
         <SVGLogo
-
             { ...props }
             name={ LOGO.GIROPAY }
             logoColor={ logoColor }

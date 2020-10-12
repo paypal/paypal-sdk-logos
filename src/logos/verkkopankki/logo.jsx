@@ -42,7 +42,6 @@ export function VerkkopankkiLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : 
 
     return (
         <SVGLogo
-
             { ...props }
             name={ LOGO.VERKKOPANKKI }
             logoColor={ logoColor }

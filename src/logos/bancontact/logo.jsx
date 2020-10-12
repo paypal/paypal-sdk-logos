@@ -29,7 +29,6 @@ export function BancontactLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : { 
 
     return (
         <SVGLogo
-
             { ...props }
             name={ LOGO.BANCONTACT }
             logoColor={ logoColor }

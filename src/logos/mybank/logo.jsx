@@ -29,7 +29,6 @@ export function MybankLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : { logo
 
     return (
         <SVGLogo
-
             { ...props }
             name={ LOGO.MYBANK }
             logoColor={ logoColor }

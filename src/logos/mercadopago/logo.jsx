@@ -35,7 +35,6 @@ export function MercadoPagoLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : {
 
     return (
         <SVGLogo
-
             { ...props }
             name={ LOGO.MERCADOPAGO }
             logoColor={ logoColor }

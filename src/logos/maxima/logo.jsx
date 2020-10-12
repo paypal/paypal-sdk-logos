@@ -29,7 +29,6 @@ export function MaximaLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : { logo
 
     return (
         <SVGLogo
-
             { ...props }
             name={ LOGO.MAXIMA }
             logoColor={ logoColor }

@@ -29,7 +29,6 @@ export function SofortLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : { logo
 
     return (
         <SVGLogo
-
             { ...props }
             name={ LOGO.SOFORT }
             logoColor={ logoColor }

@@ -35,7 +35,6 @@ export function PayuLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : { logoCo
 
     return (
         <SVGLogo
-
             { ...props }
             name={ LOGO.P24 }
             logoColor={ logoColor }

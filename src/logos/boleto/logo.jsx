@@ -29,7 +29,6 @@ export function BoletoLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : { logo
 
     return (
         <SVGLogo
-
             { ...props }
             name={ LOGO.BOLETO }
             logoColor={ logoColor }

@@ -9,7 +9,6 @@ import { SVGCardLogo, type SVGCardLogoProps } from '../../../lib';
 export function JcbLogo({ ...props } : { [string] : string } = {}) : ComponentNode<SVGCardLogoProps> {
     return (
         <SVGCardLogo
-
             { ...props }
             name={ CARD.JCB }
             render={ () => {

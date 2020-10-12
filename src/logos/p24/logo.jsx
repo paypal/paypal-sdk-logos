@@ -29,7 +29,6 @@ export function P24Logo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : { logoCol
 
     return (
         <SVGLogo
-
             { ...props }
             name={ LOGO.P24 }
             logoColor={ logoColor }

@@ -30,7 +30,6 @@ export function VenmoLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : { logoC
 
     return (
         <SVGLogo
-
             { ...props }
             name={ LOGO.VENMO }
             logoColor={ logoColor }

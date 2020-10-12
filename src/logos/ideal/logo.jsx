@@ -33,7 +33,6 @@ export function IdealLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : { logoC
 
     return (
         <SVGLogo
-
             { ...props }
             name={ LOGO.IDEAL }
             render={ () => {

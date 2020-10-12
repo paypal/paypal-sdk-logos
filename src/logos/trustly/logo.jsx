@@ -30,7 +30,6 @@ export function TrustlyLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : { log
 
     return (
         <SVGLogo
-
             { ...props }
             name={ LOGO.TRUSTLY }
             render={ () => {

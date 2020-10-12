@@ -29,7 +29,6 @@ export function WechatpayLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : { l
 
     return (
         <SVGLogo
-
             { ...props }
             name={ LOGO.WECHATPAY }
             logoColor={ logoColor }

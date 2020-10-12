@@ -29,7 +29,6 @@ export function EpsLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : { logoCol
 
     return (
         <SVGLogo
-
             { ...props }
             name={ LOGO.EPS }
             logoColor={ logoColor }

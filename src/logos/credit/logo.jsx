@@ -32,7 +32,6 @@ export function CreditLogo({ logoColor, locale, ...props } :
 
     return (
         <SVGLogo
-
             { ...props }
             name={ LOGO.CREDIT }
             logoColor={ logoColor }

@@ -10,7 +10,6 @@ export function AmexLogo({ ...props } : { [string] : string } = {}) : ComponentN
 
     return (
         <SVGCardLogo
-
             { ...props }
             name={ CARD.AMEX }
             render={ () => {

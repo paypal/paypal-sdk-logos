@@ -9,7 +9,6 @@ import { SVGCardLogo, type SVGCardLogoProps } from '../../../lib';
 export function VisaLogo({ ...props } : { [string] : string } = {}) : ComponentNode<SVGCardLogoProps> {
     return (
         <SVGCardLogo
-
             { ...props }
             name={ CARD.VISA }
             render={ () => {
