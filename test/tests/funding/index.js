@@ -1,5 +1,6 @@
 /* @flow */
 
+import './applepay';
 import './paypal';
 import './credit';
 import './venmo';

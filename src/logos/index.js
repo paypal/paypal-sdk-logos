@@ -1,5 +1,6 @@
 /* @flow */
 
+export * from './applepay';
 export * from './bancontact';
 export * from './bank';
 export * from './card';

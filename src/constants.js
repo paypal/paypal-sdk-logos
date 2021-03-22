@@ -6,6 +6,7 @@ export const LOGO = {
     CARD:         ('card' : 'card'),
     BANK:         ('bank' : 'bank'),
     VENMO:        ('venmo' : 'venmo'),
+    APPLEPAY:     ('applepay' : 'applepay'),
     ITAU:         ('itau' : 'itau'),
     CREDIT:       ('credit' : 'credit'),
     IDEAL:        ('ideal' : 'ideal'),
