@@ -4,6 +4,7 @@ export var LOGO = {
   CARD: 'card',
   BANK: 'bank',
   VENMO: 'venmo',
+  APPLEPAY: 'applepay',
   ITAU: 'itau',
   CREDIT: 'credit',
   IDEAL: 'ideal',
