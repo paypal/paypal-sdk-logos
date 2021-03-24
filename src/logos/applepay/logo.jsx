@@ -32,6 +32,8 @@ export function ApplePayLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : { lo
             { ...props }
             name={ LOGO.APPLEPAY }
             logoColor={ logoColor }
+            alt='Apple Pay'
+            aria-label='Apple Pay'
             render={ () => {
                 return (
                     <svg xmlns="http://www.w3.org/2000/svg" height="800" width="1200" viewBox="-76.79115 -52.55 665.5233 315.3">

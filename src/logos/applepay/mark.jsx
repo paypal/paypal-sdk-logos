@@ -14,6 +14,8 @@ export function ApplePayMark({ ...props } :
         <SVGLogo
             { ...props }
             name={ LOGO.APPLEPAY }
+            alt='Apple Pay mark'
+            aria-label='Apple Pay mark'
             render={ () => {
                 return (
                     <svg
