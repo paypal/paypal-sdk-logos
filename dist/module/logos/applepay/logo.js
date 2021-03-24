@@ -29,6 +29,8 @@ export function ApplePayLogo(_ref) {
   return node(SVGLogo, _extends({}, props, {
     name: LOGO.APPLEPAY,
     logoColor: logoColor,
+    alt: "Apple Pay",
+    "aria-label": "Apple Pay",
     render: function render() {
       return node("svg", {
         xmlns: "http://www.w3.org/2000/svg",
