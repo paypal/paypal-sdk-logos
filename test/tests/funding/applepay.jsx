@@ -3,7 +3,7 @@
 
 import { node, html } from 'jsx-pragmatic/src';
 
-import { ApplePayLogo, LOGO_COLOR } from '../../../src';
+import { ApplePayLogo, ApplePayMark, LOGO_COLOR } from '../../../src';
 import { validateSVG } from '../common';
 
 describe('Apple Pay logo rendering happy cases', () => {
@@ -16,5 +16,14 @@ describe('Apple Pay logo rendering happy cases', () => {
         const logoHTML = logo.render(html());
 
         validateSVG(logoHTML);
+    });
+    it('should render the Apple Pay mark', () => {
+        const mark = (
+            <ApplePayMark />
+        );
+
+        const markHTML = mark.render(html());
+
+        validateSVG(markHTML);
     });
 });
