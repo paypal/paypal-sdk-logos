@@ -23,7 +23,7 @@ export function SVG(props : SVGProps) : ElementNode {
     if (typeof svg !== 'string') {
         throw new TypeError(`Expected svg prop to be a string or jsx node`);
     }
-
+    
     // $FlowFixMe
     const svgProps = {
         src: svgToBase64(svg),
@@ -39,15 +39,16 @@ export function SVG(props : SVGProps) : ElementNode {
 export type SVGLogoProps = {
     render : () => ElementNode,
     name : string,
+    alt? : string,
     logoColor? : $Values<typeof LOGO_COLOR>
 };
 
-export function SVGLogo({ render, name, logoColor, ...props } : SVGLogoProps) : ComponentNode<SVGLogoProps> {
+export function SVGLogo({ render, name, alt, logoColor, ...props } : SVGLogoProps) : ComponentNode<SVGLogoProps> {
     return (
         <SVG
             { ...props }
             svg={ render() }
-            alt=''
+            alt={ `${ alt ?  alt : capitalizeFirstLetter(name) }` }
             class={ `${ LOGO_CLASS.LOGO } ${ LOGO_CLASS.LOGO }-${ name } ${ logoColor ? `${ LOGO_CLASS.LOGO_COLOR }-${ logoColor }` : '' }` }
         />
     );
