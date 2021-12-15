@@ -99,7 +99,6 @@ export function PPLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : { logoColo
             { ...props }
             name={ LOGO.PP }
             alt='PP'
-            aria-label='PP'
             logoColor={ logoColor }
             render={ () => {
                 return (
