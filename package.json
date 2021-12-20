@@ -47,13 +47,13 @@
   ],
   "readmeFilename": "README.md",
   "devDependencies": {
-    "flow-bin": "^0.130.0",
+    "flow-bin": "0.135.0",
     "grumbler-scripts": "3.0.71",
     "mocha": "8.0.1"
   },
   "dependencies": {
     "@paypal/sdk-constants": "^1.0.11",
     "belter": "^1.0.45",
-    "jsx-pragmatic": "2.0.20"
+    "jsx-pragmatic": "^2"
   }
 }
