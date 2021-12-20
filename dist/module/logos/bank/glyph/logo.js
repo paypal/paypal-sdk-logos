@@ -1,5 +1,6 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/esm/objectWithoutPropertiesLoose";
+var _excluded = ["logoColor"];
 
 var _LOGO_COLORS;
 
@@ -17,7 +18,7 @@ var LOGO_COLORS = (_LOGO_COLORS = {}, _LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
 export function GlyphBank(_temp) {
   var _ref = _temp === void 0 ? {} : _temp,
       logoColor = _ref.logoColor,
-      props = _objectWithoutPropertiesLoose(_ref, ["logoColor"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var _getLogoColors = getLogoColors(LOGO.BANK, LOGO_COLORS, logoColor),
       primary = _getLogoColors.primary;

@@ -1,5 +1,6 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/esm/objectWithoutPropertiesLoose";
+var _excluded = ["logoColor"];
 
 var _LOGO_COLORS;
 
@@ -27,7 +28,7 @@ var LOGO_COLORS = (_LOGO_COLORS = {}, _LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
 export function PayuLogo(_ref) {
   var _ref$logoColor = _ref.logoColor,
       logoColor = _ref$logoColor === void 0 ? LOGO_COLOR.DEFAULT : _ref$logoColor,
-      props = _objectWithoutPropertiesLoose(_ref, ["logoColor"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var _getLogoColors = getLogoColors(LOGO.P24, LOGO_COLORS, logoColor),
       primary = _getLogoColors.primary,

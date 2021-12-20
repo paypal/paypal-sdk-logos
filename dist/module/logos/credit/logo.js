@@ -1,5 +1,6 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/esm/objectWithoutPropertiesLoose";
+var _excluded = ["logoColor", "locale"];
 
 var _LOGO_COLORS;
 
@@ -20,7 +21,7 @@ var LOGO_COLORS = (_LOGO_COLORS = {}, _LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
 export function CreditLogo(_ref) {
   var logoColor = _ref.logoColor,
       locale = _ref.locale,
-      props = _objectWithoutPropertiesLoose(_ref, ["logoColor", "locale"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var _getLogoColors = getLogoColors(LOGO.CREDIT, LOGO_COLORS, logoColor),
       primary = _getLogoColors.primary;

@@ -1,5 +1,8 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/esm/objectWithoutPropertiesLoose";
+var _excluded = ["svg"],
+    _excluded2 = ["render", "name", "logoColor"],
+    _excluded3 = ["render", "name"];
 
 /** @jsx node */
 import { svgToBase64, capitalizeFirstLetter } from 'belter/src';
@@ -7,7 +10,7 @@ import { node, html } from 'jsx-pragmatic/src';
 import { LOGO_CLASS, LOGO_COLOR } from '../constants';
 export function SVG(props) {
   var svg = props.svg,
-      otherProps = _objectWithoutPropertiesLoose(props, ["svg"]);
+      otherProps = _objectWithoutPropertiesLoose(props, _excluded);
 
   if (!svg) {
     throw new TypeError("Expected svg prop");
@@ -31,7 +34,7 @@ export function SVGLogo(_ref) {
   var render = _ref.render,
       name = _ref.name,
       logoColor = _ref.logoColor,
-      props = _objectWithoutPropertiesLoose(_ref, ["render", "name", "logoColor"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded2);
 
   return node(SVG, _extends({}, props, {
     svg: render(),
@@ -43,7 +46,7 @@ export function SVGLogo(_ref) {
 export function SVGCardLogo(_ref2) {
   var render = _ref2.render,
       name = _ref2.name,
-      props = _objectWithoutPropertiesLoose(_ref2, ["render", "name"]);
+      props = _objectWithoutPropertiesLoose(_ref2, _excluded3);
 
   return node(SVG, _extends({}, props, {
     svg: render(),

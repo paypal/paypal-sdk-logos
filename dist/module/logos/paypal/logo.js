@@ -1,5 +1,7 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/esm/objectWithoutPropertiesLoose";
+var _excluded = ["logoColor"],
+    _excluded2 = ["logoColor"];
 
 var _PAYPAL_LOGO_COLORS, _PP_LOGO_COLORS, _PPMONOCHROME_LOGO_CO;
 
@@ -27,7 +29,7 @@ var PAYPAL_LOGO_COLORS = (_PAYPAL_LOGO_COLORS = {}, _PAYPAL_LOGO_COLORS[LOGO_COL
 export function PayPalLogo(_ref) {
   var _ref$logoColor = _ref.logoColor,
       logoColor = _ref$logoColor === void 0 ? LOGO_COLOR.DEFAULT : _ref$logoColor,
-      props = _objectWithoutPropertiesLoose(_ref, ["logoColor"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var _getLogoColors = getLogoColors(LOGO.PAYPAL, PAYPAL_LOGO_COLORS, logoColor),
       primary = _getLogoColors.primary,
@@ -36,7 +38,7 @@ export function PayPalLogo(_ref) {
   return node(SVGLogo, _extends({}, props, props, {
     name: LOGO.PAYPAL,
     alt: "PayPal",
-    "aria-label": "PayPal",
+    role: "presentation",
     logoColor: logoColor,
     render: function render() {
       return node("svg", {
@@ -91,7 +93,7 @@ var PP_LOGO_COLORS = (_PP_LOGO_COLORS = {}, _PP_LOGO_COLORS[LOGO_COLOR.DEFAULT] 
 export function PPLogo(_ref2) {
   var _ref2$logoColor = _ref2.logoColor,
       logoColor = _ref2$logoColor === void 0 ? LOGO_COLOR.DEFAULT : _ref2$logoColor,
-      props = _objectWithoutPropertiesLoose(_ref2, ["logoColor"]);
+      props = _objectWithoutPropertiesLoose(_ref2, _excluded2);
 
   var _getLogoColors2 = getLogoColors(LOGO.PP, PP_LOGO_COLORS, logoColor),
       primary = _getLogoColors2.primary,
@@ -107,7 +109,7 @@ export function PPLogo(_ref2) {
   return node(SVGLogo, _extends({}, props, props, {
     name: LOGO.PP,
     alt: "PP",
-    "aria-label": "PP",
+    role: "presentation",
     logoColor: logoColor,
     render: function render() {
       return node("svg", {
