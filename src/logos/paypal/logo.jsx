@@ -41,7 +41,7 @@ export function PayPalLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : { logo
             { ...props }
             name={ LOGO.PAYPAL }
             alt='PayPal'
-            aria-label='PayPal'
+            role='presentation'
             logoColor={ logoColor }
             render={ () => (
                 <svg width="101px" height="32" viewBox="0 0 101 32" preserveAspectRatio="xMinYMin meet" xmlns="http://www.w3.org/2000/svg">
@@ -100,7 +100,7 @@ export function PPLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : { logoColo
             { ...props }
             name={ LOGO.PP }
             alt='PP'
-            aria-label='PP'
+            role='presentation'
             logoColor={ logoColor }
             render={ () => {
                 return (
