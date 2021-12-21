@@ -35,7 +35,7 @@ export function PayPalLogo(_ref) {
       primary = _getLogoColors.primary,
       secondary = _getLogoColors.secondary;
 
-  return node(SVGLogo, _extends({}, props, props, {
+  return node(SVGLogo, _extends({}, props, {
     name: LOGO.PAYPAL,
     alt: "PayPal",
     role: "presentation",
@@ -106,7 +106,7 @@ export function PPLogo(_ref2) {
       _getLogoColors2$terti = _getLogoColors2.tertiaryOpacity,
       tertiaryOpacity = _getLogoColors2$terti === void 0 ? DEFAULT_OPACITY : _getLogoColors2$terti;
 
-  return node(SVGLogo, _extends({}, props, props, {
+  return node(SVGLogo, _extends({}, props, {
     name: LOGO.PP,
     alt: "PP",
     role: "presentation",
