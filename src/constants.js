@@ -27,7 +27,8 @@ export const LOGO = {
     OXXO:         ('oxxo' : 'oxxo'),
     BOLETO:       ('boleto' : 'boleto'),
     MAXIMA:       ('maxima' : 'maxima'),
-    MERCADOPAGO:  ('mercadopago' : 'mercadopago')
+    MERCADOPAGO:  ('mercadopago' : 'mercadopago'),
+    MULTIBLANCO:  ('multiblanco' : 'multiblanco')
 };
 
 export const LOGO_COLOR = {
