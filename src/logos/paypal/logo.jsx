@@ -38,7 +38,6 @@ export function PayPalLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : { logo
     return (
         <SVGLogo
             { ...props }
-            { ...props }
             name={ LOGO.PAYPAL }
             alt='PayPal'
             role='presentation'
@@ -96,7 +95,6 @@ export function PPLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : { logoColo
 
     return (
         <SVGLogo
-            { ...props }
             { ...props }
             name={ LOGO.PP }
             alt='PP'
