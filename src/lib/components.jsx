@@ -8,7 +8,7 @@ import { LOGO_CLASS, LOGO_COLOR } from '../constants';
 
 type SVGProps = {|
     svg : ElementNode,
-    [ string ] : string
+    [ key : string ] : mixed
 |};
 
 export function SVG(props : SVGProps) : ElementNode {
@@ -17,7 +17,7 @@ export function SVG(props : SVGProps) : ElementNode {
     if (!svg) {
         throw new TypeError(`Expected svg prop`);
     }
-    
+
     svg = svg.render(html());
 
     if (typeof svg !== 'string') {
