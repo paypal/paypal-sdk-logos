@@ -14,7 +14,8 @@ var LOGO_COLORS = (_LOGO_COLORS = {}, _LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
   primary: '#ffffff'
 }, _LOGO_COLORS[LOGO_COLOR.BLACK] = {
   primary: '#333030'
-}, _LOGO_COLORS);
+}, _LOGO_COLORS); // eslint-disable-next-line flowtype/require-exact-type
+
 export function GlyphBank(_temp) {
   var _ref = _temp === void 0 ? {} : _temp,
       logoColor = _ref.logoColor,
