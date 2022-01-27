@@ -47,8 +47,8 @@
     "mocha": "8.0.1"
   },
   "dependencies": {
-    "@paypal/sdk-constants": "^1.0.11",
-    "belter": "^1.0.45",
+    "@paypal/sdk-constants": "^1.0.116",
+    "belter": "^1.0.188",
     "jsx-pragmatic": "^2"
   }
 }
