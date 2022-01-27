@@ -1,11 +1,21 @@
 PayPal SDK Logos
 ----------------
 
-[![npm version](https://img.shields.io/npm/v/@paypal/sdk-logos.svg?style=flat-square)](https://www.npmjs.com/package/@paypal/sdk-logos) [![build status](https://img.shields.io/travis/paypal/paypal-sdk-logos/master.svg?style=flat-square)](https://travis-ci.org/paypal/paypal-sdk-logos) [![code coverage](https://img.shields.io/codecov/c/github/paypal/paypal-sdk-logos.svg?style=flat-square)](https://codecov.io/github/paypal/paypal-sdk-logos/)
+[![build status][build-badge]][build]
+[![code coverage][coverage-badge]][coverage]
+[![npm version][version-badge]][package]
+[![apache license][license-badge]][license]
 
-[![dependencies Status](https://david-dm.org/paypal/paypal-sdk-logos/status.svg)](https://david-dm.org/paypal/paypal-sdk-logos) [![devDependencies Status](https://david-dm.org/paypal/paypal-sdk-logos/dev-status.svg)](https://david-dm.org/paypal/paypal-sdk-logos?type=dev)
+[build-badge]: https://img.shields.io/github/workflow/status/paypal/paypal-sdk-logos/build?logo=github&style=flat-square
+[build]: https://github.com/paypal/paypal-sdk-logos/actions?query=workflow%3Abuild
+[coverage-badge]: https://img.shields.io/codecov/c/github/paypal/paypal-sdk-logos.svg?style=flat-square
+[coverage]: https://codecov.io/github/paypal/paypal-sdk-logos/
+[version-badge]: https://img.shields.io/npm/v/@paypal/sdk-logos.svg?style=flat-square
+[package]: https://www.npmjs.com/package/@paypal/sdk-logos
+[license-badge]: https://img.shields.io/npm/l/@paypal/sdk-logos.svg?style=flat-square
+[license]: https://github.com/paypal/paypal-sdk-logos/blob/main/LICENSE
 
-Logos for PayPal SDKs. 
+Logos for PayPal SDKs.
 
 ### Render using JSX with HTML
 
