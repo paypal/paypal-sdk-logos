@@ -39,21 +39,16 @@
   "keywords": [
     "template"
   ],
-  "licenses": [
-    {
-      "type": "Apache 2.0",
-      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
-    }
-  ],
+  "license": "Apache-2.0",
   "readmeFilename": "README.md",
   "devDependencies": {
     "flow-bin": "0.155.0",
-    "grumbler-scripts": "^5.0.3",
+    "grumbler-scripts": "5.0.3",
     "mocha": "8.0.1"
   },
   "dependencies": {
-    "@paypal/sdk-constants": "^1.0.11",
-    "belter": "^1.0.45",
+    "@paypal/sdk-constants": "^1.0.116",
+    "belter": "^1.0.188",
     "jsx-pragmatic": "^2"
   }
 }
