@@ -39,11 +39,16 @@
   "keywords": [
     "template"
   ],
-  "license": "Apache-2.0",
+  "licenses": [
+    {
+      "type": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  ],
   "readmeFilename": "README.md",
   "devDependencies": {
     "flow-bin": "0.155.0",
-    "grumbler-scripts": "5.0.3",
+    "grumbler-scripts": "^5.0.3",
     "mocha": "8.0.1"
   },
   "dependencies": {
