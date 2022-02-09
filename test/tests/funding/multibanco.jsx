@@ -3,14 +3,14 @@
 
 import { node, html } from 'jsx-pragmatic/src';
 
-import { MultiblancoLogo, LOGO_COLOR } from '../../../src';
+import { MultibancoLogo, LOGO_COLOR } from '../../../src';
 import { validateSVG } from '../common';
 
 describe('mulitblanco logo rendering happy cases', () => {
 
-    it('should render the multiblancoo logo', () => {
+    it('should render the multibanco logo', () => {
         const logo = (
-            <MultiblancoLogo />
+            <MultibancoLogo />
         );
 
         const logoHTML = logo.render(html());
@@ -18,9 +18,9 @@ describe('mulitblanco logo rendering happy cases', () => {
         validateSVG(logoHTML);
     });
 
-    it('should render the multiblanco white logo', () => {
+    it('should render the multibanco white logo', () => {
         const logo = (
-            <MultiblancoLogo logoColor={ LOGO_COLOR.WHITE } />
+            <MultibancoLogo logoColor={ LOGO_COLOR.WHITE } />
         );
 
         const logoHTML = logo.render(html());

@@ -23,14 +23,14 @@ const LOGO_COLORS : LogoColorMap = {
 };
 
 // eslint-disable-next-line flowtype/require-exact-type
-export function MultiblancoLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : { logoColor? : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
+export function MultibancoLogo({ logoColor = LOGO_COLOR.DEFAULT, ...props } : { logoColor? : $Values<typeof LOGO_COLOR> }) : ComponentNode<SVGLogoProps> {
 
-    const { primary, secondary } = getLogoColors(LOGO.MULTIBLANCO, LOGO_COLORS, logoColor);
+    const { primary, secondary } = getLogoColors(LOGO.MULTIBANCO, LOGO_COLORS, logoColor);
 
     return (
         <SVGLogo
             { ...props }
-            name={ LOGO.MULTIBLANCO }
+            name={ LOGO.MULTIBANCO }
             logoColor={ logoColor }
             render={ () => {
                 return (
