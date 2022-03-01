@@ -23,7 +23,7 @@ Logos for PayPal SDKs.
 /** @jsx node */
 
 import { PayPalLogo, LOGO_COLOR } from 'paypal-sdk-logos';
-import { node, html } from 'jsx-pragmatic';
+import { node, html } from '@krakenjs/jsx-pragmatic/src';
 
 function render() {
     return (
@@ -39,7 +39,7 @@ function render() {
 
 import React from 'react';
 import { PayPalLogo, LOGO_COLOR } from 'paypal-sdk-logos';
-import { node, react } from 'jsx-pragmatic';
+import { node, react } from '@krakenjs/jsx-pragmatic/src';
 
 function render() {
     return (
@@ -52,7 +52,7 @@ function render() {
 
 ```javascript
 import { PayPalLogo, LOGO_COLOR } from 'paypal-sdk-logos';
-import { html } from 'jsx-pragmatic';
+import { html } from '@krakenjs/jsx-pragmatic/src';
 
 function render() {
     return PayPalLogo({ logoColor: LOGO_COLOR.WHITE });

@@ -1,7 +1,7 @@
 /* @flow */
 /** @jsx node */
 
-import { node, html } from 'jsx-pragmatic/src';
+import { node, html } from '@krakenjs/jsx-pragmatic/src';
 
 import { P24Logo } from '../../../src';
 import { validateSVG } from '../common';

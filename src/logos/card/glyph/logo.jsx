@@ -1,7 +1,7 @@
 /* @flow */
 /** @jsx node */
 
-import { node, type ComponentNode } from 'jsx-pragmatic/src';
+import { node, type ComponentNode } from '@krakenjs/jsx-pragmatic/src';
 
 import { type LogoColorMap } from '../../../types';
 import { SVGCardLogo, type SVGCardLogoProps, getLogoColors } from '../../../lib';
