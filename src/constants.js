@@ -28,7 +28,6 @@ export const LOGO = {
     BOLETO:       ('boleto' : 'boleto'),
     MAXIMA:       ('maxima' : 'maxima'),
     MERCADOPAGO:  ('mercadopago' : 'mercadopago'),
-    MULTIBLANCO:  ('multiblanco' : 'multiblanco'),
     MULTIBANCO:   ('multibanco' : 'multibanco')
 };
 
