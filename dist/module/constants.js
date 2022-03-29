@@ -26,7 +26,6 @@ export var LOGO = {
   BOLETO: 'boleto',
   MAXIMA: 'maxima',
   MERCADOPAGO: 'mercadopago',
-  MULTIBLANCO: 'multiblanco',
   MULTIBANCO: 'multibanco'
 };
 export var LOGO_COLOR = {
