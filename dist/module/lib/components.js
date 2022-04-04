@@ -5,8 +5,8 @@ var _excluded = ["svg"],
     _excluded3 = ["render", "name"];
 
 /** @jsx node */
-import { svgToBase64, capitalizeFirstLetter } from 'belter/src';
-import { node, html } from 'jsx-pragmatic/src';
+import { svgToBase64, capitalizeFirstLetter } from '@krakenjs/belter/src';
+import { node, html } from '@krakenjs/jsx-pragmatic/src';
 import { LOGO_CLASS, LOGO_COLOR } from '../constants';
 export function SVG(props) {
   var svg = props.svg,

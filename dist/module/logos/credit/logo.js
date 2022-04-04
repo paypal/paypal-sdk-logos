@@ -6,7 +6,7 @@ var _LOGO_COLORS;
 
 /** @jsx node */
 import { COUNTRY } from '@paypal/sdk-constants/src';
-import { node } from 'jsx-pragmatic/src';
+import { node } from '@krakenjs/jsx-pragmatic/src';
 import { SVGLogo, getLogoColors } from '../../lib';
 import { LOGO_COLOR, LOGO } from '../../constants';
 var LOGO_COLORS = (_LOGO_COLORS = {}, _LOGO_COLORS[LOGO_COLOR.DEFAULT] = {

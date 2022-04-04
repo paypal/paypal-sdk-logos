@@ -6,7 +6,7 @@ var _excluded = ["logoColor"],
 var _PAYPAL_LOGO_COLORS, _PP_LOGO_COLORS, _PPMONOCHROME_LOGO_CO;
 
 /** @jsx node */
-import { node } from 'jsx-pragmatic/src';
+import { node } from '@krakenjs/jsx-pragmatic/src';
 import { LOGO, LOGO_COLOR } from '../../constants';
 import { SVGLogo, getLogoColors } from '../../lib';
 var PAYPAL_LOGO_COLORS = (_PAYPAL_LOGO_COLORS = {}, _PAYPAL_LOGO_COLORS[LOGO_COLOR.DEFAULT] = {

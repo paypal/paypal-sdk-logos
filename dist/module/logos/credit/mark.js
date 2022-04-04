@@ -1,7 +1,7 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 
 /** @jsx node */
-import { node } from 'jsx-pragmatic/src';
+import { node } from '@krakenjs/jsx-pragmatic/src';
 import { SVGLogo } from '../../lib';
 import { LOGO } from '../../constants';
 export function CreditMark(_ref) {
