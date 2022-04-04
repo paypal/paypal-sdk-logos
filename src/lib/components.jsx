@@ -1,8 +1,8 @@
 /* @flow */
 /** @jsx node */
 
-import { svgToBase64, capitalizeFirstLetter } from 'belter/src';
-import { node, html, type ElementNode, type ComponentNode } from 'jsx-pragmatic/src';
+import { svgToBase64, capitalizeFirstLetter } from '@krakenjs/belter/src';
+import { node, html, type ElementNode, type ComponentNode } from '@krakenjs/jsx-pragmatic/src';
 
 import { LOGO_CLASS, LOGO_COLOR } from '../constants';
 

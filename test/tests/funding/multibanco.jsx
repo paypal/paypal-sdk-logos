@@ -1,7 +1,7 @@
 /* @flow */
 /** @jsx node */
 
-import { node, html } from 'jsx-pragmatic/src';
+import { node, html } from '@krakenjs/jsx-pragmatic/src';
 
 import { MultibancoLogo, LOGO_COLOR } from '../../../src';
 import { validateSVG } from '../common';

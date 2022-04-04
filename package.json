@@ -48,7 +48,7 @@
   },
   "dependencies": {
     "@paypal/sdk-constants": "^1.0.116",
-    "belter": "^1.0.188",
-    "jsx-pragmatic": "^2"
+    "@krakenjs/belter": "^2.0.0",
+    "@krakenjs/jsx-pragmatic": "^3.0.0"
   }
 }

@@ -2,7 +2,7 @@
 /* @flow */
 /** @jsx node */
 
-import { node, type ComponentNode } from 'jsx-pragmatic/src';
+import { node, type ComponentNode } from '@krakenjs/jsx-pragmatic/src';
 
 import { SVGLogo, type SVGLogoProps } from '../../lib';
 import { LOGO } from '../../constants';
