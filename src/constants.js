@@ -25,6 +25,7 @@ export const LOGO = {
     BLIK:           ('blik' : 'blik'),
     TRUSTLY:        ('trustly' : 'trustly'),
     OXXO:           ('oxxo' : 'oxxo'),
+    BOLETO:         ('boleto' : 'boleto'),
     BOLETOBANCARIO: ('boletobancario' : 'boletobancario'),
     MAXIMA:         ('maxima' : 'maxima'),
     MERCADOPAGO:    ('mercadopago' : 'mercadopago'),
