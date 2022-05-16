@@ -24,6 +24,7 @@ export var LOGO = {
   TRUSTLY: 'trustly',
   OXXO: 'oxxo',
   BOLETO: 'boleto',
+  BOLETOBANCARIO: 'boletobancario',
   MAXIMA: 'maxima',
   MERCADOPAGO: 'mercadopago',
   MULTIBANCO: 'multibanco'
