@@ -1,5 +1,4 @@
-PayPal SDK Logos
-----------------
+## PayPal SDK Logos
 
 [![build status][build-badge]][build]
 [![code coverage][coverage-badge]][coverage]
@@ -22,13 +21,11 @@ Logos for PayPal SDKs.
 ```javascript
 /** @jsx node */
 
-import { PayPalLogo, LOGO_COLOR } from 'paypal-sdk-logos';
-import { node, html } from '@krakenjs/jsx-pragmatic/src';
+import { PayPalLogo, LOGO_COLOR } from "paypal-sdk-logos";
+import { node, html } from "@krakenjs/jsx-pragmatic/src";
 
 function render() {
-    return (
-        <PayPalLogo logoColor={ LOGO_COLOR.WHITE } />
-    ).render(html());
+	return (<PayPalLogo logoColor={LOGO_COLOR.WHITE} />).render(html());
 }
 ```
 
@@ -37,14 +34,12 @@ function render() {
 ```javascript
 /** @jsx node */
 
-import React from 'react';
-import { PayPalLogo, LOGO_COLOR } from 'paypal-sdk-logos';
-import { node, react } from '@krakenjs/jsx-pragmatic/src';
+import React from "react";
+import { PayPalLogo, LOGO_COLOR } from "paypal-sdk-logos";
+import { node, react } from "@krakenjs/jsx-pragmatic/src";
 
 function render() {
-    return (
-        <PayPalLogo logoColor={ LOGO_COLOR.WHITE } />
-    ).render(react({ React }));
+	return (<PayPalLogo logoColor={LOGO_COLOR.WHITE} />).render(react({ React }));
 }
 ```
 
@@ -60,8 +55,7 @@ function render() {
 }
 ```
 
-Quick Start
------------
+## Quick Start
 
 #### Getting Started
 

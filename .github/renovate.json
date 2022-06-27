@@ -1,6 +1,4 @@
 {
-    "extends": [
-      "config:base"
-    ],
-    "ignoreDeps": ["flow-bin"]
+  "extends": ["config:base"],
+  "ignoreDeps": ["flow-bin"]
 }
