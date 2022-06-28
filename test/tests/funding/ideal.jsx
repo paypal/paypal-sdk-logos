@@ -1,20 +1,17 @@
 /* @flow */
 /** @jsx node */
 
-import { node, html } from '@krakenjs/jsx-pragmatic/src';
+import { node, html } from "@krakenjs/jsx-pragmatic/src";
 
-import { IdealLogo, LOGO_COLOR } from '../../../src';
-import { validateSVG } from '../common';
+import { IdealLogo, LOGO_COLOR } from "../../../src";
+import { validateSVG } from "../common";
 
-describe('ideal logo rendering happy cases', () => {
+describe("ideal logo rendering happy cases", () => {
+  it("should render the ideal logo", () => {
+    const logo = <IdealLogo logoColor={LOGO_COLOR.WHITE} />;
 
-    it('should render the ideal logo', () => {
-        const logo = (
-            <IdealLogo logoColor={ LOGO_COLOR.WHITE } />
-        );
+    const logoHTML = logo.render(html());
 
-        const logoHTML = logo.render(html());
-
-        validateSVG(logoHTML);
-    });
+    validateSVG(logoHTML);
+  });
 });

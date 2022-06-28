@@ -1,4 +1,4 @@
 /* @flow */
 
-import './funding';
-import './card';
+import "./funding";
+import "./card";

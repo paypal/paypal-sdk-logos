@@ -1,20 +1,17 @@
 /* @flow */
 /** @jsx node */
 
-import { node, html } from '@krakenjs/jsx-pragmatic/src';
+import { node, html } from "@krakenjs/jsx-pragmatic/src";
 
-import { OxxoLogo } from '../../../src';
-import { validateSVG } from '../common';
+import { OxxoLogo } from "../../../src";
+import { validateSVG } from "../common";
 
-describe('oxxo logo rendering happy cases', () => {
+describe("oxxo logo rendering happy cases", () => {
+  it("should render the oxxo logo", () => {
+    const logo = <OxxoLogo />;
 
-    it('should render the oxxo logo', () => {
-        const logo = (
-            <OxxoLogo />
-        );
+    const logoHTML = logo.render(html());
 
-        const logoHTML = logo.render(html());
-
-        validateSVG(logoHTML);
-    });
+    validateSVG(logoHTML);
+  });
 });

@@ -1,20 +1,17 @@
 /* @flow */
 /** @jsx node */
 
-import { node, html } from '@krakenjs/jsx-pragmatic/src';
+import { node, html } from "@krakenjs/jsx-pragmatic/src";
 
-import { EloLogo } from '../../../src';
-import { validateSVG } from '../common';
+import { EloLogo } from "../../../src";
+import { validateSVG } from "../common";
 
-describe('elo logo rendering happy cases', () => {
+describe("elo logo rendering happy cases", () => {
+  it("should render the elo logo", () => {
+    const logo = <EloLogo />;
 
-    it('should render the elo logo', () => {
-        const logo = (
-            <EloLogo />
-        );
+    const logoHTML = logo.render(html());
 
-        const logoHTML = logo.render(html());
-
-        validateSVG(logoHTML);
-    });
+    validateSVG(logoHTML);
+  });
 });
