@@ -31,7 +31,6 @@ const LOGO_COLORS: LogoColorMap = {
   },
 };
 
-// eslint-disable-next-line flowtype/require-exact-type
 export function GiropayLogo({
   logoColor = LOGO_COLOR.BLACK,
   ...props

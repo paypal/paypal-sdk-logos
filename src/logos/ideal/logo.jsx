@@ -22,14 +22,13 @@ const LOGO_COLORS: LogoColorMap = {
   },
 };
 
-// eslint-disable-next-line flowtype/require-exact-type
 export function IdealLogo({
   logoColor = LOGO_COLOR.BLACK,
   ...props
 }: {
   logoColor?: $Values<typeof LOGO_COLOR>,
 }): ComponentNode<SVGLogoProps> {
-  const { primary, secondary, tertiary } = getLogoColors(
+  const { primary, secondary } = getLogoColors(
     LOGO.IDEAL,
     LOGO_COLORS,
     logoColor

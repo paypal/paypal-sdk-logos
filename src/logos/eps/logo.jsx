@@ -22,7 +22,6 @@ const LOGO_COLORS: LogoColorMap = {
   },
 };
 
-// eslint-disable-next-line flowtype/require-exact-type
 export function EpsLogo({
   logoColor = LOGO_COLOR.BLACK,
   ...props

@@ -34,7 +34,6 @@ const LOGO_COLORS: LogoColorMap = {
   },
 };
 
-// eslint-disable-next-line flowtype/require-exact-type
 export function VerkkopankkiLogo({
   logoColor = LOGO_COLOR.BLACK,
   ...props
