@@ -19,8 +19,9 @@ const LOGO_COLORS: LogoColorMap = {
   },
 };
 
+// eslint-disable-next-line flowtype/require-exact-type
 export function ZimplerLogo({
-  logoColor = LOGO_COLOR.DEFAULT,
+  logoColor = LOGO_COLOR.BLACK,
   ...props
 }: {
   logoColor?: $Values<typeof LOGO_COLOR>,
