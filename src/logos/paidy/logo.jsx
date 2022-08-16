@@ -25,7 +25,7 @@ const LOGO_COLORS: LogoColorMap = {
   },
 };
 
-export function PAIDYLogo({
+export function PaidyLogo({
   logoColor = LOGO_COLOR.DEFAULT,
   ...props
 }: {
