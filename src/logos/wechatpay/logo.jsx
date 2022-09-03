@@ -9,7 +9,7 @@ import { type LogoColorMap } from "../../types";
 
 const LOGO_COLORS: LogoColorMap = {
   [LOGO_COLOR.DEFAULT]: {
-    primary: "#FFFFFF",
+    primary: "#1AAD19",
     secondary: "#FFFFFF",
   },
   [LOGO_COLOR.WHITE]: {
