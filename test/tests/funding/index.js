@@ -17,3 +17,4 @@ import "./zimpler";
 import "./itau";
 import "./mercadopago";
 import "./multibanco";
+import "./paidy";
