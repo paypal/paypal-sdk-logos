@@ -5,9 +5,9 @@ var _excluded = ["svg"],
     _excluded3 = ["render", "name"];
 
 /** @jsx node */
-import { svgToBase64, capitalizeFirstLetter } from '@krakenjs/belter/src';
-import { node, html } from '@krakenjs/jsx-pragmatic/src';
-import { LOGO_CLASS, LOGO_COLOR } from '../constants';
+import { svgToBase64, capitalizeFirstLetter } from "@krakenjs/belter/src";
+import { node, html } from "@krakenjs/jsx-pragmatic/src";
+import { LOGO_CLASS, LOGO_COLOR } from "../constants";
 export function SVG(props) {
   var svg = props.svg,
       otherProps = _objectWithoutPropertiesLoose(props, _excluded);
@@ -18,7 +18,7 @@ export function SVG(props) {
 
   svg = svg.render(html());
 
-  if (typeof svg !== 'string') {
+  if (typeof svg !== "string") {
     throw new TypeError("Expected svg prop to be a string or jsx node");
   } // $FlowFixMe
 
@@ -28,8 +28,7 @@ export function SVG(props) {
   }, otherProps);
 
   return node("img", svgProps);
-} // eslint-disable-next-line flowtype/require-exact-type
-
+}
 export function SVGLogo(_ref) {
   var render = _ref.render,
       name = _ref.name,
@@ -39,10 +38,9 @@ export function SVGLogo(_ref) {
   return node(SVG, _extends({}, props, {
     svg: render(),
     alt: "",
-    class: LOGO_CLASS.LOGO + " " + LOGO_CLASS.LOGO + "-" + name + " " + (logoColor ? LOGO_CLASS.LOGO_COLOR + "-" + logoColor : '')
+    class: LOGO_CLASS.LOGO + " " + LOGO_CLASS.LOGO + "-" + name + " " + (logoColor ? LOGO_CLASS.LOGO_COLOR + "-" + logoColor : "")
   }));
-} // eslint-disable-next-line flowtype/require-exact-type
-
+}
 export function SVGCardLogo(_ref2) {
   var render = _ref2.render,
       name = _ref2.name,

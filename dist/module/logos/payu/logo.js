@@ -5,29 +5,28 @@ var _excluded = ["logoColor"];
 var _LOGO_COLORS;
 
 /** @jsx node */
-import { node } from '@krakenjs/jsx-pragmatic/src';
-import { SVGLogo, getLogoColors } from '../../lib';
-import { LOGO_COLOR, LOGO } from '../../constants';
+import { node } from "@krakenjs/jsx-pragmatic/src";
+import { SVGLogo, getLogoColors } from "../../lib";
+import { LOGO_COLOR, LOGO } from "../../constants";
 var LOGO_COLORS = (_LOGO_COLORS = {}, _LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
-  primary: '#A6d71c',
-  secondary: '#3C932A',
-  tertiary: '#6CC62E',
-  quaternary: '#278D30'
+  primary: "#A6d71c",
+  secondary: "#3C932A",
+  tertiary: "#6CC62E",
+  quaternary: "#278D30"
 }, _LOGO_COLORS[LOGO_COLOR.WHITE] = {
-  primary: '#FFFFFF',
-  secondary: '#FFFFFF',
-  tertiary: '#000000',
-  quaternary: '#FFFFFF'
+  primary: "#FFFFFF",
+  secondary: "#FFFFFF",
+  tertiary: "#000000",
+  quaternary: "#FFFFFF"
 }, _LOGO_COLORS[LOGO_COLOR.BLACK] = {
-  primary: '#333030',
-  secondary: '#333030',
-  tertiary: '#ffffff',
-  quaternary: '#333030'
-}, _LOGO_COLORS); // eslint-disable-next-line flowtype/require-exact-type
-
+  primary: "#333030",
+  secondary: "#333030",
+  tertiary: "#ffffff",
+  quaternary: "#333030"
+}, _LOGO_COLORS);
 export function PayuLogo(_ref) {
   var _ref$logoColor = _ref.logoColor,
-      logoColor = _ref$logoColor === void 0 ? LOGO_COLOR.DEFAULT : _ref$logoColor,
+      logoColor = _ref$logoColor === void 0 ? LOGO_COLOR.BLACK : _ref$logoColor,
       props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var _getLogoColors = getLogoColors(LOGO.P24, LOGO_COLORS, logoColor),

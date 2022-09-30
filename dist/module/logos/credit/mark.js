@@ -1,9 +1,9 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 
 /** @jsx node */
-import { node } from '@krakenjs/jsx-pragmatic/src';
-import { SVGLogo } from '../../lib';
-import { LOGO } from '../../constants';
+import { node } from "@krakenjs/jsx-pragmatic/src";
+import { SVGLogo } from "../../lib";
+import { LOGO } from "../../constants";
 export function CreditMark(_ref) {
   var props = _extends({}, _ref);
 

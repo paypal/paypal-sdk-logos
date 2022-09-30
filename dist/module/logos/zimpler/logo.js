@@ -5,20 +5,19 @@ var _excluded = ["logoColor"];
 var _LOGO_COLORS;
 
 /** @jsx node */
-import { node } from '@krakenjs/jsx-pragmatic/src';
-import { SVGLogo, getLogoColors } from '../../lib';
-import { LOGO_COLOR, LOGO } from '../../constants';
+import { node } from "@krakenjs/jsx-pragmatic/src";
+import { SVGLogo, getLogoColors } from "../../lib";
+import { LOGO_COLOR, LOGO } from "../../constants";
 var LOGO_COLORS = (_LOGO_COLORS = {}, _LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
-  primary: '#00A599'
+  primary: "#00A599"
 }, _LOGO_COLORS[LOGO_COLOR.WHITE] = {
-  primary: '#FFFFFF'
+  primary: "#FFFFFF"
 }, _LOGO_COLORS[LOGO_COLOR.BLACK] = {
-  primary: '#00A599'
-}, _LOGO_COLORS); // eslint-disable-next-line flowtype/require-exact-type
-
+  primary: "#00A599"
+}, _LOGO_COLORS);
 export function ZimplerLogo(_ref) {
   var _ref$logoColor = _ref.logoColor,
-      logoColor = _ref$logoColor === void 0 ? LOGO_COLOR.DEFAULT : _ref$logoColor,
+      logoColor = _ref$logoColor === void 0 ? LOGO_COLOR.BLACK : _ref$logoColor,
       props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var _getLogoColors = getLogoColors(LOGO.ZIMPLER, LOGO_COLORS, logoColor),

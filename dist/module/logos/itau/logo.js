@@ -5,19 +5,18 @@ var _excluded = ["logoColor"];
 var _LOGO_COLORS;
 
 /** @jsx node */
-import { node } from '@krakenjs/jsx-pragmatic/src';
-import { SVGLogo, getLogoColors } from '../../lib';
-import { LOGO_COLOR, LOGO } from '../../constants';
+import { node } from "@krakenjs/jsx-pragmatic/src";
+import { SVGLogo, getLogoColors } from "../../lib";
+import { LOGO_COLOR, LOGO } from "../../constants";
 var LOGO_COLORS = (_LOGO_COLORS = {}, _LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
-  primary: '#ffffff'
+  primary: "#ffffff"
 }, _LOGO_COLORS[LOGO_COLOR.BLUE] = {
-  primary: '#003087'
+  primary: "#003087"
 }, _LOGO_COLORS[LOGO_COLOR.WHITE] = {
-  primary: '#ffffff'
+  primary: "#ffffff"
 }, _LOGO_COLORS[LOGO_COLOR.BLACK] = {
-  primary: '#333030'
-}, _LOGO_COLORS); // eslint-disable-next-line flowtype/require-exact-type
-
+  primary: "#333030"
+}, _LOGO_COLORS);
 export function ItauLogo(_ref) {
   var _ref$logoColor = _ref.logoColor,
       logoColor = _ref$logoColor === void 0 ? LOGO_COLOR.DEFAULT : _ref$logoColor,

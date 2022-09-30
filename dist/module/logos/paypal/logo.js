@@ -6,26 +6,25 @@ var _excluded = ["logoColor"],
 var _PAYPAL_LOGO_COLORS, _PP_LOGO_COLORS, _PPMONOCHROME_LOGO_CO;
 
 /** @jsx node */
-import { node } from '@krakenjs/jsx-pragmatic/src';
-import { LOGO, LOGO_COLOR } from '../../constants';
-import { SVGLogo, getLogoColors } from '../../lib';
+import { node } from "@krakenjs/jsx-pragmatic/src";
+import { LOGO, LOGO_COLOR } from "../../constants";
+import { SVGLogo, getLogoColors } from "../../lib";
 var PAYPAL_LOGO_COLORS = (_PAYPAL_LOGO_COLORS = {}, _PAYPAL_LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
-  primary: '#003087',
-  secondary: '#009cde'
+  primary: "#003087",
+  secondary: "#009cde"
 }, _PAYPAL_LOGO_COLORS[LOGO_COLOR.BLUE] = {
-  primary: '#003087',
-  secondary: '#009cde'
+  primary: "#003087",
+  secondary: "#009cde"
 }, _PAYPAL_LOGO_COLORS[LOGO_COLOR.WHITE] = {
-  primary: '#ffffff',
-  secondary: '#ffffff'
+  primary: "#ffffff",
+  secondary: "#ffffff"
 }, _PAYPAL_LOGO_COLORS[LOGO_COLOR.BLACK] = {
-  primary: '#333030',
-  secondary: '#636363'
+  primary: "#333030",
+  secondary: "#636363"
 }, _PAYPAL_LOGO_COLORS[LOGO_COLOR.MONOCHROME] = {
-  primary: '#000000',
-  secondary: '#000000'
-}, _PAYPAL_LOGO_COLORS); // eslint-disable-next-line flowtype/require-exact-type
-
+  primary: "#000000",
+  secondary: "#000000"
+}, _PAYPAL_LOGO_COLORS);
 export function PayPalLogo(_ref) {
   var _ref$logoColor = _ref.logoColor,
       logoColor = _ref$logoColor === void 0 ? LOGO_COLOR.DEFAULT : _ref$logoColor,
@@ -69,27 +68,26 @@ export function PayPalLogo(_ref) {
     }
   }));
 }
-var DEFAULT_OPACITY = '1';
+var DEFAULT_OPACITY = "1";
 var PP_LOGO_COLORS = (_PP_LOGO_COLORS = {}, _PP_LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
-  primary: '#009cde',
-  secondary: '#012169',
-  tertiary: '#003087'
+  primary: "#009cde",
+  secondary: "#012169",
+  tertiary: "#003087"
 }, _PP_LOGO_COLORS[LOGO_COLOR.BLUE] = {
-  primary: '#009cde',
-  secondary: '#012169',
-  tertiary: '#003087'
+  primary: "#009cde",
+  secondary: "#012169",
+  tertiary: "#003087"
 }, _PP_LOGO_COLORS[LOGO_COLOR.WHITE] = {
-  primary: '#ffffff',
-  primaryOpacity: '0.7',
-  secondary: '#ffffff',
-  secondaryOpacity: '0.7',
-  tertiary: '#ffffff'
+  primary: "#ffffff",
+  primaryOpacity: "0.7",
+  secondary: "#ffffff",
+  secondaryOpacity: "0.7",
+  tertiary: "#ffffff"
 }, _PP_LOGO_COLORS[LOGO_COLOR.BLACK] = {
-  primary: '#808080',
-  secondary: '#000000',
-  tertiary: '#1a1a1a'
-}, _PP_LOGO_COLORS); // eslint-disable-next-line flowtype/require-exact-type
-
+  primary: "#808080",
+  secondary: "#000000",
+  tertiary: "#1a1a1a"
+}, _PP_LOGO_COLORS);
 export function PPLogo(_ref2) {
   var _ref2$logoColor = _ref2.logoColor,
       logoColor = _ref2$logoColor === void 0 ? LOGO_COLOR.DEFAULT : _ref2$logoColor,
@@ -135,11 +133,10 @@ export function PPLogo(_ref2) {
   }));
 }
 var PPMONOCHROME_LOGO_COLORS = (_PPMONOCHROME_LOGO_CO = {}, _PPMONOCHROME_LOGO_CO[LOGO_COLOR.MONOCHROME] = {
-  primary: '#000000',
-  secondary: '#000000',
-  tertiary: '#000000'
-}, _PPMONOCHROME_LOGO_CO); // eslint-disable-next-line flowtype/require-exact-type
-
+  primary: "#000000",
+  secondary: "#000000",
+  tertiary: "#000000"
+}, _PPMONOCHROME_LOGO_CO);
 export function PPMonochrome(_ref3) {
   var _ref3$logoColor = _ref3.logoColor,
       logoColor = _ref3$logoColor === void 0 ? LOGO_COLOR.MONOCHROME : _ref3$logoColor;

@@ -1,1 +1,1 @@
-import { LOGO_COLOR } from './constants';
+import { LOGO_COLOR } from "./constants";

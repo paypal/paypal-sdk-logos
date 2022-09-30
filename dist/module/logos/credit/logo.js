@@ -5,18 +5,18 @@ var _excluded = ["logoColor", "locale"];
 var _LOGO_COLORS;
 
 /** @jsx node */
-import { COUNTRY } from '@paypal/sdk-constants/src';
-import { node } from '@krakenjs/jsx-pragmatic/src';
-import { SVGLogo, getLogoColors } from '../../lib';
-import { LOGO_COLOR, LOGO } from '../../constants';
+import { COUNTRY } from "@paypal/sdk-constants/src";
+import { node } from "@krakenjs/jsx-pragmatic/src";
+import { SVGLogo, getLogoColors } from "../../lib";
+import { LOGO_COLOR, LOGO } from "../../constants";
 var LOGO_COLORS = (_LOGO_COLORS = {}, _LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
-  primary: '#003087'
+  primary: "#003087"
 }, _LOGO_COLORS[LOGO_COLOR.BLUE] = {
-  primary: '#003087'
+  primary: "#003087"
 }, _LOGO_COLORS[LOGO_COLOR.WHITE] = {
-  primary: '#ffffff'
+  primary: "#ffffff"
 }, _LOGO_COLORS[LOGO_COLOR.BLACK] = {
-  primary: '#333030'
+  primary: "#333030"
 }, _LOGO_COLORS);
 export function CreditLogo(_ref) {
   var logoColor = _ref.logoColor,

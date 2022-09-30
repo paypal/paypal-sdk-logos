@@ -5,23 +5,22 @@ var _excluded = ["logoColor"];
 var _LOGO_COLORS;
 
 /** @jsx node */
-import { node } from '@krakenjs/jsx-pragmatic/src';
-import { SVGLogo, getLogoColors } from '../../lib';
-import { LOGO_COLOR, LOGO } from '../../constants';
+import { node } from "@krakenjs/jsx-pragmatic/src";
+import { SVGLogo, getLogoColors } from "../../lib";
+import { LOGO_COLOR, LOGO } from "../../constants";
 var LOGO_COLORS = (_LOGO_COLORS = {}, _LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
-  primary: '#004A91',
-  secondary: '#ED1921'
+  primary: "#004A91",
+  secondary: "#ED1921"
 }, _LOGO_COLORS[LOGO_COLOR.WHITE] = {
-  primary: '#004A91',
-  secondary: '#ED1921'
+  primary: "#004A91",
+  secondary: "#ED1921"
 }, _LOGO_COLORS[LOGO_COLOR.BLACK] = {
-  primary: '#004A91',
-  secondary: '#ED1921'
-}, _LOGO_COLORS); // eslint-disable-next-line flowtype/require-exact-type
-
+  primary: "#004A91",
+  secondary: "#ED1921"
+}, _LOGO_COLORS);
 export function MaximaLogo(_ref) {
   var _ref$logoColor = _ref.logoColor,
-      logoColor = _ref$logoColor === void 0 ? LOGO_COLOR.DEFAULT : _ref$logoColor,
+      logoColor = _ref$logoColor === void 0 ? LOGO_COLOR.BLACK : _ref$logoColor,
       props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var _getLogoColors = getLogoColors(LOGO.MAXIMA, LOGO_COLORS, logoColor),

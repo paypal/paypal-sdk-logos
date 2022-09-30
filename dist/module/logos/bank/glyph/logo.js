@@ -5,17 +5,16 @@ var _excluded = ["logoColor"];
 var _LOGO_COLORS;
 
 /** @jsx node */
-import { node } from '@krakenjs/jsx-pragmatic/src';
-import { SVGLogo, getLogoColors } from '../../../lib';
-import { LOGO_COLOR, LOGO } from '../../../constants';
+import { node } from "@krakenjs/jsx-pragmatic/src";
+import { SVGLogo, getLogoColors } from "../../../lib";
+import { LOGO_COLOR, LOGO } from "../../../constants";
 var LOGO_COLORS = (_LOGO_COLORS = {}, _LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
-  primary: '#333030'
+  primary: "#333030"
 }, _LOGO_COLORS[LOGO_COLOR.WHITE] = {
-  primary: '#ffffff'
+  primary: "#ffffff"
 }, _LOGO_COLORS[LOGO_COLOR.BLACK] = {
-  primary: '#333030'
-}, _LOGO_COLORS); // eslint-disable-next-line flowtype/require-exact-type
-
+  primary: "#333030"
+}, _LOGO_COLORS);
 export function GlyphBank(_temp) {
   var _ref = _temp === void 0 ? {} : _temp,
       logoColor = _ref.logoColor,
