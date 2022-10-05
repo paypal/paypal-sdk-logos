@@ -75,7 +75,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/dtjones404/paypal-sdk-logos.git"
+    "url": "git://github.com/paypal/paypal-sdk-logos.git"
   },
   "keywords": [
     "template"
