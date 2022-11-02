@@ -10,15 +10,12 @@ import { type LogoColorMap } from "../../types";
 const LOGO_COLORS: LogoColorMap = {
   [LOGO_COLOR.DEFAULT]: {
     primary: "#A6C307",
-    secondary: "#FFFFFF",
   },
   [LOGO_COLOR.WHITE]: {
     primary: "#FFFFFF",
-    secondary: "#FFFFFF",
   },
   [LOGO_COLOR.BLACK]: {
     primary: "#2C2E2F",
-    secondary: "#FFFFFF",
   },
 };
 
@@ -28,11 +25,7 @@ export function PayuLogo({
 }: {
   logoColor?: $Values<typeof LOGO_COLOR>,
 }): ComponentNode<SVGLogoProps> {
-  const { primary, secondary } = getLogoColors(
-    LOGO.PAYU,
-    LOGO_COLORS,
-    logoColor
-  );
+  const { primary } = getLogoColors(LOGO.PAYU, LOGO_COLORS, logoColor);
 
   return (
     <SVGLogo
@@ -56,7 +49,7 @@ export function PayuLogo({
             </g>
             <defs>
               <clipPath id="clip0_381_8857">
-                <rect width="44.44" height="22" fill={secondary} />
+                <rect width="44.44" height="22" fill="white" />
               </clipPath>
             </defs>
           </svg>
