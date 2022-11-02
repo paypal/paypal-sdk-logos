@@ -17,7 +17,7 @@ const LOGO_COLORS: LogoColorMap = {
     secondary: "#FFFFFF",
   },
   [LOGO_COLOR.BLACK]: {
-    primary: "#A6C307",
+    primary: "#2C2E2F",
     secondary: "#FFFFFF",
   },
 };
