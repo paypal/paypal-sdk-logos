@@ -1,3 +1,5 @@
+
+
 export var LOGO = {
   PP: "pp",
   PAYPAL: "paypal",
@@ -27,7 +29,8 @@ export var LOGO = {
   BOLETOBANCARIO: "boletobancario",
   MAXIMA: "maxima",
   MERCADOPAGO: "mercadopago",
-  MULTIBANCO: "multibanco"
+  MULTIBANCO: "multibanco",
+  SATISPAY: "satispay"
 };
 export var LOGO_COLOR = {
   BLUE: "blue",

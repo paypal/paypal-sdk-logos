@@ -1,10 +1,9 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/esm/objectWithoutPropertiesLoose";
 var _excluded = ["logoColor"];
-
 var _LOGO_COLORS;
-
 /** @jsx node */
+
 import { node } from "@krakenjs/jsx-pragmatic/src";
 import { SVGLogo, getLogoColors } from "../../lib";
 import { LOGO_COLOR, LOGO } from "../../constants";
@@ -29,16 +28,14 @@ var LOGO_COLORS = (_LOGO_COLORS = {}, _LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
 }, _LOGO_COLORS);
 export function GiropayLogo(_ref) {
   var _ref$logoColor = _ref.logoColor,
-      logoColor = _ref$logoColor === void 0 ? LOGO_COLOR.BLACK : _ref$logoColor,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
-
+    logoColor = _ref$logoColor === void 0 ? LOGO_COLOR.BLACK : _ref$logoColor,
+    props = _objectWithoutPropertiesLoose(_ref, _excluded);
   var _getLogoColors = getLogoColors(LOGO.GIROPAY, LOGO_COLORS, logoColor),
-      primary = _getLogoColors.primary,
-      secondary = _getLogoColors.secondary,
-      tertiary = _getLogoColors.tertiary,
-      quaternary = _getLogoColors.quaternary,
-      quinary = _getLogoColors.quinary;
-
+    primary = _getLogoColors.primary,
+    secondary = _getLogoColors.secondary,
+    tertiary = _getLogoColors.tertiary,
+    quaternary = _getLogoColors.quaternary,
+    quinary = _getLogoColors.quinary;
   return node(SVGLogo, _extends({}, props, {
     name: LOGO.GIROPAY,
     logoColor: logoColor,

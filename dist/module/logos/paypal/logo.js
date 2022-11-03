@@ -1,11 +1,10 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/esm/objectWithoutPropertiesLoose";
 var _excluded = ["logoColor"],
-    _excluded2 = ["logoColor"];
-
+  _excluded2 = ["logoColor"];
 var _PAYPAL_LOGO_COLORS, _PP_LOGO_COLORS, _PPMONOCHROME_LOGO_CO;
-
 /** @jsx node */
+
 import { node } from "@krakenjs/jsx-pragmatic/src";
 import { LOGO, LOGO_COLOR } from "../../constants";
 import { SVGLogo, getLogoColors } from "../../lib";
@@ -27,13 +26,11 @@ var PAYPAL_LOGO_COLORS = (_PAYPAL_LOGO_COLORS = {}, _PAYPAL_LOGO_COLORS[LOGO_COL
 }, _PAYPAL_LOGO_COLORS);
 export function PayPalLogo(_ref) {
   var _ref$logoColor = _ref.logoColor,
-      logoColor = _ref$logoColor === void 0 ? LOGO_COLOR.DEFAULT : _ref$logoColor,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
-
+    logoColor = _ref$logoColor === void 0 ? LOGO_COLOR.DEFAULT : _ref$logoColor,
+    props = _objectWithoutPropertiesLoose(_ref, _excluded);
   var _getLogoColors = getLogoColors(LOGO.PAYPAL, PAYPAL_LOGO_COLORS, logoColor),
-      primary = _getLogoColors.primary,
-      secondary = _getLogoColors.secondary;
-
+    primary = _getLogoColors.primary,
+    secondary = _getLogoColors.secondary;
   return node(SVGLogo, _extends({}, props, {
     name: LOGO.PAYPAL,
     alt: "PayPal",
@@ -90,20 +87,18 @@ var PP_LOGO_COLORS = (_PP_LOGO_COLORS = {}, _PP_LOGO_COLORS[LOGO_COLOR.DEFAULT] 
 }, _PP_LOGO_COLORS);
 export function PPLogo(_ref2) {
   var _ref2$logoColor = _ref2.logoColor,
-      logoColor = _ref2$logoColor === void 0 ? LOGO_COLOR.DEFAULT : _ref2$logoColor,
-      props = _objectWithoutPropertiesLoose(_ref2, _excluded2);
-
+    logoColor = _ref2$logoColor === void 0 ? LOGO_COLOR.DEFAULT : _ref2$logoColor,
+    props = _objectWithoutPropertiesLoose(_ref2, _excluded2);
   var _getLogoColors2 = getLogoColors(LOGO.PP, PP_LOGO_COLORS, logoColor),
-      primary = _getLogoColors2.primary,
-      secondary = _getLogoColors2.secondary,
-      tertiary = _getLogoColors2.tertiary,
-      _getLogoColors2$prima = _getLogoColors2.primaryOpacity,
-      primaryOpacity = _getLogoColors2$prima === void 0 ? DEFAULT_OPACITY : _getLogoColors2$prima,
-      _getLogoColors2$secon = _getLogoColors2.secondaryOpacity,
-      secondaryOpacity = _getLogoColors2$secon === void 0 ? DEFAULT_OPACITY : _getLogoColors2$secon,
-      _getLogoColors2$terti = _getLogoColors2.tertiaryOpacity,
-      tertiaryOpacity = _getLogoColors2$terti === void 0 ? DEFAULT_OPACITY : _getLogoColors2$terti;
-
+    primary = _getLogoColors2.primary,
+    secondary = _getLogoColors2.secondary,
+    tertiary = _getLogoColors2.tertiary,
+    _getLogoColors2$prima = _getLogoColors2.primaryOpacity,
+    primaryOpacity = _getLogoColors2$prima === void 0 ? DEFAULT_OPACITY : _getLogoColors2$prima,
+    _getLogoColors2$secon = _getLogoColors2.secondaryOpacity,
+    secondaryOpacity = _getLogoColors2$secon === void 0 ? DEFAULT_OPACITY : _getLogoColors2$secon,
+    _getLogoColors2$terti = _getLogoColors2.tertiaryOpacity,
+    tertiaryOpacity = _getLogoColors2$terti === void 0 ? DEFAULT_OPACITY : _getLogoColors2$terti;
   return node(SVGLogo, _extends({}, props, {
     name: LOGO.PP,
     alt: "PP",
@@ -139,13 +134,11 @@ var PPMONOCHROME_LOGO_COLORS = (_PPMONOCHROME_LOGO_CO = {}, _PPMONOCHROME_LOGO_C
 }, _PPMONOCHROME_LOGO_CO);
 export function PPMonochrome(_ref3) {
   var _ref3$logoColor = _ref3.logoColor,
-      logoColor = _ref3$logoColor === void 0 ? LOGO_COLOR.MONOCHROME : _ref3$logoColor;
-
+    logoColor = _ref3$logoColor === void 0 ? LOGO_COLOR.MONOCHROME : _ref3$logoColor;
   var _getLogoColors3 = getLogoColors(LOGO.PP, PPMONOCHROME_LOGO_COLORS, logoColor),
-      primary = _getLogoColors3.primary,
-      secondary = _getLogoColors3.secondary,
-      tertiary = _getLogoColors3.tertiary;
-
+    primary = _getLogoColors3.primary,
+    secondary = _getLogoColors3.secondary,
+    tertiary = _getLogoColors3.tertiary;
   return node(SVGLogo, {
     name: LOGO.PP,
     alt: "PP",
