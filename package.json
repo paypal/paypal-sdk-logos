@@ -94,7 +94,7 @@
     "standard-version": "^9.5.0"
   },
   "dependencies": {
-    "@paypal/sdk-constants": "^1.0.116",
+    "@paypal/sdk-constants": "^1.0.127",
     "@krakenjs/belter": "^2.0.0",
     "@krakenjs/jsx-pragmatic": "^3.0.0"
   },
