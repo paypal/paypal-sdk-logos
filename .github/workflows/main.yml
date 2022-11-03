@@ -26,6 +26,9 @@ jobs:
         with:
           useLockFile: false
 
+      - name: 👕 Lint commit messages
+        uses: wagoid/commitlint-github-action@v4
+
       - name: ▶️ Run build script
         run: npm run build
 
