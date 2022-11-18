@@ -86,7 +86,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
-    "@krakenjs/grumbler-scripts": "^8.0.1",
+    "@krakenjs/grumbler-scripts": "^8.0.4",
     "cross-env": "^7.0.3",
     "flow-bin": "0.155.0",
     "flow-typed": "^3.8.0",
