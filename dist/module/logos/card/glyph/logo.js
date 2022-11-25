@@ -1,28 +1,25 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/esm/objectWithoutPropertiesLoose";
 var _excluded = ["logoColor"];
-
 var _LOGO_COLORS;
-
 /** @jsx node */
-import { node } from '@krakenjs/jsx-pragmatic/src';
-import { SVGCardLogo, getLogoColors } from '../../../lib';
-import { LOGO_COLOR, LOGO } from '../../../constants';
+
+import { node } from "@krakenjs/jsx-pragmatic/src";
+import { SVGCardLogo, getLogoColors } from "../../../lib";
+import { LOGO_COLOR, LOGO } from "../../../constants";
 var LOGO_COLORS = (_LOGO_COLORS = {}, _LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
-  primary: '#333030'
+  primary: "#333030"
 }, _LOGO_COLORS[LOGO_COLOR.WHITE] = {
-  primary: '#ffffff'
+  primary: "#ffffff"
 }, _LOGO_COLORS[LOGO_COLOR.BLACK] = {
-  primary: '#333030'
+  primary: "#333030"
 }, _LOGO_COLORS);
 export function GlyphCard(_temp) {
   var _ref = _temp === void 0 ? {} : _temp,
-      logoColor = _ref.logoColor,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
-
+    logoColor = _ref.logoColor,
+    props = _objectWithoutPropertiesLoose(_ref, _excluded);
   var _getLogoColors = getLogoColors(LOGO.CARD, LOGO_COLORS, logoColor),
-      primary = _getLogoColors.primary;
-
+    primary = _getLogoColors.primary;
   return node(SVGCardLogo, _extends({}, props, {
     name: "",
     render: function render() {

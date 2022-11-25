@@ -1,40 +1,36 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/esm/objectWithoutPropertiesLoose";
 var _excluded = ["logoColor"],
-    _excluded2 = ["logoColor"];
-
+  _excluded2 = ["logoColor"];
 var _PAYPAL_LOGO_COLORS, _PP_LOGO_COLORS, _PPMONOCHROME_LOGO_CO;
-
 /** @jsx node */
-import { node } from '@krakenjs/jsx-pragmatic/src';
-import { LOGO, LOGO_COLOR } from '../../constants';
-import { SVGLogo, getLogoColors } from '../../lib';
-var PAYPAL_LOGO_COLORS = (_PAYPAL_LOGO_COLORS = {}, _PAYPAL_LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
-  primary: '#003087',
-  secondary: '#009cde'
-}, _PAYPAL_LOGO_COLORS[LOGO_COLOR.BLUE] = {
-  primary: '#003087',
-  secondary: '#009cde'
-}, _PAYPAL_LOGO_COLORS[LOGO_COLOR.WHITE] = {
-  primary: '#ffffff',
-  secondary: '#ffffff'
-}, _PAYPAL_LOGO_COLORS[LOGO_COLOR.BLACK] = {
-  primary: '#333030',
-  secondary: '#636363'
-}, _PAYPAL_LOGO_COLORS[LOGO_COLOR.MONOCHROME] = {
-  primary: '#000000',
-  secondary: '#000000'
-}, _PAYPAL_LOGO_COLORS); // eslint-disable-next-line flowtype/require-exact-type
 
+import { node } from "@krakenjs/jsx-pragmatic/src";
+import { LOGO, LOGO_COLOR } from "../../constants";
+import { SVGLogo, getLogoColors } from "../../lib";
+var PAYPAL_LOGO_COLORS = (_PAYPAL_LOGO_COLORS = {}, _PAYPAL_LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
+  primary: "#003087",
+  secondary: "#009cde"
+}, _PAYPAL_LOGO_COLORS[LOGO_COLOR.BLUE] = {
+  primary: "#003087",
+  secondary: "#009cde"
+}, _PAYPAL_LOGO_COLORS[LOGO_COLOR.WHITE] = {
+  primary: "#ffffff",
+  secondary: "#ffffff"
+}, _PAYPAL_LOGO_COLORS[LOGO_COLOR.BLACK] = {
+  primary: "#333030",
+  secondary: "#636363"
+}, _PAYPAL_LOGO_COLORS[LOGO_COLOR.MONOCHROME] = {
+  primary: "#000000",
+  secondary: "#000000"
+}, _PAYPAL_LOGO_COLORS);
 export function PayPalLogo(_ref) {
   var _ref$logoColor = _ref.logoColor,
-      logoColor = _ref$logoColor === void 0 ? LOGO_COLOR.DEFAULT : _ref$logoColor,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
-
+    logoColor = _ref$logoColor === void 0 ? LOGO_COLOR.DEFAULT : _ref$logoColor,
+    props = _objectWithoutPropertiesLoose(_ref, _excluded);
   var _getLogoColors = getLogoColors(LOGO.PAYPAL, PAYPAL_LOGO_COLORS, logoColor),
-      primary = _getLogoColors.primary,
-      secondary = _getLogoColors.secondary;
-
+    primary = _getLogoColors.primary,
+    secondary = _getLogoColors.secondary;
   return node(SVGLogo, _extends({}, props, {
     name: LOGO.PAYPAL,
     alt: "PayPal",
@@ -69,43 +65,40 @@ export function PayPalLogo(_ref) {
     }
   }));
 }
-var DEFAULT_OPACITY = '1';
+var DEFAULT_OPACITY = "1";
 var PP_LOGO_COLORS = (_PP_LOGO_COLORS = {}, _PP_LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
-  primary: '#009cde',
-  secondary: '#012169',
-  tertiary: '#003087'
+  primary: "#009cde",
+  secondary: "#012169",
+  tertiary: "#003087"
 }, _PP_LOGO_COLORS[LOGO_COLOR.BLUE] = {
-  primary: '#009cde',
-  secondary: '#012169',
-  tertiary: '#003087'
+  primary: "#009cde",
+  secondary: "#012169",
+  tertiary: "#003087"
 }, _PP_LOGO_COLORS[LOGO_COLOR.WHITE] = {
-  primary: '#ffffff',
-  primaryOpacity: '0.7',
-  secondary: '#ffffff',
-  secondaryOpacity: '0.7',
-  tertiary: '#ffffff'
+  primary: "#ffffff",
+  primaryOpacity: "0.7",
+  secondary: "#ffffff",
+  secondaryOpacity: "0.7",
+  tertiary: "#ffffff"
 }, _PP_LOGO_COLORS[LOGO_COLOR.BLACK] = {
-  primary: '#808080',
-  secondary: '#000000',
-  tertiary: '#1a1a1a'
-}, _PP_LOGO_COLORS); // eslint-disable-next-line flowtype/require-exact-type
-
+  primary: "#808080",
+  secondary: "#000000",
+  tertiary: "#1a1a1a"
+}, _PP_LOGO_COLORS);
 export function PPLogo(_ref2) {
   var _ref2$logoColor = _ref2.logoColor,
-      logoColor = _ref2$logoColor === void 0 ? LOGO_COLOR.DEFAULT : _ref2$logoColor,
-      props = _objectWithoutPropertiesLoose(_ref2, _excluded2);
-
+    logoColor = _ref2$logoColor === void 0 ? LOGO_COLOR.DEFAULT : _ref2$logoColor,
+    props = _objectWithoutPropertiesLoose(_ref2, _excluded2);
   var _getLogoColors2 = getLogoColors(LOGO.PP, PP_LOGO_COLORS, logoColor),
-      primary = _getLogoColors2.primary,
-      secondary = _getLogoColors2.secondary,
-      tertiary = _getLogoColors2.tertiary,
-      _getLogoColors2$prima = _getLogoColors2.primaryOpacity,
-      primaryOpacity = _getLogoColors2$prima === void 0 ? DEFAULT_OPACITY : _getLogoColors2$prima,
-      _getLogoColors2$secon = _getLogoColors2.secondaryOpacity,
-      secondaryOpacity = _getLogoColors2$secon === void 0 ? DEFAULT_OPACITY : _getLogoColors2$secon,
-      _getLogoColors2$terti = _getLogoColors2.tertiaryOpacity,
-      tertiaryOpacity = _getLogoColors2$terti === void 0 ? DEFAULT_OPACITY : _getLogoColors2$terti;
-
+    primary = _getLogoColors2.primary,
+    secondary = _getLogoColors2.secondary,
+    tertiary = _getLogoColors2.tertiary,
+    _getLogoColors2$prima = _getLogoColors2.primaryOpacity,
+    primaryOpacity = _getLogoColors2$prima === void 0 ? DEFAULT_OPACITY : _getLogoColors2$prima,
+    _getLogoColors2$secon = _getLogoColors2.secondaryOpacity,
+    secondaryOpacity = _getLogoColors2$secon === void 0 ? DEFAULT_OPACITY : _getLogoColors2$secon,
+    _getLogoColors2$terti = _getLogoColors2.tertiaryOpacity,
+    tertiaryOpacity = _getLogoColors2$terti === void 0 ? DEFAULT_OPACITY : _getLogoColors2$terti;
   return node(SVGLogo, _extends({}, props, {
     name: LOGO.PP,
     alt: "PP",
@@ -135,20 +128,17 @@ export function PPLogo(_ref2) {
   }));
 }
 var PPMONOCHROME_LOGO_COLORS = (_PPMONOCHROME_LOGO_CO = {}, _PPMONOCHROME_LOGO_CO[LOGO_COLOR.MONOCHROME] = {
-  primary: '#000000',
-  secondary: '#000000',
-  tertiary: '#000000'
-}, _PPMONOCHROME_LOGO_CO); // eslint-disable-next-line flowtype/require-exact-type
-
+  primary: "#000000",
+  secondary: "#000000",
+  tertiary: "#000000"
+}, _PPMONOCHROME_LOGO_CO);
 export function PPMonochrome(_ref3) {
   var _ref3$logoColor = _ref3.logoColor,
-      logoColor = _ref3$logoColor === void 0 ? LOGO_COLOR.MONOCHROME : _ref3$logoColor;
-
+    logoColor = _ref3$logoColor === void 0 ? LOGO_COLOR.MONOCHROME : _ref3$logoColor;
   var _getLogoColors3 = getLogoColors(LOGO.PP, PPMONOCHROME_LOGO_COLORS, logoColor),
-      primary = _getLogoColors3.primary,
-      secondary = _getLogoColors3.secondary,
-      tertiary = _getLogoColors3.tertiary;
-
+    primary = _getLogoColors3.primary,
+    secondary = _getLogoColors3.secondary,
+    tertiary = _getLogoColors3.tertiary;
   return node(SVGLogo, {
     name: LOGO.PP,
     alt: "PP",

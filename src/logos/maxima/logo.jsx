@@ -23,7 +23,7 @@ const LOGO_COLORS: LogoColorMap = {
 };
 
 export function MaximaLogo({
-  logoColor = LOGO_COLOR.DEFAULT,
+  logoColor = LOGO_COLOR.BLACK,
   ...props
 }: {
   logoColor?: $Values<typeof LOGO_COLOR>,

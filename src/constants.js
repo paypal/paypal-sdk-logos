@@ -30,6 +30,7 @@ export const LOGO = {
   MAXIMA: ("maxima": "maxima"),
   MERCADOPAGO: ("mercadopago": "mercadopago"),
   MULTIBANCO: ("multibanco": "multibanco"),
+  SATISPAY: ("satispay": "satispay"),
   PAIDY: ("paidy": "paidy"),
 };
 
