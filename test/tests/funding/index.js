@@ -18,3 +18,4 @@ import "./itau";
 import "./mercadopago";
 import "./multibanco";
 import "./satispay";
+import "./paidy";
