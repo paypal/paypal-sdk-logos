@@ -21,7 +21,8 @@
     "clean": "rimraf dist coverage",
     "reinstall": "rimraf flow-typed && rimraf node_modules && npm install && flow-typed install",
     "debug": "cross-env NODE_ENV=debug",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "build-logos": "babel-node --config-file './scripts/babel.config.json' --ignore ./fake --plugins=transform-es2015-modules-commonjs ./scripts/buildLogos.js"
   },
   "standard-version": {
     "types": [
