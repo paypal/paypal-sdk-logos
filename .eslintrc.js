@@ -12,4 +12,13 @@ module.exports = {
     // this was disabled already in all the logo files
     "flowtype/require-exact-type": "off",
   },
+  overrides: [
+    {
+      files: ["scripts/*"],
+      rules: {
+        "flowtype/require-valid-file-annotation": "off",
+        "no-sync": "off",
+      },
+    },
+  ],
 };

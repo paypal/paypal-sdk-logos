@@ -1,7 +1,12 @@
 /* @flow */
 
-import { LOGO_COLOR } from "../constants";
-import type { LogoColorMap, LogoColors } from "../types";
+import { LOGO, LOGO_COLOR } from "../constants";
+import type {
+  LogoColorMap,
+  LogoColors,
+  LogoColorSVGMap,
+  SVGGetter,
+} from "../types";
 
 export function getLogoColors(
   name: string,
@@ -25,4 +30,20 @@ export function getLogoColors(
   }
 
   return colors;
+}
+
+export function getSVGs(
+  logoName: $Values<typeof LOGO>,
+  svgGetter: SVGGetter,
+  logoColorMap: LogoColorMap
+): LogoColorSVGMap {
+  const svgs = {};
+
+  for (const logoColor of Object.keys(logoColorMap)) {
+    const logoColors = getLogoColors(logoName, logoColorMap, logoColor);
+
+    svgs[logoColor] = svgGetter(logoColors);
+  }
+
+  return svgs;
 }
