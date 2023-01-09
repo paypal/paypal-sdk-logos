@@ -6,6 +6,9 @@ import { html } from "@krakenjs/jsx-pragmatic/src";
 // eslint-disable-next-line import/no-namespace
 import * as logos from "../src/logos";
 import { LOGO_COLOR } from "../src/constants";
+import { ApplePayLogo } from "../src/logos";
+
+// console.log(ApplePayLogo({ logoColor: "black" }).props.render().render(html()));
 
 async function buildLogos() {
   const logoPromises = [];
@@ -26,8 +29,8 @@ async function buildLogos() {
     for (const logoColor of Object.values(LOGO_COLOR)) {
       logoPromises.push(
         fs.writeFile(
-          `./svg/${name}_${logoColor}.html`,
-          logo({ logoColor }).renderComponent(html())
+          `./svg/${name}_${logoColor}.svg`,
+          logo({ logoColor }).props.render().render(html())
         )
       );
     }
