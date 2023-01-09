@@ -1,7 +1,5 @@
 import _objectDestructuringEmpty from "@babel/runtime/helpers/esm/objectDestructuringEmpty";
 import _extends from "@babel/runtime/helpers/esm/extends";
-/** @jsx node */
-
 import { node } from "@krakenjs/jsx-pragmatic/src";
 import { CARD } from "@paypal/sdk-constants/src";
 import { SVGCardLogo } from "../../../lib";

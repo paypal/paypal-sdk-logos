@@ -3,8 +3,6 @@ import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/esm/objectWith
 var _excluded = ["logoColor"],
   _excluded2 = ["logoColor"];
 var _PAYPAL_LOGO_COLORS, _PP_LOGO_COLORS, _PPMONOCHROME_LOGO_CO;
-/** @jsx node */
-
 import { node } from "@krakenjs/jsx-pragmatic/src";
 import { LOGO, LOGO_COLOR } from "../../constants";
 import { SVGLogo, getLogoColors } from "../../lib";

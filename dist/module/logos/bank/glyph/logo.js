@@ -2,8 +2,6 @@ import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/esm/objectWithoutPropertiesLoose";
 var _excluded = ["logoColor"];
 var _LOGO_COLORS;
-/** @jsx node */
-
 import { node } from "@krakenjs/jsx-pragmatic/src";
 import { SVGLogo, getLogoColors } from "../../../lib";
 import { LOGO_COLOR, LOGO } from "../../../constants";
