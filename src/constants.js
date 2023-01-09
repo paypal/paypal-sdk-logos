@@ -31,6 +31,7 @@ export const LOGO = {
   MERCADOPAGO: ("mercadopago": "mercadopago"),
   MULTIBANCO: ("multibanco": "multibanco"),
   SATISPAY: ("satispay": "satispay"),
+  PAIDY: ("paidy": "paidy"),
 };
 
 export const LOGO_COLOR = {
