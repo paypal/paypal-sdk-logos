@@ -1,6 +1,6 @@
 {
   "name": "@paypal/sdk-logos",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "description": "JSX/SVG logos for PayPal.",
   "main": "index.js",
   "scripts": {
@@ -98,7 +98,7 @@
     "standard-version": "^9.5.0"
   },
   "dependencies": {
-    "@paypal/sdk-constants": "^1.0.127",
+    "@paypal/sdk-constants": "^1.0.128",
     "@krakenjs/belter": "^2.0.0",
     "@krakenjs/jsx-pragmatic": "^3.0.0"
   },

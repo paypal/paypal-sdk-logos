@@ -3,8 +3,6 @@ import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/esm/objectWith
 var _excluded = ["svg"],
   _excluded2 = ["render", "name", "logoColor"],
   _excluded3 = ["render", "name"];
-/** @jsx node */
-
 import { svgToBase64, capitalizeFirstLetter } from "@krakenjs/belter/src";
 import { node, html } from "@krakenjs/jsx-pragmatic/src";
 import { LOGO_CLASS, LOGO_COLOR } from "../constants";
@@ -18,8 +16,6 @@ export function SVG(props) {
   if (typeof svg !== "string") {
     throw new TypeError("Expected svg prop to be a string or jsx node");
   }
-
-  // $FlowFixMe
   var svgProps = _extends({
     src: svgToBase64(svg)
   }, otherProps);

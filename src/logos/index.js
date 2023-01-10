@@ -28,3 +28,4 @@ export * from "./mercadopago";
 export * from "./multibanco";
 export * from "./satispay";
 export * from "./payuponinvoice";
+export * from "./paidy";

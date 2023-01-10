@@ -2,8 +2,6 @@ import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/esm/objectWithoutPropertiesLoose";
 var _excluded = ["logoColor", "locale"];
 var _LOGO_COLORS;
-/** @jsx node */
-
 import { COUNTRY } from "@paypal/sdk-constants/src";
 import { node } from "@krakenjs/jsx-pragmatic/src";
 import { SVGLogo, getLogoColors } from "../../lib";

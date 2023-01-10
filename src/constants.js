@@ -32,6 +32,7 @@ export const LOGO = {
   MULTIBANCO: ("multibanco": "multibanco"),
   SATISPAY: ("satispay": "satispay"),
   PAYUPONINVOICE: ("payuponinvoice": "payuponinvoice"),
+  PAIDY: ("paidy": "paidy"),
 };
 
 export const LOGO_COLOR = {

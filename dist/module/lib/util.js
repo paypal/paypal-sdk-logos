@@ -1,5 +1,3 @@
-
-
 import { LOGO_COLOR } from "../constants";
 export function getLogoColors(name, logoColorMap, logoColor) {
   var colors;

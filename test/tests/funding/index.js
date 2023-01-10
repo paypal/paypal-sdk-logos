@@ -19,3 +19,4 @@ import "./mercadopago";
 import "./multibanco";
 import "./satispay";
 import "./payuponinvoice";
+import "./paidy";

@@ -1,0 +1,39 @@
+import _extends from "@babel/runtime/helpers/esm/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/esm/objectWithoutPropertiesLoose";
+var _excluded = ["logoColor"];
+var _LOGO_COLORS;
+import { node } from "@krakenjs/jsx-pragmatic/src";
+import { SVGLogo, getLogoColors } from "../../lib";
+import { LOGO_COLOR, LOGO } from "../../constants";
+var LOGO_COLORS = (_LOGO_COLORS = {}, _LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
+  primary: "#FFFFFF"
+}, _LOGO_COLORS[LOGO_COLOR.WHITE] = {
+  primary: "#FFFFFF"
+}, _LOGO_COLORS[LOGO_COLOR.BLACK] = {
+  primary: "#2C2E2F"
+}, _LOGO_COLORS);
+export function PayuponinvoiceLogo(_ref) {
+  var _ref$logoColor = _ref.logoColor,
+    logoColor = _ref$logoColor === void 0 ? LOGO_COLOR.BLACK : _ref$logoColor,
+    props = _objectWithoutPropertiesLoose(_ref, _excluded);
+  var _getLogoColors = getLogoColors(LOGO.PAYUPONINVOICE, LOGO_COLORS, logoColor),
+    primary = _getLogoColors.primary;
+  return node(SVGLogo, _extends({}, props, {
+    name: LOGO.PAYUPONINVOICE,
+    logoColor: logoColor,
+    render: function render() {
+      return node("svg", {
+        width: "17",
+        height: "22",
+        viewBox: "0 0 17 22",
+        fill: "none",
+        xmlns: "http://www.w3.org/2000/svg"
+      }, node("path", {
+        "fill-rule": "evenodd",
+        "clip-rule": "evenodd",
+        d: "M1.98496 0.227173C0.99117 0.227173 0.185547 1.01939 0.185547 1.99664V19.9655C0.185547 20.9427 0.991169 21.735 1.98496 21.735H14.9807C15.9745 21.735 16.7801 20.9427 16.7801 19.9655V1.99664C16.7801 1.01939 15.9745 0.227173 14.9807 0.227173H1.98496ZM1.5376 4.52539C1.5376 3.75036 2.15215 3.12207 2.91023 3.12207H4.68626C5.44435 3.12207 6.0589 3.75036 6.0589 4.52539C6.0589 5.30042 5.44435 5.9287 4.68626 5.9287H2.91023C2.15215 5.9287 1.5376 5.30042 1.5376 4.52539ZM1.92236 17.7328C1.92236 17.3836 2.19921 17.1006 2.54072 17.1006H5.0558C5.39731 17.1006 5.67416 17.3836 5.67416 17.7328C5.67416 18.0819 5.39731 18.365 5.0558 18.365H2.54073C2.19921 18.365 1.92236 18.0819 1.92236 17.7328ZM2.39375 8.66663C2.05224 8.66663 1.77539 8.94966 1.77539 9.29881C1.77539 9.64795 2.05224 9.93099 2.39375 9.93099L14.376 9.93099C14.7175 9.93099 14.9943 9.64795 14.9943 9.29881C14.9943 8.94966 14.7175 8.66662 14.376 8.66662L2.39375 8.66663ZM1.77539 11.8308C1.77539 11.4816 2.05224 11.1986 2.39375 11.1986L14.376 11.1986C14.7175 11.1986 14.9943 11.4816 14.9943 11.8308C14.9943 12.1799 14.7175 12.463 14.376 12.463L2.39375 12.463C2.05224 12.463 1.77539 12.1799 1.77539 11.8308ZM2.39375 13.7307C2.05224 13.7307 1.77539 14.0138 1.77539 14.3629C1.77539 14.712 2.05224 14.9951 2.39375 14.9951H9.46297C9.80448 14.9951 10.0813 14.712 10.0813 14.3629C10.0813 14.0138 9.80448 13.7307 9.46297 13.7307H2.39375ZM11.2427 4.52549C11.2427 4.17635 11.5195 3.89331 11.861 3.89331L14.3761 3.89331C14.7176 3.89331 14.9945 4.17635 14.9945 4.52549C14.9945 4.87464 14.7176 5.15768 14.3761 5.15768L11.861 5.15768C11.5195 5.15768 11.2427 4.87464 11.2427 4.52549Z",
+        fill: primary
+      }));
+    }
+  }));
+}
