@@ -1,16 +1,14 @@
 /* @flow */
 
 import fs from "fs-extra";
-import { html } from "@krakenjs/jsx-pragmatic/src";
+import { html } from "@krakenjs/jsx-pragmatic";
 
 // eslint-disable-next-line import/no-namespace
 import * as logos from "../src/logos";
 import { LOGO_COLOR } from "../src/constants";
-import { ApplePayLogo } from "../src/logos";
-
-// console.log(ApplePayLogo({ logoColor: "black" }).props.render().render(html()));
 
 async function buildLogos() {
+  const outdir = process.argv.pop();
   const logoPromises = [];
 
   for (const [name, logo] of Object.entries(logos)) {
@@ -29,7 +27,7 @@ async function buildLogos() {
     for (const logoColor of Object.values(LOGO_COLOR)) {
       logoPromises.push(
         fs.writeFile(
-          `./svg/${name}_${logoColor}.svg`,
+          `${outdir}/${name}-${logoColor}.svg`,
           logo({ logoColor }).props.render().render(html())
         )
       );

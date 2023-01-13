@@ -1,0 +1,8 @@
+{
+  "PROJECT_TYPE": "front-tier",
+  "web": {
+    "projectName": "@paypal/sdk-logos",
+    "staticDirectory": "cdn",
+    "staticNamespace": "js-sdk-logos"
+  }
+}
