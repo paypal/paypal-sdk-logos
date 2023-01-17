@@ -34,10 +34,14 @@ export function IdealLogo({
     logoColor
   );
 
+  const CDN_URL =
+    "https://www.paypalobjects.com/images/checkout/latinum/Altpay_logo_iDEAL.svg";
+
   return (
     <SVGLogo
       {...props}
       name={LOGO.IDEAL}
+      cdnUrl={CDN_URL}
       render={() => {
         return (
           <svg

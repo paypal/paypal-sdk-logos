@@ -17,6 +17,8 @@ const getNodeOps = () => {
 };
 
 const web = async (cmd, options) => {
+  // const cmdString = `JENKINS_HOME=0 npx @paypalcorp/web ${cmd}`;
+  // return await $`${cmdString}`;
   return await exec(`npx @paypalcorp/web ${cmd}`, {
     JENKINS_HOME: "0",
     // SVC_ACC_USERNAME: options.username,
@@ -48,6 +50,10 @@ const run = async () => {
   const options = { username: "dustijones", password: "Ojeu2493@#" };
   const response = await web("stage --json", options);
   const { id, message } = response;
+
+  //debug
+  console.log(response);
+
   console.info(message);
 };
 

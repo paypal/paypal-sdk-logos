@@ -25,12 +25,10 @@ async function buildLogos() {
     }
 
     for (const logoColor of Object.values(LOGO_COLOR)) {
-      logoPromises.push(
-        fs.writeFile(
-          `${outdir}/${name}-${logoColor}.svg`,
-          logo({ logoColor }).props.render().render(html())
-        )
-      );
+      const filepath = `${outdir}/${name}-${logoColor}.svg`;
+      const svg = logo({ logoColor }).props.render().render(html());
+
+      logoPromises.push(fs.writeFile(filepath, svg));
     }
   }
 
