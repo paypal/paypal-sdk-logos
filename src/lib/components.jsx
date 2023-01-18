@@ -21,7 +21,8 @@ export function SVG(props: SVGProps): ElementNode {
   let { svg, cdnUrl, ...otherProps } = props;
 
   if (cdnUrl) {
-    const svgProps = { src: cdnUrl, ...otherProps };
+    // $FlowFixMe
+    const svgProps: SVGProps = { src: cdnUrl, ...otherProps };
     return <img {...svgProps} />;
   }
 

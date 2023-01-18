@@ -8,7 +8,7 @@ import { $ } from "zx";
 import * as logos from "../src/logos";
 import { LOGO_COLOR } from "../src/constants";
 
-import { getPackage } from "./utils";
+import { getPackage, getSVGFilename } from "./utils";
 
 async function buildLogos() {
   const version = getPackage().version;
@@ -37,7 +37,11 @@ async function buildLogos() {
     }
 
     for (const logoColor of Object.values(LOGO_COLOR)) {
-      const filepath = `${outdir}/${name}-${logoColor}.svg`;
+      // $FlowFixMe
+      const filename = getSVGFilename(name, logoColor);
+      const filepath = `${outdir}/${filename}`;
+
+      // $FlowFixMe
       const svg = logo({ logoColor }).props.render().render(html());
 
       logoPromises.push(fs.writeFile(filepath, svg));

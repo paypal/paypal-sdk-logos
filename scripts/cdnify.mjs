@@ -25,7 +25,6 @@ const run = async () => {
     throw new Error(`Namespace required`);
   }
 
-  const options = { username: "dustijones", password: "Ojeu2493@#" };
   const response = await web("stage --json", options);
   const { id, message } = response;
 
