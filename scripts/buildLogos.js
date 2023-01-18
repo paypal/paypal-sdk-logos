@@ -2,13 +2,25 @@
 
 import fs from "fs-extra";
 import { html } from "@krakenjs/jsx-pragmatic";
+import { $ } from "zx";
 
 // eslint-disable-next-line import/no-namespace
 import * as logos from "../src/logos";
 import { LOGO_COLOR } from "../src/constants";
 
+import { getPackage } from "./utils";
+
 async function buildLogos() {
-  const outdir = process.argv.pop();
+  const version = getPackage().version;
+
+  if (!version) {
+    throw new Error(`Package version required`);
+  }
+
+  const outdir = `cdn/${version}`;
+
+  await $`mkdir -p ${outdir}`;
+
   const logoPromises = [];
 
   for (const [name, logo] of Object.entries(logos)) {

@@ -1,20 +1,6 @@
-import { $ } from "zx";
-import fs from "fs-extra";
 import { exec } from "@krakenjs/grabthar-release/scripts/grabthar-utils.js";
 
-const getPackage = () => {
-  if (!fs.existsSync("./package.json")) {
-    throw new Error(`Package file not found`);
-  }
-  return JSON.parse(fs.readFileSync("./package.json"));
-};
-
-const getNodeOps = () => {
-  if (!fs.existsSync("./.nodeops")) {
-    throw new Error(`Node Ops file not found`);
-  }
-  return JSON.parse(fs.readFileSync("./.nodeops"));
-};
+import { getNodeOps, getPackage } from "./utils";
 
 const web = async (cmd, options) => {
   // const cmdString = `JENKINS_HOME=0 npx @paypalcorp/web ${cmd}`;
@@ -30,7 +16,6 @@ const web = async (cmd, options) => {
 const run = async () => {
   const module = getPackage().name;
   const namespace = getNodeOps().web.staticNamespace;
-  const version = getPackage().version;
 
   if (!module) {
     throw new Error(`Module name required`);
@@ -39,13 +24,6 @@ const run = async () => {
   if (!namespace) {
     throw new Error(`Namespace required`);
   }
-
-  if (!version) {
-    throw new Error(`CDN required`);
-  }
-
-  await $`mkdir -p cdn/${version}`;
-  await $`npm run build-logos -- cdn/${version}`;
 
   const options = { username: "dustijones", password: "Ojeu2493@#" };
   const response = await web("stage --json", options);
