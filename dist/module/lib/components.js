@@ -1,6 +1,6 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/esm/objectWithoutPropertiesLoose";
-var _excluded = ["svg"],
+var _excluded = ["svg", "cdnUrl"],
   _excluded2 = ["render", "name", "logoColor"],
   _excluded3 = ["render", "name"];
 import { svgToBase64, capitalizeFirstLetter } from "@krakenjs/belter/src";
@@ -8,7 +8,14 @@ import { node, html } from "@krakenjs/jsx-pragmatic/src";
 import { LOGO_CLASS, LOGO_COLOR } from "../constants";
 export function SVG(props) {
   var svg = props.svg,
+    cdnUrl = props.cdnUrl,
     otherProps = _objectWithoutPropertiesLoose(props, _excluded);
+  if (cdnUrl) {
+    var _svgProps = _extends({
+      src: cdnUrl
+    }, otherProps);
+    return node("img", _svgProps);
+  }
   if (!svg) {
     throw new TypeError("Expected svg prop");
   }
