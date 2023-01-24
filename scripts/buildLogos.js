@@ -12,6 +12,10 @@ import { getPackage, getSVGFilename } from "./utils";
 async function buildLogos() {
   const version = getPackage().version;
 
+  let shouldCommit;
+  process.argv[2] &&
+    (shouldCommit = process.argv[2].replace(/\s+/g, "") === "commit");
+
   if (!version) {
     throw new Error(`Package version required`);
   }
@@ -40,6 +44,12 @@ async function buildLogos() {
 
   // eslint-disable-next-line no-restricted-globals,compat/compat,promise/no-native
   await Promise.all(logoPromises);
+
+  if (shouldCommit) {
+    await $`git add .`;
+    await $`git commit -am "feat: adding ${outdir}"`;
+    await $`git push`;
+  }
 }
 
 buildLogos();
