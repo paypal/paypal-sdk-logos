@@ -26,6 +26,7 @@ export function GlyphBank({
   logoColor?: $Values<typeof LOGO_COLOR>,
 } = {}): ComponentNode<SVGLogoProps> {
   const { primary } = getLogoColors(LOGO.BANK, LOGO_COLORS, logoColor);
+
   return (
     <SVGLogo
       {...props}

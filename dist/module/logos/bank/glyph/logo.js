@@ -6,7 +6,7 @@ import { node } from "@krakenjs/jsx-pragmatic/src";
 import { SVGLogo, getLogoColors } from "../../../lib";
 import { LOGO_COLOR, LOGO } from "../../../constants";
 var LOGO_COLORS = (_LOGO_COLORS = {}, _LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
-  primary: "#333030"
+  primary: "#142C8E"
 }, _LOGO_COLORS[LOGO_COLOR.WHITE] = {
   primary: "#ffffff"
 }, _LOGO_COLORS[LOGO_COLOR.BLACK] = {
