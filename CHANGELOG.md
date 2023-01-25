@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 2.1.1 (2023-01-25)
+
+
+* update bank glyph logo ([#88](https://github.com/paypal/paypal-sdk-logos/issues/88)) ([7f96dcf](https://github.com/paypal/paypal-sdk-logos/commit/7f96dcf53b1ecf97954688e21b8aa42e347e7345))
+
 ## 2.1.0 (2023-01-09)
 
 
