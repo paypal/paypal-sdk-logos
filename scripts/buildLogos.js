@@ -14,7 +14,7 @@ async function buildLogos() {
 
   let shouldCommit;
   process.argv[2] &&
-    (shouldCommit = process.argv[2].replace(/\s+/g, "") === "commit");
+    (shouldCommit = process.argv[2].replace(/\s+/g, "") === "--commit");
 
   if (!version) {
     throw new Error(`Package version required`);
@@ -46,8 +46,8 @@ async function buildLogos() {
   await Promise.all(logoPromises);
 
   if (shouldCommit) {
-    await $`git add .`;
-    await $`git commit -am "feat: adding ${outdir}"`;
+    await $`git add cdn`;
+    await $`git commit -am "feat: generate CDN packages"`;
     await $`git push`;
   }
 }
