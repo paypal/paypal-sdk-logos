@@ -12,9 +12,11 @@ import { getPackage, getSVGFilename } from "./utils";
 async function buildLogos() {
   const version = getPackage().version;
 
-  let shouldCommit;
-  process.argv[2] &&
-    (shouldCommit = process.argv[2].replace(/\s+/g, "") === "--commit");
+  let shouldCommit = false;
+
+  if (process.argv.includes("--commit")) {
+    shouldCommit = true;
+  }
 
   if (!version) {
     throw new Error(`Package version required`);
