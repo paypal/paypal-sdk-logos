@@ -1,12 +1,7 @@
 /* @flow */
 
-import { LOGO, LOGO_COLOR } from "../constants";
-import type {
-  LogoColorMap,
-  LogoColors,
-  LogoColorSVGMap,
-  SVGGetter,
-} from "../types";
+import { CDN_BASE_URL, LOGO, LOGO_COLOR } from "../constants";
+import type { LogoColorMap, LogoColors } from "../types";
 
 export function getLogoColors(
   name: string,
@@ -32,18 +27,23 @@ export function getLogoColors(
   return colors;
 }
 
-export function getSVGs(
+export function getSVGFilename(
   logoName: $Values<typeof LOGO>,
-  svgGetter: SVGGetter,
-  logoColorMap: LogoColorMap
-): LogoColorSVGMap {
-  const svgs = {};
+  logoColor: $Values<typeof LOGO_COLOR>
+): string {
+  return `${logoName}-${logoColor}.svg`;
+}
 
-  for (const logoColor of Object.keys(logoColorMap)) {
-    const logoColors = getLogoColors(logoName, logoColorMap, logoColor);
-
-    svgs[logoColor] = svgGetter(logoColors);
+export function getLogoCDNUrl(
+  logoName: $Values<typeof LOGO>,
+  logoColorMap: LogoColorMap,
+  logoColor: $Values<typeof LOGO_COLOR>
+): string {
+  if (!logoColorMap[logoColor]) {
+    logoColor = LOGO_COLOR.DEFAULT;
   }
 
-  return svgs;
+  const svgFilename = getSVGFilename(logoName, logoColor);
+
+  return `${CDN_BASE_URL}/${svgFilename}`;
 }

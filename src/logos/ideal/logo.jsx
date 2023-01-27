@@ -1,13 +1,22 @@
 /* @flow */
 /** @jsx node */
 
-import { node, type ComponentNode } from "@krakenjs/jsx-pragmatic/src";
+import {
+  node,
+  type ElementNode,
+  type ComponentNode,
+} from "@krakenjs/jsx-pragmatic/src";
 
-import { getSVGs, SVGLogo, type SVGLogoProps } from "../../lib";
+import {
+  getLogoCDNUrl,
+  getLogoColors,
+  SVGLogo,
+  type SVGLogoProps,
+} from "../../lib";
 import { LOGO_COLOR, LOGO } from "../../constants";
-import type { LogoColorMap, LogoColorSVGMap } from "../../types";
+import type { LogoColors, LogoColorMap } from "../../types";
 
-const LOGO_COLORS: LogoColorMap = {
+export const IDEAL_LOGO_COLORS: LogoColorMap = {
   [LOGO_COLOR.DEFAULT]: {
     primary: "#FFFFFF",
     secondary: "#CC0066",
@@ -22,7 +31,10 @@ const LOGO_COLORS: LogoColorMap = {
   },
 };
 
-const svgGetter = ({ primary, secondary }) => {
+export const getIdealSVG = ({
+  primary,
+  secondary,
+}: LogoColors): ElementNode => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -74,25 +86,22 @@ const svgGetter = ({ primary, secondary }) => {
   );
 };
 
-export const getIdealSVGs = (): LogoColorSVGMap =>
-  getSVGs(LOGO.IDEAL, svgGetter, LOGO_COLORS);
-
 export function IdealLogo({
   logoColor = LOGO_COLOR.BLACK,
   ...props
 }: {
   logoColor?: $Values<typeof LOGO_COLOR>,
 }): ComponentNode<SVGLogoProps> {
-  const CDN_URL =
-    "https://www.paypalobjects.com/images/checkout/latinum/Altpay_logo_iDEAL.svg";
-
-  const svg = getIdealSVGs()[logoColor];
+  const svg = getIdealSVG(
+    getLogoColors(LOGO.IDEAL, IDEAL_LOGO_COLORS, logoColor)
+  );
+  const cdnUrl = getLogoCDNUrl(LOGO.IDEAL, IDEAL_LOGO_COLORS, logoColor);
 
   return (
     <SVGLogo
       {...props}
       name={LOGO.IDEAL}
-      cdnUrl={CDN_URL}
+      cdnUrl={cdnUrl}
       render={() => {
         return svg;
       }}

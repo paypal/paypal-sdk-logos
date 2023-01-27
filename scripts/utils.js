@@ -1,7 +1,6 @@
 /* @flow */
 
 import fs from "fs-extra";
-import { LOGO_COLOR } from "../src/constants";
 
 type Package = {|
   name: string,
@@ -26,11 +25,4 @@ export function getNodeOps(): NodeOps {
     throw new Error(`Node Ops file not found`);
   }
   return JSON.parse(fs.readFileSync("./.nodeops", "utf-8"));
-}
-
-export function getSVGFilename(
-  name: string,
-  logoColor: $Values<typeof LOGO_COLOR>
-): string {
-  return `${name}-${logoColor}.svg`;
 }
