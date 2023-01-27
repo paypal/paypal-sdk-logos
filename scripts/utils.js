@@ -1,6 +1,7 @@
 /* @flow */
 
-import fs from "fs-extra";
+// eslint-disable-next-line import/no-nodejs-modules
+import fs from "fs";
 
 type Package = {|
   name: string,
