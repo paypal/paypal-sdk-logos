@@ -12,6 +12,12 @@ import { getPackage, getSVGFilename } from "./utils";
 async function buildLogos() {
   const version = getPackage().version;
 
+  let shouldCommit = false;
+
+  if (process.argv.includes("--commit")) {
+    shouldCommit = true;
+  }
+
   if (!version) {
     throw new Error(`Package version required`);
   }
@@ -40,6 +46,12 @@ async function buildLogos() {
 
   // eslint-disable-next-line no-restricted-globals,compat/compat,promise/no-native
   await Promise.all(logoPromises);
+
+  if (shouldCommit) {
+    await $`git add cdn`;
+    await $`git commit -m "chore: generate CDN packages"`;
+    await $`git push`;
+  }
 }
 
 buildLogos();
