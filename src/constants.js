@@ -48,5 +48,5 @@ export const LOGO_CLASS = {
   LOGO_COLOR: ("paypal-logo-color": "paypal-logo-color"),
 };
 
-// TODO: get namespace and version dynamically
-export const CDN_BASE_URL = "https://www.paypalobjects.com/js-sdk-logos/2.1.1";
+const PACKAGE_VERSION = "";
+export const CDN_BASE_URL = `https://www.paypalobjects.com/js-sdk-logos/${PACKAGE_VERSION}`;

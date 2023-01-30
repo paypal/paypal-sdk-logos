@@ -55,7 +55,7 @@ import {
   ZIMPLER_LOGO_COLORS,
 } from "../src/logos";
 
-import { getPackage } from "./utils";
+import { getPackage, updateCDNUrl } from "./utils";
 
 const LOGO_GETTERS = {
   [LOGO.APPLEPAY]: getApplepaySVG,
@@ -122,6 +122,9 @@ async function buildLogos() {
     throw new Error(`Package version required`);
   }
 
+  // updates CDN URL in src/constants.js with package version
+  updateCDNUrl(version);
+
   const outdir = `cdn/${version}`;
 
   await $`mkdir -p ${outdir}`;
@@ -149,7 +152,7 @@ async function buildLogos() {
   await Promise.all(logoPromises);
 
   if (shouldCommit) {
-    await $`git add cdn`;
+    await $`git add cdn src/constants.js`;
     await $`git commit -m "chore: generate CDN packages"`;
     await $`git push`;
   }
