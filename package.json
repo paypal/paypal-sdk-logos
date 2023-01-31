@@ -25,6 +25,9 @@
     "build-logos": "babel-node --config-file './scripts/babel.config.json' --ignore ./fake --plugins=transform-es2015-modules-commonjs ./scripts/buildLogos.js"
   },
   "standard-version": {
+    "scripts": {
+      "postbump": "npm run build-logos -- --commit"
+    },
     "types": [
       {
         "type": "feat",
