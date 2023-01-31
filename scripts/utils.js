@@ -16,7 +16,7 @@ export function getNodeOps(): NodeOps {
   return JSON.parse(fs.readFileSync("./.nodeops", "utf-8"));
 }
 
-export function updateCDNUrl(packageVersion: string, cdnNamespace: string) {
+export function updateCDNUrl(packageVersion: string) {
   const filepath = "src/constants.js";
 
   let constantsFile = fs.readFileSync(filepath, "utf-8");
@@ -24,10 +24,6 @@ export function updateCDNUrl(packageVersion: string, cdnNamespace: string) {
   constantsFile = constantsFile.replace(
     /const PACKAGE_VERSION = ".*";/,
     `const PACKAGE_VERSION = "${packageVersion}";`
-  );
-  constantsFile = constantsFile.replace(
-    /const CDN_NAMESPACE = ".*";/,
-    `const CDN_NAMESPACE = "${cdnNamespace}";`
   );
 
   fs.writeFileSync(filepath, constantsFile);

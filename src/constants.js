@@ -49,5 +49,4 @@ export const LOGO_CLASS = {
 };
 
 const PACKAGE_VERSION = "2.1.1";
-const CDN_NAMESPACE = "js-sdk-logos";
-export const CDN_BASE_URL = `https://www.paypalobjects.com/${CDN_NAMESPACE}/${PACKAGE_VERSION}`;
+export const CDN_BASE_URL = `https://www.paypalobjects.com/js-sdk-logos/${PACKAGE_VERSION}`;
