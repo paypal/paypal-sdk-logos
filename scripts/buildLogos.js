@@ -56,7 +56,7 @@ import {
 } from "../src/logos";
 import { version } from "../package.json";
 
-import { getPackage, updateCDNUrl } from "./utils";
+import { getNodeOps, updateCDNUrl } from "./utils";
 
 const LOGO_GETTERS = {
   [LOGO.APPLEPAY]: getApplepaySVG,
@@ -121,8 +121,14 @@ async function buildLogos() {
     throw new Error(`Package version required`);
   }
 
+  const cdnNamespace = getNodeOps().web.staticNamespace;
+
+  if (!cdnNamespace) {
+    throw new Error(`CDN namespace required`);
+  }
+
   // updates CDN URL in src/constants.js with package version
-  updateCDNUrl(version);
+  updateCDNUrl(version, cdnNamespace);
 
   const outdir = `cdn/${version}`;
 
