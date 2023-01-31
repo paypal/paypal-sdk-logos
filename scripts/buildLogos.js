@@ -54,6 +54,7 @@ import {
   WECHATPAY_LOGO_COLORS,
   ZIMPLER_LOGO_COLORS,
 } from "../src/logos";
+import { version } from "../package.json";
 
 import { getPackage, updateCDNUrl } from "./utils";
 
@@ -110,8 +111,6 @@ const LOGO_COLOR_MAPS = {
 };
 
 async function buildLogos() {
-  const version = getPackage().version;
-
   let shouldCommit = false;
 
   if (process.argv.includes("--commit")) {
