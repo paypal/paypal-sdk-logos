@@ -26,9 +26,6 @@ jobs:
           git config --global user.email ${{ github.actor }}@users.noreply.github.com
           git config --global user.name ${{ github.actor }}
 
-      - name: Update cdn folder with new svg files
-        run: npm run build-logos -- --commit
-
       - name: Publish to npm
         run: npm run release
         env:
