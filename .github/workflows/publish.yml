@@ -26,7 +26,7 @@ jobs:
           git config --global user.email ${{ github.actor }}@users.noreply.github.com
           git config --global user.name ${{ github.actor }}
 
-      - name: Run buildLogos script
+      - name: Update cdn folder with new svg files
         run: npm run build-logos -- --commit
 
       - name: Publish to npm
