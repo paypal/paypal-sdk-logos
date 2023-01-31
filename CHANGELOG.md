@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 2.2.0 (2023-01-31)
+
+
+### Features
+
+* add support for loading logos from cdn ([#89](https://github.com/paypal/paypal-sdk-logos/issues/89)) ([f2b6b82](https://github.com/paypal/paypal-sdk-logos/commit/f2b6b82b41b533831751acd6be29fd6d8995806b))
+
+
+* generate CDN packages ([75bb899](https://github.com/paypal/paypal-sdk-logos/commit/75bb89913b0201224e1a1cce59d9234ff2712225))
+
 ### 2.1.1 (2023-01-25)
 
 
