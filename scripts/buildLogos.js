@@ -127,10 +127,11 @@ async function buildLogos() {
     throw new Error(`CDN namespace required`);
   }
 
-  // updates CDN URL in src/constants.js with package version
   if (cdnNamespace !== "js-sdk-logos") {
     throw new Error("Expected cdnNamespace to be js-sdk-logos");
   }
+
+  // updates CDN URL in src/constants.js with package version
   updateCDNUrl(version);
 
   const outdir = `cdn/${version}`;
