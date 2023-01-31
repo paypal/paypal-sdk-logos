@@ -128,7 +128,10 @@ async function buildLogos() {
   }
 
   // updates CDN URL in src/constants.js with package version
-  updateCDNUrl(version, cdnNamespace);
+  if (cdnNamespace !== "js-sdk-logos") {
+    throw new Error("Expected cdnNamespace to be js-sdk-logos");
+  }
+  updateCDNUrl(version);
 
   const outdir = `cdn/${version}`;
 
