@@ -21,7 +21,8 @@
     "clean": "rimraf dist coverage",
     "reinstall": "rimraf flow-typed && rimraf node_modules && npm install && flow-typed install",
     "debug": "cross-env NODE_ENV=debug",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "build-logos": "babel-node --config-file './scripts/babel.config.json' --ignore ./fake --plugins=transform-es2015-modules-commonjs ./scripts/buildLogos.js"
   },
   "standard-version": {
     "types": [
@@ -95,7 +96,8 @@
     "lint-staged": "^13.0.3",
     "mocha": "9.2.0",
     "prettier": "2.7.1",
-    "standard-version": "^9.5.0"
+    "standard-version": "^9.5.0",
+    "zx": "^4.3.0"
   },
   "dependencies": {
     "@paypal/sdk-constants": "^1.0.128",

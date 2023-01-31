@@ -13,11 +13,19 @@ import { LOGO_CLASS, LOGO_COLOR } from "../constants";
 
 type SVGProps = {|
   svg: ElementNode,
+  cdnUrl?: string,
+  loadFromCDN?: boolean,
   [key: string]: mixed,
 |};
 
 export function SVG(props: SVGProps): ElementNode {
-  let { svg, ...otherProps } = props;
+  let { svg, cdnUrl, loadFromCDN, ...otherProps } = props;
+
+  if (loadFromCDN && cdnUrl) {
+    // $FlowFixMe
+    const svgProps: SVGProps = { src: cdnUrl, ...otherProps };
+    return <img {...svgProps} />;
+  }
 
   if (!svg) {
     throw new TypeError(`Expected svg prop`);
@@ -42,6 +50,8 @@ export type SVGLogoProps = {
   render: () => ElementNode,
   name: string,
   logoColor?: $Values<typeof LOGO_COLOR>,
+  cdnUrl?: string,
+  loadFromCDN?: boolean,
 };
 
 export function SVGLogo({
