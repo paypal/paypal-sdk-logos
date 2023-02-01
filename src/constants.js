@@ -34,6 +34,12 @@ export const LOGO = {
   PAIDY: ("paidy": "paidy"),
 };
 
+export const MARK = {
+  APPLEPAY: ("applepay-mark": "applepay-mark"),
+  CREDIT: ("credit-mark": "credit-mark"),
+  PAYPAL: ("paypal-mark": "paypal-mark"),
+};
+
 export const LOGO_COLOR = {
   BLUE: ("blue": "blue"),
   BLACK: ("black": "black"),

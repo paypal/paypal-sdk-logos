@@ -1,6 +1,8 @@
 /* @flow */
 
-import { CDN_BASE_URL, LOGO, LOGO_COLOR } from "../constants";
+import { CARD } from "@paypal/sdk-constants/src";
+
+import { CDN_BASE_URL, LOGO, LOGO_COLOR, MARK } from "../constants";
 import type { LogoColorMap, LogoColors } from "../types";
 
 export function getLogoColors(
@@ -28,18 +30,22 @@ export function getLogoColors(
 }
 
 export function getSVGFilename(
-  logoName: $Values<typeof LOGO>,
-  logoColor: $Values<typeof LOGO_COLOR>
+  logoName: $Values<typeof LOGO> | $Values<typeof CARD> | $Values<typeof MARK>,
+  logoColor?: $Values<typeof LOGO_COLOR>
 ): string {
-  return `${logoName}-${logoColor}.svg`;
+  if (logoColor) {
+    return `${logoName}-${logoColor}.svg`;
+  }
+
+  return `${logoName}.svg`;
 }
 
 export function getLogoCDNUrl(
-  logoName: $Values<typeof LOGO>,
-  logoColorMap: LogoColorMap,
-  logoColor: $Values<typeof LOGO_COLOR>
+  logoName: $Values<typeof LOGO> | $Values<typeof CARD> | $Values<typeof MARK>,
+  logoColorMap?: LogoColorMap,
+  logoColor?: $Values<typeof LOGO_COLOR>
 ): string {
-  if (!logoColorMap[logoColor]) {
+  if (logoColor && logoColorMap && !logoColorMap[logoColor]) {
     logoColor = LOGO_COLOR.DEFAULT;
   }
 
