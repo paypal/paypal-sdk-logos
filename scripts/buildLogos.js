@@ -84,8 +84,10 @@ import { getNodeOps, updateCDNUrl } from "./utils";
 const LOGO_GETTERS = {
   [LOGO.APPLEPAY]: getApplepaySVG,
   [LOGO.BANCONTACT]: getBancontactSVG,
+  [LOGO.BANK]: getGlyphBankSVG,
   [LOGO.BLIK]: getBlikSVG,
   [LOGO.BOLETO]: getBoletoSVG,
+  [LOGO.CARD]: getGlyphCardSVG,
   [LOGO.CREDIT]: getCreditSVG,
   [LOGO.EPS]: getEpsSVG,
   [LOGO.GIROPAY]: getGiropaySVG,
@@ -109,8 +111,6 @@ const LOGO_GETTERS = {
   [LOGO.VERKKOPANKKI]: getVerkkopankkiSVG,
   [LOGO.WECHATPAY]: getWechatpaySVG,
   [LOGO.ZIMPLER]: getZimplerSVG,
-  [LOGO.BANK]: getGlyphBankSVG,
-  [LOGO.CARD]: getGlyphCardSVG,
   [CARD.AMEX]: getAmexSVG,
   [CARD.DISCOVER]: getDiscoverSVG,
   [CARD.ELO]: getEloSVG,
@@ -126,8 +126,10 @@ const LOGO_GETTERS = {
 const LOGO_COLOR_MAPS = {
   [LOGO.APPLEPAY]: APPLEPAY_LOGO_COLORS,
   [LOGO.BANCONTACT]: BANCONTACT_LOGO_COLORS,
+  [LOGO.BANK]: GLYPH_BANK_LOGO_COLORS,
   [LOGO.BLIK]: BLIK_LOGO_COLORS,
   [LOGO.BOLETO]: BOLETO_LOGO_COLORS,
+  [LOGO.CARD]: GLYPH_CARD_LOGO_COLORS,
   [LOGO.CREDIT]: CREDIT_LOGO_COLORS,
   [LOGO.EPS]: EPS_LOGO_COLORS,
   [LOGO.GIROPAY]: GIROPAY_LOGO_COLORS,
@@ -151,8 +153,6 @@ const LOGO_COLOR_MAPS = {
   [LOGO.VERKKOPANKKI]: VERKKOPANKKI_LOGO_COLORS,
   [LOGO.WECHATPAY]: WECHATPAY_LOGO_COLORS,
   [LOGO.ZIMPLER]: ZIMPLER_LOGO_COLORS,
-  [LOGO.BANK]: GLYPH_BANK_LOGO_COLORS,
-  [LOGO.CARD]: GLYPH_CARD_LOGO_COLORS,
 };
 
 async function buildLogos() {
@@ -187,6 +187,7 @@ async function buildLogos() {
 
   for (const logoName of Object.keys(LOGO_GETTERS)) {
     const logoGetter = LOGO_GETTERS[logoName];
+    // $FlowFixMe
     const logoColorMap = LOGO_COLOR_MAPS[logoName];
 
     if (logoColorMap) {
@@ -198,18 +199,15 @@ async function buildLogos() {
         const filename = getSVGFilename(logoName, colorName);
         const filepath = `${outdir}/${filename}`;
 
-        // $FlowFixMe
         logoPromises.push(fs.writeFile(filepath, svg.render(html())));
       }
     } else {
       // $FlowFixMe
       const svg = logoGetter();
 
-      // $FlowFixMe
       const filename = getSVGFilename(logoName);
       const filepath = `${outdir}/${filename}`;
 
-      // $FlowFixMe
       logoPromises.push(fs.writeFile(filepath, svg.render(html())));
     }
   }
