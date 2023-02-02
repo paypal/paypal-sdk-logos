@@ -7,6 +7,7 @@ import { CARD } from "@paypal/sdk-constants/src";
 
 import { getSVGFilename } from "../src/lib";
 import { LOGO, MARK } from "../src/constants";
+import type { LogoColors } from "../src/types";
 import {
   APPLEPAY_LOGO_COLORS,
   BANCONTACT_LOGO_COLORS,
@@ -91,6 +92,9 @@ const LOGO_GETTERS = {
   [LOGO.BOLETO]: getBoletoSVG,
   [LOGO.CARD]: getGlyphCardSVG,
   [LOGO.CREDIT]: getCreditSVG,
+  // Germany-specific credit glyphs
+  [`${LOGO.CREDIT}-DE`]: (logoColors: LogoColors) =>
+    getCreditSVG({ ...logoColors, country: "DE" }),
   [LOGO.EPS]: getEpsSVG,
   [LOGO.GIROPAY]: getGiropaySVG,
   [LOGO.IDEAL]: getIdealSVG,
@@ -134,6 +138,7 @@ const LOGO_COLOR_MAPS = {
   [LOGO.BOLETO]: BOLETO_LOGO_COLORS,
   [LOGO.CARD]: GLYPH_CARD_LOGO_COLORS,
   [LOGO.CREDIT]: CREDIT_LOGO_COLORS,
+  [`${LOGO.CREDIT}-DE`]: GLYPH_CARD_LOGO_COLORS,
   [LOGO.EPS]: EPS_LOGO_COLORS,
   [LOGO.GIROPAY]: GIROPAY_LOGO_COLORS,
   [LOGO.IDEAL]: IDEAL_LOGO_COLORS,

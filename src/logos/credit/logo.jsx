@@ -103,7 +103,12 @@ export function CreditLogo({
     country,
     ...getLogoColors(LOGO.CREDIT, CREDIT_LOGO_COLORS, logoColor),
   });
-  const cdnUrl = getLogoCDNUrl(LOGO.CREDIT, CREDIT_LOGO_COLORS, logoColor);
+  const cdnUrl = getLogoCDNUrl(
+    LOGO.CREDIT,
+    CREDIT_LOGO_COLORS,
+    // $FlowFixMe
+    country === COUNTRY.DE ? `${COUNTRY.DE}-${logoColor}` : logoColor
+  );
 
   return (
     <SVGLogo
