@@ -242,9 +242,13 @@ export function PPMonochrome({
   logoColor?: $Values<typeof LOGO_COLOR>,
 }): ComponentNode<SVGLogoProps> {
   const svg = getPPMonochromeSVG(
-    getLogoColors(LOGO.PP, PPMONOCHROME_LOGO_COLORS, logoColor)
+    getLogoColors(LOGO.PPMONOCHROME, PPMONOCHROME_LOGO_COLORS, logoColor)
   );
-  const cdnUrl = getLogoCDNUrl(LOGO.PP, PPMONOCHROME_LOGO_COLORS, logoColor);
+  const cdnUrl = getLogoCDNUrl(
+    LOGO.PPMONOCHROME,
+    PPMONOCHROME_LOGO_COLORS,
+    logoColor
+  );
 
   return (
     <SVGLogo

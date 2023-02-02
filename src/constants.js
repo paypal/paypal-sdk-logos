@@ -2,6 +2,7 @@
 
 export const LOGO = {
   PP: ("pp": "pp"),
+  PPMONOCHROME: ("ppmonochrome": "ppmonochrome"),
   PAYPAL: ("paypal": "paypal"),
   CARD: ("card": "card"),
   BANK: ("bank": "bank"),
