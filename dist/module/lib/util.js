@@ -1,4 +1,5 @@
-import { CDN_BASE_URL, LOGO, LOGO_COLOR } from "../constants";
+import { CARD } from "@paypal/sdk-constants/src";
+import { CDN_BASE_URL, LOGO, LOGO_COLOR, MARK } from "../constants";
 export function getLogoColors(name, logoColorMap, logoColor) {
   var colors;
   if (logoColor) {
@@ -13,10 +14,13 @@ export function getLogoColors(name, logoColorMap, logoColor) {
   return colors;
 }
 export function getSVGFilename(logoName, logoColor) {
-  return logoName + "-" + logoColor + ".svg";
+  if (logoColor) {
+    return logoName + "-" + logoColor + ".svg";
+  }
+  return logoName + ".svg";
 }
 export function getLogoCDNUrl(logoName, logoColorMap, logoColor) {
-  if (!logoColorMap[logoColor]) {
+  if (logoColor && logoColorMap && !logoColorMap[logoColor]) {
     logoColor = LOGO_COLOR.DEFAULT;
   }
   var svgFilename = getSVGFilename(logoName, logoColor);
