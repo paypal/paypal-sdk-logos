@@ -2,6 +2,7 @@
 
 export const LOGO = {
   PP: ("pp": "pp"),
+  PPMONOCHROME: ("ppmonochrome": "ppmonochrome"),
   PAYPAL: ("paypal": "paypal"),
   CARD: ("card": "card"),
   BANK: ("bank": "bank"),
@@ -32,6 +33,12 @@ export const LOGO = {
   MULTIBANCO: ("multibanco": "multibanco"),
   SATISPAY: ("satispay": "satispay"),
   PAIDY: ("paidy": "paidy"),
+};
+
+export const MARK = {
+  APPLEPAY: ("applepay-mark": "applepay-mark"),
+  CREDIT: ("credit-mark": "credit-mark"),
+  PAYPAL: ("paypal-mark": "paypal-mark"),
 };
 
 export const LOGO_COLOR = {
