@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 2.2.3 (2023-02-07)
+
+
+### Bug Fixes
+
+* fix types and getCDNUrl logic ([#93](https://github.com/paypal/paypal-sdk-logos/issues/93)) ([f1dce0f](https://github.com/paypal/paypal-sdk-logos/commit/f1dce0fc2c2f66497052b1117dd8a3664219350e))
+
+
+* generate CDN packages ([8b24ba3](https://github.com/paypal/paypal-sdk-logos/commit/8b24ba388a2d46b747575b85089e95de41e2509d))
+
 ### 2.2.2 (2023-02-03)
 
 
