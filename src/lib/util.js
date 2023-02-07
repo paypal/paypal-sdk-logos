@@ -45,7 +45,7 @@ export function getLogoCDNUrl(
   logoColorMap?: LogoColorMap,
   logoColor?: $Values<typeof LOGO_COLOR>
 ): string {
-  if (logoColor && logoColorMap && !logoColorMap[logoColor]) {
+  if (logoColorMap && (!logoColor || !logoColorMap[logoColor])) {
     logoColor = LOGO_COLOR.DEFAULT;
   }
 

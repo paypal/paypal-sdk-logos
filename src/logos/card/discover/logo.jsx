@@ -94,7 +94,10 @@ export const getDiscoverSVG = (): ElementNode => {
 
 export function DiscoverLogo({
   ...props
-}: { [string]: string } = {}): ComponentNode<SVGCardLogoProps> {
+}: {
+  loadFromCDN?: boolean,
+  [string]: string,
+} = {}): ComponentNode<SVGCardLogoProps> {
   const svg = getDiscoverSVG();
   const cdnUrl = getLogoCDNUrl(CARD.DISCOVER);
 

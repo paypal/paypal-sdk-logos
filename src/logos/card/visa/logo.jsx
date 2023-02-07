@@ -37,7 +37,10 @@ export const getVisaSVG = (): ElementNode => {
 
 export function VisaLogo({
   ...props
-}: { [string]: string } = {}): ComponentNode<SVGCardLogoProps> {
+}: {
+  loadFromCDN?: boolean,
+  [string]: string,
+} = {}): ComponentNode<SVGCardLogoProps> {
   const svg = getVisaSVG();
   const cdnUrl = getLogoCDNUrl(CARD.VISA);
 

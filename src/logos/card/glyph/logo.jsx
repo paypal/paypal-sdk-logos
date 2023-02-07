@@ -57,6 +57,7 @@ export function GlyphCard({
   ...props
 }: {
   logoColor?: $Values<typeof LOGO_COLOR>,
+  loadFromCDN?: boolean,
   [string]: string,
 } = {}): ComponentNode<SVGCardLogoProps> {
   const svg = getGlyphCardSVG(

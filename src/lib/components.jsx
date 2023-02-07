@@ -75,6 +75,8 @@ export function SVGLogo({
 export type SVGCardLogoProps = {
   render: () => ElementNode,
   name: string,
+  cdnUrl?: string,
+  loadFromCDN?: boolean,
 };
 
 export function SVGCardLogo({
