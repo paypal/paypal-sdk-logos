@@ -20,7 +20,7 @@ export function getSVGFilename(logoName, logoColor) {
   return logoName + ".svg";
 }
 export function getLogoCDNUrl(logoName, logoColorMap, logoColor) {
-  if (logoColor && logoColorMap && !logoColorMap[logoColor]) {
+  if (logoColorMap && (!logoColor || !logoColorMap[logoColor])) {
     logoColor = LOGO_COLOR.DEFAULT;
   }
   var svgFilename = getSVGFilename(logoName, logoColor);
