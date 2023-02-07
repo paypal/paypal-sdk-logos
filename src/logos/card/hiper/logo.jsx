@@ -63,7 +63,10 @@ export const getHiperSVG = (): ElementNode => {
 
 export function HiperLogo({
   ...props
-}: { [string]: string } = {}): ComponentNode<SVGCardLogoProps> {
+}: {
+  loadFromCDN?: boolean,
+  [string]: string,
+} = {}): ComponentNode<SVGCardLogoProps> {
   const svg = getHiperSVG();
   const cdnUrl = getLogoCDNUrl(CARD.HIPER);
 

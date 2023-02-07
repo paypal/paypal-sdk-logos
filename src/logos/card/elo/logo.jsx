@@ -70,7 +70,10 @@ export const getEloSVG = (): ElementNode => {
 
 export function EloLogo({
   ...props
-}: { [string]: string } = {}): ComponentNode<SVGCardLogoProps> {
+}: {
+  loadFromCDN?: boolean,
+  [string]: string,
+} = {}): ComponentNode<SVGCardLogoProps> {
   const svg = getEloSVG();
   const cdnUrl = getLogoCDNUrl(CARD.ELO);
 

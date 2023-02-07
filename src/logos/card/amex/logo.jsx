@@ -41,7 +41,10 @@ export const getAmexSVG = (): ElementNode => {
 
 export function AmexLogo({
   ...props
-}: { [string]: string } = {}): ComponentNode<SVGCardLogoProps> {
+}: {
+  loadFromCDN?: boolean,
+  [string]: string,
+} = {}): ComponentNode<SVGCardLogoProps> {
   const svg = getAmexSVG();
   const cdnUrl = getLogoCDNUrl(CARD.AMEX);
 
