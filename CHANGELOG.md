@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 2.2.4 (2023-02-14)
+
+
+### Bug Fixes
+
+* **styles:** fix logo images for other color buttons ([#94](https://github.com/paypal/paypal-sdk-logos/issues/94)) ([6d84a30](https://github.com/paypal/paypal-sdk-logos/commit/6d84a30a71c8108ee5d0c5701bfb7aa2b7b259ed))
+
+
+* generate CDN packages ([bdca09c](https://github.com/paypal/paypal-sdk-logos/commit/bdca09c69974904b04eeb0de9bf6017fd83e1131))
+
 ### 2.2.3 (2023-02-07)
 
 
