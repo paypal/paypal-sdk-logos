@@ -20,12 +20,6 @@ export const GLYPH_BANK_LOGO_COLORS: LogoColorMap = {
   [LOGO_COLOR.DEFAULT]: {
     primary: "#142C8E",
   },
-  [LOGO_COLOR.WHITE]: {
-    primary: "#ffffff",
-  },
-  [LOGO_COLOR.BLACK]: {
-    primary: "#333030",
-  },
 };
 
 export const getGlyphBankSVG = ({ primary }: LogoColors): ElementNode => {
