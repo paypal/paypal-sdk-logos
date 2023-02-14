@@ -7,10 +7,6 @@ import { getLogoCDNUrl, getLogoColors, SVGLogo } from "../../../lib";
 import { LOGO_COLOR, LOGO } from "../../../constants";
 export var GLYPH_BANK_LOGO_COLORS = (_GLYPH_BANK_LOGO_COLO = {}, _GLYPH_BANK_LOGO_COLO[LOGO_COLOR.DEFAULT] = {
   primary: "#142C8E"
-}, _GLYPH_BANK_LOGO_COLO[LOGO_COLOR.WHITE] = {
-  primary: "#ffffff"
-}, _GLYPH_BANK_LOGO_COLO[LOGO_COLOR.BLACK] = {
-  primary: "#333030"
 }, _GLYPH_BANK_LOGO_COLO);
 export var getGlyphBankSVG = function getGlyphBankSVG(_ref) {
   var primary = _ref.primary;
