@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 2.2.5 (2023-02-27)
+
+
+* add missing prop types ([#97](https://github.com/paypal/paypal-sdk-logos/issues/97)) ([ebd07d1](https://github.com/paypal/paypal-sdk-logos/commit/ebd07d1875cd9d630fcd40907f726967a91a5c2b))
+* generate CDN packages ([c2e7192](https://github.com/paypal/paypal-sdk-logos/commit/c2e71921567e3127ce356b6a504c258752a8e237))
+
 ### 2.2.4 (2023-02-14)
 
 
