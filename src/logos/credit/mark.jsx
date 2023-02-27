@@ -129,7 +129,11 @@ export const getCreditMarkSVG = (): ElementNode => {
   );
 };
 
-export function CreditMark({ ...props }: {||}): ComponentNode<SVGLogoProps> {
+export function CreditMark({
+  ...props
+}: {|
+  loadFromCDN?: boolean,
+|}): ComponentNode<SVGLogoProps> {
   const svg = getCreditMarkSVG();
   const cdnUrl = getLogoCDNUrl(MARK.CREDIT);
 

@@ -95,6 +95,7 @@ export function CreditLogo({
 }: {|
   logoColor?: $Values<typeof LOGO_COLOR>,
   locale: LocaleType,
+  loadFromCDN?: boolean,
 |}): ComponentNode<SVGLogoProps> {
   const { country } = locale;
 
