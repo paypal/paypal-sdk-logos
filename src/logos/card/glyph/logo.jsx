@@ -73,7 +73,7 @@ export function GlyphCardExternalImage({
   );
 }
 
-export function GlyphCardInlineSvg({
+export function GlyphCardInlineSVG({
   logoColor,
   ...props
 }: {
