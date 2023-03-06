@@ -74,13 +74,12 @@ export const getOxxoSVG = ({ primary, secondary }: LogoColors): ElementNode => {
   );
 };
 
-export function OxxoLogo({
+export function OxxoLogoExternalImage({
   logoColor = LOGO_COLOR.BLACK,
   ...props
 }: {
   logoColor?: $Values<typeof LOGO_COLOR>,
 }): ComponentNode<SVGLogoProps> {
-  const svg = getOxxoSVG(getLogoColors(LOGO.OXXO, OXXO_LOGO_COLORS, logoColor));
   const cdnUrl = getLogoCDNUrl(LOGO.OXXO, OXXO_LOGO_COLORS, logoColor);
 
   return (
@@ -90,8 +89,30 @@ export function OxxoLogo({
       logoColor={logoColor}
       cdnUrl={cdnUrl}
       render={() => {
+        return <svg />;
+      }}
+    />
+  );
+}
+
+export function OxxoLogoInlineSVG({
+  logoColor = LOGO_COLOR.BLACK,
+  ...props
+}: {
+  logoColor?: $Values<typeof LOGO_COLOR>,
+}): ComponentNode<SVGLogoProps> {
+  const svg = getOxxoSVG(getLogoColors(LOGO.OXXO, OXXO_LOGO_COLORS, logoColor));
+
+  return (
+    <SVGLogo
+      {...props}
+      name={LOGO.OXXO}
+      logoColor={logoColor}
+      render={() => {
         return svg;
       }}
     />
   );
 }
+
+export const OxxoLogo = OxxoLogoInlineSVG;

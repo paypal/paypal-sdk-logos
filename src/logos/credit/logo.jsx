@@ -88,22 +88,16 @@ export const getCreditSVG = ({ country, primary }: LogoColors): ElementNode => {
   }
 };
 
-export function CreditLogo({
+export function CreditLogoExternalImage({
   logoColor,
   locale,
   ...props
 }: {|
   logoColor?: $Values<typeof LOGO_COLOR>,
   locale: LocaleType,
-  loadFromCDN?: boolean,
 |}): ComponentNode<SVGLogoProps> {
   const { country } = locale;
 
-  // $FlowFixMe
-  const svg = getCreditSVG({
-    country,
-    ...getLogoColors(LOGO.CREDIT, CREDIT_LOGO_COLORS, logoColor),
-  });
   const cdnUrl = getLogoCDNUrl(
     LOGO.CREDIT,
     CREDIT_LOGO_COLORS,
@@ -118,8 +112,38 @@ export function CreditLogo({
       logoColor={logoColor}
       cdnUrl={cdnUrl}
       render={() => {
+        return <svg />;
+      }}
+    />
+  );
+}
+
+export function CreditLogoInlineSVG({
+  logoColor,
+  locale,
+  ...props
+}: {|
+  logoColor?: $Values<typeof LOGO_COLOR>,
+  locale: LocaleType,
+|}): ComponentNode<SVGLogoProps> {
+  const { country } = locale;
+
+  // $FlowFixMe
+  const svg = getCreditSVG({
+    country,
+    ...getLogoColors(LOGO.CREDIT, CREDIT_LOGO_COLORS, logoColor),
+  });
+
+  return (
+    <SVGLogo
+      {...props}
+      name={LOGO.CREDIT}
+      logoColor={logoColor}
+      render={() => {
         return svg;
       }}
     />
   );
 }
+
+export const CreditLogo = CreditLogoInlineSVG;

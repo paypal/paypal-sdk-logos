@@ -14,14 +14,13 @@ import { LOGO_CLASS, LOGO_COLOR } from "../constants";
 type SVGProps = {|
   svg: ElementNode,
   cdnUrl?: string,
-  loadFromCDN?: boolean,
   [key: string]: mixed,
 |};
 
 export function SVG(props: SVGProps): ElementNode {
-  let { svg, cdnUrl, loadFromCDN, ...otherProps } = props;
+  let { svg, cdnUrl, ...otherProps } = props;
 
-  if (loadFromCDN && cdnUrl) {
+  if (cdnUrl) {
     // $FlowFixMe
     const svgProps: SVGProps = { src: cdnUrl, ...otherProps };
     return <img {...svgProps} />;
@@ -51,7 +50,6 @@ export type SVGLogoProps = {
   name: string,
   logoColor?: $Values<typeof LOGO_COLOR>,
   cdnUrl?: string,
-  loadFromCDN?: boolean,
 };
 
 export function SVGLogo({
@@ -76,7 +74,6 @@ export type SVGCardLogoProps = {
   render: () => ElementNode,
   name: string,
   cdnUrl?: string,
-  loadFromCDN?: boolean,
 };
 
 export function SVGCardLogo({

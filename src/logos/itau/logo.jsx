@@ -158,13 +158,12 @@ export const getItauSVG = ({ primary }: LogoColors): ElementNode => {
   );
 };
 
-export function ItauLogo({
+export function ItauLogoExternalImage({
   logoColor = LOGO_COLOR.DEFAULT,
   ...props
 }: {
   logoColor?: $Values<typeof LOGO_COLOR>,
 }): ComponentNode<SVGLogoProps> {
-  const svg = getItauSVG(getLogoColors(LOGO.ITAU, ITAU_LOGO_COLORS, logoColor));
   const cdnUrl = getLogoCDNUrl(LOGO.ITAU, ITAU_LOGO_COLORS, logoColor);
 
   return (
@@ -174,8 +173,30 @@ export function ItauLogo({
       logoColor={logoColor}
       cdnUrl={cdnUrl}
       render={() => {
+        return <svg />;
+      }}
+    />
+  );
+}
+
+export function ItauLogoInlineSVG({
+  logoColor = LOGO_COLOR.DEFAULT,
+  ...props
+}: {
+  logoColor?: $Values<typeof LOGO_COLOR>,
+}): ComponentNode<SVGLogoProps> {
+  const svg = getItauSVG(getLogoColors(LOGO.ITAU, ITAU_LOGO_COLORS, logoColor));
+
+  return (
+    <SVGLogo
+      {...props}
+      name={LOGO.ITAU}
+      logoColor={logoColor}
+      render={() => {
         return svg;
       }}
     />
   );
 }
+
+export const ItauLogo = ItauLogoInlineSVG;

@@ -122,15 +122,12 @@ export const getPaidySVG = ({
   );
 };
 
-export function PaidyLogo({
+export function PaidyLogoExternalImage({
   logoColor = LOGO_COLOR.BLACK,
   ...props
 }: {
   logoColor?: $Values<typeof LOGO_COLOR>,
 }): ComponentNode<SVGLogoProps> {
-  const svg = getPaidySVG(
-    getLogoColors(LOGO.PAIDY, PAIDY_LOGO_COLORS, logoColor)
-  );
   const cdnUrl = getLogoCDNUrl(LOGO.PAIDY, PAIDY_LOGO_COLORS, logoColor);
 
   return (
@@ -140,8 +137,32 @@ export function PaidyLogo({
       logoColor={logoColor}
       cdnUrl={cdnUrl}
       render={() => {
+        return <svg />;
+      }}
+    />
+  );
+}
+
+export function PaidyLogoInlineSVG({
+  logoColor = LOGO_COLOR.BLACK,
+  ...props
+}: {
+  logoColor?: $Values<typeof LOGO_COLOR>,
+}): ComponentNode<SVGLogoProps> {
+  const svg = getPaidySVG(
+    getLogoColors(LOGO.PAIDY, PAIDY_LOGO_COLORS, logoColor)
+  );
+
+  return (
+    <SVGLogo
+      {...props}
+      name={LOGO.PAIDY}
+      logoColor={logoColor}
+      render={() => {
         return svg;
       }}
     />
   );
 }
+
+export const PaidyLogo = PaidyLogoInlineSVG;

@@ -120,13 +120,12 @@ export const getBlikSVG = ({
   );
 };
 
-export function BlikLogo({
+export function BlikLogoExternalImage({
   logoColor = LOGO_COLOR.BLACK,
   ...props
 }: {
   logoColor?: $Values<typeof LOGO_COLOR>,
 }): ComponentNode<SVGLogoProps> {
-  const svg = getBlikSVG(getLogoColors(LOGO.BLIK, BLIK_LOGO_COLORS, logoColor));
   const cdnUrl = getLogoCDNUrl(LOGO.BLIK, BLIK_LOGO_COLORS, logoColor);
 
   return (
@@ -135,8 +134,29 @@ export function BlikLogo({
       name={LOGO.BLIK}
       cdnUrl={cdnUrl}
       render={() => {
+        return <svg />;
+      }}
+    />
+  );
+}
+
+export function BlikLogoInlineSVG({
+  logoColor = LOGO_COLOR.BLACK,
+  ...props
+}: {
+  logoColor?: $Values<typeof LOGO_COLOR>,
+}): ComponentNode<SVGLogoProps> {
+  const svg = getBlikSVG(getLogoColors(LOGO.BLIK, BLIK_LOGO_COLORS, logoColor));
+
+  return (
+    <SVGLogo
+      {...props}
+      name={LOGO.BLIK}
+      render={() => {
         return svg;
       }}
     />
   );
 }
+
+export const BlikLogo = BlikLogoInlineSVG;

@@ -92,13 +92,11 @@ export const getDiscoverSVG = (): ElementNode => {
   );
 };
 
-export function DiscoverLogo({
+export function DiscoverLogoExternalImage({
   ...props
 }: {
-  loadFromCDN?: boolean,
   [string]: string,
 } = {}): ComponentNode<SVGCardLogoProps> {
-  const svg = getDiscoverSVG();
   const cdnUrl = getLogoCDNUrl(CARD.DISCOVER);
 
   return (
@@ -107,8 +105,28 @@ export function DiscoverLogo({
       name={CARD.DISCOVER}
       cdnUrl={cdnUrl}
       render={() => {
+        return <svg />;
+      }}
+    />
+  );
+}
+
+export function DiscoverLogoInlineSVG({
+  ...props
+}: {
+  [string]: string,
+} = {}): ComponentNode<SVGCardLogoProps> {
+  const svg = getDiscoverSVG();
+
+  return (
+    <SVGCardLogo
+      {...props}
+      name={CARD.DISCOVER}
+      render={() => {
         return svg;
       }}
     />
   );
 }
+
+export const DiscoverLogo = DiscoverLogoInlineSVG;

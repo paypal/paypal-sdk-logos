@@ -98,15 +98,12 @@ export const getMybankSVG = ({
   );
 };
 
-export function MybankLogo({
+export function MybankLogoExternalImage({
   logoColor = LOGO_COLOR.BLACK,
   ...props
 }: {
   logoColor?: $Values<typeof LOGO_COLOR>,
 }): ComponentNode<SVGLogoProps> {
-  const svg = getMybankSVG(
-    getLogoColors(LOGO.MYBANK, MYBANK_LOGO_COLORS, logoColor)
-  );
   const cdnUrl = getLogoCDNUrl(LOGO.MYBANK, MYBANK_LOGO_COLORS, logoColor);
 
   return (
@@ -116,8 +113,32 @@ export function MybankLogo({
       logoColor={logoColor}
       cdnUrl={cdnUrl}
       render={() => {
+        return <svg />;
+      }}
+    />
+  );
+}
+
+export function MybankLogoInlineSVG({
+  logoColor = LOGO_COLOR.BLACK,
+  ...props
+}: {
+  logoColor?: $Values<typeof LOGO_COLOR>,
+}): ComponentNode<SVGLogoProps> {
+  const svg = getMybankSVG(
+    getLogoColors(LOGO.MYBANK, MYBANK_LOGO_COLORS, logoColor)
+  );
+
+  return (
+    <SVGLogo
+      {...props}
+      name={LOGO.MYBANK}
+      logoColor={logoColor}
+      render={() => {
         return svg;
       }}
     />
   );
 }
+
+export const MybankLogo = MybankLogoInlineSVG;

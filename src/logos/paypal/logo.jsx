@@ -79,15 +79,12 @@ export const getPayPalSVG = ({
   );
 };
 
-export function PayPalLogo({
+export function PayPalLogoExternalImage({
   logoColor = LOGO_COLOR.DEFAULT,
   ...props
 }: {
   logoColor?: $Values<typeof LOGO_COLOR>,
 }): ComponentNode<SVGLogoProps> {
-  const svg = getPayPalSVG(
-    getLogoColors(LOGO.PAYPAL, PAYPAL_LOGO_COLORS, logoColor)
-  );
   const cdnUrl = getLogoCDNUrl(LOGO.PAYPAL, PAYPAL_LOGO_COLORS, logoColor);
 
   return (
@@ -99,11 +96,37 @@ export function PayPalLogo({
       logoColor={logoColor}
       cdnUrl={cdnUrl}
       render={() => {
+        return <svg />;
+      }}
+    />
+  );
+}
+
+export function PayPalLogoInlineSVG({
+  logoColor = LOGO_COLOR.DEFAULT,
+  ...props
+}: {
+  logoColor?: $Values<typeof LOGO_COLOR>,
+}): ComponentNode<SVGLogoProps> {
+  const svg = getPayPalSVG(
+    getLogoColors(LOGO.PAYPAL, PAYPAL_LOGO_COLORS, logoColor)
+  );
+
+  return (
+    <SVGLogo
+      {...props}
+      name={LOGO.PAYPAL}
+      alt="PayPal"
+      role="presentation"
+      logoColor={logoColor}
+      render={() => {
         return svg;
       }}
     />
   );
 }
+
+export const PayPalLogo = PayPalLogoInlineSVG;
 
 const DEFAULT_OPACITY = "1";
 
@@ -167,14 +190,14 @@ export const getPPSVG = ({
   );
 };
 
-export function PPLogo({
+export function PPLogoExternalImage({
   logoColor = LOGO_COLOR.DEFAULT,
   ...props
 }: {
   logoColor?: $Values<typeof LOGO_COLOR>,
 }): ComponentNode<SVGLogoProps> {
-  const svg = getPPSVG(getLogoColors(LOGO.PP, PP_LOGO_COLORS, logoColor));
   const cdnUrl = getLogoCDNUrl(LOGO.PP, PP_LOGO_COLORS, logoColor);
+
   return (
     <SVGLogo
       {...props}
@@ -184,11 +207,35 @@ export function PPLogo({
       logoColor={logoColor}
       cdnUrl={cdnUrl}
       render={() => {
+        return <svg />;
+      }}
+    />
+  );
+}
+
+export function PPLogoInlineSVG({
+  logoColor = LOGO_COLOR.DEFAULT,
+  ...props
+}: {
+  logoColor?: $Values<typeof LOGO_COLOR>,
+}): ComponentNode<SVGLogoProps> {
+  const svg = getPPSVG(getLogoColors(LOGO.PP, PP_LOGO_COLORS, logoColor));
+
+  return (
+    <SVGLogo
+      {...props}
+      name={LOGO.PP}
+      alt="PP"
+      role="presentation"
+      logoColor={logoColor}
+      render={() => {
         return svg;
       }}
     />
   );
 }
+
+export const PPLogo = PPLogoInlineSVG;
 
 export const PPMONOCHROME_LOGO_COLORS: LogoColorMap = {
   [LOGO_COLOR.MONOCHROME]: {
@@ -236,14 +283,11 @@ export const getPPMonochromeSVG = ({
   );
 };
 
-export function PPMonochrome({
+export function PPMonochromeExternalImage({
   logoColor = LOGO_COLOR.MONOCHROME,
 }: {
   logoColor?: $Values<typeof LOGO_COLOR>,
 }): ComponentNode<SVGLogoProps> {
-  const svg = getPPMonochromeSVG(
-    getLogoColors(LOGO.PPMONOCHROME, PPMONOCHROME_LOGO_COLORS, logoColor)
-  );
   const cdnUrl = getLogoCDNUrl(
     LOGO.PPMONOCHROME,
     PPMONOCHROME_LOGO_COLORS,
@@ -257,8 +301,31 @@ export function PPMonochrome({
       logoColor={logoColor}
       cdnUrl={cdnUrl}
       render={() => {
+        return <svg />;
+      }}
+    />
+  );
+}
+
+export function PPMonochromeInlineSVG({
+  logoColor = LOGO_COLOR.MONOCHROME,
+}: {
+  logoColor?: $Values<typeof LOGO_COLOR>,
+}): ComponentNode<SVGLogoProps> {
+  const svg = getPPMonochromeSVG(
+    getLogoColors(LOGO.PPMONOCHROME, PPMONOCHROME_LOGO_COLORS, logoColor)
+  );
+
+  return (
+    <SVGLogo
+      name={LOGO.PP}
+      alt="PP"
+      logoColor={logoColor}
+      render={() => {
         return svg;
       }}
     />
   );
 }
+
+export const PPMonochrome = PPMonochromeInlineSVG;

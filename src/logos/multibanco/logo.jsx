@@ -131,15 +131,12 @@ export const getMultibancoSVG = ({
   );
 };
 
-export function MultibancoLogo({
+export function MultibancoLogoExternalImage({
   logoColor = LOGO_COLOR.BLACK,
   ...props
 }: {
   logoColor?: $Values<typeof LOGO_COLOR>,
 }): ComponentNode<SVGLogoProps> {
-  const svg = getMultibancoSVG(
-    getLogoColors(LOGO.MULTIBANCO, MULTIBANCO_LOGO_COLORS, logoColor)
-  );
   const cdnUrl = getLogoCDNUrl(
     LOGO.MULTIBANCO,
     MULTIBANCO_LOGO_COLORS,
@@ -153,8 +150,32 @@ export function MultibancoLogo({
       logoColor={logoColor}
       cdnUrl={cdnUrl}
       render={() => {
+        return <svg />;
+      }}
+    />
+  );
+}
+
+export function MultibancoLogoInlineSVG({
+  logoColor = LOGO_COLOR.BLACK,
+  ...props
+}: {
+  logoColor?: $Values<typeof LOGO_COLOR>,
+}): ComponentNode<SVGLogoProps> {
+  const svg = getMultibancoSVG(
+    getLogoColors(LOGO.MULTIBANCO, MULTIBANCO_LOGO_COLORS, logoColor)
+  );
+
+  return (
+    <SVGLogo
+      {...props}
+      name={LOGO.MULTIBANCO}
+      logoColor={logoColor}
+      render={() => {
         return svg;
       }}
     />
   );
 }
+
+export const MultibancoLogo = MultibancoLogoInlineSVG;

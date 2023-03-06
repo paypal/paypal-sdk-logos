@@ -72,15 +72,12 @@ export const getSofortSVG = ({
   );
 };
 
-export function SofortLogo({
+export function SofortLogoExternalImage({
   logoColor = LOGO_COLOR.BLACK,
   ...props
 }: {
   logoColor?: $Values<typeof LOGO_COLOR>,
 }): ComponentNode<SVGLogoProps> {
-  const svg = getSofortSVG(
-    getLogoColors(LOGO.SOFORT, SOFORT_LOGO_COLORS, logoColor)
-  );
   const cdnUrl = getLogoCDNUrl(LOGO.SOFORT, SOFORT_LOGO_COLORS, logoColor);
 
   return (
@@ -90,8 +87,32 @@ export function SofortLogo({
       logoColor={logoColor}
       cdnUrl={cdnUrl}
       render={() => {
+        return <svg />;
+      }}
+    />
+  );
+}
+
+export function SofortLogoInlineSVG({
+  logoColor = LOGO_COLOR.BLACK,
+  ...props
+}: {
+  logoColor?: $Values<typeof LOGO_COLOR>,
+}): ComponentNode<SVGLogoProps> {
+  const svg = getSofortSVG(
+    getLogoColors(LOGO.SOFORT, SOFORT_LOGO_COLORS, logoColor)
+  );
+
+  return (
+    <SVGLogo
+      {...props}
+      name={LOGO.SOFORT}
+      logoColor={logoColor}
+      render={() => {
         return svg;
       }}
     />
   );
 }
+
+export const SofortLogo = SofortLogoInlineSVG;

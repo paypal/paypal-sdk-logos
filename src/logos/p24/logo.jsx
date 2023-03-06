@@ -134,13 +134,12 @@ export const getP24SVG = ({ primary, secondary }: LogoColors): ElementNode => {
   );
 };
 
-export function P24Logo({
+export function P24LogoExternalImage({
   logoColor = LOGO_COLOR.BLACK,
   ...props
 }: {
   logoColor?: $Values<typeof LOGO_COLOR>,
 }): ComponentNode<SVGLogoProps> {
-  const svg = getP24SVG(getLogoColors(LOGO.P24, P24_LOGO_COLORS, logoColor));
   const cdnUrl = getLogoCDNUrl(LOGO.P24, P24_LOGO_COLORS, logoColor);
 
   return (
@@ -150,8 +149,30 @@ export function P24Logo({
       logoColor={logoColor}
       cdnUrl={cdnUrl}
       render={() => {
+        return <svg />;
+      }}
+    />
+  );
+}
+
+export function P24LogoInlineSVG({
+  logoColor = LOGO_COLOR.BLACK,
+  ...props
+}: {
+  logoColor?: $Values<typeof LOGO_COLOR>,
+}): ComponentNode<SVGLogoProps> {
+  const svg = getP24SVG(getLogoColors(LOGO.P24, P24_LOGO_COLORS, logoColor));
+
+  return (
+    <SVGLogo
+      {...props}
+      name={LOGO.P24}
+      logoColor={logoColor}
+      render={() => {
         return svg;
       }}
     />
   );
 }
+
+export const P24Logo = P24LogoInlineSVG;

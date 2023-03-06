@@ -107,15 +107,12 @@ export const getWechatpaySVG = ({
   );
 };
 
-export function WechatpayLogo({
+export function WechatpayLogoExternalImage({
   logoColor = LOGO_COLOR.BLACK,
   ...props
 }: {
   logoColor?: $Values<typeof LOGO_COLOR>,
 }): ComponentNode<SVGLogoProps> {
-  const svg = getWechatpaySVG(
-    getLogoColors(LOGO.WECHATPAY, WECHATPAY_LOGO_COLORS, logoColor)
-  );
   const cdnUrl = getLogoCDNUrl(
     LOGO.WECHATPAY,
     WECHATPAY_LOGO_COLORS,
@@ -129,8 +126,32 @@ export function WechatpayLogo({
       logoColor={logoColor}
       cdnUrl={cdnUrl}
       render={() => {
+        return <svg />;
+      }}
+    />
+  );
+}
+
+export function WechatpayLogoInlineSVG({
+  logoColor = LOGO_COLOR.BLACK,
+  ...props
+}: {
+  logoColor?: $Values<typeof LOGO_COLOR>,
+}): ComponentNode<SVGLogoProps> {
+  const svg = getWechatpaySVG(
+    getLogoColors(LOGO.WECHATPAY, WECHATPAY_LOGO_COLORS, logoColor)
+  );
+
+  return (
+    <SVGLogo
+      {...props}
+      name={LOGO.WECHATPAY}
+      logoColor={logoColor}
+      render={() => {
         return svg;
       }}
     />
   );
 }
+
+export const WechatpayLogo = WechatpayLogoInlineSVG;

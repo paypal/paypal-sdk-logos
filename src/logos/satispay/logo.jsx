@@ -54,15 +54,12 @@ export const getSatispaySVG = ({ primary }: LogoColors): ElementNode => {
   );
 };
 
-export function SatispayLogo({
+export function SatispayLogoExternalImage({
   logoColor = LOGO_COLOR.BLACK,
   ...props
 }: {
   logoColor?: $Values<typeof LOGO_COLOR>,
 }): ComponentNode<SVGLogoProps> {
-  const svg = getSatispaySVG(
-    getLogoColors(LOGO.SATISPAY, SATISPAY_LOGO_COLORS, logoColor)
-  );
   const cdnUrl = getLogoCDNUrl(LOGO.SATISPAY, SATISPAY_LOGO_COLORS, logoColor);
 
   return (
@@ -72,8 +69,32 @@ export function SatispayLogo({
       logoColor={logoColor}
       cdnUrl={cdnUrl}
       render={() => {
+        return <svg />;
+      }}
+    />
+  );
+}
+
+export function SatispayLogoInlineSVG({
+  logoColor = LOGO_COLOR.BLACK,
+  ...props
+}: {
+  logoColor?: $Values<typeof LOGO_COLOR>,
+}): ComponentNode<SVGLogoProps> {
+  const svg = getSatispaySVG(
+    getLogoColors(LOGO.SATISPAY, SATISPAY_LOGO_COLORS, logoColor)
+  );
+
+  return (
+    <SVGLogo
+      {...props}
+      name={LOGO.SATISPAY}
+      logoColor={logoColor}
+      render={() => {
         return svg;
       }}
     />
   );
 }
+
+export const SatispayLogo = SatispayLogoInlineSVG;

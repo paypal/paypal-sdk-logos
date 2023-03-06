@@ -89,15 +89,12 @@ export const getTrustlySVG = ({ primary }: LogoColors): ElementNode => {
   );
 };
 
-export function TrustlyLogo({
+export function TrustlyLogoExternalImage({
   logoColor = LOGO_COLOR.BLACK,
   ...props
 }: {
   logoColor?: $Values<typeof LOGO_COLOR>,
 }): ComponentNode<SVGLogoProps> {
-  const svg = getTrustlySVG(
-    getLogoColors(LOGO.TRUSTLY, TRUSTLY_LOGO_COLORS, logoColor)
-  );
   const cdnUrl = getLogoCDNUrl(LOGO.TRUSTLY, TRUSTLY_LOGO_COLORS, logoColor);
 
   return (
@@ -106,8 +103,31 @@ export function TrustlyLogo({
       name={LOGO.TRUSTLY}
       cdnUrl={cdnUrl}
       render={() => {
+        return <svg />;
+      }}
+    />
+  );
+}
+
+export function TrustlyLogoInlineSVG({
+  logoColor = LOGO_COLOR.BLACK,
+  ...props
+}: {
+  logoColor?: $Values<typeof LOGO_COLOR>,
+}): ComponentNode<SVGLogoProps> {
+  const svg = getTrustlySVG(
+    getLogoColors(LOGO.TRUSTLY, TRUSTLY_LOGO_COLORS, logoColor)
+  );
+
+  return (
+    <SVGLogo
+      {...props}
+      name={LOGO.TRUSTLY}
+      render={() => {
         return svg;
       }}
     />
   );
 }
+
+export const TrustlyLogo = TrustlyLogoInlineSVG;

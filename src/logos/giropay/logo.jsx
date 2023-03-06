@@ -123,15 +123,12 @@ export const getGiropaySVG = ({
   );
 };
 
-export function GiropayLogo({
+export function GiropayLogoExternalImage({
   logoColor = LOGO_COLOR.BLACK,
   ...props
 }: {
   logoColor?: $Values<typeof LOGO_COLOR>,
 }): ComponentNode<SVGLogoProps> {
-  const svg = getGiropaySVG(
-    getLogoColors(LOGO.GIROPAY, GIROPAY_LOGO_COLORS, logoColor)
-  );
   const cdnUrl = getLogoCDNUrl(LOGO.GIROPAY, GIROPAY_LOGO_COLORS, logoColor);
 
   return (
@@ -141,8 +138,32 @@ export function GiropayLogo({
       logoColor={logoColor}
       cdnUrl={cdnUrl}
       render={() => {
+        return <svg />;
+      }}
+    />
+  );
+}
+
+export function GiropayLogoInlineSVG({
+  logoColor = LOGO_COLOR.BLACK,
+  ...props
+}: {
+  logoColor?: $Values<typeof LOGO_COLOR>,
+}): ComponentNode<SVGLogoProps> {
+  const svg = getGiropaySVG(
+    getLogoColors(LOGO.GIROPAY, GIROPAY_LOGO_COLORS, logoColor)
+  );
+
+  return (
+    <SVGLogo
+      {...props}
+      name={LOGO.GIROPAY}
+      logoColor={logoColor}
+      render={() => {
         return svg;
       }}
     />
   );
 }
+
+export const GiropayLogo = GiropayLogoInlineSVG;

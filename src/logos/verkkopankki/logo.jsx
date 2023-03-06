@@ -338,15 +338,12 @@ export const getVerkkopankkiSVG = ({
   );
 };
 
-export function VerkkopankkiLogo({
+export function VerkkopankkiLogoExternalImage({
   logoColor = LOGO_COLOR.BLACK,
   ...props
 }: {
   logoColor?: $Values<typeof LOGO_COLOR>,
 }): ComponentNode<SVGLogoProps> {
-  const svg = getVerkkopankkiSVG(
-    getLogoColors(LOGO.VERKKOPANKKI, VERKKOPANKKI_LOGO_COLORS, logoColor)
-  );
   const cdnUrl = getLogoCDNUrl(
     LOGO.VERKKOPANKKI,
     VERKKOPANKKI_LOGO_COLORS,
@@ -360,8 +357,32 @@ export function VerkkopankkiLogo({
       logoColor={logoColor}
       cdnUrl={cdnUrl}
       render={() => {
+        return <svg />;
+      }}
+    />
+  );
+}
+
+export function VerkkopankkiLogoInlineSVG({
+  logoColor = LOGO_COLOR.BLACK,
+  ...props
+}: {
+  logoColor?: $Values<typeof LOGO_COLOR>,
+}): ComponentNode<SVGLogoProps> {
+  const svg = getVerkkopankkiSVG(
+    getLogoColors(LOGO.VERKKOPANKKI, VERKKOPANKKI_LOGO_COLORS, logoColor)
+  );
+
+  return (
+    <SVGLogo
+      {...props}
+      name={LOGO.VERKKOPANKKI}
+      logoColor={logoColor}
+      render={() => {
         return svg;
       }}
     />
   );
 }
+
+export const VerkkopankkiLogo = VerkkopankkiLogoInlineSVG;

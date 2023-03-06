@@ -39,13 +39,11 @@ export const getAmexSVG = (): ElementNode => {
   );
 };
 
-export function AmexLogo({
+export function AmexLogoExternalImage({
   ...props
 }: {
-  loadFromCDN?: boolean,
   [string]: string,
 } = {}): ComponentNode<SVGCardLogoProps> {
-  const svg = getAmexSVG();
   const cdnUrl = getLogoCDNUrl(CARD.AMEX);
 
   return (
@@ -54,8 +52,28 @@ export function AmexLogo({
       name={CARD.AMEX}
       cdnUrl={cdnUrl}
       render={() => {
+        return <svg />;
+      }}
+    />
+  );
+}
+
+export function AmexLogoInlineSVG({
+  ...props
+}: {
+  [string]: string,
+} = {}): ComponentNode<SVGCardLogoProps> {
+  const svg = getAmexSVG();
+
+  return (
+    <SVGCardLogo
+      {...props}
+      name={CARD.AMEX}
+      render={() => {
         return svg;
       }}
     />
   );
 }
+
+export const AmexLogo = AmexLogoInlineSVG;

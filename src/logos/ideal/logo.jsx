@@ -86,15 +86,12 @@ export const getIdealSVG = ({
   );
 };
 
-export function IdealLogo({
+export function IdealLogoExternalImage({
   logoColor = LOGO_COLOR.BLACK,
   ...props
 }: {
   logoColor?: $Values<typeof LOGO_COLOR>,
 }): ComponentNode<SVGLogoProps> {
-  const svg = getIdealSVG(
-    getLogoColors(LOGO.IDEAL, IDEAL_LOGO_COLORS, logoColor)
-  );
   const cdnUrl = getLogoCDNUrl(LOGO.IDEAL, IDEAL_LOGO_COLORS, logoColor);
 
   return (
@@ -103,8 +100,31 @@ export function IdealLogo({
       name={LOGO.IDEAL}
       cdnUrl={cdnUrl}
       render={() => {
+        return <svg />;
+      }}
+    />
+  );
+}
+
+export function IdealLogoInlineSVG({
+  logoColor = LOGO_COLOR.BLACK,
+  ...props
+}: {
+  logoColor?: $Values<typeof LOGO_COLOR>,
+}): ComponentNode<SVGLogoProps> {
+  const svg = getIdealSVG(
+    getLogoColors(LOGO.IDEAL, IDEAL_LOGO_COLORS, logoColor)
+  );
+
+  return (
+    <SVGLogo
+      {...props}
+      name={LOGO.IDEAL}
+      render={() => {
         return svg;
       }}
     />
   );
 }
+
+export const IdealLogo = IdealLogoInlineSVG;
