@@ -66,9 +66,6 @@ export function PayuLogoExternalImage({
       name={LOGO.PAYU}
       logoColor={logoColor}
       cdnUrl={cdnUrl}
-      render={() => {
-        return <svg />;
-      }}
     />
   );
 }

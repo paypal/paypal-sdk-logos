@@ -137,9 +137,6 @@ export function GiropayLogoExternalImage({
       name={LOGO.GIROPAY}
       logoColor={logoColor}
       cdnUrl={cdnUrl}
-      render={() => {
-        return <svg />;
-      }}
     />
   );
 }

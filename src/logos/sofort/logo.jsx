@@ -86,9 +86,6 @@ export function SofortLogoExternalImage({
       name={LOGO.SOFORT}
       logoColor={logoColor}
       cdnUrl={cdnUrl}
-      render={() => {
-        return <svg />;
-      }}
     />
   );
 }

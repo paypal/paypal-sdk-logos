@@ -68,9 +68,6 @@ export function SatispayLogoExternalImage({
       name={LOGO.SATISPAY}
       logoColor={logoColor}
       cdnUrl={cdnUrl}
-      render={() => {
-        return <svg />;
-      }}
     />
   );
 }

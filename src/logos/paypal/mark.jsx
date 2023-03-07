@@ -82,16 +82,7 @@ export function PayPalMarkExternalImage({
 }: {||}): ComponentNode<SVGLogoProps> {
   const cdnUrl = getLogoCDNUrl(MARK.PAYPAL);
 
-  return (
-    <SVGLogo
-      {...props}
-      name={LOGO.PP}
-      cdnUrl={cdnUrl}
-      render={() => {
-        return <svg />;
-      }}
-    />
-  );
+  return <SVGLogo {...props} name={LOGO.PP} cdnUrl={cdnUrl} />;
 }
 
 export function PayPalMarkInlineSVG({

@@ -65,9 +65,6 @@ export function ZimplerLogoExternalImage({
       name={LOGO.ZIMPLER}
       logoColor={logoColor}
       cdnUrl={cdnUrl}
-      render={() => {
-        return <svg />;
-      }}
     />
   );
 }

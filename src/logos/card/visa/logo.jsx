@@ -37,28 +37,15 @@ export const getVisaSVG = (): ElementNode => {
 
 export function VisaLogoExternalImage({
   ...props
-}: {
-  [string]: string,
-} = {}): ComponentNode<SVGCardLogoProps> {
+}: {} = {}): ComponentNode<SVGCardLogoProps> {
   const cdnUrl = getLogoCDNUrl(CARD.VISA);
 
-  return (
-    <SVGCardLogo
-      {...props}
-      name={CARD.VISA}
-      cdnUrl={cdnUrl}
-      render={() => {
-        return <svg />;
-      }}
-    />
-  );
+  return <SVGCardLogo {...props} name={CARD.VISA} cdnUrl={cdnUrl} />;
 }
 
 export function VisaLogoInlineSVG({
   ...props
-}: {
-  [string]: string,
-} = {}): ComponentNode<SVGCardLogoProps> {
+}: {} = {}): ComponentNode<SVGCardLogoProps> {
   const svg = getVisaSVG();
 
   return (

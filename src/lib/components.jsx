@@ -12,7 +12,7 @@ import {
 import { LOGO_CLASS, LOGO_COLOR } from "../constants";
 
 type SVGProps = {|
-  svg: ElementNode,
+  svg: ElementNode | null,
   cdnUrl?: string,
   [key: string]: mixed,
 |};
@@ -46,8 +46,8 @@ export function SVG(props: SVGProps): ElementNode {
 }
 
 export type SVGLogoProps = {
-  render: () => ElementNode,
   name: string,
+  render?: () => ElementNode,
   logoColor?: $Values<typeof LOGO_COLOR>,
   cdnUrl?: string,
 };
@@ -61,7 +61,7 @@ export function SVGLogo({
   return (
     <SVG
       {...props}
-      svg={render()}
+      svg={render ? render() : null}
       alt=""
       class={`${LOGO_CLASS.LOGO} ${LOGO_CLASS.LOGO}-${name} ${
         logoColor ? `${LOGO_CLASS.LOGO_COLOR}-${logoColor}` : ""
@@ -71,8 +71,8 @@ export function SVGLogo({
 }
 
 export type SVGCardLogoProps = {
-  render: () => ElementNode,
   name: string,
+  render?: () => ElementNode,
   cdnUrl?: string,
 };
 
@@ -84,7 +84,7 @@ export function SVGCardLogo({
   return (
     <SVG
       {...props}
-      svg={render()}
+      svg={render ? render() : null}
       alt={capitalizeFirstLetter(name)}
       class={`${LOGO_CLASS.CARD} ${LOGO_CLASS.CARD}-${name}`}
     />

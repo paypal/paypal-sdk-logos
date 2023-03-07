@@ -136,9 +136,6 @@ export function SepaLogoExternalImage({
       name={LOGO.SEPA}
       logoColor={logoColor}
       cdnUrl={cdnUrl}
-      render={() => {
-        return <svg />;
-      }}
     />
   );
 }

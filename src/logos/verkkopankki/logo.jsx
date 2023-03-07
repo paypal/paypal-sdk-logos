@@ -356,9 +356,6 @@ export function VerkkopankkiLogoExternalImage({
       name={LOGO.VERKKOPANKKI}
       logoColor={logoColor}
       cdnUrl={cdnUrl}
-      render={() => {
-        return <svg />;
-      }}
     />
   );
 }

@@ -149,9 +149,6 @@ export function MultibancoLogoExternalImage({
       name={LOGO.MULTIBANCO}
       logoColor={logoColor}
       cdnUrl={cdnUrl}
-      render={() => {
-        return <svg />;
-      }}
     />
   );
 }

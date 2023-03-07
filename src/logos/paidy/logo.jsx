@@ -136,9 +136,6 @@ export function PaidyLogoExternalImage({
       name={LOGO.PAIDY}
       logoColor={logoColor}
       cdnUrl={cdnUrl}
-      render={() => {
-        return <svg />;
-      }}
     />
   );
 }

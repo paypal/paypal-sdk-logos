@@ -67,9 +67,6 @@ export function ApplePayMarkExternalImage({
       alt="Apple Pay mark"
       aria-label="Apple Pay mark"
       cdnUrl={cdnUrl}
-      render={() => {
-        return <svg />;
-      }}
     />
   );
 }

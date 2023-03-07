@@ -49,28 +49,15 @@ export const getMastercardSVG = (): ElementNode => {
 
 export function MastercardLogoExternalImage({
   ...props
-}: {
-  [string]: string,
-} = {}): ComponentNode<SVGCardLogoProps> {
+}: {} = {}): ComponentNode<SVGCardLogoProps> {
   const cdnUrl = getLogoCDNUrl(CARD.MASTERCARD);
 
-  return (
-    <SVGCardLogo
-      {...props}
-      name={CARD.MASTERCARD}
-      cdnUrl={cdnUrl}
-      render={() => {
-        return <svg />;
-      }}
-    />
-  );
+  return <SVGCardLogo {...props} name={CARD.MASTERCARD} cdnUrl={cdnUrl} />;
 }
 
 export function MastercardLogoInlineSVG({
   ...props
-}: {
-  [string]: string,
-} = {}): ComponentNode<SVGCardLogoProps> {
+}: {} = {}): ComponentNode<SVGCardLogoProps> {
   const svg = getMastercardSVG();
 
   return (

@@ -134,16 +134,7 @@ export function CreditMarkExternalImage({
 }: {||}): ComponentNode<SVGLogoProps> {
   const cdnUrl = getLogoCDNUrl(MARK.CREDIT);
 
-  return (
-    <SVGLogo
-      {...props}
-      name={LOGO.CREDIT}
-      cdnUrl={cdnUrl}
-      render={() => {
-        return <svg />;
-      }}
-    />
-  );
+  return <SVGLogo {...props} name={LOGO.CREDIT} cdnUrl={cdnUrl} />;
 }
 
 export function CreditMarkInlineSVG({

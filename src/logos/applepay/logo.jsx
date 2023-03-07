@@ -63,9 +63,6 @@ export function ApplePayLogoExternalImage({
       alt="Apple Pay"
       aria-label="Apple Pay"
       cdnUrl={cdnUrl}
-      render={() => {
-        return <svg />;
-      }}
     />
   );
 }

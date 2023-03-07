@@ -71,9 +71,6 @@ export function VenmoLogoExternalImage({
       name={LOGO.VENMO}
       logoColor={logoColor}
       cdnUrl={cdnUrl}
-      render={() => {
-        return <svg />;
-      }}
     />
   );
 }

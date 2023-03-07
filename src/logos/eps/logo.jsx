@@ -143,15 +143,7 @@ export function EpsLogoExternalImage({
   const cdnUrl = getLogoCDNUrl(LOGO.EPS, EPS_LOGO_COLORS, logoColor);
 
   return (
-    <SVGLogo
-      {...props}
-      name={LOGO.EPS}
-      logoColor={logoColor}
-      cdnUrl={cdnUrl}
-      render={() => {
-        return <svg />;
-      }}
-    />
+    <SVGLogo {...props} name={LOGO.EPS} logoColor={logoColor} cdnUrl={cdnUrl} />
   );
 }
 

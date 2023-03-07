@@ -175,9 +175,6 @@ export function MercadoPagoLogoExternalImage({
       name={LOGO.MERCADOPAGO}
       logoColor={logoColor}
       cdnUrl={cdnUrl}
-      render={() => {
-        return <svg />;
-      }}
     />
   );
 }

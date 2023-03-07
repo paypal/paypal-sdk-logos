@@ -143,15 +143,7 @@ export function P24LogoExternalImage({
   const cdnUrl = getLogoCDNUrl(LOGO.P24, P24_LOGO_COLORS, logoColor);
 
   return (
-    <SVGLogo
-      {...props}
-      name={LOGO.P24}
-      logoColor={logoColor}
-      cdnUrl={cdnUrl}
-      render={() => {
-        return <svg />;
-      }}
-    />
+    <SVGLogo {...props} name={LOGO.P24} logoColor={logoColor} cdnUrl={cdnUrl} />
   );
 }
 

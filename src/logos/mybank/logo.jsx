@@ -112,9 +112,6 @@ export function MybankLogoExternalImage({
       name={LOGO.MYBANK}
       logoColor={logoColor}
       cdnUrl={cdnUrl}
-      render={() => {
-        return <svg />;
-      }}
     />
   );
 }

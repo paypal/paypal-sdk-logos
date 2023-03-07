@@ -95,9 +95,6 @@ export function PayPalLogoExternalImage({
       role="presentation"
       logoColor={logoColor}
       cdnUrl={cdnUrl}
-      render={() => {
-        return <svg />;
-      }}
     />
   );
 }
@@ -206,9 +203,6 @@ export function PPLogoExternalImage({
       role="presentation"
       logoColor={logoColor}
       cdnUrl={cdnUrl}
-      render={() => {
-        return <svg />;
-      }}
     />
   );
 }
@@ -295,15 +289,7 @@ export function PPMonochromeExternalImage({
   );
 
   return (
-    <SVGLogo
-      name={LOGO.PP}
-      alt="PP"
-      logoColor={logoColor}
-      cdnUrl={cdnUrl}
-      render={() => {
-        return <svg />;
-      }}
-    />
+    <SVGLogo name={LOGO.PP} alt="PP" logoColor={logoColor} cdnUrl={cdnUrl} />
   );
 }
 

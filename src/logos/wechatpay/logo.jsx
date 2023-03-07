@@ -125,9 +125,6 @@ export function WechatpayLogoExternalImage({
       name={LOGO.WECHATPAY}
       logoColor={logoColor}
       cdnUrl={cdnUrl}
-      render={() => {
-        return <svg />;
-      }}
     />
   );
 }

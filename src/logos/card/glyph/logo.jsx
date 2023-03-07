@@ -57,20 +57,10 @@ export function GlyphCardExternalImage({
   ...props
 }: {
   logoColor?: $Values<typeof LOGO_COLOR>,
-  [string]: string,
 } = {}): ComponentNode<SVGCardLogoProps> {
   const cdnUrl = getLogoCDNUrl(LOGO.CARD, GLYPH_CARD_LOGO_COLORS, logoColor);
 
-  return (
-    <SVGCardLogo
-      {...props}
-      name=""
-      cdnUrl={cdnUrl}
-      render={() => {
-        return <svg />;
-      }}
-    />
-  );
+  return <SVGCardLogo {...props} name="" cdnUrl={cdnUrl} />;
 }
 
 export function GlyphCardInlineSVG({
@@ -78,7 +68,6 @@ export function GlyphCardInlineSVG({
   ...props
 }: {
   logoColor?: $Values<typeof LOGO_COLOR>,
-  [string]: string,
 } = {}): ComponentNode<SVGCardLogoProps> {
   const svg = getGlyphCardSVG(
     getLogoColors(LOGO.CARD, GLYPH_CARD_LOGO_COLORS, logoColor)

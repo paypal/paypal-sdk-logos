@@ -167,28 +167,15 @@ export const getJcbSVG = (): ElementNode => {
 
 export function JcbLogoExternalImage({
   ...props
-}: {
-  [string]: string,
-} = {}): ComponentNode<SVGCardLogoProps> {
+}: {} = {}): ComponentNode<SVGCardLogoProps> {
   const cdnUrl = getLogoCDNUrl(CARD.JCB);
 
-  return (
-    <SVGCardLogo
-      {...props}
-      name={CARD.JCB}
-      cdnUrl={cdnUrl}
-      render={() => {
-        return <svg />;
-      }}
-    />
-  );
+  return <SVGCardLogo {...props} name={CARD.JCB} cdnUrl={cdnUrl} />;
 }
 
 export function JcbLogoInlineSVG({
   ...props
-}: {
-  [string]: string,
-} = {}): ComponentNode<SVGCardLogoProps> {
+}: {} = {}): ComponentNode<SVGCardLogoProps> {
   const svg = getJcbSVG();
 
   return (

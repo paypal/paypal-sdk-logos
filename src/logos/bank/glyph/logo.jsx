@@ -63,16 +63,7 @@ export function GlyphBankExternalImage({
 } = {}): ComponentNode<SVGLogoProps> {
   const cdnUrl = getLogoCDNUrl(LOGO.BANK, GLYPH_BANK_LOGO_COLORS, logoColor);
 
-  return (
-    <SVGLogo
-      {...props}
-      name={LOGO.BANK}
-      cdnUrl={cdnUrl}
-      render={() => {
-        return <svg />;
-      }}
-    />
-  );
+  return <SVGLogo {...props} name={LOGO.BANK} cdnUrl={cdnUrl} />;
 }
 
 export function GlyphBankInlineSVG({

@@ -88,9 +88,6 @@ export function OxxoLogoExternalImage({
       name={LOGO.OXXO}
       logoColor={logoColor}
       cdnUrl={cdnUrl}
-      render={() => {
-        return <svg />;
-      }}
     />
   );
 }

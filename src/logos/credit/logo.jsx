@@ -111,9 +111,6 @@ export function CreditLogoExternalImage({
       name={LOGO.CREDIT}
       logoColor={logoColor}
       cdnUrl={cdnUrl}
-      render={() => {
-        return <svg />;
-      }}
     />
   );
 }

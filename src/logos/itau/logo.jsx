@@ -172,9 +172,6 @@ export function ItauLogoExternalImage({
       name={LOGO.ITAU}
       logoColor={logoColor}
       cdnUrl={cdnUrl}
-      render={() => {
-        return <svg />;
-      }}
     />
   );
 }

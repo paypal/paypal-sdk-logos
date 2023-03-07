@@ -94,16 +94,7 @@ export function IdealLogoExternalImage({
 }): ComponentNode<SVGLogoProps> {
   const cdnUrl = getLogoCDNUrl(LOGO.IDEAL, IDEAL_LOGO_COLORS, logoColor);
 
-  return (
-    <SVGLogo
-      {...props}
-      name={LOGO.IDEAL}
-      cdnUrl={cdnUrl}
-      render={() => {
-        return <svg />;
-      }}
-    />
-  );
+  return <SVGLogo {...props} name={LOGO.IDEAL} cdnUrl={cdnUrl} />;
 }
 
 export function IdealLogoInlineSVG({

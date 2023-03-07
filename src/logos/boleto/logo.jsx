@@ -61,9 +61,6 @@ export function BoletoLogoExternalImage({
       name={LOGO.BOLETO}
       logoColor={logoColor}
       cdnUrl={cdnUrl}
-      render={() => {
-        return <svg />;
-      }}
     />
   );
 }

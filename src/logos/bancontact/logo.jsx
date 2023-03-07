@@ -109,9 +109,6 @@ export function BancontactLogoExternalImage({
       name={LOGO.BANCONTACT}
       logoColor={logoColor}
       cdnUrl={cdnUrl}
-      render={() => {
-        return <svg />;
-      }}
     />
   );
 }

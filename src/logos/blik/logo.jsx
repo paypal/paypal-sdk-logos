@@ -128,16 +128,7 @@ export function BlikLogoExternalImage({
 }): ComponentNode<SVGLogoProps> {
   const cdnUrl = getLogoCDNUrl(LOGO.BLIK, BLIK_LOGO_COLORS, logoColor);
 
-  return (
-    <SVGLogo
-      {...props}
-      name={LOGO.BLIK}
-      cdnUrl={cdnUrl}
-      render={() => {
-        return <svg />;
-      }}
-    />
-  );
+  return <SVGLogo {...props} name={LOGO.BLIK} cdnUrl={cdnUrl} />;
 }
 
 export function BlikLogoInlineSVG({

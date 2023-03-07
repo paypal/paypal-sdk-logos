@@ -94,28 +94,15 @@ export const getDiscoverSVG = (): ElementNode => {
 
 export function DiscoverLogoExternalImage({
   ...props
-}: {
-  [string]: string,
-} = {}): ComponentNode<SVGCardLogoProps> {
+}: {} = {}): ComponentNode<SVGCardLogoProps> {
   const cdnUrl = getLogoCDNUrl(CARD.DISCOVER);
 
-  return (
-    <SVGCardLogo
-      {...props}
-      name={CARD.DISCOVER}
-      cdnUrl={cdnUrl}
-      render={() => {
-        return <svg />;
-      }}
-    />
-  );
+  return <SVGCardLogo {...props} name={CARD.DISCOVER} cdnUrl={cdnUrl} />;
 }
 
 export function DiscoverLogoInlineSVG({
   ...props
-}: {
-  [string]: string,
-} = {}): ComponentNode<SVGCardLogoProps> {
+}: {} = {}): ComponentNode<SVGCardLogoProps> {
   const svg = getDiscoverSVG();
 
   return (

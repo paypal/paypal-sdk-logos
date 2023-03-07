@@ -97,16 +97,7 @@ export function TrustlyLogoExternalImage({
 }): ComponentNode<SVGLogoProps> {
   const cdnUrl = getLogoCDNUrl(LOGO.TRUSTLY, TRUSTLY_LOGO_COLORS, logoColor);
 
-  return (
-    <SVGLogo
-      {...props}
-      name={LOGO.TRUSTLY}
-      cdnUrl={cdnUrl}
-      render={() => {
-        return <svg />;
-      }}
-    />
-  );
+  return <SVGLogo {...props} name={LOGO.TRUSTLY} cdnUrl={cdnUrl} />;
 }
 
 export function TrustlyLogoInlineSVG({

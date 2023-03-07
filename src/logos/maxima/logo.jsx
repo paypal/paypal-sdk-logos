@@ -119,9 +119,6 @@ export function MaximaLogoExternalImage({
       name={LOGO.MAXIMA}
       logoColor={logoColor}
       cdnUrl={cdnUrl}
-      render={() => {
-        return <svg />;
-      }}
     />
   );
 }
