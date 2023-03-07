@@ -3,8 +3,8 @@
 
 import { node, html } from "@krakenjs/jsx-pragmatic/src";
 
-import { SofortLogo, LOGO_COLOR } from "../../../src";
-import { validateSVG } from "../common";
+import { SofortLogo, LOGO_COLOR, SofortLogoExternalImage } from "../../../src";
+import { validateExternalSVG, validateSVG } from "../common";
 
 describe("sofort logo rendering happy cases", () => {
   it("should render the sofort logo", () => {
@@ -13,5 +13,15 @@ describe("sofort logo rendering happy cases", () => {
     const logoHTML = logo.render(html());
 
     validateSVG(logoHTML);
+  });
+});
+
+describe("SofortLogoExternalImage rendering happy cases", () => {
+  it("should render the sofort logo from CDN", () => {
+    const logo = <SofortLogoExternalImage />;
+
+    const logoHTML = logo.render(html());
+
+    validateExternalSVG(logoHTML);
   });
 });

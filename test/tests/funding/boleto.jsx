@@ -3,8 +3,8 @@
 
 import { node, html } from "@krakenjs/jsx-pragmatic/src";
 
-import { BoletoLogo } from "../../../src";
-import { validateSVG } from "../common";
+import { BoletoLogo, BoletoLogoExternalImage } from "../../../src";
+import { validateExternalSVG, validateSVG } from "../common";
 
 describe("boleto logo rendering happy cases", () => {
   it("should render the boleto logo", () => {
@@ -13,5 +13,15 @@ describe("boleto logo rendering happy cases", () => {
     const logoHTML = logo.render(html());
 
     validateSVG(logoHTML);
+  });
+});
+
+describe("BoletoLogoExternalImage rendering happy cases", () => {
+  it("should render the boleto logo from CDN", () => {
+    const logo = <BoletoLogoExternalImage />;
+
+    const logoHTML = logo.render(html());
+
+    validateExternalSVG(logoHTML);
   });
 });

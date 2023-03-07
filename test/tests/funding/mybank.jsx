@@ -3,8 +3,8 @@
 
 import { node, html } from "@krakenjs/jsx-pragmatic/src";
 
-import { MybankLogo, LOGO_COLOR } from "../../../src";
-import { validateSVG } from "../common";
+import { MybankLogo, LOGO_COLOR, MybankLogoExternalImage } from "../../../src";
+import { validateExternalSVG, validateSVG } from "../common";
 
 describe("mybank logo rendering happy cases", () => {
   it("should render the mybank logo", () => {
@@ -13,5 +13,15 @@ describe("mybank logo rendering happy cases", () => {
     const logoHTML = logo.render(html());
 
     validateSVG(logoHTML);
+  });
+});
+
+describe("MybankLogoExternalImage rendering happy cases", () => {
+  it("should render the mybank logo from CDN", () => {
+    const logo = <MybankLogoExternalImage />;
+
+    const logoHTML = logo.render(html());
+
+    validateExternalSVG(logoHTML);
   });
 });
