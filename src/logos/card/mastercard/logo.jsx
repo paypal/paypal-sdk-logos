@@ -47,23 +47,28 @@ export const getMastercardSVG = (): ElementNode => {
   );
 };
 
-export function MastercardLogo({
+export function MastercardLogoExternalImage({
   ...props
-}: {
-  loadFromCDN?: boolean,
-  [string]: string,
-} = {}): ComponentNode<SVGCardLogoProps> {
-  const svg = getMastercardSVG();
+}: {} = {}): ComponentNode<SVGCardLogoProps> {
   const cdnUrl = getLogoCDNUrl(CARD.MASTERCARD);
+
+  return <SVGCardLogo {...props} name={CARD.MASTERCARD} cdnUrl={cdnUrl} />;
+}
+
+export function MastercardLogoInlineSVG({
+  ...props
+}: {} = {}): ComponentNode<SVGCardLogoProps> {
+  const svg = getMastercardSVG();
 
   return (
     <SVGCardLogo
       {...props}
       name={CARD.MASTERCARD}
-      cdnUrl={cdnUrl}
       render={() => {
         return svg;
       }}
     />
   );
 }
+
+export const MastercardLogo = MastercardLogoInlineSVG;

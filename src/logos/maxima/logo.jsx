@@ -105,15 +105,12 @@ export const getMaximaSVG = ({
   );
 };
 
-export function MaximaLogo({
+export function MaximaLogoExternalImage({
   logoColor = LOGO_COLOR.BLACK,
   ...props
 }: {
   logoColor?: $Values<typeof LOGO_COLOR>,
 }): ComponentNode<SVGLogoProps> {
-  const svg = getMaximaSVG(
-    getLogoColors(LOGO.MAXIMA, MAXIMA_LOGO_COLORS, logoColor)
-  );
   const cdnUrl = getLogoCDNUrl(LOGO.MAXIMA, MAXIMA_LOGO_COLORS, logoColor);
 
   return (
@@ -122,9 +119,30 @@ export function MaximaLogo({
       name={LOGO.MAXIMA}
       logoColor={logoColor}
       cdnUrl={cdnUrl}
+    />
+  );
+}
+
+export function MaximaLogoInlineSVG({
+  logoColor = LOGO_COLOR.BLACK,
+  ...props
+}: {
+  logoColor?: $Values<typeof LOGO_COLOR>,
+}): ComponentNode<SVGLogoProps> {
+  const svg = getMaximaSVG(
+    getLogoColors(LOGO.MAXIMA, MAXIMA_LOGO_COLORS, logoColor)
+  );
+
+  return (
+    <SVGLogo
+      {...props}
+      name={LOGO.MAXIMA}
+      logoColor={logoColor}
       render={() => {
         return svg;
       }}
     />
   );
 }
+
+export const MaximaLogo = MaximaLogoInlineSVG;

@@ -47,15 +47,12 @@ export const getApplepaySVG = ({ primary }: LogoColors): ElementNode => {
   );
 };
 
-export function ApplePayLogo({
+export function ApplePayLogoExternalImage({
   logoColor = LOGO_COLOR.DEFAULT,
   ...props
 }: {
   logoColor?: $Values<typeof LOGO_COLOR>,
 }): ComponentNode<SVGLogoProps> {
-  const svg = getApplepaySVG(
-    getLogoColors(LOGO.APPLEPAY, APPLEPAY_LOGO_COLORS, logoColor)
-  );
   const cdnUrl = getLogoCDNUrl(LOGO.APPLEPAY, APPLEPAY_LOGO_COLORS, logoColor);
 
   return (
@@ -66,9 +63,32 @@ export function ApplePayLogo({
       alt="Apple Pay"
       aria-label="Apple Pay"
       cdnUrl={cdnUrl}
+    />
+  );
+}
+
+export function ApplePayLogoInlineSVG({
+  logoColor = LOGO_COLOR.DEFAULT,
+  ...props
+}: {
+  logoColor?: $Values<typeof LOGO_COLOR>,
+}): ComponentNode<SVGLogoProps> {
+  const svg = getApplepaySVG(
+    getLogoColors(LOGO.APPLEPAY, APPLEPAY_LOGO_COLORS, logoColor)
+  );
+
+  return (
+    <SVGLogo
+      {...props}
+      name={LOGO.APPLEPAY}
+      logoColor={logoColor}
+      alt="Apple Pay"
+      aria-label="Apple Pay"
       render={() => {
         return svg;
       }}
     />
   );
 }
+
+export const ApplePayLogo = ApplePayLogoInlineSVG;

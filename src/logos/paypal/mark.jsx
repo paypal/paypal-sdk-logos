@@ -77,22 +77,28 @@ export const getPayPalMarkSVG = (): ElementNode => {
   );
 };
 
-export function PayPalMark({
+export function PayPalMarkExternalImage({
   ...props
-}: {|
-  loadFromCDN?: boolean,
-|}): ComponentNode<SVGLogoProps> {
-  const svg = getPayPalMarkSVG();
+}: {||}): ComponentNode<SVGLogoProps> {
   const cdnUrl = getLogoCDNUrl(MARK.PAYPAL);
+
+  return <SVGLogo {...props} name={LOGO.PP} cdnUrl={cdnUrl} />;
+}
+
+export function PayPalMarkInlineSVG({
+  ...props
+}: {||}): ComponentNode<SVGLogoProps> {
+  const svg = getPayPalMarkSVG();
 
   return (
     <SVGLogo
       {...props}
       name={LOGO.PP}
-      cdnUrl={cdnUrl}
       render={() => {
         return svg;
       }}
     />
   );
 }
+
+export const PayPalMark = PayPalMarkInlineSVG;

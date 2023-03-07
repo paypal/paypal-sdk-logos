@@ -4,8 +4,13 @@
 import { node, html } from "@krakenjs/jsx-pragmatic/src";
 import { COUNTRY, LANG } from "@paypal/sdk-constants/src";
 
-import { CreditLogo, LOGO_COLOR } from "../../../src";
-import { validateSVG, getLocale } from "../common";
+import {
+  CreditLogo,
+  CreditLogoExternalImage,
+  CreditMarkExternalImage,
+  LOGO_COLOR,
+} from "../../../src";
+import { validateSVG, getLocale, validateExternalSVG } from "../common";
 
 describe("credit logo rendering happy cases", () => {
   it("should render the credit logo", () => {
@@ -41,6 +46,28 @@ describe("credit logo rendering happy cases", () => {
         `Expected credit logo to be different for US and DE locales`
       );
     }
+  });
+});
+
+describe("CreditLogoExternalImage rendering happy cases", () => {
+  it("should render the credit logo from CDN", () => {
+    const logo = (
+      <CreditLogoExternalImage locale={getLocale(COUNTRY.US, LANG.EN)} />
+    );
+
+    const logoHTML = logo.render(html());
+
+    validateExternalSVG(logoHTML);
+  });
+});
+
+describe("CreditMarkExternalImage rendering happy cases", () => {
+  it("should render the credit mark from CDN", () => {
+    const mark = <CreditMarkExternalImage />;
+
+    const markHTML = mark.render(html());
+
+    validateExternalSVG(markHTML);
   });
 });
 

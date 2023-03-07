@@ -157,15 +157,12 @@ export const getMercadoPagoSVG = ({
   );
 };
 
-export function MercadoPagoLogo({
+export function MercadoPagoLogoExternalImage({
   logoColor = LOGO_COLOR.BLACK,
   ...props
 }: {
   logoColor?: $Values<typeof LOGO_COLOR>,
 }): ComponentNode<SVGLogoProps> {
-  const svg = getMercadoPagoSVG(
-    getLogoColors(LOGO.MERCADOPAGO, MERCADOPAGO_LOGO_COLORS, logoColor)
-  );
   const cdnUrl = getLogoCDNUrl(
     LOGO.MERCADOPAGO,
     MERCADOPAGO_LOGO_COLORS,
@@ -178,9 +175,30 @@ export function MercadoPagoLogo({
       name={LOGO.MERCADOPAGO}
       logoColor={logoColor}
       cdnUrl={cdnUrl}
+    />
+  );
+}
+
+export function MercadoPagoLogoInlineSVG({
+  logoColor = LOGO_COLOR.BLACK,
+  ...props
+}: {
+  logoColor?: $Values<typeof LOGO_COLOR>,
+}): ComponentNode<SVGLogoProps> {
+  const svg = getMercadoPagoSVG(
+    getLogoColors(LOGO.MERCADOPAGO, MERCADOPAGO_LOGO_COLORS, logoColor)
+  );
+
+  return (
+    <SVGLogo
+      {...props}
+      name={LOGO.MERCADOPAGO}
+      logoColor={logoColor}
       render={() => {
         return svg;
       }}
     />
   );
 }
+
+export const MercadoPagoLogo = MercadoPagoLogoInlineSVG;

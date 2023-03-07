@@ -3,8 +3,8 @@
 
 import { node, html } from "@krakenjs/jsx-pragmatic/src";
 
-import { PaidyLogo, LOGO_COLOR } from "../../../src";
-import { validateSVG } from "../common";
+import { PaidyLogo, LOGO_COLOR, PaidyLogoExternalImage } from "../../../src";
+import { validateExternalSVG, validateSVG } from "../common";
 
 describe("paidy logo rendering happy cases", () => {
   it("should render the paidy logo", () => {
@@ -21,5 +21,15 @@ describe("paidy logo rendering happy cases", () => {
     const logoHTML = logo.render(html());
 
     validateSVG(logoHTML);
+  });
+});
+
+describe("PaidyLogoExternalImage rendering happy cases", () => {
+  it("should render the paidy logo from CDN", () => {
+    const logo = <PaidyLogoExternalImage />;
+
+    const logoHTML = logo.render(html());
+
+    validateExternalSVG(logoHTML);
   });
 });

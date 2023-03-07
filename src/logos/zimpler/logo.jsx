@@ -51,15 +51,12 @@ export const getZimplerSVG = ({ primary }: LogoColors): ElementNode => {
   );
 };
 
-export function ZimplerLogo({
+export function ZimplerLogoExternalImage({
   logoColor = LOGO_COLOR.BLACK,
   ...props
 }: {
   logoColor?: $Values<typeof LOGO_COLOR>,
 }): ComponentNode<SVGLogoProps> {
-  const svg = getZimplerSVG(
-    getLogoColors(LOGO.ZIMPLER, ZIMPLER_LOGO_COLORS, logoColor)
-  );
   const cdnUrl = getLogoCDNUrl(LOGO.ZIMPLER, ZIMPLER_LOGO_COLORS, logoColor);
 
   return (
@@ -68,9 +65,30 @@ export function ZimplerLogo({
       name={LOGO.ZIMPLER}
       logoColor={logoColor}
       cdnUrl={cdnUrl}
+    />
+  );
+}
+
+export function ZimplerLogoInlineSVG({
+  logoColor = LOGO_COLOR.BLACK,
+  ...props
+}: {
+  logoColor?: $Values<typeof LOGO_COLOR>,
+}): ComponentNode<SVGLogoProps> {
+  const svg = getZimplerSVG(
+    getLogoColors(LOGO.ZIMPLER, ZIMPLER_LOGO_COLORS, logoColor)
+  );
+
+  return (
+    <SVGLogo
+      {...props}
+      name={LOGO.ZIMPLER}
+      logoColor={logoColor}
       render={() => {
         return svg;
       }}
     />
   );
 }
+
+export const ZimplerLogo = ZimplerLogoInlineSVG;

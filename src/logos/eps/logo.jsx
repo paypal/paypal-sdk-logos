@@ -134,24 +134,37 @@ export const getEpsSVG = ({ primary, secondary }: LogoColors): ElementNode => {
   );
 };
 
-export function EpsLogo({
+export function EpsLogoExternalImage({
+  logoColor = LOGO_COLOR.BLACK,
+  ...props
+}: {
+  logoColor?: $Values<typeof LOGO_COLOR>,
+}): ComponentNode<SVGLogoProps> {
+  const cdnUrl = getLogoCDNUrl(LOGO.EPS, EPS_LOGO_COLORS, logoColor);
+
+  return (
+    <SVGLogo {...props} name={LOGO.EPS} logoColor={logoColor} cdnUrl={cdnUrl} />
+  );
+}
+
+export function EpsLogoInlineSVG({
   logoColor = LOGO_COLOR.BLACK,
   ...props
 }: {
   logoColor?: $Values<typeof LOGO_COLOR>,
 }): ComponentNode<SVGLogoProps> {
   const svg = getEpsSVG(getLogoColors(LOGO.EPS, EPS_LOGO_COLORS, logoColor));
-  const cdnUrl = getLogoCDNUrl(LOGO.EPS, EPS_LOGO_COLORS, logoColor);
 
   return (
     <SVGLogo
       {...props}
       name={LOGO.EPS}
       logoColor={logoColor}
-      cdnUrl={cdnUrl}
       render={() => {
         return svg;
       }}
     />
   );
 }
+
+export const EpsLogo = EpsLogoInlineSVG;

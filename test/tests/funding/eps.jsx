@@ -3,8 +3,8 @@
 
 import { node, html } from "@krakenjs/jsx-pragmatic/src";
 
-import { EpsLogo, LOGO_COLOR } from "../../../src";
-import { validateSVG } from "../common";
+import { EpsLogo, EpsLogoExternalImage, LOGO_COLOR } from "../../../src";
+import { validateExternalSVG, validateSVG } from "../common";
 
 describe("eps logo rendering happy cases", () => {
   it("should render the eps logo", () => {
@@ -13,5 +13,15 @@ describe("eps logo rendering happy cases", () => {
     const logoHTML = logo.render(html());
 
     validateSVG(logoHTML);
+  });
+});
+
+describe("EpsLogoExternalImage rendering happy cases", () => {
+  it("should render the eps logo from CDN", () => {
+    const logo = <EpsLogoExternalImage />;
+
+    const logoHTML = logo.render(html());
+
+    validateExternalSVG(logoHTML);
   });
 });

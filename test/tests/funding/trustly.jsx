@@ -3,8 +3,8 @@
 
 import { node, html } from "@krakenjs/jsx-pragmatic/src";
 
-import { TrustlyLogo } from "../../../src";
-import { validateSVG } from "../common";
+import { TrustlyLogo, TrustlyLogoExternalImage } from "../../../src";
+import { validateExternalSVG, validateSVG } from "../common";
 
 describe("blik logo rendering happy cases", () => {
   it("should render the payu logo", () => {
@@ -13,5 +13,15 @@ describe("blik logo rendering happy cases", () => {
     const logoHTML = logo.render(html());
 
     validateSVG(logoHTML);
+  });
+});
+
+describe("TrustlyLogoExternalImage rendering happy cases", () => {
+  it("should render the trustly logo from CDN", () => {
+    const logo = <TrustlyLogoExternalImage />;
+
+    const logoHTML = logo.render(html());
+
+    validateExternalSVG(logoHTML);
   });
 });

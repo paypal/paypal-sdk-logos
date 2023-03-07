@@ -3,8 +3,8 @@
 
 import { node, html } from "@krakenjs/jsx-pragmatic/src";
 
-import { VerkkopankkiLogo } from "../../../src";
-import { validateSVG } from "../common";
+import { VerkkopankkiLogo, VerkkopankkiLogoExternalImage } from "../../../src";
+import { validateExternalSVG, validateSVG } from "../common";
 
 describe("payu logo rendering happy cases", () => {
   it("should render the payu logo", () => {
@@ -13,5 +13,15 @@ describe("payu logo rendering happy cases", () => {
     const logoHTML = logo.render(html());
 
     validateSVG(logoHTML);
+  });
+});
+
+describe("VerkkopankkiLogoExternalImage rendering happy cases", () => {
+  it("should render the verkkopankki logo from CDN", () => {
+    const logo = <VerkkopankkiLogoExternalImage />;
+
+    const logoHTML = logo.render(html());
+
+    validateExternalSVG(logoHTML);
   });
 });

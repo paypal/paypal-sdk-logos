@@ -3,8 +3,8 @@
 
 import { node, html } from "@krakenjs/jsx-pragmatic/src";
 
-import { MaximaLogo } from "../../../src";
-import { validateSVG } from "../common";
+import { MaximaLogo, MaximaLogoExternalImage } from "../../../src";
+import { validateExternalSVG, validateSVG } from "../common";
 
 describe("maxima logo rendering happy cases", () => {
   it("should render the maxima logo", () => {
@@ -13,5 +13,15 @@ describe("maxima logo rendering happy cases", () => {
     const logoHTML = logo.render(html());
 
     validateSVG(logoHTML);
+  });
+});
+
+describe("MaximaLogoExternalImage rendering happy cases", () => {
+  it("should render the maxima logo from CDN", () => {
+    const logo = <MaximaLogoExternalImage />;
+
+    const logoHTML = logo.render(html());
+
+    validateExternalSVG(logoHTML);
   });
 });
