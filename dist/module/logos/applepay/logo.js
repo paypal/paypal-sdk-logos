@@ -1,6 +1,7 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/esm/objectWithoutPropertiesLoose";
-var _excluded = ["logoColor"];
+var _excluded = ["logoColor"],
+  _excluded2 = ["logoColor"];
 var _APPLEPAY_LOGO_COLORS;
 import { node } from "@krakenjs/jsx-pragmatic/src";
 import { getLogoCDNUrl, getLogoColors, SVGLogo } from "../../lib";
@@ -27,20 +28,32 @@ export var getApplepaySVG = function getApplepaySVG(_ref) {
     fill: primary
   }));
 };
-export function ApplePayLogo(_ref2) {
+export function ApplePayLogoExternalImage(_ref2) {
   var _ref2$logoColor = _ref2.logoColor,
     logoColor = _ref2$logoColor === void 0 ? LOGO_COLOR.DEFAULT : _ref2$logoColor,
     props = _objectWithoutPropertiesLoose(_ref2, _excluded);
-  var svg = getApplepaySVG(getLogoColors(LOGO.APPLEPAY, APPLEPAY_LOGO_COLORS, logoColor));
   var cdnUrl = getLogoCDNUrl(LOGO.APPLEPAY, APPLEPAY_LOGO_COLORS, logoColor);
   return node(SVGLogo, _extends({}, props, {
     name: LOGO.APPLEPAY,
     logoColor: logoColor,
     alt: "Apple Pay",
     "aria-label": "Apple Pay",
-    cdnUrl: cdnUrl,
+    cdnUrl: cdnUrl
+  }));
+}
+export function ApplePayLogoInlineSVG(_ref3) {
+  var _ref3$logoColor = _ref3.logoColor,
+    logoColor = _ref3$logoColor === void 0 ? LOGO_COLOR.DEFAULT : _ref3$logoColor,
+    props = _objectWithoutPropertiesLoose(_ref3, _excluded2);
+  var svg = getApplepaySVG(getLogoColors(LOGO.APPLEPAY, APPLEPAY_LOGO_COLORS, logoColor));
+  return node(SVGLogo, _extends({}, props, {
+    name: LOGO.APPLEPAY,
+    logoColor: logoColor,
+    alt: "Apple Pay",
+    "aria-label": "Apple Pay",
     render: function render() {
       return svg;
     }
   }));
 }
+export var ApplePayLogo = ApplePayLogoInlineSVG;

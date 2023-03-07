@@ -1,6 +1,7 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/esm/objectWithoutPropertiesLoose";
-var _excluded = ["logoColor"];
+var _excluded = ["logoColor"],
+  _excluded2 = ["logoColor"];
 var _P24_LOGO_COLORS;
 import { node } from "@krakenjs/jsx-pragmatic/src";
 import { getLogoCDNUrl, getLogoColors, SVGLogo } from "../../lib";
@@ -101,18 +102,28 @@ export var getP24SVG = function getP24SVG(_ref) {
     fill: primary
   }));
 };
-export function P24Logo(_ref2) {
+export function P24LogoExternalImage(_ref2) {
   var _ref2$logoColor = _ref2.logoColor,
     logoColor = _ref2$logoColor === void 0 ? LOGO_COLOR.BLACK : _ref2$logoColor,
     props = _objectWithoutPropertiesLoose(_ref2, _excluded);
-  var svg = getP24SVG(getLogoColors(LOGO.P24, P24_LOGO_COLORS, logoColor));
   var cdnUrl = getLogoCDNUrl(LOGO.P24, P24_LOGO_COLORS, logoColor);
   return node(SVGLogo, _extends({}, props, {
     name: LOGO.P24,
     logoColor: logoColor,
-    cdnUrl: cdnUrl,
+    cdnUrl: cdnUrl
+  }));
+}
+export function P24LogoInlineSVG(_ref3) {
+  var _ref3$logoColor = _ref3.logoColor,
+    logoColor = _ref3$logoColor === void 0 ? LOGO_COLOR.BLACK : _ref3$logoColor,
+    props = _objectWithoutPropertiesLoose(_ref3, _excluded2);
+  var svg = getP24SVG(getLogoColors(LOGO.P24, P24_LOGO_COLORS, logoColor));
+  return node(SVGLogo, _extends({}, props, {
+    name: LOGO.P24,
+    logoColor: logoColor,
     render: function render() {
       return svg;
     }
   }));
 }
+export var P24Logo = P24LogoInlineSVG;

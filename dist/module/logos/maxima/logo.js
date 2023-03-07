@@ -1,6 +1,7 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/esm/objectWithoutPropertiesLoose";
-var _excluded = ["logoColor"];
+var _excluded = ["logoColor"],
+  _excluded2 = ["logoColor"];
 var _MAXIMA_LOGO_COLORS;
 import { node } from "@krakenjs/jsx-pragmatic/src";
 import { getLogoCDNUrl, getLogoColors, SVGLogo } from "../../lib";
@@ -76,18 +77,28 @@ export var getMaximaSVG = function getMaximaSVG(_ref) {
     mask: "url(#mask-2)"
   }))))));
 };
-export function MaximaLogo(_ref2) {
+export function MaximaLogoExternalImage(_ref2) {
   var _ref2$logoColor = _ref2.logoColor,
     logoColor = _ref2$logoColor === void 0 ? LOGO_COLOR.BLACK : _ref2$logoColor,
     props = _objectWithoutPropertiesLoose(_ref2, _excluded);
-  var svg = getMaximaSVG(getLogoColors(LOGO.MAXIMA, MAXIMA_LOGO_COLORS, logoColor));
   var cdnUrl = getLogoCDNUrl(LOGO.MAXIMA, MAXIMA_LOGO_COLORS, logoColor);
   return node(SVGLogo, _extends({}, props, {
     name: LOGO.MAXIMA,
     logoColor: logoColor,
-    cdnUrl: cdnUrl,
+    cdnUrl: cdnUrl
+  }));
+}
+export function MaximaLogoInlineSVG(_ref3) {
+  var _ref3$logoColor = _ref3.logoColor,
+    logoColor = _ref3$logoColor === void 0 ? LOGO_COLOR.BLACK : _ref3$logoColor,
+    props = _objectWithoutPropertiesLoose(_ref3, _excluded2);
+  var svg = getMaximaSVG(getLogoColors(LOGO.MAXIMA, MAXIMA_LOGO_COLORS, logoColor));
+  return node(SVGLogo, _extends({}, props, {
+    name: LOGO.MAXIMA,
+    logoColor: logoColor,
     render: function render() {
       return svg;
     }
   }));
 }
+export var MaximaLogo = MaximaLogoInlineSVG;

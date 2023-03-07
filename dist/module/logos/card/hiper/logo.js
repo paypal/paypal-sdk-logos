@@ -40,16 +40,24 @@ export var getHiperSVG = function getHiperSVG() {
     d: "M 19.247 15.159 L 20.433 15.159 C 21.624 15.159 22.163 14.395 22.163 13.6 C 22.163 12.805 22.106 11.006 20.633 11.006 C 18.943 11.006 19.218 13.238 19.224 14.408 C 19.226 14.658 19.24 14.908 19.247 15.159 Z M 13.041 9.315 L 15.472 9.315 L 15.472 13.6 C 15.472 14.395 15.912 15.157 16.887 15.159 C 16.894 13.229 16.886 11.243 16.822 9.315 L 18.852 9.315 C 18.896 9.687 18.936 10.059 18.973 10.432 C 19.932 8.514 22.954 8.937 23.971 10.555 C 25.022 12.228 25.379 17.017 20.433 17.017 L 19.282 17.017 C 19.293 17.988 19.295 18.963 19.295 19.936 L 16.865 19.936 C 16.865 19.001 16.871 18.022 16.878 17.016 C 14.252 17.007 13.041 15.339 13.041 13.6 L 13.041 9.315"
   }));
 };
-export function HiperLogo(_temp) {
+export function HiperLogoExternalImage(_temp) {
   var _ref = _temp === void 0 ? {} : _temp,
     props = _extends({}, (_objectDestructuringEmpty(_ref), _ref));
-  var svg = getHiperSVG();
   var cdnUrl = getLogoCDNUrl(CARD.HIPER);
   return node(SVGCardLogo, _extends({}, props, {
     name: CARD.HIPER,
-    cdnUrl: cdnUrl,
+    cdnUrl: cdnUrl
+  }));
+}
+export function HiperLogoInlineSVG(_temp2) {
+  var _ref2 = _temp2 === void 0 ? {} : _temp2,
+    props = _extends({}, (_objectDestructuringEmpty(_ref2), _ref2));
+  var svg = getHiperSVG();
+  return node(SVGCardLogo, _extends({}, props, {
+    name: CARD.HIPER,
     render: function render() {
       return svg;
     }
   }));
 }
+export var HiperLogo = HiperLogoInlineSVG;
