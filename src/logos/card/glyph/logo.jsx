@@ -95,4 +95,4 @@ export function GlyphCardInlineSVG({
   );
 }
 
-export const GlyphCard = GlyphCardInlineSvg;
+export const GlyphCard = GlyphCardInlineSVG;
