@@ -21,6 +21,7 @@ export * from "./blik";
 export * from "./trustly";
 export * from "./oxxo";
 export * from "./boleto";
+export * from "./mercadopago";
 export * from "./multibanco";
 export * from "./satispay";
 export * from "./paidy";

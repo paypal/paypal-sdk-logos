@@ -26,6 +26,7 @@ export const LOGO = {
   OXXO: ("oxxo": "oxxo"),
   BOLETO: ("boleto": "boleto"),
   BOLETOBANCARIO: ("boletobancario": "boletobancario"),
+  MERCADOPAGO: ("mercadopago": "mercadopago"),
   MULTIBANCO: ("multibanco": "multibanco"),
   SATISPAY: ("satispay": "satispay"),
   PAIDY: ("paidy": "paidy"),

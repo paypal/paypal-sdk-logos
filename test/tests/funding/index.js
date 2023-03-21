@@ -14,6 +14,7 @@ import "./sepa";
 import "./sofort";
 import "./wechatpay";
 import "./itau";
+import "./mercadopago";
 import "./multibanco";
 import "./satispay";
 import "./paidy";
