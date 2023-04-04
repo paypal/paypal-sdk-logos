@@ -17,7 +17,6 @@ import "./sepa";
 import "./sofort";
 import "./trustly";
 import "./wechatpay";
-import "./zimpler";
 import "./itau";
 import "./mercadopago";
 import "./multibanco";
