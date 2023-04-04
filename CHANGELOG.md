@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 2.2.7 (2023-04-04)
+
+
+* generate CDN packages ([0dee5ff](https://github.com/paypal/paypal-sdk-logos/commit/0dee5ff0030680006df994055c3e249254b12c40))
+* removing deprecated apm ([#100](https://github.com/paypal/paypal-sdk-logos/issues/100)) ([2454e73](https://github.com/paypal/paypal-sdk-logos/commit/2454e73da9d81c786435e2104c5bd8ec88e89943))
+
 ### 2.2.6 (2023-03-07)
 
 
