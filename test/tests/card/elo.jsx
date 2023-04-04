@@ -3,8 +3,8 @@
 
 import { node, html } from "@krakenjs/jsx-pragmatic/src";
 
-import { EloLogo } from "../../../src";
-import { validateSVG } from "../common";
+import { EloLogo, EloLogoExternalImage } from "../../../src";
+import { validateExternalSVG, validateSVG } from "../common";
 
 describe("elo logo rendering happy cases", () => {
   it("should render the elo logo", () => {
@@ -13,5 +13,15 @@ describe("elo logo rendering happy cases", () => {
     const logoHTML = logo.render(html());
 
     validateSVG(logoHTML);
+  });
+});
+
+describe("EloLogoExternalImage rendering happy cases", () => {
+  it("should render the elo logo from CDN", () => {
+    const logo = <EloLogoExternalImage />;
+
+    const logoHTML = logo.render(html());
+
+    validateExternalSVG(logoHTML);
   });
 });

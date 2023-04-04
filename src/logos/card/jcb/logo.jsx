@@ -165,23 +165,28 @@ export const getJcbSVG = (): ElementNode => {
   );
 };
 
-export function JcbLogo({
+export function JcbLogoExternalImage({
   ...props
-}: {
-  loadFromCDN?: boolean,
-  [string]: string,
-} = {}): ComponentNode<SVGCardLogoProps> {
-  const svg = getJcbSVG();
+}: {} = {}): ComponentNode<SVGCardLogoProps> {
   const cdnUrl = getLogoCDNUrl(CARD.JCB);
+
+  return <SVGCardLogo {...props} name={CARD.JCB} cdnUrl={cdnUrl} />;
+}
+
+export function JcbLogoInlineSVG({
+  ...props
+}: {} = {}): ComponentNode<SVGCardLogoProps> {
+  const svg = getJcbSVG();
 
   return (
     <SVGCardLogo
       {...props}
       name={CARD.JCB}
-      cdnUrl={cdnUrl}
       render={() => {
         return svg;
       }}
     />
   );
 }
+
+export const JcbLogo = JcbLogoInlineSVG;

@@ -1,6 +1,7 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/esm/objectWithoutPropertiesLoose";
-var _excluded = ["logoColor", "locale"];
+var _excluded = ["logoColor", "locale"],
+  _excluded2 = ["logoColor", "locale"];
 var _CREDIT_LOGO_COLORS;
 import { COUNTRY } from "@paypal/sdk-constants/src";
 import { node } from "@krakenjs/jsx-pragmatic/src";
@@ -62,21 +63,32 @@ export var getCreditSVG = function getCreditSVG(_ref) {
       }));
   }
 };
-export function CreditLogo(_ref2) {
+export function CreditLogoExternalImage(_ref2) {
   var logoColor = _ref2.logoColor,
     locale = _ref2.locale,
     props = _objectWithoutPropertiesLoose(_ref2, _excluded);
   var country = locale.country;
-  var svg = getCreditSVG(_extends({
-    country: country
-  }, getLogoColors(LOGO.CREDIT, CREDIT_LOGO_COLORS, logoColor)));
   var cdnUrl = getLogoCDNUrl(LOGO.CREDIT, CREDIT_LOGO_COLORS, country === COUNTRY.DE ? COUNTRY.DE + "-" + logoColor : logoColor);
   return node(SVGLogo, _extends({}, props, {
     name: LOGO.CREDIT,
     logoColor: logoColor,
-    cdnUrl: cdnUrl,
+    cdnUrl: cdnUrl
+  }));
+}
+export function CreditLogoInlineSVG(_ref3) {
+  var logoColor = _ref3.logoColor,
+    locale = _ref3.locale,
+    props = _objectWithoutPropertiesLoose(_ref3, _excluded2);
+  var country = locale.country;
+  var svg = getCreditSVG(_extends({
+    country: country
+  }, getLogoColors(LOGO.CREDIT, CREDIT_LOGO_COLORS, logoColor)));
+  return node(SVGLogo, _extends({}, props, {
+    name: LOGO.CREDIT,
+    logoColor: logoColor,
     render: function render() {
       return svg;
     }
   }));
 }
+export var CreditLogo = CreditLogoInlineSVG;

@@ -27,16 +27,24 @@ export var getMastercardSVG = function getMastercardSVG() {
     fill: "rgb(255, 255, 255)"
   }));
 };
-export function MastercardLogo(_temp) {
+export function MastercardLogoExternalImage(_temp) {
   var _ref = _temp === void 0 ? {} : _temp,
     props = _extends({}, (_objectDestructuringEmpty(_ref), _ref));
-  var svg = getMastercardSVG();
   var cdnUrl = getLogoCDNUrl(CARD.MASTERCARD);
   return node(SVGCardLogo, _extends({}, props, {
     name: CARD.MASTERCARD,
-    cdnUrl: cdnUrl,
+    cdnUrl: cdnUrl
+  }));
+}
+export function MastercardLogoInlineSVG(_temp2) {
+  var _ref2 = _temp2 === void 0 ? {} : _temp2,
+    props = _extends({}, (_objectDestructuringEmpty(_ref2), _ref2));
+  var svg = getMastercardSVG();
+  return node(SVGCardLogo, _extends({}, props, {
+    name: CARD.MASTERCARD,
     render: function render() {
       return svg;
     }
   }));
 }
+export var MastercardLogo = MastercardLogoInlineSVG;

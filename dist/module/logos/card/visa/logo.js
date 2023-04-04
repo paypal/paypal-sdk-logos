@@ -18,16 +18,24 @@ export var getVisaSVG = function getVisaSVG() {
     fill: "rgb(255, 255, 255)"
   }));
 };
-export function VisaLogo(_temp) {
+export function VisaLogoExternalImage(_temp) {
   var _ref = _temp === void 0 ? {} : _temp,
     props = _extends({}, (_objectDestructuringEmpty(_ref), _ref));
-  var svg = getVisaSVG();
   var cdnUrl = getLogoCDNUrl(CARD.VISA);
   return node(SVGCardLogo, _extends({}, props, {
     name: CARD.VISA,
-    cdnUrl: cdnUrl,
+    cdnUrl: cdnUrl
+  }));
+}
+export function VisaLogoInlineSVG(_temp2) {
+  var _ref2 = _temp2 === void 0 ? {} : _temp2,
+    props = _extends({}, (_objectDestructuringEmpty(_ref2), _ref2));
+  var svg = getVisaSVG();
+  return node(SVGCardLogo, _extends({}, props, {
+    name: CARD.VISA,
     render: function render() {
       return svg;
     }
   }));
 }
+export var VisaLogo = VisaLogoInlineSVG;

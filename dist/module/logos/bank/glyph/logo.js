@@ -1,6 +1,7 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/esm/objectWithoutPropertiesLoose";
-var _excluded = ["logoColor"];
+var _excluded = ["logoColor"],
+  _excluded2 = ["logoColor"];
 var _GLYPH_BANK_LOGO_COLO;
 import { node } from "@krakenjs/jsx-pragmatic/src";
 import { getLogoCDNUrl, getLogoColors, SVGLogo } from "../../../lib";
@@ -40,17 +41,26 @@ export var getGlyphBankSVG = function getGlyphBankSVG(_ref) {
     fill: "white"
   }))));
 };
-export function GlyphBank(_temp) {
+export function GlyphBankExternalImage(_temp) {
   var _ref2 = _temp === void 0 ? {} : _temp,
     logoColor = _ref2.logoColor,
     props = _objectWithoutPropertiesLoose(_ref2, _excluded);
-  var svg = getGlyphBankSVG(getLogoColors(LOGO.BANK, GLYPH_BANK_LOGO_COLORS, logoColor));
   var cdnUrl = getLogoCDNUrl(LOGO.BANK, GLYPH_BANK_LOGO_COLORS, logoColor);
   return node(SVGLogo, _extends({}, props, {
     name: LOGO.BANK,
-    cdnUrl: cdnUrl,
+    cdnUrl: cdnUrl
+  }));
+}
+export function GlyphBankInlineSVG(_temp2) {
+  var _ref3 = _temp2 === void 0 ? {} : _temp2,
+    logoColor = _ref3.logoColor,
+    props = _objectWithoutPropertiesLoose(_ref3, _excluded2);
+  var svg = getGlyphBankSVG(getLogoColors(LOGO.BANK, GLYPH_BANK_LOGO_COLORS, logoColor));
+  return node(SVGLogo, _extends({}, props, {
+    name: LOGO.BANK,
     render: function render() {
       return svg;
     }
   }));
 }
+export var GlyphBank = GlyphBankInlineSVG;

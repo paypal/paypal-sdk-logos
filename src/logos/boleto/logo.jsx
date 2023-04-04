@@ -47,15 +47,12 @@ export const getBoletoSVG = ({ primary }: LogoColors): ElementNode => {
   );
 };
 
-export function BoletoLogo({
+export function BoletoLogoExternalImage({
   logoColor = LOGO_COLOR.BLACK,
   ...props
 }: {
   logoColor?: $Values<typeof LOGO_COLOR>,
 }): ComponentNode<SVGLogoProps> {
-  const svg = getBoletoSVG(
-    getLogoColors(LOGO.BOLETO, BOLETO_LOGO_COLORS, logoColor)
-  );
   const cdnUrl = getLogoCDNUrl(LOGO.BOLETO, BOLETO_LOGO_COLORS, logoColor);
 
   return (
@@ -64,9 +61,30 @@ export function BoletoLogo({
       name={LOGO.BOLETO}
       logoColor={logoColor}
       cdnUrl={cdnUrl}
+    />
+  );
+}
+
+export function BoletoLogoInlineSVG({
+  logoColor = LOGO_COLOR.BLACK,
+  ...props
+}: {
+  logoColor?: $Values<typeof LOGO_COLOR>,
+}): ComponentNode<SVGLogoProps> {
+  const svg = getBoletoSVG(
+    getLogoColors(LOGO.BOLETO, BOLETO_LOGO_COLORS, logoColor)
+  );
+
+  return (
+    <SVGLogo
+      {...props}
+      name={LOGO.BOLETO}
+      logoColor={logoColor}
       render={() => {
         return svg;
       }}
     />
   );
 }
+
+export const BoletoLogo = BoletoLogoInlineSVG;

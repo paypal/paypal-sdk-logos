@@ -1,6 +1,7 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/esm/objectWithoutPropertiesLoose";
-var _excluded = ["logoColor"];
+var _excluded = ["logoColor"],
+  _excluded2 = ["logoColor"];
 var _SATISPAY_LOGO_COLORS;
 import { node } from "@krakenjs/jsx-pragmatic/src";
 import { getLogoCDNUrl, getLogoColors, SVGLogo } from "../../lib";
@@ -35,18 +36,28 @@ export var getSatispaySVG = function getSatispaySVG(_ref) {
     fill: "white"
   }))));
 };
-export function SatispayLogo(_ref2) {
+export function SatispayLogoExternalImage(_ref2) {
   var _ref2$logoColor = _ref2.logoColor,
     logoColor = _ref2$logoColor === void 0 ? LOGO_COLOR.BLACK : _ref2$logoColor,
     props = _objectWithoutPropertiesLoose(_ref2, _excluded);
-  var svg = getSatispaySVG(getLogoColors(LOGO.SATISPAY, SATISPAY_LOGO_COLORS, logoColor));
   var cdnUrl = getLogoCDNUrl(LOGO.SATISPAY, SATISPAY_LOGO_COLORS, logoColor);
   return node(SVGLogo, _extends({}, props, {
     name: LOGO.SATISPAY,
     logoColor: logoColor,
-    cdnUrl: cdnUrl,
+    cdnUrl: cdnUrl
+  }));
+}
+export function SatispayLogoInlineSVG(_ref3) {
+  var _ref3$logoColor = _ref3.logoColor,
+    logoColor = _ref3$logoColor === void 0 ? LOGO_COLOR.BLACK : _ref3$logoColor,
+    props = _objectWithoutPropertiesLoose(_ref3, _excluded2);
+  var svg = getSatispaySVG(getLogoColors(LOGO.SATISPAY, SATISPAY_LOGO_COLORS, logoColor));
+  return node(SVGLogo, _extends({}, props, {
+    name: LOGO.SATISPAY,
+    logoColor: logoColor,
     render: function render() {
       return svg;
     }
   }));
 }
+export var SatispayLogo = SatispayLogoInlineSVG;

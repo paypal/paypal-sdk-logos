@@ -57,15 +57,12 @@ export const getVenmoSVG = ({ primary }: LogoColors): ElementNode => {
   );
 };
 
-export function VenmoLogo({
+export function VenmoLogoExternalImage({
   logoColor = LOGO_COLOR.DEFAULT,
   ...props
 }: {
   logoColor?: $Values<typeof LOGO_COLOR>,
 }): ComponentNode<SVGLogoProps> {
-  const svg = getVenmoSVG(
-    getLogoColors(LOGO.VENMO, VENMO_LOGO_COLORS, logoColor)
-  );
   const cdnUrl = getLogoCDNUrl(LOGO.VENMO, VENMO_LOGO_COLORS, logoColor);
 
   return (
@@ -74,9 +71,30 @@ export function VenmoLogo({
       name={LOGO.VENMO}
       logoColor={logoColor}
       cdnUrl={cdnUrl}
+    />
+  );
+}
+
+export function VenmoLogoInlineSVG({
+  logoColor = LOGO_COLOR.DEFAULT,
+  ...props
+}: {
+  logoColor?: $Values<typeof LOGO_COLOR>,
+}): ComponentNode<SVGLogoProps> {
+  const svg = getVenmoSVG(
+    getLogoColors(LOGO.VENMO, VENMO_LOGO_COLORS, logoColor)
+  );
+
+  return (
+    <SVGLogo
+      {...props}
+      name={LOGO.VENMO}
+      logoColor={logoColor}
       render={() => {
         return svg;
       }}
     />
   );
 }
+
+export const VenmoLogo = VenmoLogoInlineSVG;

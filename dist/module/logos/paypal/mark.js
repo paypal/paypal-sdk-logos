@@ -62,15 +62,22 @@ export var getPayPalMarkSVG = function getPayPalMarkSVG() {
     fill: "#003087"
   }))))));
 };
-export function PayPalMark(_ref) {
+export function PayPalMarkExternalImage(_ref) {
   var props = _extends({}, (_objectDestructuringEmpty(_ref), _ref));
-  var svg = getPayPalMarkSVG();
   var cdnUrl = getLogoCDNUrl(MARK.PAYPAL);
   return node(SVGLogo, _extends({}, props, {
     name: LOGO.PP,
-    cdnUrl: cdnUrl,
+    cdnUrl: cdnUrl
+  }));
+}
+export function PayPalMarkInlineSVG(_ref2) {
+  var props = _extends({}, (_objectDestructuringEmpty(_ref2), _ref2));
+  var svg = getPayPalMarkSVG();
+  return node(SVGLogo, _extends({}, props, {
+    name: LOGO.PP,
     render: function render() {
       return svg;
     }
   }));
 }
+export var PayPalMark = PayPalMarkInlineSVG;

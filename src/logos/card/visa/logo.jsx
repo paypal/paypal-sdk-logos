@@ -35,23 +35,28 @@ export const getVisaSVG = (): ElementNode => {
   );
 };
 
-export function VisaLogo({
+export function VisaLogoExternalImage({
   ...props
-}: {
-  loadFromCDN?: boolean,
-  [string]: string,
-} = {}): ComponentNode<SVGCardLogoProps> {
-  const svg = getVisaSVG();
+}: {} = {}): ComponentNode<SVGCardLogoProps> {
   const cdnUrl = getLogoCDNUrl(CARD.VISA);
+
+  return <SVGCardLogo {...props} name={CARD.VISA} cdnUrl={cdnUrl} />;
+}
+
+export function VisaLogoInlineSVG({
+  ...props
+}: {} = {}): ComponentNode<SVGCardLogoProps> {
+  const svg = getVisaSVG();
 
   return (
     <SVGCardLogo
       {...props}
       name={CARD.VISA}
-      cdnUrl={cdnUrl}
       render={() => {
         return svg;
       }}
     />
   );
 }
+
+export const VisaLogo = VisaLogoInlineSVG;

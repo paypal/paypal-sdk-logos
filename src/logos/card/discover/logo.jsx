@@ -92,23 +92,28 @@ export const getDiscoverSVG = (): ElementNode => {
   );
 };
 
-export function DiscoverLogo({
+export function DiscoverLogoExternalImage({
   ...props
-}: {
-  loadFromCDN?: boolean,
-  [string]: string,
-} = {}): ComponentNode<SVGCardLogoProps> {
-  const svg = getDiscoverSVG();
+}: {} = {}): ComponentNode<SVGCardLogoProps> {
   const cdnUrl = getLogoCDNUrl(CARD.DISCOVER);
+
+  return <SVGCardLogo {...props} name={CARD.DISCOVER} cdnUrl={cdnUrl} />;
+}
+
+export function DiscoverLogoInlineSVG({
+  ...props
+}: {} = {}): ComponentNode<SVGCardLogoProps> {
+  const svg = getDiscoverSVG();
 
   return (
     <SVGCardLogo
       {...props}
       name={CARD.DISCOVER}
-      cdnUrl={cdnUrl}
       render={() => {
         return svg;
       }}
     />
   );
 }
+
+export const DiscoverLogo = DiscoverLogoInlineSVG;

@@ -3,8 +3,8 @@
 
 import { node, html } from "@krakenjs/jsx-pragmatic/src";
 
-import { SatispayLogo } from "../../../src";
-import { validateSVG } from "../common";
+import { SatispayLogo, SatispayLogoExternalImage } from "../../../src";
+import { validateExternalSVG, validateSVG } from "../common";
 
 describe("satispay logo rendering happy cases", () => {
   it("should render the satispay logo", () => {
@@ -13,5 +13,15 @@ describe("satispay logo rendering happy cases", () => {
     const logoHTML = logo.render(html());
 
     validateSVG(logoHTML);
+  });
+});
+
+describe("SatispayLogoExternalImage rendering happy cases", () => {
+  it("should render the satispay logo from CDN", () => {
+    const logo = <SatispayLogoExternalImage />;
+
+    const logoHTML = logo.render(html());
+
+    validateExternalSVG(logoHTML);
   });
 });

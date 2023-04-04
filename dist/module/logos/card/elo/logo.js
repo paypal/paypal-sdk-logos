@@ -44,16 +44,24 @@ export var getEloSVG = function getEloSVG() {
     fill: "rgb(255, 255, 255)"
   })));
 };
-export function EloLogo(_temp) {
+export function EloLogoExternalImage(_temp) {
   var _ref = _temp === void 0 ? {} : _temp,
     props = _extends({}, (_objectDestructuringEmpty(_ref), _ref));
-  var svg = getEloSVG();
   var cdnUrl = getLogoCDNUrl(CARD.ELO);
   return node(SVGCardLogo, _extends({}, props, {
     name: CARD.ELO,
-    cdnUrl: cdnUrl,
+    cdnUrl: cdnUrl
+  }));
+}
+export function EloLogoInlineSVG(_temp2) {
+  var _ref2 = _temp2 === void 0 ? {} : _temp2,
+    props = _extends({}, (_objectDestructuringEmpty(_ref2), _ref2));
+  var svg = getEloSVG();
+  return node(SVGCardLogo, _extends({}, props, {
+    name: CARD.ELO,
     render: function render() {
       return svg;
     }
   }));
 }
+export var EloLogo = EloLogoInlineSVG;

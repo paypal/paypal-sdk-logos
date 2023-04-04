@@ -12,6 +12,14 @@ export function validateSVG(htmlString: string) {
   }
 }
 
+export function validateExternalSVG(htmlString: string) {
+  validateSVG(htmlString);
+
+  if (htmlString.indexOf("www.paypalobjects.com") === -1) {
+    throw new Error(`Expected logo to render from CDN`);
+  }
+}
+
 export function getLocale(
   country?: $Values<typeof COUNTRY> = COUNTRY.US,
   lang?: $Values<typeof LANG> = LANG.EN

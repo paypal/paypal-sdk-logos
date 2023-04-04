@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 2.2.6 (2023-03-07)
+
+
+*  create separate components for inline and external svgs ([#98](https://github.com/paypal/paypal-sdk-logos/issues/98)) ([c09ec7a](https://github.com/paypal/paypal-sdk-logos/commit/c09ec7a436b96f83725664cb83982fe457e85c24))
+* generate CDN packages ([54e01e3](https://github.com/paypal/paypal-sdk-logos/commit/54e01e3859b18c24392160e42d0306c972c5d600))
+
 ### 2.2.5 (2023-02-27)
 
 

@@ -61,23 +61,28 @@ export const getHiperSVG = (): ElementNode => {
   );
 };
 
-export function HiperLogo({
+export function HiperLogoExternalImage({
   ...props
-}: {
-  loadFromCDN?: boolean,
-  [string]: string,
-} = {}): ComponentNode<SVGCardLogoProps> {
-  const svg = getHiperSVG();
+}: {} = {}): ComponentNode<SVGCardLogoProps> {
   const cdnUrl = getLogoCDNUrl(CARD.HIPER);
+
+  return <SVGCardLogo {...props} name={CARD.HIPER} cdnUrl={cdnUrl} />;
+}
+
+export function HiperLogoInlineSVG({
+  ...props
+}: {} = {}): ComponentNode<SVGCardLogoProps> {
+  const svg = getHiperSVG();
 
   return (
     <SVGCardLogo
       {...props}
       name={CARD.HIPER}
-      cdnUrl={cdnUrl}
       render={() => {
         return svg;
       }}
     />
   );
 }
+
+export const HiperLogo = HiperLogoInlineSVG;
