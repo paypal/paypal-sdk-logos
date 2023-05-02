@@ -2,6 +2,34 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 2.2.7 (2023-04-04)
+
+
+* generate CDN packages ([0dee5ff](https://github.com/paypal/paypal-sdk-logos/commit/0dee5ff0030680006df994055c3e249254b12c40))
+* removing deprecated apm ([#100](https://github.com/paypal/paypal-sdk-logos/issues/100)) ([2454e73](https://github.com/paypal/paypal-sdk-logos/commit/2454e73da9d81c786435e2104c5bd8ec88e89943))
+
+### 2.2.6 (2023-03-07)
+
+
+*  create separate components for inline and external svgs ([#98](https://github.com/paypal/paypal-sdk-logos/issues/98)) ([c09ec7a](https://github.com/paypal/paypal-sdk-logos/commit/c09ec7a436b96f83725664cb83982fe457e85c24))
+* generate CDN packages ([54e01e3](https://github.com/paypal/paypal-sdk-logos/commit/54e01e3859b18c24392160e42d0306c972c5d600))
+
+### 2.2.5 (2023-02-27)
+
+
+* add missing prop types ([#97](https://github.com/paypal/paypal-sdk-logos/issues/97)) ([ebd07d1](https://github.com/paypal/paypal-sdk-logos/commit/ebd07d1875cd9d630fcd40907f726967a91a5c2b))
+* generate CDN packages ([c2e7192](https://github.com/paypal/paypal-sdk-logos/commit/c2e71921567e3127ce356b6a504c258752a8e237))
+
+### 2.2.4 (2023-02-14)
+
+
+### Bug Fixes
+
+* **styles:** fix logo images for other color buttons ([#94](https://github.com/paypal/paypal-sdk-logos/issues/94)) ([6d84a30](https://github.com/paypal/paypal-sdk-logos/commit/6d84a30a71c8108ee5d0c5701bfb7aa2b7b259ed))
+
+
+* generate CDN packages ([bdca09c](https://github.com/paypal/paypal-sdk-logos/commit/bdca09c69974904b04eeb0de9bf6017fd83e1131))
+
 ### 2.2.3 (2023-02-07)
 
 

@@ -3,8 +3,12 @@
 
 import { node, html } from "@krakenjs/jsx-pragmatic/src";
 
-import { MultibancoLogo, LOGO_COLOR } from "../../../src";
-import { validateSVG } from "../common";
+import {
+  MultibancoLogo,
+  LOGO_COLOR,
+  MultibancoLogoExternalImage,
+} from "../../../src";
+import { validateExternalSVG, validateSVG } from "../common";
 
 describe("mulitbanco logo rendering happy cases", () => {
   it("should render the multibanco logo", () => {
@@ -21,5 +25,15 @@ describe("mulitbanco logo rendering happy cases", () => {
     const logoHTML = logo.render(html());
 
     validateSVG(logoHTML);
+  });
+});
+
+describe("MultibancoLogoExternalImage rendering happy cases", () => {
+  it("should render the multibanco logo from CDN", () => {
+    const logo = <MultibancoLogoExternalImage />;
+
+    const logoHTML = logo.render(html());
+
+    validateExternalSVG(logoHTML);
   });
 });

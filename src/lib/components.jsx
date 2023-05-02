@@ -12,16 +12,15 @@ import {
 import { LOGO_CLASS, LOGO_COLOR } from "../constants";
 
 type SVGProps = {|
-  svg: ElementNode,
+  svg: ElementNode | null,
   cdnUrl?: string,
-  loadFromCDN?: boolean,
   [key: string]: mixed,
 |};
 
 export function SVG(props: SVGProps): ElementNode {
-  let { svg, cdnUrl, loadFromCDN, ...otherProps } = props;
+  let { svg, cdnUrl, ...otherProps } = props;
 
-  if (loadFromCDN && cdnUrl) {
+  if (cdnUrl) {
     // $FlowFixMe
     const svgProps: SVGProps = { src: cdnUrl, ...otherProps };
     return <img {...svgProps} />;
@@ -47,11 +46,10 @@ export function SVG(props: SVGProps): ElementNode {
 }
 
 export type SVGLogoProps = {
-  render: () => ElementNode,
   name: string,
+  render?: () => ElementNode,
   logoColor?: $Values<typeof LOGO_COLOR>,
   cdnUrl?: string,
-  loadFromCDN?: boolean,
 };
 
 export function SVGLogo({
@@ -63,7 +61,7 @@ export function SVGLogo({
   return (
     <SVG
       {...props}
-      svg={render()}
+      svg={render ? render() : null}
       alt={name}
       class={`${LOGO_CLASS.LOGO} ${LOGO_CLASS.LOGO}-${name} ${
         logoColor ? `${LOGO_CLASS.LOGO_COLOR}-${logoColor}` : ""
@@ -73,10 +71,9 @@ export function SVGLogo({
 }
 
 export type SVGCardLogoProps = {
-  render: () => ElementNode,
   name: string,
+  render?: () => ElementNode,
   cdnUrl?: string,
-  loadFromCDN?: boolean,
 };
 
 export function SVGCardLogo({
@@ -87,7 +84,7 @@ export function SVGCardLogo({
   return (
     <SVG
       {...props}
-      svg={render()}
+      svg={render ? render() : null}
       alt={capitalizeFirstLetter(name)}
       class={`${LOGO_CLASS.CARD} ${LOGO_CLASS.CARD}-${name}`}
     />

@@ -1,7 +1,9 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/esm/objectWithoutPropertiesLoose";
 var _excluded = ["logoColor"],
-  _excluded2 = ["logoColor"];
+  _excluded2 = ["logoColor"],
+  _excluded3 = ["logoColor"],
+  _excluded4 = ["logoColor"];
 var _PAYPAL_LOGO_COLORS, _PP_LOGO_COLORS, _PPMONOCHROME_LOGO_CO;
 import { node } from "@krakenjs/jsx-pragmatic/src";
 import { getLogoCDNUrl, getLogoColors, SVGLogo } from "../../lib";
@@ -51,23 +53,35 @@ export var getPayPalSVG = function getPayPalSVG(_ref) {
     d: "M 95.337 3.3 L 92.137 23.6 C 92.037 24 92.337 24.3 92.737 24.3 L 95.937 24.3 C 96.437 24.3 96.937 23.9 97.037 23.4 L 100.237 3.5 C 100.337 3.1 100.037 2.8 99.637 2.8 L 96.037 2.8 C 95.637 2.8 95.437 3 95.337 3.3 Z"
   }));
 };
-export function PayPalLogo(_ref2) {
+export function PayPalLogoExternalImage(_ref2) {
   var _ref2$logoColor = _ref2.logoColor,
     logoColor = _ref2$logoColor === void 0 ? LOGO_COLOR.DEFAULT : _ref2$logoColor,
     props = _objectWithoutPropertiesLoose(_ref2, _excluded);
-  var svg = getPayPalSVG(getLogoColors(LOGO.PAYPAL, PAYPAL_LOGO_COLORS, logoColor));
   var cdnUrl = getLogoCDNUrl(LOGO.PAYPAL, PAYPAL_LOGO_COLORS, logoColor);
   return node(SVGLogo, _extends({}, props, {
     name: LOGO.PAYPAL,
     alt: "PayPal",
     role: "presentation",
     logoColor: logoColor,
-    cdnUrl: cdnUrl,
+    cdnUrl: cdnUrl
+  }));
+}
+export function PayPalLogoInlineSVG(_ref3) {
+  var _ref3$logoColor = _ref3.logoColor,
+    logoColor = _ref3$logoColor === void 0 ? LOGO_COLOR.DEFAULT : _ref3$logoColor,
+    props = _objectWithoutPropertiesLoose(_ref3, _excluded2);
+  var svg = getPayPalSVG(getLogoColors(LOGO.PAYPAL, PAYPAL_LOGO_COLORS, logoColor));
+  return node(SVGLogo, _extends({}, props, {
+    name: LOGO.PAYPAL,
+    alt: "PayPal",
+    role: "presentation",
+    logoColor: logoColor,
     render: function render() {
       return svg;
     }
   }));
 }
+export var PayPalLogo = PayPalLogoInlineSVG;
 var DEFAULT_OPACITY = "1";
 export var PP_LOGO_COLORS = (_PP_LOGO_COLORS = {}, _PP_LOGO_COLORS[LOGO_COLOR.DEFAULT] = {
   primary: "#009cde",
@@ -88,16 +102,16 @@ export var PP_LOGO_COLORS = (_PP_LOGO_COLORS = {}, _PP_LOGO_COLORS[LOGO_COLOR.DE
   secondary: "#000000",
   tertiary: "#1a1a1a"
 }, _PP_LOGO_COLORS);
-export var getPPSVG = function getPPSVG(_ref3) {
-  var primary = _ref3.primary,
-    secondary = _ref3.secondary,
-    tertiary = _ref3.tertiary,
-    _ref3$primaryOpacity = _ref3.primaryOpacity,
-    primaryOpacity = _ref3$primaryOpacity === void 0 ? DEFAULT_OPACITY : _ref3$primaryOpacity,
-    _ref3$secondaryOpacit = _ref3.secondaryOpacity,
-    secondaryOpacity = _ref3$secondaryOpacit === void 0 ? DEFAULT_OPACITY : _ref3$secondaryOpacit,
-    _ref3$tertiaryOpacity = _ref3.tertiaryOpacity,
-    tertiaryOpacity = _ref3$tertiaryOpacity === void 0 ? DEFAULT_OPACITY : _ref3$tertiaryOpacity;
+export var getPPSVG = function getPPSVG(_ref4) {
+  var primary = _ref4.primary,
+    secondary = _ref4.secondary,
+    tertiary = _ref4.tertiary,
+    _ref4$primaryOpacity = _ref4.primaryOpacity,
+    primaryOpacity = _ref4$primaryOpacity === void 0 ? DEFAULT_OPACITY : _ref4$primaryOpacity,
+    _ref4$secondaryOpacit = _ref4.secondaryOpacity,
+    secondaryOpacity = _ref4$secondaryOpacit === void 0 ? DEFAULT_OPACITY : _ref4$secondaryOpacit,
+    _ref4$tertiaryOpacity = _ref4.tertiaryOpacity,
+    tertiaryOpacity = _ref4$tertiaryOpacity === void 0 ? DEFAULT_OPACITY : _ref4$tertiaryOpacity;
   return node("svg", {
     width: "24",
     height: "32",
@@ -118,32 +132,44 @@ export var getPPSVG = function getPPSVG(_ref3) {
     d: "M 9.504 7.157 C 9.596 6.857 9.784 6.557 10.065 6.357 C 10.251 6.357 10.345 6.257 10.532 6.257 L 16.711 6.257 C 17.461 6.257 18.208 6.357 18.772 6.457 C 18.958 6.457 19.146 6.457 19.333 6.557 C 19.52 6.657 19.707 6.657 19.801 6.757 C 19.894 6.757 19.987 6.757 20.082 6.757 C 20.362 6.857 20.643 7.057 20.924 7.157 C 21.204 5.057 20.924 3.657 19.801 2.257 C 18.677 0.857 16.525 0.257 13.809 0.257 L 5.758 0.257 C 5.29 0.257 4.729 0.657 4.634 1.257 L 1.358 23.457 C 1.358 23.857 1.639 24.357 2.107 24.357 L 6.975 24.357 L 8.286 16.057 L 9.504 7.157 Z"
   }));
 };
-export function PPLogo(_ref4) {
-  var _ref4$logoColor = _ref4.logoColor,
-    logoColor = _ref4$logoColor === void 0 ? LOGO_COLOR.DEFAULT : _ref4$logoColor,
-    props = _objectWithoutPropertiesLoose(_ref4, _excluded2);
-  var svg = getPPSVG(getLogoColors(LOGO.PP, PP_LOGO_COLORS, logoColor));
+export function PPLogoExternalImage(_ref5) {
+  var _ref5$logoColor = _ref5.logoColor,
+    logoColor = _ref5$logoColor === void 0 ? LOGO_COLOR.DEFAULT : _ref5$logoColor,
+    props = _objectWithoutPropertiesLoose(_ref5, _excluded3);
   var cdnUrl = getLogoCDNUrl(LOGO.PP, PP_LOGO_COLORS, logoColor);
   return node(SVGLogo, _extends({}, props, {
     name: LOGO.PP,
     alt: "PP",
     role: "presentation",
     logoColor: logoColor,
-    cdnUrl: cdnUrl,
+    cdnUrl: cdnUrl
+  }));
+}
+export function PPLogoInlineSVG(_ref6) {
+  var _ref6$logoColor = _ref6.logoColor,
+    logoColor = _ref6$logoColor === void 0 ? LOGO_COLOR.DEFAULT : _ref6$logoColor,
+    props = _objectWithoutPropertiesLoose(_ref6, _excluded4);
+  var svg = getPPSVG(getLogoColors(LOGO.PP, PP_LOGO_COLORS, logoColor));
+  return node(SVGLogo, _extends({}, props, {
+    name: LOGO.PP,
+    alt: "PP",
+    role: "presentation",
+    logoColor: logoColor,
     render: function render() {
       return svg;
     }
   }));
 }
+export var PPLogo = PPLogoInlineSVG;
 export var PPMONOCHROME_LOGO_COLORS = (_PPMONOCHROME_LOGO_CO = {}, _PPMONOCHROME_LOGO_CO[LOGO_COLOR.MONOCHROME] = {
   primary: "#000000",
   secondary: "#000000",
   tertiary: "#000000"
 }, _PPMONOCHROME_LOGO_CO);
-export var getPPMonochromeSVG = function getPPMonochromeSVG(_ref5) {
-  var primary = _ref5.primary,
-    secondary = _ref5.secondary,
-    tertiary = _ref5.tertiary;
+export var getPPMonochromeSVG = function getPPMonochromeSVG(_ref7) {
+  var primary = _ref7.primary,
+    secondary = _ref7.secondary,
+    tertiary = _ref7.tertiary;
   return node("svg", {
     x: "0px",
     y: "0px",
@@ -161,18 +187,28 @@ export var getPPMonochromeSVG = function getPPMonochromeSVG(_ref5) {
     d: "M148.21,56.27c-1.44-1.64-3.19-3.02-5.07-4.29c-4.63,22.39-18.44,53.91-70.2,53.91c-0.11,0-12.83-0.04-12.83-0.04 c-4.02,0-7.41,2.92-8.03,6.89c0,0-9.97,62.79-10.46,66.09c-0.39,2.61,1.87,4.73,4.25,4.73h25.76c3.51,0,6.51-2.56,7.05-6.03 l6.24-38.93c0.55-3.47,3.54-6.03,7.05-6.03h4.44c28.76,0,51.28-11.69,57.86-45.48c0.2-1,0.37-2.01,0.52-3.03 C156.14,72.74,154.31,63.23,148.21,56.27z"
   }));
 };
-export function PPMonochrome(_ref6) {
-  var _ref6$logoColor = _ref6.logoColor,
-    logoColor = _ref6$logoColor === void 0 ? LOGO_COLOR.MONOCHROME : _ref6$logoColor;
-  var svg = getPPMonochromeSVG(getLogoColors(LOGO.PPMONOCHROME, PPMONOCHROME_LOGO_COLORS, logoColor));
+export function PPMonochromeExternalImage(_ref8) {
+  var _ref8$logoColor = _ref8.logoColor,
+    logoColor = _ref8$logoColor === void 0 ? LOGO_COLOR.MONOCHROME : _ref8$logoColor;
   var cdnUrl = getLogoCDNUrl(LOGO.PPMONOCHROME, PPMONOCHROME_LOGO_COLORS, logoColor);
   return node(SVGLogo, {
     name: LOGO.PP,
     alt: "PP",
     logoColor: logoColor,
-    cdnUrl: cdnUrl,
+    cdnUrl: cdnUrl
+  });
+}
+export function PPMonochromeInlineSVG(_ref9) {
+  var _ref9$logoColor = _ref9.logoColor,
+    logoColor = _ref9$logoColor === void 0 ? LOGO_COLOR.MONOCHROME : _ref9$logoColor;
+  var svg = getPPMonochromeSVG(getLogoColors(LOGO.PPMONOCHROME, PPMONOCHROME_LOGO_COLORS, logoColor));
+  return node(SVGLogo, {
+    name: LOGO.PP,
+    alt: "PP",
+    logoColor: logoColor,
     render: function render() {
       return svg;
     }
   });
 }
+export var PPMonochrome = PPMonochromeInlineSVG;

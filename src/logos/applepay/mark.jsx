@@ -55,8 +55,9 @@ export const getApplepayMarkSVG = (): ElementNode => {
   );
 };
 
-export function ApplePayMark({ ...props }: {||}): ComponentNode<SVGLogoProps> {
-  const svg = getApplepayMarkSVG();
+export function ApplePayMarkExternalImage({
+  ...props
+}: {||}): ComponentNode<SVGLogoProps> {
   const cdnUrl = getLogoCDNUrl(MARK.APPLEPAY);
 
   return (
@@ -66,9 +67,26 @@ export function ApplePayMark({ ...props }: {||}): ComponentNode<SVGLogoProps> {
       alt="Apple Pay mark"
       aria-label="Apple Pay mark"
       cdnUrl={cdnUrl}
+    />
+  );
+}
+
+export function ApplePayMarkInlineSVG({
+  ...props
+}: {||}): ComponentNode<SVGLogoProps> {
+  const svg = getApplepayMarkSVG();
+
+  return (
+    <SVGLogo
+      {...props}
+      name={LOGO.APPLEPAY}
+      alt="Apple Pay mark"
+      aria-label="Apple Pay mark"
       render={() => {
         return svg;
       }}
     />
   );
 }
+
+export const ApplePayMark = ApplePayMarkInlineSVG;

@@ -19,16 +19,13 @@ export const LOGO = {
   EPS: ("eps": "eps"),
   MYBANK: ("mybank": "mybank"),
   P24: ("p24": "p24"),
-  ZIMPLER: ("zimpler": "zimpler"),
   WECHATPAY: ("wechatpay": "wechatpay"),
   PAYU: ("payu": "payu"),
-  VERKKOPANKKI: ("verkkopankki": "verkkopankki"),
   BLIK: ("blik": "blik"),
   TRUSTLY: ("trustly": "trustly"),
   OXXO: ("oxxo": "oxxo"),
   BOLETO: ("boleto": "boleto"),
   BOLETOBANCARIO: ("boletobancario": "boletobancario"),
-  MAXIMA: ("maxima": "maxima"),
   MERCADOPAGO: ("mercadopago": "mercadopago"),
   MULTIBANCO: ("multibanco": "multibanco"),
   SATISPAY: ("satispay": "satispay"),
@@ -55,5 +52,5 @@ export const LOGO_CLASS = {
   LOGO_COLOR: ("paypal-logo-color": "paypal-logo-color"),
 };
 
-const PACKAGE_VERSION = "2.2.3";
+const PACKAGE_VERSION = "2.2.7";
 export const CDN_BASE_URL = `https://www.paypalobjects.com/js-sdk-logos/${PACKAGE_VERSION}`;

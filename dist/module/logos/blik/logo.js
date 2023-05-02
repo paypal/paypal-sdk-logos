@@ -1,6 +1,7 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/esm/objectWithoutPropertiesLoose";
-var _excluded = ["logoColor"];
+var _excluded = ["logoColor"],
+  _excluded2 = ["logoColor"];
 var _BLIK_LOGO_COLORS;
 import { node } from "@krakenjs/jsx-pragmatic/src";
 import { getLogoCDNUrl, getLogoColors, SVGLogo } from "../../lib";
@@ -94,17 +95,26 @@ export var getBlikSVG = function getBlikSVG(_ref) {
     "stop-color": tertiary
   }))));
 };
-export function BlikLogo(_ref2) {
+export function BlikLogoExternalImage(_ref2) {
   var _ref2$logoColor = _ref2.logoColor,
     logoColor = _ref2$logoColor === void 0 ? LOGO_COLOR.BLACK : _ref2$logoColor,
     props = _objectWithoutPropertiesLoose(_ref2, _excluded);
-  var svg = getBlikSVG(getLogoColors(LOGO.BLIK, BLIK_LOGO_COLORS, logoColor));
   var cdnUrl = getLogoCDNUrl(LOGO.BLIK, BLIK_LOGO_COLORS, logoColor);
   return node(SVGLogo, _extends({}, props, {
     name: LOGO.BLIK,
-    cdnUrl: cdnUrl,
+    cdnUrl: cdnUrl
+  }));
+}
+export function BlikLogoInlineSVG(_ref3) {
+  var _ref3$logoColor = _ref3.logoColor,
+    logoColor = _ref3$logoColor === void 0 ? LOGO_COLOR.BLACK : _ref3$logoColor,
+    props = _objectWithoutPropertiesLoose(_ref3, _excluded2);
+  var svg = getBlikSVG(getLogoColors(LOGO.BLIK, BLIK_LOGO_COLORS, logoColor));
+  return node(SVGLogo, _extends({}, props, {
+    name: LOGO.BLIK,
     render: function render() {
       return svg;
     }
   }));
 }
+export var BlikLogo = BlikLogoInlineSVG;

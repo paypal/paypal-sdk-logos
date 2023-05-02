@@ -91,15 +91,12 @@ export const getBancontactSVG = ({
   );
 };
 
-export function BancontactLogo({
+export function BancontactLogoExternalImage({
   logoColor = LOGO_COLOR.BLACK,
   ...props
 }: {
   logoColor?: $Values<typeof LOGO_COLOR>,
 }): ComponentNode<SVGLogoProps> {
-  const svg = getBancontactSVG(
-    getLogoColors(LOGO.BANCONTACT, BANCONTACT_LOGO_COLORS, logoColor)
-  );
   const cdnUrl = getLogoCDNUrl(
     LOGO.BANCONTACT,
     BANCONTACT_LOGO_COLORS,
@@ -112,9 +109,30 @@ export function BancontactLogo({
       name={LOGO.BANCONTACT}
       logoColor={logoColor}
       cdnUrl={cdnUrl}
+    />
+  );
+}
+
+export function BancontactLogoInlineSVG({
+  logoColor = LOGO_COLOR.BLACK,
+  ...props
+}: {
+  logoColor?: $Values<typeof LOGO_COLOR>,
+}): ComponentNode<SVGLogoProps> {
+  const svg = getBancontactSVG(
+    getLogoColors(LOGO.BANCONTACT, BANCONTACT_LOGO_COLORS, logoColor)
+  );
+
+  return (
+    <SVGLogo
+      {...props}
+      name={LOGO.BANCONTACT}
+      logoColor={logoColor}
       render={() => {
         return svg;
       }}
     />
   );
 }
+
+export const BancontactLogo = BancontactLogoInlineSVG;

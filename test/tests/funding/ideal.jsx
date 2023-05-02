@@ -3,8 +3,8 @@
 
 import { node, html } from "@krakenjs/jsx-pragmatic/src";
 
-import { IdealLogo, LOGO_COLOR } from "../../../src";
-import { validateSVG } from "../common";
+import { IdealLogo, IdealLogoExternalImage, LOGO_COLOR } from "../../../src";
+import { validateExternalSVG, validateSVG } from "../common";
 
 describe("ideal logo rendering happy cases", () => {
   it("should render the ideal logo", () => {
@@ -13,5 +13,15 @@ describe("ideal logo rendering happy cases", () => {
     const logoHTML = logo.render(html());
 
     validateSVG(logoHTML);
+  });
+});
+
+describe("IdealLogoExternalImage rendering happy cases", () => {
+  it("should render the ideal logo from CDN", () => {
+    const logo = <IdealLogoExternalImage />;
+
+    const logoHTML = logo.render(html());
+
+    validateExternalSVG(logoHTML);
   });
 });

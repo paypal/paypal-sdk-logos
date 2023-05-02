@@ -52,13 +52,12 @@ export const getPayuSVG = ({ primary }: LogoColors): ElementNode => {
   );
 };
 
-export function PayuLogo({
+export function PayuLogoExternalImage({
   logoColor = LOGO_COLOR.BLACK,
   ...props
 }: {
   logoColor?: $Values<typeof LOGO_COLOR>,
 }): ComponentNode<SVGLogoProps> {
-  const svg = getPayuSVG(getLogoColors(LOGO.PAYU, PAYU_LOGO_COLORS, logoColor));
   const cdnUrl = getLogoCDNUrl(LOGO.PAYU, PAYU_LOGO_COLORS, logoColor);
 
   return (
@@ -67,9 +66,28 @@ export function PayuLogo({
       name={LOGO.PAYU}
       logoColor={logoColor}
       cdnUrl={cdnUrl}
+    />
+  );
+}
+
+export function PayuLogoInlineSVG({
+  logoColor = LOGO_COLOR.BLACK,
+  ...props
+}: {
+  logoColor?: $Values<typeof LOGO_COLOR>,
+}): ComponentNode<SVGLogoProps> {
+  const svg = getPayuSVG(getLogoColors(LOGO.PAYU, PAYU_LOGO_COLORS, logoColor));
+
+  return (
+    <SVGLogo
+      {...props}
+      name={LOGO.PAYU}
+      logoColor={logoColor}
       render={() => {
         return svg;
       }}
     />
   );
 }
+
+export const PayuLogo = PayuLogoInlineSVG;

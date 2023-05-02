@@ -91,16 +91,24 @@ export var getDiscoverSVG = function getDiscoverSVG() {
     fill: "rgb(255, 129, 38)"
   })))));
 };
-export function DiscoverLogo(_temp) {
+export function DiscoverLogoExternalImage(_temp) {
   var _ref = _temp === void 0 ? {} : _temp,
     props = _extends({}, (_objectDestructuringEmpty(_ref), _ref));
-  var svg = getDiscoverSVG();
   var cdnUrl = getLogoCDNUrl(CARD.DISCOVER);
   return node(SVGCardLogo, _extends({}, props, {
     name: CARD.DISCOVER,
-    cdnUrl: cdnUrl,
+    cdnUrl: cdnUrl
+  }));
+}
+export function DiscoverLogoInlineSVG(_temp2) {
+  var _ref2 = _temp2 === void 0 ? {} : _temp2,
+    props = _extends({}, (_objectDestructuringEmpty(_ref2), _ref2));
+  var svg = getDiscoverSVG();
+  return node(SVGCardLogo, _extends({}, props, {
+    name: CARD.DISCOVER,
     render: function render() {
       return svg;
     }
   }));
 }
+export var DiscoverLogo = DiscoverLogoInlineSVG;

@@ -3,8 +3,8 @@
 
 import { node, html } from "@krakenjs/jsx-pragmatic/src";
 
-import { MastercardLogo } from "../../../src";
-import { validateSVG } from "../common";
+import { MastercardLogo, MastercardLogoExternalImage } from "../../../src";
+import { validateExternalSVG, validateSVG } from "../common";
 
 describe("mastercard logo rendering happy cases", () => {
   it("should render the mastercard logo", () => {
@@ -13,5 +13,15 @@ describe("mastercard logo rendering happy cases", () => {
     const logoHTML = logo.render(html());
 
     validateSVG(logoHTML);
+  });
+});
+
+describe("MastercardLogoExternalImage rendering happy cases", () => {
+  it("should render the mastercard logo from CDN", () => {
+    const logo = <MastercardLogoExternalImage />;
+
+    const logoHTML = logo.render(html());
+
+    validateExternalSVG(logoHTML);
   });
 });

@@ -21,16 +21,24 @@ export var getAmexSVG = function getAmexSVG() {
     fill: "rgb(255, 255, 255)"
   }));
 };
-export function AmexLogo(_temp) {
+export function AmexLogoExternalImage(_temp) {
   var _ref = _temp === void 0 ? {} : _temp,
     props = _extends({}, (_objectDestructuringEmpty(_ref), _ref));
-  var svg = getAmexSVG();
   var cdnUrl = getLogoCDNUrl(CARD.AMEX);
   return node(SVGCardLogo, _extends({}, props, {
     name: CARD.AMEX,
-    cdnUrl: cdnUrl,
+    cdnUrl: cdnUrl
+  }));
+}
+export function AmexLogoInlineSVG(_temp2) {
+  var _ref2 = _temp2 === void 0 ? {} : _temp2,
+    props = _extends({}, (_objectDestructuringEmpty(_ref2), _ref2));
+  var svg = getAmexSVG();
+  return node(SVGCardLogo, _extends({}, props, {
+    name: CARD.AMEX,
     render: function render() {
       return svg;
     }
   }));
 }
+export var AmexLogo = AmexLogoInlineSVG;

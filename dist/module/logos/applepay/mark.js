@@ -33,17 +33,26 @@ export var getApplepayMarkSVG = function getApplepayMarkSVG() {
     d: "M119.34167,79.9889v-4.5946c0.4193,0.10483,1.36425,0.10483,1.83723,0.10483c2.6252,0,4.04313-1.10245,4.90908-3.9378     c0-0.05267,0.49931-1.68025,0.49931-1.70658l-9.97616-27.64562h6.14268l6.98432,22.47371h0.10432l6.98433-22.47371h5.9857     l-10.34483,29.06304c-2.36186,6.69517-5.0924,8.84789-10.81577,8.84789C121.17891,80.12006,119.76098,80.06739,119.34167,79.9889     z"
   })))), node("g", null), node("g", null), node("g", null), node("g", null), node("g", null), node("g", null));
 };
-export function ApplePayMark(_ref) {
+export function ApplePayMarkExternalImage(_ref) {
   var props = _extends({}, (_objectDestructuringEmpty(_ref), _ref));
-  var svg = getApplepayMarkSVG();
   var cdnUrl = getLogoCDNUrl(MARK.APPLEPAY);
   return node(SVGLogo, _extends({}, props, {
     name: LOGO.APPLEPAY,
     alt: "Apple Pay mark",
     "aria-label": "Apple Pay mark",
-    cdnUrl: cdnUrl,
+    cdnUrl: cdnUrl
+  }));
+}
+export function ApplePayMarkInlineSVG(_ref2) {
+  var props = _extends({}, (_objectDestructuringEmpty(_ref2), _ref2));
+  var svg = getApplepayMarkSVG();
+  return node(SVGLogo, _extends({}, props, {
+    name: LOGO.APPLEPAY,
+    alt: "Apple Pay mark",
+    "aria-label": "Apple Pay mark",
     render: function render() {
       return svg;
     }
   }));
 }
+export var ApplePayMark = ApplePayMarkInlineSVG;

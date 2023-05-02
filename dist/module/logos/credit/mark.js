@@ -97,15 +97,22 @@ export var getCreditMarkSVG = function getCreditMarkSVG() {
     id: "Path"
   })))))))));
 };
-export function CreditMark(_ref) {
+export function CreditMarkExternalImage(_ref) {
   var props = _extends({}, (_objectDestructuringEmpty(_ref), _ref));
-  var svg = getCreditMarkSVG();
   var cdnUrl = getLogoCDNUrl(MARK.CREDIT);
   return node(SVGLogo, _extends({}, props, {
     name: LOGO.CREDIT,
-    cdnUrl: cdnUrl,
+    cdnUrl: cdnUrl
+  }));
+}
+export function CreditMarkInlineSVG(_ref2) {
+  var props = _extends({}, (_objectDestructuringEmpty(_ref2), _ref2));
+  var svg = getCreditMarkSVG();
+  return node(SVGLogo, _extends({}, props, {
+    name: LOGO.CREDIT,
     render: function render() {
       return svg;
     }
   }));
 }
+export var CreditMark = CreditMarkInlineSVG;

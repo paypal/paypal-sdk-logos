@@ -1,6 +1,6 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/esm/objectWithoutPropertiesLoose";
-var _excluded = ["svg", "cdnUrl", "loadFromCDN"],
+var _excluded = ["svg", "cdnUrl"],
   _excluded2 = ["render", "name", "logoColor"],
   _excluded3 = ["render", "name"];
 import { svgToBase64, capitalizeFirstLetter } from "@krakenjs/belter/src";
@@ -9,9 +9,8 @@ import { LOGO_CLASS, LOGO_COLOR } from "../constants";
 export function SVG(props) {
   var svg = props.svg,
     cdnUrl = props.cdnUrl,
-    loadFromCDN = props.loadFromCDN,
     otherProps = _objectWithoutPropertiesLoose(props, _excluded);
-  if (loadFromCDN && cdnUrl) {
+  if (cdnUrl) {
     var _svgProps = _extends({
       src: cdnUrl
     }, otherProps);
@@ -35,7 +34,7 @@ export function SVGLogo(_ref) {
     logoColor = _ref.logoColor,
     props = _objectWithoutPropertiesLoose(_ref, _excluded2);
   return node(SVG, _extends({}, props, {
-    svg: render(),
+    svg: render ? render() : null,
     alt: "",
     class: LOGO_CLASS.LOGO + " " + LOGO_CLASS.LOGO + "-" + name + " " + (logoColor ? LOGO_CLASS.LOGO_COLOR + "-" + logoColor : "")
   }));
@@ -45,7 +44,7 @@ export function SVGCardLogo(_ref2) {
     name = _ref2.name,
     props = _objectWithoutPropertiesLoose(_ref2, _excluded3);
   return node(SVG, _extends({}, props, {
-    svg: render(),
+    svg: render ? render() : null,
     alt: capitalizeFirstLetter(name),
     class: LOGO_CLASS.CARD + " " + LOGO_CLASS.CARD + "-" + name
   }));

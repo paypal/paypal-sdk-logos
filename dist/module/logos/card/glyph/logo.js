@@ -1,6 +1,7 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/esm/objectWithoutPropertiesLoose";
-var _excluded = ["logoColor"];
+var _excluded = ["logoColor"],
+  _excluded2 = ["logoColor"];
 var _GLYPH_CARD_LOGO_COLO;
 import { node } from "@krakenjs/jsx-pragmatic/src";
 import { getLogoCDNUrl, SVGCardLogo, getLogoColors } from "../../../lib";
@@ -33,17 +34,26 @@ export var getGlyphCardSVG = function getGlyphCardSVG(_ref) {
     id: "Stroke-1"
   }))));
 };
-export function GlyphCard(_temp) {
+export function GlyphCardExternalImage(_temp) {
   var _ref2 = _temp === void 0 ? {} : _temp,
     logoColor = _ref2.logoColor,
     props = _objectWithoutPropertiesLoose(_ref2, _excluded);
-  var svg = getGlyphCardSVG(getLogoColors(LOGO.CARD, GLYPH_CARD_LOGO_COLORS, logoColor));
   var cdnUrl = getLogoCDNUrl(LOGO.CARD, GLYPH_CARD_LOGO_COLORS, logoColor);
   return node(SVGCardLogo, _extends({}, props, {
     name: "",
-    cdnUrl: cdnUrl,
+    cdnUrl: cdnUrl
+  }));
+}
+export function GlyphCardInlineSVG(_temp2) {
+  var _ref3 = _temp2 === void 0 ? {} : _temp2,
+    logoColor = _ref3.logoColor,
+    props = _objectWithoutPropertiesLoose(_ref3, _excluded2);
+  var svg = getGlyphCardSVG(getLogoColors(LOGO.CARD, GLYPH_CARD_LOGO_COLORS, logoColor));
+  return node(SVGCardLogo, _extends({}, props, {
+    name: "",
     render: function render() {
       return svg;
     }
   }));
 }
+export var GlyphCard = GlyphCardInlineSVG;

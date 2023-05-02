@@ -3,8 +3,16 @@
 
 import { node, html } from "@krakenjs/jsx-pragmatic/src";
 
-import { PPLogo, PPMonochrome, PayPalLogo, LOGO_COLOR } from "../../../src";
-import { validateSVG } from "../common";
+import {
+  PPLogo,
+  PPMonochrome,
+  PayPalLogo,
+  LOGO_COLOR,
+  PayPalLogoExternalImage,
+  PPLogoExternalImage,
+  PPMonochromeExternalImage,
+} from "../../../src";
+import { validateExternalSVG, validateSVG } from "../common";
 
 describe("paypal logo rendering happy cases", () => {
   it("should render the pp logo in white", () => {
@@ -59,5 +67,35 @@ describe("paypal logo rendering happy cases", () => {
     }
 
     validateSVG(logoHTML);
+  });
+});
+
+describe("PayPalLogoExternalImage rendering happy cases", () => {
+  it("should render the paypal logo from CDN", () => {
+    const logo = <PayPalLogoExternalImage />;
+
+    const logoHTML = logo.render(html());
+
+    validateExternalSVG(logoHTML);
+  });
+});
+
+describe("PPLogoExternalImage rendering happy cases", () => {
+  it("should render the PP logo from CDN", () => {
+    const logo = <PPLogoExternalImage />;
+
+    const logoHTML = logo.render(html());
+
+    validateExternalSVG(logoHTML);
+  });
+});
+
+describe("PPMonochromeExternalImage rendering happy cases", () => {
+  it("should render the PPMonochrome logo from CDN", () => {
+    const logo = <PPMonochromeExternalImage />;
+
+    const logoHTML = logo.render(html());
+
+    validateExternalSVG(logoHTML);
   });
 });

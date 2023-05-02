@@ -1,6 +1,7 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/esm/objectWithoutPropertiesLoose";
-var _excluded = ["logoColor"];
+var _excluded = ["logoColor"],
+  _excluded2 = ["logoColor"];
 var _ITAU_LOGO_COLORS;
 import { node } from "@krakenjs/jsx-pragmatic/src";
 import { getLogoCDNUrl, getLogoColors, SVGLogo } from "../../lib";
@@ -120,18 +121,28 @@ export var getItauSVG = function getItauSVG(_ref) {
     height: "21.5"
   }));
 };
-export function ItauLogo(_ref2) {
+export function ItauLogoExternalImage(_ref2) {
   var _ref2$logoColor = _ref2.logoColor,
     logoColor = _ref2$logoColor === void 0 ? LOGO_COLOR.DEFAULT : _ref2$logoColor,
     props = _objectWithoutPropertiesLoose(_ref2, _excluded);
-  var svg = getItauSVG(getLogoColors(LOGO.ITAU, ITAU_LOGO_COLORS, logoColor));
   var cdnUrl = getLogoCDNUrl(LOGO.ITAU, ITAU_LOGO_COLORS, logoColor);
   return node(SVGLogo, _extends({}, props, {
     name: LOGO.ITAU,
     logoColor: logoColor,
-    cdnUrl: cdnUrl,
+    cdnUrl: cdnUrl
+  }));
+}
+export function ItauLogoInlineSVG(_ref3) {
+  var _ref3$logoColor = _ref3.logoColor,
+    logoColor = _ref3$logoColor === void 0 ? LOGO_COLOR.DEFAULT : _ref3$logoColor,
+    props = _objectWithoutPropertiesLoose(_ref3, _excluded2);
+  var svg = getItauSVG(getLogoColors(LOGO.ITAU, ITAU_LOGO_COLORS, logoColor));
+  return node(SVGLogo, _extends({}, props, {
+    name: LOGO.ITAU,
+    logoColor: logoColor,
     render: function render() {
       return svg;
     }
   }));
 }
+export var ItauLogo = ItauLogoInlineSVG;

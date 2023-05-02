@@ -122,13 +122,12 @@ export const getSepaSVG = ({ main, card }: LogoColors): ElementNode => {
   );
 };
 
-export function SepaLogo({
+export function SepaLogoExternalImage({
   logoColor = LOGO_COLOR.DEFAULT,
   ...props
 }: {
   logoColor?: $Values<typeof LOGO_COLOR>,
 }): ComponentNode<SVGLogoProps> {
-  const svg = getSepaSVG(getLogoColors(LOGO.SEPA, SEPA_LOGO_COLORS, logoColor));
   const cdnUrl = getLogoCDNUrl(LOGO.SEPA, SEPA_LOGO_COLORS, logoColor);
 
   return (
@@ -137,9 +136,28 @@ export function SepaLogo({
       name={LOGO.SEPA}
       logoColor={logoColor}
       cdnUrl={cdnUrl}
+    />
+  );
+}
+
+export function SepaLogoInlineSVG({
+  logoColor = LOGO_COLOR.DEFAULT,
+  ...props
+}: {
+  logoColor?: $Values<typeof LOGO_COLOR>,
+}): ComponentNode<SVGLogoProps> {
+  const svg = getSepaSVG(getLogoColors(LOGO.SEPA, SEPA_LOGO_COLORS, logoColor));
+
+  return (
+    <SVGLogo
+      {...props}
+      name={LOGO.SEPA}
+      logoColor={logoColor}
       render={() => {
         return svg;
       }}
     />
   );
 }
+
+export const SepaLogo = SepaLogoInlineSVG;

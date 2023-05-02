@@ -20,12 +20,6 @@ export const GLYPH_BANK_LOGO_COLORS: LogoColorMap = {
   [LOGO_COLOR.DEFAULT]: {
     primary: "#142C8E",
   },
-  [LOGO_COLOR.WHITE]: {
-    primary: "#ffffff",
-  },
-  [LOGO_COLOR.BLACK]: {
-    primary: "#333030",
-  },
 };
 
 export const getGlyphBankSVG = ({ primary }: LogoColors): ElementNode => {
@@ -61,7 +55,18 @@ export const getGlyphBankSVG = ({ primary }: LogoColors): ElementNode => {
   );
 };
 
-export function GlyphBank({
+export function GlyphBankExternalImage({
+  logoColor,
+  ...props
+}: {
+  logoColor?: $Values<typeof LOGO_COLOR>,
+} = {}): ComponentNode<SVGLogoProps> {
+  const cdnUrl = getLogoCDNUrl(LOGO.BANK, GLYPH_BANK_LOGO_COLORS, logoColor);
+
+  return <SVGLogo {...props} name={LOGO.BANK} cdnUrl={cdnUrl} />;
+}
+
+export function GlyphBankInlineSVG({
   logoColor,
   ...props
 }: {
@@ -70,16 +75,16 @@ export function GlyphBank({
   const svg = getGlyphBankSVG(
     getLogoColors(LOGO.BANK, GLYPH_BANK_LOGO_COLORS, logoColor)
   );
-  const cdnUrl = getLogoCDNUrl(LOGO.BANK, GLYPH_BANK_LOGO_COLORS, logoColor);
 
   return (
     <SVGLogo
       {...props}
       name={LOGO.BANK}
-      cdnUrl={cdnUrl}
       render={() => {
         return svg;
       }}
     />
   );
 }
+
+export const GlyphBank = GlyphBankInlineSVG;

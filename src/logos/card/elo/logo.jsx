@@ -68,23 +68,28 @@ export const getEloSVG = (): ElementNode => {
   );
 };
 
-export function EloLogo({
+export function EloLogoExternalImage({
   ...props
-}: {
-  loadFromCDN?: boolean,
-  [string]: string,
-} = {}): ComponentNode<SVGCardLogoProps> {
-  const svg = getEloSVG();
+}: {} = {}): ComponentNode<SVGCardLogoProps> {
   const cdnUrl = getLogoCDNUrl(CARD.ELO);
+
+  return <SVGCardLogo {...props} name={CARD.ELO} cdnUrl={cdnUrl} />;
+}
+
+export function EloLogoInlineSVG({
+  ...props
+}: {} = {}): ComponentNode<SVGCardLogoProps> {
+  const svg = getEloSVG();
 
   return (
     <SVGCardLogo
       {...props}
       name={CARD.ELO}
-      cdnUrl={cdnUrl}
       render={() => {
         return svg;
       }}
     />
   );
 }
+
+export const EloLogo = EloLogoInlineSVG;

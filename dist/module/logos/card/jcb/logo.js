@@ -191,16 +191,24 @@ export var getJcbSVG = function getJcbSVG() {
     id: "g6386"
   })));
 };
-export function JcbLogo(_temp) {
+export function JcbLogoExternalImage(_temp) {
   var _ref = _temp === void 0 ? {} : _temp,
     props = _extends({}, (_objectDestructuringEmpty(_ref), _ref));
-  var svg = getJcbSVG();
   var cdnUrl = getLogoCDNUrl(CARD.JCB);
   return node(SVGCardLogo, _extends({}, props, {
     name: CARD.JCB,
-    cdnUrl: cdnUrl,
+    cdnUrl: cdnUrl
+  }));
+}
+export function JcbLogoInlineSVG(_temp2) {
+  var _ref2 = _temp2 === void 0 ? {} : _temp2,
+    props = _extends({}, (_objectDestructuringEmpty(_ref2), _ref2));
+  var svg = getJcbSVG();
+  return node(SVGCardLogo, _extends({}, props, {
+    name: CARD.JCB,
     render: function render() {
       return svg;
     }
   }));
 }
+export var JcbLogo = JcbLogoInlineSVG;
