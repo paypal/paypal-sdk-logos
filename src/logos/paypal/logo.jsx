@@ -179,7 +179,7 @@ export function PPLogo({
     <SVGLogo
       {...props}
       name={LOGO.PP}
-      alt="PP"
+      alt="PayPal"
       role="presentation"
       logoColor={logoColor}
       cdnUrl={cdnUrl}
@@ -253,7 +253,7 @@ export function PPMonochrome({
   return (
     <SVGLogo
       name={LOGO.PP}
-      alt="PP"
+      alt="PayPal"
       logoColor={logoColor}
       cdnUrl={cdnUrl}
       render={() => {
