@@ -171,8 +171,6 @@ export function PayPalRebrandLogoInlineSVG({
     getLogoColors(LOGO.PAYPAL, PAYPAL_LOGO_COLORS, logoColor)
   );
 
-  const cdnUrl = getLogoCDNUrl(LOGO.PAYPAL, PAYPAL_LOGO_COLORS, logoColor);
-
   return (
     <SVGLogo
       {...props}
