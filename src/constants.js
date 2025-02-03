@@ -44,6 +44,7 @@ export const LOGO_COLOR = {
   WHITE: ("white": "white"),
   MONOCHROME: ("monochrome": "monochrome"),
   DEFAULT: ("default": "default"),
+  DARK_BLUE: ("dark_blue": "dark_blue"),
 };
 
 export const LOGO_CLASS = {
@@ -52,5 +53,6 @@ export const LOGO_CLASS = {
   LOGO_COLOR: ("paypal-logo-color": "paypal-logo-color"),
 };
 
+// this could be a csnw global
 const PACKAGE_VERSION = "2.2.7";
 export const CDN_BASE_URL = `https://www.paypalobjects.com/js-sdk-logos/${PACKAGE_VERSION}`;
