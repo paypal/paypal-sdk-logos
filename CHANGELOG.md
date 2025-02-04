@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.2.9-patch.0](https://github.com/paypal/paypal-sdk-logos/compare/v2.3.0-alpha-f76133d.0...v2.2.9-patch.0) (2025-02-04)
+
+
+* generate CDN packages ([384380a](https://github.com/paypal/paypal-sdk-logos/commit/384380a03eece36ec946dbccc3ca7d3239f2dfd8))
+* generate CDN packages ([00e6806](https://github.com/paypal/paypal-sdk-logos/commit/00e6806e33a5bd74f9f719a93c3c01b382309aaa))
+* **release:** 2.2.8 ([61f8442](https://github.com/paypal/paypal-sdk-logos/commit/61f8442801d124b7f026bdad9c866089a248f4ef))
+
 ### [2.2.8](https://github.com/paypal/paypal-sdk-logos/compare/v2.3.0-alpha-f76133d.0...v2.2.8) (2025-02-04)
 
 
