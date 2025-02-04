@@ -15,8 +15,8 @@ if [ "$current_branch" != "$default_branch" ]; then
   bump='prerelease'
   tag="alpha-$current_sha"
   export tag
-  npm standard-version --prerelease $tag
+  npm run standard-version -- --prerelease $tag
 else
   export tag
-  npm standard-version --release-as patch
+  npm run standard-version --  --release-as patch
 fi

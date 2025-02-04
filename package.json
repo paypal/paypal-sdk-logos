@@ -1,6 +1,6 @@
 {
   "name": "@paypal/sdk-logos",
-  "version": "2.2.8",
+  "version": "2.3.0",
   "description": "JSX/SVG logos for PayPal.",
   "main": "index.js",
   "scripts": {
@@ -17,6 +17,7 @@
     "build": "npm run test && npm run babel && npm run webpack",
     "prerelease": "npm run clean && npm run build && git add dist && git commit -m 'ci: check in dist folder' || echo 'Nothing to distribute'",
     "release": "./scripts/publish.sh",
+    "standard-version": "standard-version",
     "postrelease": "git push && git push --follow-tags && npm publish",
     "clean": "rimraf dist coverage",
     "reinstall": "rimraf flow-typed && rimraf node_modules && npm install && flow-typed install",
