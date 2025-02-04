@@ -1,6 +1,6 @@
 {
   "name": "@paypal/sdk-logos",
-  "version": "2.2.7",
+  "version": "2.2.8",
   "description": "JSX/SVG logos for PayPal.",
   "main": "index.js",
   "scripts": {
@@ -26,7 +26,7 @@
   },
   "standard-version": {
     "scripts": {
-      "postbump": "npm run build-logos -- --commit"
+      "postbump": "npm run build-logos"
     },
     "types": [
       {

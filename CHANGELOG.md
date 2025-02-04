@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.2.8](https://github.com/paypal/paypal-sdk-logos/compare/v2.2.7...v2.2.8) (2025-02-04)
+
 ### 2.2.7 (2023-04-04)
 
 
