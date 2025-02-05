@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 2.2.8-alpha-ae7b9c7.0 (2025-02-05)
+
+
+### Features
+
+* add new paypal logo ([ae7b9c7](https://github.com/paypal/paypal-sdk-logos/commit/ae7b9c7259dee857df644b1fce0fe08776df3c97))
+
+
+* generate CDN packages ([c59aeab](https://github.com/paypal/paypal-sdk-logos/commit/c59aeab559a9e41df45d4bfc08f0f6c170eb7517))
+
 ### 2.2.7 (2023-04-04)
 
 
