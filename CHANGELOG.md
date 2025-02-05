@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 2.2.8-alpha-3abd540.0 (2025-02-05)
+
+
+### Features
+
+* add dark-blue logo color ([a33c5d4](https://github.com/paypal/paypal-sdk-logos/commit/a33c5d4f805bdb01b7bd73d32012fe1574e2a590))
+
+
+* generate CDN packages ([3518f8f](https://github.com/paypal/paypal-sdk-logos/commit/3518f8fcd6bb08d122f30a1013ce548e270eb173))
+
 ### 2.2.8-alpha-ae7b9c7.0 (2025-02-05)
 
 
