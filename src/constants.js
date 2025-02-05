@@ -40,6 +40,7 @@ export const MARK = {
 
 export const LOGO_COLOR = {
   BLUE: ("blue": "blue"),
+  DARK_BLUE: ("dark-blue": "dark-blue"),
   BLACK: ("black": "black"),
   WHITE: ("white": "white"),
   MONOCHROME: ("monochrome": "monochrome"),
