@@ -36,6 +36,7 @@ export var MARK = {
 };
 export var LOGO_COLOR = {
   BLUE: "blue",
+  DARK_BLUE: "dark-blue",
   BLACK: "black",
   WHITE: "white",
   MONOCHROME: "monochrome",
@@ -46,5 +47,5 @@ export var LOGO_CLASS = {
   CARD: "paypal-logo-card",
   LOGO_COLOR: "paypal-logo-color"
 };
-var PACKAGE_VERSION = "2.2.6";
+var PACKAGE_VERSION = "2.2.8-alpha-ae7b9c7.0";
 export var CDN_BASE_URL = "https://www.paypalobjects.com/js-sdk-logos/" + PACKAGE_VERSION;
