@@ -23,3 +23,4 @@ import "./multibanco";
 import "./oxxo";
 import "./satispay";
 import "./paidy";
+import "./paypalRebrand";

@@ -52,6 +52,7 @@ import {
   getVenmoSVG,
   getVisaSVG,
   getWechatpaySVG,
+  getPayPalRebrandSVG,
   GIROPAY_LOGO_COLORS,
   GLYPH_BANK_LOGO_COLORS,
   GLYPH_CARD_LOGO_COLORS,
@@ -73,6 +74,7 @@ import {
   TRUSTLY_LOGO_COLORS,
   VENMO_LOGO_COLORS,
   WECHATPAY_LOGO_COLORS,
+  PAYPAL_REBRAND_LOGO_COLORS,
 } from "../src/logos";
 import { version } from "../package.json";
 
@@ -109,6 +111,7 @@ const LOGO_GETTERS = {
   [LOGO.TRUSTLY]: getTrustlySVG,
   [LOGO.VENMO]: getVenmoSVG,
   [LOGO.WECHATPAY]: getWechatpaySVG,
+  [LOGO.PAYPAL_REBRAND]: getPayPalRebrandSVG,
   [CARD.AMEX]: getAmexSVG,
   [CARD.DISCOVER]: getDiscoverSVG,
   [CARD.ELO]: getEloSVG,
@@ -150,6 +153,7 @@ const LOGO_COLOR_MAPS = {
   [LOGO.TRUSTLY]: TRUSTLY_LOGO_COLORS,
   [LOGO.VENMO]: VENMO_LOGO_COLORS,
   [LOGO.WECHATPAY]: WECHATPAY_LOGO_COLORS,
+  [LOGO.PAYPAL_REBRAND]: PAYPAL_REBRAND_LOGO_COLORS,
 };
 
 async function buildLogos() {
