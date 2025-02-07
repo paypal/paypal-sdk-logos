@@ -93,7 +93,7 @@ export function PayPalRebrandLogoInlineSVG({
   logoColor?: $Values<typeof LOGO_COLOR>,
 }): ComponentNode<SVGLogoProps> {
   const svg = getPayPalRebrandSVG(
-    getLogoColors(LOGO.PAYPAL, PAYPAL_REBRAND_LOGO_COLORS, logoColor)
+    getLogoColors(LOGO.PAYPAL_REBRAND, PAYPAL_REBRAND_LOGO_COLORS, logoColor)
   );
 
   return (
