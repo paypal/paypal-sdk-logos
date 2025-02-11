@@ -30,6 +30,7 @@ export const LOGO = {
   MULTIBANCO: ("multibanco": "multibanco"),
   SATISPAY: ("satispay": "satispay"),
   PAIDY: ("paidy": "paidy"),
+  PAYPAL_REBRAND: ("paypal-rebrand": "paypal-rebrand"),
 };
 
 export const MARK = {
