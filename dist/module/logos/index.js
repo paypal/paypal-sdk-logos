@@ -23,3 +23,4 @@ export * from "./mercadopago";
 export * from "./multibanco";
 export * from "./satispay";
 export * from "./paidy";
+export * from "./paypalRebrand";
