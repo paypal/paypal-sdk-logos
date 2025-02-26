@@ -53,5 +53,5 @@ export const LOGO_CLASS = {
   LOGO_COLOR: ("paypal-logo-color": "paypal-logo-color"),
 };
 
-const PACKAGE_VERSION = "2.2.8";
+const PACKAGE_VERSION = "2.2.9";
 export const CDN_BASE_URL = `https://www.paypalobjects.com/js-sdk-logos/${PACKAGE_VERSION}`;
