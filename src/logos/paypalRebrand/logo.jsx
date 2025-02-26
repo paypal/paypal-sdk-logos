@@ -18,10 +18,10 @@ import type { LogoColors, LogoColorMap } from "../../types";
 
 export const PAYPAL_REBRAND_LOGO_COLORS: LogoColorMap = {
   [LOGO_COLOR.DEFAULT]: {
-    primary: "#333030",
+    primary: "#000000",
   },
   [LOGO_COLOR.BLACK]: {
-    primary: "#333030",
+    primary: "#000000",
   },
   [LOGO_COLOR.BLUE]: {
     primary: "#60CDFF",
