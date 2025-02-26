@@ -7,9 +7,9 @@ import { node } from "@krakenjs/jsx-pragmatic/src";
 import { getLogoCDNUrl, getLogoColors, SVGLogo } from "../../lib";
 import { LOGO_COLOR, LOGO } from "../../constants";
 export var PAYPAL_REBRAND_LOGO_COLORS = (_PAYPAL_REBRAND_LOGO_ = {}, _PAYPAL_REBRAND_LOGO_[LOGO_COLOR.DEFAULT] = {
-  primary: "#333030"
+  primary: "#000000"
 }, _PAYPAL_REBRAND_LOGO_[LOGO_COLOR.BLACK] = {
-  primary: "#333030"
+  primary: "#000000"
 }, _PAYPAL_REBRAND_LOGO_[LOGO_COLOR.BLUE] = {
   primary: "#60CDFF"
 }, _PAYPAL_REBRAND_LOGO_);
