@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 2.2.9 (2025-02-26)
+
+
+### Features
+
+* update PaypalRebrand logo color ([#116](https://github.com/paypal/paypal-sdk-logos/issues/116)) ([077f0a0](https://github.com/paypal/paypal-sdk-logos/commit/077f0a0c626740d49882ec340f041b8d12afc1cb))
+
+
+* generate CDN packages ([8c08302](https://github.com/paypal/paypal-sdk-logos/commit/8c083029d639390ecede04686cc7a6fe38bc8c29))
+
 ### 2.2.8 (2025-02-11)
 
 
