@@ -23,6 +23,9 @@ export const PAYPAL_REBRAND_LOGO_COLORS: LogoColorMap = {
   [LOGO_COLOR.BLACK]: {
     primary: "#000000",
   },
+  [LOGO_COLOR.WHITE]: {
+    primary: "#FFFFFF",
+  },
   [LOGO_COLOR.BLUE]: {
     primary: "#60CDFF",
   },
