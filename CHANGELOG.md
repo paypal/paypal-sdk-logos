@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 2.2.10 (2025-04-02)
+
+
+* add white ([#117](https://github.com/paypal/paypal-sdk-logos/issues/117)) ([370dee2](https://github.com/paypal/paypal-sdk-logos/commit/370dee2b7090a9493db61bcd6f65bd8e8b9e07c4))
+* generate CDN packages ([d7f0555](https://github.com/paypal/paypal-sdk-logos/commit/d7f05550c297b1053722fd1a10ca8fb3fb701dc1))
+
 ### 2.2.9 (2025-02-26)
 
 
