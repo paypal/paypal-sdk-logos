@@ -62,7 +62,7 @@ export function SVGLogo({
     <SVG
       {...props}
       svg={render ? render() : null}
-      alt=""
+      alt={name}
       class={`${LOGO_CLASS.LOGO} ${LOGO_CLASS.LOGO}-${name} ${
         logoColor ? `${LOGO_CLASS.LOGO_COLOR}-${logoColor}` : ""
       }`}
