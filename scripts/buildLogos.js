@@ -29,6 +29,7 @@ import {
   getGiropaySVG,
   getGlyphBankSVG,
   getGlyphCardSVG,
+  getGlyphCardRebrandSVG,
   getHiperSVG,
   getIdealSVG,
   getItauSVG,
@@ -79,6 +80,7 @@ import {
   PAYPAL_REBRAND_LOGO_COLORS,
   VENMO_REBRAND_LOGO_COLORS,
   PP_REBRAND_LOGO_COLORS,
+  CARD_REBRAND_LOGO_COLORS,
 } from "../src/logos";
 import { version } from "../package.json";
 
@@ -91,6 +93,7 @@ const LOGO_GETTERS = {
   [LOGO.BLIK]: getBlikSVG,
   [LOGO.BOLETO]: getBoletoSVG,
   [LOGO.CARD]: getGlyphCardSVG,
+  [LOGO.CARD_REBRAND]: getGlyphCardRebrandSVG,
   [LOGO.CREDIT]: getCreditSVG,
   // Germany-specific credit glyphs
   [`${LOGO.CREDIT}-DE`]: (logoColors: LogoColors) =>
@@ -137,6 +140,7 @@ const LOGO_COLOR_MAPS = {
   [LOGO.BLIK]: BLIK_LOGO_COLORS,
   [LOGO.BOLETO]: BOLETO_LOGO_COLORS,
   [LOGO.CARD]: GLYPH_CARD_LOGO_COLORS,
+  [LOGO.CARD_REBRAND]: CARD_REBRAND_LOGO_COLORS,
   [LOGO.CREDIT]: CREDIT_LOGO_COLORS,
   [`${LOGO.CREDIT}-DE`]: GLYPH_CARD_LOGO_COLORS,
   [LOGO.EPS]: EPS_LOGO_COLORS,

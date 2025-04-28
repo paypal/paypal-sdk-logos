@@ -227,4 +227,4 @@ export function PPRebrandLogoInlineSVG({
   );
 }
 
-export const PPLogo = PPRebrandLogoInlineSVG;
+export const PPRebrandLogo = PPRebrandLogoInlineSVG;
