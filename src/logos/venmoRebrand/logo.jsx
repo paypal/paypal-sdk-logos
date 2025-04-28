@@ -80,7 +80,7 @@ export function VenmoRebrandLogoExternalImage({
   logoColor?: $Values<typeof LOGO_COLOR>,
 }): ComponentNode<SVGLogoProps> {
   const cdnUrl = getLogoCDNUrl(
-    LOGO.VENMO,
+    LOGO.VENMO_REBRAND,
     VENMO_REBRAND_LOGO_COLORS,
     logoColor
   );

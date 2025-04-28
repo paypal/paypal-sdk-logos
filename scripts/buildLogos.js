@@ -45,6 +45,7 @@ import {
   getPayuSVG,
   getPPMonochromeSVG,
   getPPSVG,
+  getPPRebrandSVG,
   getSatispaySVG,
   getSepaSVG,
   getSofortSVG,
@@ -77,6 +78,7 @@ import {
   WECHATPAY_LOGO_COLORS,
   PAYPAL_REBRAND_LOGO_COLORS,
   VENMO_REBRAND_LOGO_COLORS,
+  PP_REBRAND_LOGO_COLORS,
 } from "../src/logos";
 import { version } from "../package.json";
 
@@ -107,6 +109,7 @@ const LOGO_GETTERS = {
   [LOGO.PAYPAL_REBRAND]: getPayPalRebrandSVG,
   [LOGO.PAYU]: getPayuSVG,
   [LOGO.PP]: getPPSVG,
+  [LOGO.PP_REBRAND]: getPPRebrandSVG,
   [LOGO.PPMONOCHROME]: getPPMonochromeSVG,
   [LOGO.SATISPAY]: getSatispaySVG,
   [LOGO.SEPA]: getSepaSVG,
@@ -150,6 +153,7 @@ const LOGO_COLOR_MAPS = {
   [LOGO.PAYPAL_REBRAND]: PAYPAL_REBRAND_LOGO_COLORS,
   [LOGO.PAYU]: PAYU_LOGO_COLORS,
   [LOGO.PP]: PP_LOGO_COLORS,
+  [LOGO.PP_REBRAND]: PP_REBRAND_LOGO_COLORS,
   [LOGO.PPMONOCHROME]: PPMONOCHROME_LOGO_COLORS,
   [LOGO.SATISPAY]: SATISPAY_LOGO_COLORS,
   [LOGO.SEPA]: SEPA_LOGO_COLORS,
