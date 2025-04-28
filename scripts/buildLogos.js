@@ -50,6 +50,7 @@ import {
   getSofortSVG,
   getTrustlySVG,
   getVenmoSVG,
+  getVenmoRebrandSVG,
   getVisaSVG,
   getWechatpaySVG,
   getPayPalRebrandSVG,
@@ -75,6 +76,7 @@ import {
   VENMO_LOGO_COLORS,
   WECHATPAY_LOGO_COLORS,
   PAYPAL_REBRAND_LOGO_COLORS,
+  VENMO_REBRAND_LOGO_COLORS,
 } from "../src/logos";
 import { version } from "../package.json";
 
@@ -111,6 +113,7 @@ const LOGO_GETTERS = {
   [LOGO.SOFORT]: getSofortSVG,
   [LOGO.TRUSTLY]: getTrustlySVG,
   [LOGO.VENMO]: getVenmoSVG,
+  [LOGO.VENMO_REBRAND]: getVenmoRebrandSVG,
   [LOGO.WECHATPAY]: getWechatpaySVG,
   [CARD.AMEX]: getAmexSVG,
   [CARD.DISCOVER]: getDiscoverSVG,
@@ -153,6 +156,7 @@ const LOGO_COLOR_MAPS = {
   [LOGO.SOFORT]: SOFORT_LOGO_COLORS,
   [LOGO.TRUSTLY]: TRUSTLY_LOGO_COLORS,
   [LOGO.VENMO]: VENMO_LOGO_COLORS,
+  [LOGO.VENMO_REBRAND]: VENMO_REBRAND_LOGO_COLORS,
   [LOGO.WECHATPAY]: WECHATPAY_LOGO_COLORS,
 };
 
