@@ -8,6 +8,7 @@ import {
   LOGO_COLOR,
   PayPalRebrandLogoExternalImage,
   PayPalRebrandLogoInlineSVG,
+  PPRebrandLogo,
 } from "../../../src";
 import { validateExternalSVG, validateSVG } from "../common";
 
@@ -42,5 +43,31 @@ describe("paypal logo rendering happy cases", () => {
     const logoRebrandHTML = logo.render(html());
 
     validateSVG(logoRebrandHTML);
+  });
+});
+
+describe("PP monogram logo rendering happy cases", () => {
+  it("should render the pp monogram logo in white", () => {
+    const logo = <PPRebrandLogo logoColor={LOGO_COLOR.WHITE} />;
+
+    const logoHTML = logo.render(html());
+
+    validateSVG(logoHTML);
+  });
+
+  it("should render the pp monogram logo in blue", () => {
+    const logo = <PPRebrandLogo logoColor={LOGO_COLOR.BLUE} />;
+
+    const logoHTML = logo.render(html());
+
+    validateSVG(logoHTML);
+  });
+
+  it("should render the paypal monogram logo in black", () => {
+    const logo = <PPRebrandLogo logoColor={LOGO_COLOR.BLACK} />;
+
+    const logoHTML = logo.render(html());
+
+    validateSVG(logoHTML);
   });
 });
