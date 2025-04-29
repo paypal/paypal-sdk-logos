@@ -28,7 +28,10 @@ export var LOGO = {
   MULTIBANCO: "multibanco",
   SATISPAY: "satispay",
   PAIDY: "paidy",
-  PAYPAL_REBRAND: "paypal-rebrand"
+  PAYPAL_REBRAND: "paypal-rebrand",
+  VENMO_REBRAND: "venmo-rebrand",
+  PP_REBRAND: "pp-rebrand",
+  CARD_REBRAND: "card-rebrand"
 };
 export var MARK = {
   APPLEPAY: "applepay-mark",
@@ -47,5 +50,5 @@ export var LOGO_CLASS = {
   CARD: "paypal-logo-card",
   LOGO_COLOR: "paypal-logo-color"
 };
-var PACKAGE_VERSION = "2.2.9";
+var PACKAGE_VERSION = "2.2.10";
 export var CDN_BASE_URL = "https://www.paypalobjects.com/js-sdk-logos/" + PACKAGE_VERSION;

@@ -6,3 +6,4 @@ export * from "./jcb";
 export * from "./mastercard";
 export * from "./visa";
 export * from "./glyph";
+export * from "./glyphRebrand";

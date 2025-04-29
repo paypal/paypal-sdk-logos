@@ -1,8 +1,10 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/esm/objectWithoutPropertiesLoose";
 var _excluded = ["logoColor"],
-  _excluded2 = ["logoColor"];
-var _PAYPAL_REBRAND_LOGO_;
+  _excluded2 = ["logoColor"],
+  _excluded3 = ["logoColor"],
+  _excluded4 = ["logoColor"];
+var _PAYPAL_REBRAND_LOGO_, _PP_REBRAND_LOGO_COLO;
 import { node } from "@krakenjs/jsx-pragmatic/src";
 import { getLogoCDNUrl, getLogoColors, SVGLogo } from "../../lib";
 import { LOGO_COLOR, LOGO } from "../../constants";
@@ -72,3 +74,74 @@ export function PayPalRebrandLogoInlineSVG(_ref3) {
   }));
 }
 export var PayPalRebrandLogo = PayPalRebrandLogoInlineSVG;
+export var PP_REBRAND_LOGO_COLORS = (_PP_REBRAND_LOGO_COLO = {}, _PP_REBRAND_LOGO_COLO[LOGO_COLOR.DEFAULT] = {
+  primary: "#002991",
+  secondary: "#60CDFF",
+  tertiary: "#008CFF"
+}, _PP_REBRAND_LOGO_COLO[LOGO_COLOR.BLUE] = {
+  primary: "#002991",
+  secondary: "#60CDFF",
+  tertiary: "#008CFF"
+}, _PP_REBRAND_LOGO_COLO[LOGO_COLOR.WHITE] = {
+  primary: "#F3F3F3",
+  secondary: "#898989",
+  tertiary: "#B8B8B8"
+}, _PP_REBRAND_LOGO_COLO[LOGO_COLOR.BLACK] = {
+  primary: "#0D0D0D",
+  secondary: "#808080",
+  tertiary: "#4D4D4D"
+}, _PP_REBRAND_LOGO_COLO);
+export var getPPRebrandSVG = function getPPRebrandSVG(_ref4) {
+  var primary = _ref4.primary,
+    secondary = _ref4.secondary,
+    tertiary = _ref4.tertiary;
+  return node("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "20",
+    height: "34",
+    viewBox: "0 0 20 34",
+    fill: "none"
+  }, node("g", {
+    "clip-path": "url(#clip0_4189_85875)"
+  }, node("path", {
+    "fill-rule": "evenodd",
+    "clip-rule": "evenodd",
+    d: "M16.3532 12.06C15.5794 11.65 14.643 11.4 13.6227 11.4H7.5307L6.51043 18H6.51041L6.33297 19.135L5.49014 24.6H1L3.70099 7H10.9759C13.4255 7 15.3527 8.385 16.0624 10.31C16.2645 10.855 16.3631 11.445 16.3532 12.06Z",
+    fill: primary
+  }), node("path", {
+    d: "M18.9408 17.1201C18.443 20.1701 15.8553 22.4001 12.7946 22.4001H10.2858L9.24089 29.0001H4.77539L5.49007 24.6001L6.33289 19.1351L6.51033 18.0001H10.1231C13.869 18.0001 16.3532 14.7851 16.3532 12.0601C18.1965 13.0251 19.271 14.9751 18.9408 17.1201Z",
+    fill: secondary
+  }), node("path", {
+    d: "M16.3536 12.06C15.5797 11.65 14.6433 11.4 13.623 11.4H7.531L6.51074 18H10.1236C13.8694 18 16.3536 14.785 16.3536 12.06Z",
+    fill: tertiary
+  })));
+};
+export function PPRebrandLogoExternalImage(_ref5) {
+  var _ref5$logoColor = _ref5.logoColor,
+    logoColor = _ref5$logoColor === void 0 ? LOGO_COLOR.DEFAULT : _ref5$logoColor,
+    props = _objectWithoutPropertiesLoose(_ref5, _excluded3);
+  var cdnUrl = getLogoCDNUrl(LOGO.PP_REBRAND, PP_REBRAND_LOGO_COLORS, logoColor);
+  return node(SVGLogo, _extends({}, props, {
+    name: LOGO.PP,
+    alt: "PP",
+    role: "presentation",
+    logoColor: logoColor,
+    cdnUrl: cdnUrl
+  }));
+}
+export function PPRebrandLogoInlineSVG(_ref6) {
+  var _ref6$logoColor = _ref6.logoColor,
+    logoColor = _ref6$logoColor === void 0 ? LOGO_COLOR.DEFAULT : _ref6$logoColor,
+    props = _objectWithoutPropertiesLoose(_ref6, _excluded4);
+  var svg = getPPRebrandSVG(getLogoColors(LOGO.PP, PP_REBRAND_LOGO_COLORS, logoColor));
+  return node(SVGLogo, _extends({}, props, {
+    name: LOGO.PP,
+    alt: "PP",
+    role: "presentation",
+    logoColor: logoColor,
+    render: function render() {
+      return svg;
+    }
+  }));
+}
+export var PPRebrandLogo = PPRebrandLogoInlineSVG;
