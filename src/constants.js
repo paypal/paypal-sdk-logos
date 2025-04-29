@@ -31,6 +31,9 @@ export const LOGO = {
   SATISPAY: ("satispay": "satispay"),
   PAIDY: ("paidy": "paidy"),
   PAYPAL_REBRAND: ("paypal-rebrand": "paypal-rebrand"),
+  VENMO_REBRAND: ("venmo-rebrand": "venmo-rebrand"),
+  PP_REBRAND: ("pp-rebrand": "pp-rebrand"),
+  CARD_REBRAND: ("card-rebrand": "card-rebrand"),
 };
 
 export const MARK = {

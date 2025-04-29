@@ -117,3 +117,111 @@ export function PayPalRebrandLogoInlineSVG({
 }
 
 export const PayPalRebrandLogo = PayPalRebrandLogoInlineSVG;
+
+// PayPal Monogram Logo
+
+export const PP_REBRAND_LOGO_COLORS: LogoColorMap = {
+  [LOGO_COLOR.DEFAULT]: {
+    primary: "#002991",
+    secondary: "#60CDFF",
+    tertiary: "#008CFF",
+  },
+  [LOGO_COLOR.BLUE]: {
+    primary: "#002991",
+    secondary: "#60CDFF",
+    tertiary: "#008CFF",
+  },
+  [LOGO_COLOR.WHITE]: {
+    primary: "#F3F3F3",
+    secondary: "#898989",
+    tertiary: "#B8B8B8",
+  },
+  [LOGO_COLOR.BLACK]: {
+    primary: "#0D0D0D",
+    secondary: "#808080",
+    tertiary: "#4D4D4D",
+  },
+};
+
+export const getPPRebrandSVG = ({
+  primary,
+  secondary,
+  tertiary,
+}: LogoColors): ElementNode => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="34"
+      viewBox="0 0 20 34"
+      fill="none"
+    >
+      <g clip-path="url(#clip0_4189_85875)">
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M16.3532 12.06C15.5794 11.65 14.643 11.4 13.6227 11.4H7.5307L6.51043 18H6.51041L6.33297 19.135L5.49014 24.6H1L3.70099 7H10.9759C13.4255 7 15.3527 8.385 16.0624 10.31C16.2645 10.855 16.3631 11.445 16.3532 12.06Z"
+          fill={primary}
+        />
+        <path
+          d="M18.9408 17.1201C18.443 20.1701 15.8553 22.4001 12.7946 22.4001H10.2858L9.24089 29.0001H4.77539L5.49007 24.6001L6.33289 19.1351L6.51033 18.0001H10.1231C13.869 18.0001 16.3532 14.7851 16.3532 12.0601C18.1965 13.0251 19.271 14.9751 18.9408 17.1201Z"
+          fill={secondary}
+        />
+        <path
+          d="M16.3536 12.06C15.5797 11.65 14.6433 11.4 13.623 11.4H7.531L6.51074 18H10.1236C13.8694 18 16.3536 14.785 16.3536 12.06Z"
+          fill={tertiary}
+        />
+      </g>
+    </svg>
+  );
+};
+
+export function PPRebrandLogoExternalImage({
+  logoColor = LOGO_COLOR.DEFAULT,
+  ...props
+}: {
+  logoColor?: $Values<typeof LOGO_COLOR>,
+}): ComponentNode<SVGLogoProps> {
+  const cdnUrl = getLogoCDNUrl(
+    LOGO.PP_REBRAND,
+    PP_REBRAND_LOGO_COLORS,
+    logoColor
+  );
+
+  return (
+    <SVGLogo
+      {...props}
+      name={LOGO.PP}
+      alt="PP"
+      role="presentation"
+      logoColor={logoColor}
+      cdnUrl={cdnUrl}
+    />
+  );
+}
+
+export function PPRebrandLogoInlineSVG({
+  logoColor = LOGO_COLOR.DEFAULT,
+  ...props
+}: {
+  logoColor?: $Values<typeof LOGO_COLOR>,
+}): ComponentNode<SVGLogoProps> {
+  const svg = getPPRebrandSVG(
+    getLogoColors(LOGO.PP, PP_REBRAND_LOGO_COLORS, logoColor)
+  );
+
+  return (
+    <SVGLogo
+      {...props}
+      name={LOGO.PP}
+      alt="PP"
+      role="presentation"
+      logoColor={logoColor}
+      render={() => {
+        return svg;
+      }}
+    />
+  );
+}
+
+export const PPRebrandLogo = PPRebrandLogoInlineSVG;
