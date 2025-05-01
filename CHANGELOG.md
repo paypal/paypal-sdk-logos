@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 2.2.12 (2025-05-01)
+
+
+* generate CDN packages ([ddd2280](https://github.com/paypal/paypal-sdk-logos/commit/ddd2280776861620897197515ad7f61ed63ed933))
+* new paypal logo for rebrand, 58% ([#119](https://github.com/paypal/paypal-sdk-logos/issues/119)) ([0c695da](https://github.com/paypal/paypal-sdk-logos/commit/0c695da464c21b86bebc8d4cce95986ecd93457d))
+
 ### 2.2.11 (2025-04-29)
 
 
