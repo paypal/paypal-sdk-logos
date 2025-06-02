@@ -9,3 +9,7 @@ export * from "./mastercard";
 export * from "./visa";
 export * from "./glyph";
 export * from "./glyphRebrand";
+export * from "./diners";
+export * from "./maestro";
+export * from "./cup";
+export * from "./cb_nationale";
