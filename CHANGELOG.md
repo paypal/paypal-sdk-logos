@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 2.2.13-alpha-6e83cc4.0 (2025-06-04)
+
+
+### Features
+
+* resize CB Nationale ([16ffa9e](https://github.com/paypal/paypal-sdk-logos/commit/16ffa9e0524cd3b12880906c8e6c7aeee18b0ff6))
+
+
+* generate CDN packages ([dbb06a9](https://github.com/paypal/paypal-sdk-logos/commit/dbb06a93b24c6e9127e1b394359b666013686c13))
+
 ### 2.2.12 (2025-05-01)
 
 
