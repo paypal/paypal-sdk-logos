@@ -17,40 +17,119 @@ import {
 export const getCBNationaleSVG = (): ElementNode => {
   return (
     <svg
-      width="800px"
-      height="800px"
-      viewBox="0 -9 58 58"
+      width="48"
+      height="31"
+      viewBox="0 0 48 31"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <rect
-        x="0.5"
-        y="0.5"
-        width="57"
-        height="39"
-        rx="2.5"
-        fill="url(#paint0_linear_545_4267)"
-        stroke="#F1F1F1"
-      />
-      <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
-        d="M21.825 19.4075H29.6782C29.6082 17.71 29.2127 15.9599 28.0131 14.8358C26.5842 13.4967 24.0813 13 21.8449 13C19.5172 13 16.943 13.5448 15.5065 14.9815C14.2678 16.2192 14 18.2105 14 19.9996C14 21.8737 14.5239 24.0536 15.8677 25.3093C17.2966 26.6453 19.612 27 21.8449 27C24.0141 27 26.3638 26.5995 27.7844 25.3311C29.201 24.0641 29.6906 21.9301 29.6906 19.9996V19.9906H21.825V19.4075ZM30.2053 19.9909V26.687H41.1298V26.6779C42.7283 26.5908 44 25.1495 44 23.3799C44 21.6095 42.7283 20.0758 41.1298 19.9879V19.9909H30.2053ZM41.0054 13.2804C42.5634 13.2804 43.8 14.6322 43.8 16.338C43.8 17.9528 42.6643 19.2716 41.2196 19.4076H30.2051V13.2706H40.6607C40.725 13.2627 40.8 13.2683 40.8733 13.2737C40.919 13.277 40.964 13.2804 41.0054 13.2804Z"
-        fill="#FEFEFE"
-      />
+      <mask
+        id="mask0_11874_358413"
+        style="mask-type:alpha"
+        maskUnits="userSpaceOnUse"
+        x="0"
+        y="0"
+        width="48"
+        height="31"
+      >
+        <rect width="48" height="30.2274" rx="2" fill="#0C0C0D" />
+      </mask>
+      <g mask="url(#mask0_11874_358413)">
+        <mask
+          id="mask1_11874_358413"
+          style="mask-type:alpha"
+          maskUnits="userSpaceOnUse"
+          x="0"
+          y="0"
+          width="48"
+          height="31"
+        >
+          <rect width="48" height="30.2274" rx="4" fill="#0C0C0D" />
+        </mask>
+        <g mask="url(#mask1_11874_358413)">
+          <rect width="48" height="30.2274" fill="white" />
+          <rect
+            width="48"
+            height="30.2274"
+            fill="url(#paint0_linear_11874_358413)"
+          />
+          <rect
+            width="48"
+            height="30.2274"
+            fill="url(#paint1_radial_11874_358413)"
+          />
+          <g clip-path="url(#clip0_11874_358413)">
+            <path
+              d="M37 5.0379H10V25.1895H37V5.0379Z"
+              fill="url(#paint2_linear_11874_358413)"
+            />
+            <path
+              d="M18.291 14.6649H24.0768C24.0261 13.5109 23.7376 12.3158 22.8518 11.5465C21.7989 10.6336 19.9513 10.2848 18.3214 10.2848C16.6915 10.2848 14.7072 10.6541 13.6442 11.6388C12.7179 12.4902 12.5205 13.875 12.5205 15.0701C12.5205 16.2651 12.9052 17.8397 13.8973 18.6963C14.8895 19.5528 16.6561 19.8503 18.3062 19.8503C19.9564 19.8503 21.6369 19.5784 22.6797 18.7116C23.7224 17.8448 24.0869 16.3882 24.0869 15.0701H18.291V14.6649Z"
+              fill="white"
+            />
+            <path
+              d="M24.4668 15.0651V19.6349H32.5202C33.0905 19.606 33.6281 19.3562 34.0219 18.9372C34.4156 18.5182 34.6355 17.9619 34.6361 17.3833C34.6376 16.7981 34.4202 16.234 34.0275 15.8047C33.6349 15.3755 33.0963 15.113 32.5202 15.0702H24.4668V15.0651Z"
+              fill="white"
+            />
+            <path
+              d="M34.4893 12.5722C34.4941 12.2968 34.4441 12.0231 34.3423 11.7677C34.2404 11.5122 34.0888 11.2802 33.8966 11.0853C33.7043 10.8905 33.4753 10.7369 33.2232 10.6338C32.971 10.5306 32.701 10.4799 32.4291 10.4848C32.3448 10.4797 32.2603 10.4797 32.176 10.4848H24.4668V14.67H32.5658C33.0886 14.6311 33.5775 14.3932 33.9344 14.0041C34.2912 13.615 34.4894 13.1034 34.4893 12.5722Z"
+              fill="white"
+            />
+          </g>
+        </g>
+      </g>
       <defs>
         <linearGradient
-          id="paint0_linear_545_4267"
-          x1="15.7319"
-          y1="-5.06532"
-          x2="1.63672"
-          y2="38.2044"
+          id="paint0_linear_11874_358413"
+          x1="-1.00191e-07"
+          y1="0.699709"
+          x2="47.3003"
+          y2="30.2274"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#222E72" />
-          <stop offset="0.591647" stop-color="#40CBFF" />
-          <stop offset="1" stop-color="#3CB792" />
+          <stop offset="0.273366" stop-color="white" />
+          <stop offset="0.777565" stop-color="#F0F0F0" />
+          <stop offset="1" stop-color="#DFDFDF" />
         </linearGradient>
+        <radialGradient
+          id="paint1_radial_11874_358413"
+          cx="0"
+          cy="0"
+          r="1"
+          gradientUnits="userSpaceOnUse"
+          gradientTransform="translate(23 14.1061) rotate(87.0864) scale(19.6732 31.2398)"
+        >
+          <stop stop-color="white" />
+          <stop offset="1" stop-color="#E9E9E9" />
+        </radialGradient>
+        <linearGradient
+          id="paint2_linear_11874_358413"
+          x1="23.2302"
+          y1="4.72504"
+          x2="23.2302"
+          y2="24.9433"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#1B1F46" />
+          <stop offset="0.35" stop-color="#1B1F46" />
+          <stop offset="0.47" stop-color="#2C4B84" />
+          <stop offset="0.55" stop-color="#3665A9" />
+          <stop offset="0.61" stop-color="#3565A5" />
+          <stop offset="0.66" stop-color="#33659A" />
+          <stop offset="0.71" stop-color="#306487" />
+          <stop offset="0.77" stop-color="#2B636C" />
+          <stop offset="0.82" stop-color="#256349" />
+          <stop offset="0.85" stop-color="#216230" />
+          <stop offset="1" stop-color="#216230" />
+        </linearGradient>
+        <clipPath id="clip0_11874_358413">
+          <rect
+            width="27"
+            height="20.1516"
+            fill="white"
+            transform="translate(10 5.0379)"
+          />
+        </clipPath>
       </defs>
     </svg>
   );
