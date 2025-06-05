@@ -55,7 +55,6 @@ The following commit types are supported and will be reflected in the changelog:
 - **refactor**: Code refactoring
 - **perf**: Performance improvements
 - **test**: Adding or updating tests
-- **ci**: Continuous integration changes (hidden in changelog)
 
 Refer to the `standard-version` configuration in the `package.json` for more details.
 
