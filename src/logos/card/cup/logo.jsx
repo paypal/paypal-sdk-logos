@@ -17,9 +17,9 @@ import {
 export const getCUPSVG = (): ElementNode => {
   return (
     <svg
-      width="28"
-      height="18"
-      viewBox="0 0 28 18"
+      width="48"
+      height="31"
+      viewBox="0 -7 48 31"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >

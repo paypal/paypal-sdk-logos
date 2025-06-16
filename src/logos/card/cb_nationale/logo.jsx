@@ -17,9 +17,9 @@ import {
 export const getCBNationaleSVG = (): ElementNode => {
   return (
     <svg
-      width="27"
-      height="21"
-      viewBox="0 0 27 21"
+      width="48"
+      height="31"
+      viewBox="0 -4.5 48 31"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
