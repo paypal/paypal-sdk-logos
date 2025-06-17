@@ -88,7 +88,7 @@ export function VenmoRebrandLogoExternalImage({
   return (
     <SVGLogo
       {...props}
-      name={LOGO.VENMO}
+      name={LOGO.VENMO_REBRAND}
       logoColor={logoColor}
       cdnUrl={cdnUrl}
     />
@@ -108,7 +108,7 @@ export function VenmoRebrandLogoInlineSVG({
   return (
     <SVGLogo
       {...props}
-      name={LOGO.VENMO}
+      name={LOGO.VENMO_REBRAND}
       logoColor={logoColor}
       render={() => {
         return svg;

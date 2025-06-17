@@ -191,7 +191,7 @@ export function PPRebrandLogoExternalImage({
   return (
     <SVGLogo
       {...props}
-      name={LOGO.PP}
+      name={LOGO.PP_REBRAND}
       alt="PP"
       role="presentation"
       logoColor={logoColor}
@@ -207,13 +207,13 @@ export function PPRebrandLogoInlineSVG({
   logoColor?: $Values<typeof LOGO_COLOR>,
 }): ComponentNode<SVGLogoProps> {
   const svg = getPPRebrandSVG(
-    getLogoColors(LOGO.PP, PP_REBRAND_LOGO_COLORS, logoColor)
+    getLogoColors(LOGO.PP_REBRAND, PP_REBRAND_LOGO_COLORS, logoColor)
   );
 
   return (
     <SVGLogo
       {...props}
-      name={LOGO.PP}
+      name={LOGO.PP_REBRAND}
       alt="PP"
       role="presentation"
       logoColor={logoColor}

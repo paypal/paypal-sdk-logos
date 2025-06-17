@@ -83,7 +83,7 @@ export function GlyphCardRebrandInlineSVG({
   return (
     <SVGLogo
       {...props}
-      name={LOGO.CARD}
+      name={LOGO.CARD_REBRAND}
       render={() => {
         return svg;
       }}
