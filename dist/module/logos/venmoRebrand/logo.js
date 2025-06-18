@@ -53,7 +53,7 @@ export function VenmoRebrandLogoExternalImage(_ref2) {
     props = _objectWithoutPropertiesLoose(_ref2, _excluded);
   var cdnUrl = getLogoCDNUrl(LOGO.VENMO_REBRAND, VENMO_REBRAND_LOGO_COLORS, logoColor);
   return node(SVGLogo, _extends({}, props, {
-    name: LOGO.VENMO,
+    name: LOGO.VENMO_REBRAND,
     logoColor: logoColor,
     cdnUrl: cdnUrl
   }));
@@ -64,7 +64,7 @@ export function VenmoRebrandLogoInlineSVG(_ref3) {
     props = _objectWithoutPropertiesLoose(_ref3, _excluded2);
   var svg = getVenmoRebrandSVG(getLogoColors(LOGO.VENMO, VENMO_REBRAND_LOGO_COLORS, logoColor));
   return node(SVGLogo, _extends({}, props, {
-    name: LOGO.VENMO,
+    name: LOGO.VENMO_REBRAND,
     logoColor: logoColor,
     render: function render() {
       return svg;

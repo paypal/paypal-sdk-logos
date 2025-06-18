@@ -49,7 +49,7 @@ export function GlyphCardRebrandInlineSVG(_temp2) {
     props = _objectWithoutPropertiesLoose(_ref3, _excluded2);
   var svg = getGlyphCardRebrandSVG(getLogoColors(LOGO.CARD_REBRAND, GLYPH_CARD_REBRAND_LOGO_COLORS, logoColor));
   return node(SVGLogo, _extends({}, props, {
-    name: LOGO.CARD,
+    name: LOGO.CARD_REBRAND,
     render: function render() {
       return svg;
     }
