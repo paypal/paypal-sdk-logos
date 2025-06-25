@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 2.2.15 (2025-06-25)
+
+
+### Features
+
+* Add new SVGs for v6 Card Fields ([#123](https://github.com/paypal/paypal-sdk-logos/issues/123)) ([552e247](https://github.com/paypal/paypal-sdk-logos/commit/552e247377263b1be0b8b77d9d767af4c9864b19))
+
+
+* generate CDN packages ([dd12d40](https://github.com/paypal/paypal-sdk-logos/commit/dd12d4056216217e858b1565cff7b854a045294a))
+
 ### 2.2.14 (2025-06-18)
 
 
