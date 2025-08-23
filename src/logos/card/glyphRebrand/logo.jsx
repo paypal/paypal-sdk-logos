@@ -18,7 +18,7 @@ import type { LogoColors, LogoColorMap } from "../../../types";
 
 export const GLYPH_CARD_REBRAND_LOGO_COLORS: LogoColorMap = {
   [LOGO_COLOR.DEFAULT]: {
-    primary: "#FFFFFF",
+    primary: "#000000",
   },
   [LOGO_COLOR.WHITE]: {
     primary: "#FFFFFF",
