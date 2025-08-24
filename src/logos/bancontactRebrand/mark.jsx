@@ -9,11 +9,8 @@ import {
 
 import { getLogoCDNUrl, SVGLogo, type SVGLogoProps } from "../../lib";
 import { MARK } from "../../constants";
-import type { LogoColors } from "../../types";
 
-export const getBancontactMarkRebrandSVG = ({
-  primary,
-}: LogoColors): ElementNode => {
+export const getBancontactMarkRebrandSVG = (): ElementNode => {
   return (
     <svg
       width="39"
@@ -71,12 +68,9 @@ export function BancontactMarkRebrandExternalImage({
 }
 
 export function BancontactMarkRebrandInlineSVG({
-  logoColor,
   ...props
-}: {
-  logoColor?: any,
-}): ComponentNode<SVGLogoProps> {
-  const svg = getBancontactMarkRebrandSVG({ primary: "#000000" });
+}: {}): ComponentNode<SVGLogoProps> {
+  const svg = getBancontactMarkRebrandSVG();
 
   return (
     <SVGLogo
