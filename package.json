@@ -8,9 +8,9 @@
     "lint": "eslint src/ test/ *.js --ext .js,.jsx",
     "flow-typed": "rm -rf ./flow-typed && flow-typed install && flow-typed install mocha@4",
     "flow": "flow",
-    "karma": "cross-env NODE_ENV=test babel-node --plugins=transform-es2015-modules-commonjs ./node_modules/.bin/karma start",
+    "karma": "cross-env NODE_ENV=test babel-node --plugins=@babel/plugin-transform-modules-commonjs ./node_modules/.bin/karma start",
     "babel": "babel src/ --out-dir dist/module",
-    "webpack": "babel-node --plugins=transform-es2015-modules-commonjs ./node_modules/.bin/webpack --progress",
+    "webpack": "babel-node ---plugins=@babel/plugin-transform-modules-commonjs ./node_modules/.bin/webpack --progress",
     "format": "prettier --write --ignore-unknown .",
     "format:check": "prettier --check .",
     "test": "npm run format:check && npm run lint && npm run flow && npm run karma",
@@ -23,7 +23,7 @@
     "reinstall": "rimraf flow-typed && rimraf node_modules && npm install && flow-typed install",
     "debug": "cross-env NODE_ENV=debug",
     "prepare": "husky install",
-    "build-logos": "babel-node --config-file './scripts/babel.config.json' --ignore ./fake --plugins=transform-es2015-modules-commonjs ./scripts/buildLogos.js"
+    "build-logos": "babel-node --config-file './scripts/babel.config.json' --ignore ./fake --plugins=@babel/plugin-transform-modules-commonjs ./scripts/buildLogos.js"
   },
   "standard-version": {
     "scripts": {
