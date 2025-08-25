@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 2.2.16 (2025-08-25)
+
+
+* generate CDN packages ([e17296c](https://github.com/paypal/paypal-sdk-logos/commit/e17296cd8558f16719b49bf265b11b9a2a6f59dc))
+
 ### 2.2.15 (2025-06-25)
 
 
