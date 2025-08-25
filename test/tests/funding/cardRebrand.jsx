@@ -45,6 +45,6 @@ describe("GlyphCardRebrandInlineSVG rendering happy cases", () => {
 
     const logoHTML = logo.render(html());
 
-    validateExternalSVG(logoHTML);
+    validateSVG(logoHTML);
   });
 });

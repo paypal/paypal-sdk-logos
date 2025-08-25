@@ -39,7 +39,10 @@ export const LOGO = {
 export const MARK = {
   APPLEPAY: ("applepay-mark": "applepay-mark"),
   CREDIT: ("credit-mark": "credit-mark"),
+  CREDIT_REBRAND: ("credit-rebrand-mark": "credit-rebrand-mark"),
   PAYPAL: ("paypal-mark": "paypal-mark"),
+  PAYLATER_REBRAND: ("paylater-rebrand-mark": "paylater-rebrand-mark"),
+  BANCONTACT_REBRAND: ("bancontact-rebrand-mark": "bancontact-rebrand-mark"),
 };
 
 export const LOGO_COLOR = {
