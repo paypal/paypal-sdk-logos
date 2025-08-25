@@ -25,3 +25,6 @@ export * from "./satispay";
 export * from "./paidy";
 export * from "./paypalRebrand";
 export * from "./venmoRebrand";
+export * from "./creditRebrand";
+export * from "./paylaterRebrand";
+export * from "./bancontactRebrand";

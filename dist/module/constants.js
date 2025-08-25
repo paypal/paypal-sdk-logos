@@ -36,7 +36,10 @@ export var LOGO = {
 export var MARK = {
   APPLEPAY: "applepay-mark",
   CREDIT: "credit-mark",
-  PAYPAL: "paypal-mark"
+  CREDIT_REBRAND: "credit-rebrand-mark",
+  PAYPAL: "paypal-mark",
+  PAYLATER_REBRAND: "paylater-rebrand-mark",
+  BANCONTACT_REBRAND: "bancontact-rebrand-mark"
 };
 export var LOGO_COLOR = {
   BLUE: "blue",
@@ -50,5 +53,5 @@ export var LOGO_CLASS = {
   CARD: "paypal-logo-card",
   LOGO_COLOR: "paypal-logo-color"
 };
-var PACKAGE_VERSION = "2.2.14";
+var PACKAGE_VERSION = "2.2.15";
 export var CDN_BASE_URL = "https://www.paypalobjects.com/js-sdk-logos/" + PACKAGE_VERSION;

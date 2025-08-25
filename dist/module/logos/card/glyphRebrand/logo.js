@@ -7,7 +7,7 @@ import { node } from "@krakenjs/jsx-pragmatic/src";
 import { getLogoCDNUrl, getLogoColors, SVGLogo } from "../../../lib";
 import { LOGO_COLOR, LOGO } from "../../../constants";
 export var GLYPH_CARD_REBRAND_LOGO_COLORS = (_GLYPH_CARD_REBRAND_L = {}, _GLYPH_CARD_REBRAND_L[LOGO_COLOR.DEFAULT] = {
-  primary: "#FFFFFF"
+  primary: "#000000"
 }, _GLYPH_CARD_REBRAND_L[LOGO_COLOR.WHITE] = {
   primary: "#FFFFFF"
 }, _GLYPH_CARD_REBRAND_L[LOGO_COLOR.BLACK] = {
