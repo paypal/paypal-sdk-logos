@@ -2,6 +2,36 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 2.2.16 (2025-08-25)
+
+
+* generate CDN packages ([e17296c](https://github.com/paypal/paypal-sdk-logos/commit/e17296cd8558f16719b49bf265b11b9a2a6f59dc))
+
+### 2.2.15 (2025-06-25)
+
+
+### Features
+
+* Add new SVGs for v6 Card Fields ([#123](https://github.com/paypal/paypal-sdk-logos/issues/123)) ([552e247](https://github.com/paypal/paypal-sdk-logos/commit/552e247377263b1be0b8b77d9d767af4c9864b19))
+
+
+* generate CDN packages ([dd12d40](https://github.com/paypal/paypal-sdk-logos/commit/dd12d4056216217e858b1565cff7b854a045294a))
+
+### 2.2.14 (2025-06-18)
+
+
+### Bug Fixes
+
+* use rebrand for name ([#124](https://github.com/paypal/paypal-sdk-logos/issues/124)) ([ec36c66](https://github.com/paypal/paypal-sdk-logos/commit/ec36c664d54316650b87bb06b33368b5e8f12141))
+
+
+* generate CDN packages ([37acc4c](https://github.com/paypal/paypal-sdk-logos/commit/37acc4c13850828238d42e9925f98a48f7d046dc))
+
+### 2.2.13 (2025-06-11)
+
+
+* generate CDN packages ([eaa74a3](https://github.com/paypal/paypal-sdk-logos/commit/eaa74a3239b94f27da9436ce86b08b353362393d))
+
 ### 2.2.12 (2025-05-01)
 
 

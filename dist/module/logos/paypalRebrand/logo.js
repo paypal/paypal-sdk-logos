@@ -122,7 +122,7 @@ export function PPRebrandLogoExternalImage(_ref5) {
     props = _objectWithoutPropertiesLoose(_ref5, _excluded3);
   var cdnUrl = getLogoCDNUrl(LOGO.PP_REBRAND, PP_REBRAND_LOGO_COLORS, logoColor);
   return node(SVGLogo, _extends({}, props, {
-    name: LOGO.PP,
+    name: LOGO.PP_REBRAND,
     alt: "PP",
     role: "presentation",
     logoColor: logoColor,
@@ -133,9 +133,9 @@ export function PPRebrandLogoInlineSVG(_ref6) {
   var _ref6$logoColor = _ref6.logoColor,
     logoColor = _ref6$logoColor === void 0 ? LOGO_COLOR.DEFAULT : _ref6$logoColor,
     props = _objectWithoutPropertiesLoose(_ref6, _excluded4);
-  var svg = getPPRebrandSVG(getLogoColors(LOGO.PP, PP_REBRAND_LOGO_COLORS, logoColor));
+  var svg = getPPRebrandSVG(getLogoColors(LOGO.PP_REBRAND, PP_REBRAND_LOGO_COLORS, logoColor));
   return node(SVGLogo, _extends({}, props, {
-    name: LOGO.PP,
+    name: LOGO.PP_REBRAND,
     alt: "PP",
     role: "presentation",
     logoColor: logoColor,

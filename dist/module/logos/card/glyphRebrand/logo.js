@@ -7,7 +7,7 @@ import { node } from "@krakenjs/jsx-pragmatic/src";
 import { getLogoCDNUrl, getLogoColors, SVGLogo } from "../../../lib";
 import { LOGO_COLOR, LOGO } from "../../../constants";
 export var GLYPH_CARD_REBRAND_LOGO_COLORS = (_GLYPH_CARD_REBRAND_L = {}, _GLYPH_CARD_REBRAND_L[LOGO_COLOR.DEFAULT] = {
-  primary: "#FFFFFF"
+  primary: "#000000"
 }, _GLYPH_CARD_REBRAND_L[LOGO_COLOR.WHITE] = {
   primary: "#FFFFFF"
 }, _GLYPH_CARD_REBRAND_L[LOGO_COLOR.BLACK] = {
@@ -49,7 +49,7 @@ export function GlyphCardRebrandInlineSVG(_temp2) {
     props = _objectWithoutPropertiesLoose(_ref3, _excluded2);
   var svg = getGlyphCardRebrandSVG(getLogoColors(LOGO.CARD_REBRAND, GLYPH_CARD_REBRAND_LOGO_COLORS, logoColor));
   return node(SVGLogo, _extends({}, props, {
-    name: LOGO.CARD,
+    name: LOGO.CARD_REBRAND,
     render: function render() {
       return svg;
     }

@@ -24,3 +24,8 @@ import "./oxxo";
 import "./satispay";
 import "./paidy";
 import "./paypalRebrand";
+import "./venmoRebrand";
+import "./cardRebrand";
+import "./creditRebrand";
+import "./paylaterRebrand";
+import "./bancontactRebrand";

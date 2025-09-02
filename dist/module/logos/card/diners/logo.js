@@ -1,0 +1,45 @@
+import _objectDestructuringEmpty from "@babel/runtime/helpers/esm/objectDestructuringEmpty";
+import _extends from "@babel/runtime/helpers/esm/extends";
+import { node } from "@krakenjs/jsx-pragmatic/src";
+import { CARD } from "@paypal/sdk-constants/src";
+import { getLogoCDNUrl, SVGCardLogo } from "../../../lib";
+export var getDinersSVG = function getDinersSVG() {
+  return node("svg", {
+    width: "24",
+    height: "20",
+    viewBox: "0 0 24 20",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, node("path", {
+    "fill-rule": "evenodd",
+    "clip-rule": "evenodd",
+    d: "M14.06 19.2513C19.2567 19.2764 24 14.9703 24 9.73173C24 4.00318 19.2567 0.0435767 14.06 0.0454833H9.58754C4.32873 0.0435767 0 4.00445 0 9.73173C0 14.9714 4.32873 19.2764 9.58754 19.2513H14.06Z",
+    fill: "#0B69AA"
+  }), node("path", {
+    "fill-rule": "evenodd",
+    "clip-rule": "evenodd",
+    d: "M11.6667 15.0389V4.6366C13.7363 5.43874 15.2058 7.46326 15.2095 9.83745C15.2058 12.2123 13.7363 14.2353 11.6667 15.0389ZM4.17789 9.83745C4.1823 7.46453 5.64948 5.44107 7.71838 4.63702V15.0366C5.64948 14.233 4.18209 12.2106 4.17789 9.83745ZM9.69287 1.04553C4.88746 1.0468 0.993237 4.9814 0.992188 9.83745C0.993237 14.6924 4.88746 18.6268 9.69287 18.6281C14.4995 18.6268 18.3944 14.6924 18.395 9.83745C18.3944 4.9814 14.4995 1.0468 9.69287 1.04553Z",
+    fill: "#FFFFFE"
+  }));
+};
+export function DinersLogoExternalImage(_temp) {
+  var _ref = _temp === void 0 ? {} : _temp,
+    props = _extends({}, (_objectDestructuringEmpty(_ref), _ref));
+  var cdnUrl = getLogoCDNUrl(CARD.DINERS);
+  return node(SVGCardLogo, _extends({}, props, {
+    name: CARD.DINERS,
+    cdnUrl: cdnUrl
+  }));
+}
+export function DinersLogoInlineSVG(_temp2) {
+  var _ref2 = _temp2 === void 0 ? {} : _temp2,
+    props = _extends({}, (_objectDestructuringEmpty(_ref2), _ref2));
+  var svg = getDinersSVG();
+  return node(SVGCardLogo, _extends({}, props, {
+    name: CARD.DINERS,
+    render: function render() {
+      return svg;
+    }
+  }));
+}
+export var DinersLogo = DinersLogoInlineSVG;

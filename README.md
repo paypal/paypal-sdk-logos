@@ -79,31 +79,9 @@ npm run build
   npm run test
   ```
 
-#### Testing with different/multiple browsers
+#### Publishing & Deploying to CDN
 
-```bash
-npm run karma -- --browser=PhantomJS
-npm run karma -- --browser=Chrome
-npm run karma -- --browser=Safari
-npm run karma -- --browser=Firefox
-npm run karma -- --browser=PhantomJS,Chrome,Safari,Firefox
-```
+For detailed instructions on publishing the package and deploying the logos to the CDN, refer to the [Contributing Guide](./CONTRIBUTING.md).
 
-#### Keeping the browser open after tests
-
-```bash
-npm run karma -- --browser=Chrome --keep-open
-```
-
-#### Publishing
-
-##### Before you publish for the first time:
-
-- Delete the example code in `./src`, `./test/tests` and `./demo`
-- Edit the module name in `package.json`
-- Edit `README.md` and `CONTRIBUTING.md`
-
-##### Then:
-
-- Publish your code: `npm run release` to add a patch
-  - Or `npm run release:path`, `npm run release:minor`, `npm run release:major`
+- **Publishing**: Learn how to publish the package, including alpha and main branch releases, in the [Publishing section](./CONTRIBUTING.md#publishing).
+- **Deploying to CDN**: Follow the steps to deploy the `cdn` folder using the PayPal Web CLI or the UI in the [Deploying Logos to the CDN section](./CONTRIBUTING.md#deploying-logos-to-the-cdn).
