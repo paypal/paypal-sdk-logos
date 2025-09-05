@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 2.2.18-alpha.0 (2025-09-05)
+
+
+### Features
+
+* update release scripts ([dd6c57d](https://github.com/paypal/paypal-sdk-logos/commit/dd6c57dc4a2bf1cbe386d17d76201c1ebdad7ac7))
+
+
+* generate CDN packages ([cb7a4bc](https://github.com/paypal/paypal-sdk-logos/commit/cb7a4bc07c0d79a65add40e2a124088df920800e))
+
 ### 2.2.16 (2025-08-25)
 
 
