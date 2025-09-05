@@ -39,7 +39,7 @@ export function GlyphCardRebrandExternalImage(_temp) {
     props = _objectWithoutPropertiesLoose(_ref2, _excluded);
   var cdnUrl = getLogoCDNUrl(LOGO.CARD_REBRAND, GLYPH_CARD_REBRAND_LOGO_COLORS, logoColor);
   return node(SVGLogo, _extends({}, props, {
-    name: LOGO.CARD,
+    name: LOGO.CARD_REBRAND,
     cdnUrl: cdnUrl
   }));
 }
