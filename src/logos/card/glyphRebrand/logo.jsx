@@ -67,7 +67,7 @@ export function GlyphCardRebrandExternalImage({
     logoColor
   );
 
-  return <SVGLogo {...props} name={LOGO.CARD} cdnUrl={cdnUrl} />;
+  return <SVGLogo {...props} name={LOGO.CARD_REBRAND} cdnUrl={cdnUrl} />;
 }
 
 export function GlyphCardRebrandInlineSVG({

@@ -13,10 +13,11 @@ current_sha=$(git rev-parse --short HEAD)
 
 if [ "$current_branch" != "$default_branch" ]; then
   bump='prerelease'
-  tag="alpha-$current_sha"
-  export tag
+  tag="alpha"
   npm run standard-version -- --prerelease $tag --release-as patch
 else
-  export tag
-  npm run standard-version --  --release-as patch
+  npm run standard-version -- --release-as patch
 fi
+
+# Git push and npm publish (in same script, so $tag is available)
+git push && git push --follow-tags && npm publish --tag $tag
