@@ -60,6 +60,9 @@ import {
   getVisaSVG,
   getWechatpaySVG,
   getPayPalRebrandSVG,
+  getBancontactMarkRebrandSVG,
+  getPaylaterMarkRebrandSVG,
+  getCreditMarkRebrandSVG,
   GIROPAY_LOGO_COLORS,
   GLYPH_BANK_LOGO_COLORS,
   GLYPH_CARD_LOGO_COLORS,
@@ -139,6 +142,9 @@ const LOGO_GETTERS = {
   [MARK.APPLEPAY]: getApplepayMarkSVG,
   [MARK.CREDIT]: getCreditMarkSVG,
   [MARK.PAYPAL]: getPayPalMarkSVG,
+  [MARK.BANCONTACT_REBRAND]: getBancontactMarkRebrandSVG,
+  [MARK.CREDIT_REBRAND]: getCreditMarkRebrandSVG,
+  [MARK.PAYLATER_REBRAND]: getPaylaterMarkRebrandSVG,
 };
 
 const LOGO_COLOR_MAPS = {
