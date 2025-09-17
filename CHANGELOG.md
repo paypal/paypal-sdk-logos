@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 2.2.17-alpha-3b4f8af.0 (2025-09-17)
+
+
+### Features
+
+* remove opacity ([a6929d9](https://github.com/paypal/paypal-sdk-logos/commit/a6929d94c7f7e95475acae3fa208f5529cf68b8a))
+
+
+* generate CDN packages ([d9046fc](https://github.com/paypal/paypal-sdk-logos/commit/d9046fc9db589ec31269eb28f66c955a68df6d8b))
+
 ### 2.2.16 (2025-08-25)
 
 
