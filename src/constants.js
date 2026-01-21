@@ -1,7 +1,7 @@
 /* @flow */
 
 export const LOGO = {
-  PP: ("pp": "pp"),
+  PP: ("paypal": "paypal"),
   PPMONOCHROME: ("ppmonochrome": "ppmonochrome"),
   PAYPAL: ("paypal": "paypal"),
   CARD: ("card": "card"),
