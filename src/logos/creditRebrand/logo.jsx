@@ -118,54 +118,39 @@ export const CREDIT_REBRAND_PP_BADGE_COLORS: LogoColorMap = {
   [LOGO_COLOR.DEFAULT]: {
     background: "#60CDFF",
     foreground: "#000000",
-    ppA: "#000000",
-    ppAOpacity: "0.95",
-    ppB: "#000000",
-    ppBOpacity: "0.5",
-    ppC: "#000000",
-    ppCOpacity: "0.7",
+    primary: "#002991",
+    secondary: "#60CDFF",
+    tertiary: "#008CFF",
   },
   [LOGO_COLOR.BLACK]: {
     background: "#000000",
     foreground: "#FFFFFF",
-    ppA: "#FFFFFF",
-    ppAOpacity: "0.95",
-    ppB: "#FFFFFF",
-    ppBOpacity: "0.5",
-    ppC: "#FFFFFF",
-    ppCOpacity: "0.7",
+    primary: "#0D0D0D",
+    secondary: "#808080",
+    tertiary: "#4D4D4D",
   },
   [LOGO_COLOR.BLUE]: {
     background: "#60CDFF",
     foreground: "#000000",
-    ppA: "#000000",
-    ppAOpacity: "0.95",
-    ppB: "#000000",
-    ppBOpacity: "0.5",
-    ppC: "#000000",
-    ppCOpacity: "0.7",
+    primary: "#002991",
+    secondary: "#60CDFF",
+    tertiary: "#008CFF",
   },
   [LOGO_COLOR.WHITE]: {
     background: "#FFFFFF",
     foreground: "#000000",
-    ppA: "#002991",
-    ppAOpacity: "1",
-    ppB: "#60CDFF",
-    ppBOpacity: "1",
-    ppC: "#008CFF",
-    ppCOpacity: "1",
+    primary: "#F3F3F3",
+    secondary: "#898989",
+    tertiary: "#B8B8B8",
   },
 };
 
 export const getCreditRebrandPPBadgeSVG = ({
   background,
   foreground,
-  ppA,
-  ppAOpacity,
-  ppB,
-  ppBOpacity,
-  ppC,
-  ppCOpacity,
+  primary,
+  secondary,
+  tertiary,
 }: LogoColors): ElementNode => {
   return (
     <svg
@@ -178,19 +163,16 @@ export const getCreditRebrandPPBadgeSVG = ({
       <rect width="169" height="70.285" rx="16.47" fill={background} />
       <g clip-path="url(#credit-rebrand-pp-badge-clip)">
         <path
-          opacity={ppAOpacity}
           d="M45.0801 27.6059C45.0801 31.8766 41.1385 36.9152 35.1753 36.9152H29.4314L29.1493 38.694L27.8093 47.2588H20.6707L24.9648 19.6758H36.5309C40.4255 19.6758 43.4894 21.8464 44.6178 24.8633C44.939 25.7174 45.0958 26.6421 45.0801 27.6059Z"
-          fill={ppA}
+          fill={primary}
         />
         <path
-          opacity={ppBOpacity}
           d="M49.194 35.5356C48.4026 40.3156 44.2886 43.8105 39.4224 43.8105H35.4339L33.7726 54.1542H26.6731L27.8093 47.2584L29.1493 38.6935L29.4314 36.9148H35.1753C41.1307 36.9148 45.0801 31.8761 45.0801 27.6055C48.0108 29.1178 49.7191 32.1739 49.194 35.5356Z"
-          fill={ppB}
+          fill={secondary}
         />
         <path
-          opacity={ppCOpacity}
           d="M45.0801 27.6066C43.8498 26.9641 42.361 26.5723 40.7389 26.5723H31.0535L29.4314 36.9159H35.1753C41.1307 36.9159 45.0801 31.8773 45.0801 27.6066Z"
-          fill={ppC}
+          fill={tertiary}
         />
       </g>
       <path
