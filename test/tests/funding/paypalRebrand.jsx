@@ -9,6 +9,9 @@ import {
   PayPalRebrandLogoExternalImage,
   PayPalRebrandLogoInlineSVG,
   PPRebrandLogo,
+  PayPalRebrandBadge,
+  PayPalRebrandBadgeExternalImage,
+  PayPalRebrandBadgeInlineSVG,
 } from "../../../src";
 import { validateExternalSVG, validateSVG } from "../common";
 
@@ -65,6 +68,48 @@ describe("PP monogram logo rendering happy cases", () => {
 
   it("should render the paypal monogram logo in black", () => {
     const logo = <PPRebrandLogo logoColor={LOGO_COLOR.BLACK} />;
+
+    const logoHTML = logo.render(html());
+
+    validateSVG(logoHTML);
+  });
+});
+
+describe("PayPal rebrand badge rendering happy cases", () => {
+  it("should render the PayPal rebrand badge in black", () => {
+    const logo = <PayPalRebrandBadge logoColor={LOGO_COLOR.BLACK} />;
+
+    const logoHTML = logo.render(html());
+
+    validateSVG(logoHTML);
+  });
+
+  it("should render the PayPal rebrand badge in blue", () => {
+    const logo = <PayPalRebrandBadge logoColor={LOGO_COLOR.BLUE} />;
+
+    const logoHTML = logo.render(html());
+
+    validateSVG(logoHTML);
+  });
+
+  it("should render the PayPal rebrand badge in white", () => {
+    const logo = <PayPalRebrandBadge logoColor={LOGO_COLOR.WHITE} />;
+
+    const logoHTML = logo.render(html());
+
+    validateSVG(logoHTML);
+  });
+
+  it("should render PayPal rebrand badge external image", () => {
+    const logo = <PayPalRebrandBadgeExternalImage />;
+
+    const logoHTML = logo.render(html());
+
+    validateExternalSVG(logoHTML);
+  });
+
+  it("should render PayPal rebrand badge inline SVG", () => {
+    const logo = <PayPalRebrandBadgeInlineSVG />;
 
     const logoHTML = logo.render(html());
 

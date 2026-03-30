@@ -34,6 +34,11 @@ export const LOGO = {
   VENMO_REBRAND: ("venmo-rebrand": "venmo-rebrand"),
   PP_REBRAND: ("pp-rebrand": "pp-rebrand"),
   CARD_REBRAND: ("card-rebrand": "card-rebrand"),
+  PAYPAL_REBRAND_BADGE: ("paypal-rebrand-badge": "paypal-rebrand-badge"),
+  CREDIT_REBRAND_BADGE: ("credit-rebrand-badge": "credit-rebrand-badge"),
+  CREDIT_REBRAND_PP_BADGE:
+    ("credit-rebrand-pp-badge": "credit-rebrand-pp-badge"),
+  PAYPAL_CREDIT_REBRAND: ("paypal-credit-rebrand": "paypal-credit-rebrand"),
 };
 
 export const MARK = {
