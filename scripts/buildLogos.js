@@ -6,7 +6,7 @@ import { html } from "@krakenjs/jsx-pragmatic";
 import { CARD } from "@paypal/sdk-constants/src";
 
 import { getSVGFilename } from "../src/lib";
-import { LOGO, MARK } from "../src/constants";
+import { BADGE, LOGO, MARK } from "../src/constants";
 import type { LogoColors } from "../src/types";
 import {
   APPLEPAY_LOGO_COLORS,
@@ -14,15 +14,21 @@ import {
   BLIK_LOGO_COLORS,
   BOLETO_LOGO_COLORS,
   CREDIT_LOGO_COLORS,
+  CREDIT_REBRAND_BADGE_COLORS,
+  CREDIT_REBRAND_PP_BADGE_COLORS,
   EPS_LOGO_COLORS,
   getAmexSVG,
   getApplepayMarkSVG,
   getApplepaySVG,
+  getBancontactMarkRebrandSVG,
   getBancontactSVG,
   getBlikSVG,
   getBoletoSVG,
   getCBNationaleSVG,
+  getCreditMarkRebrandSVG,
   getCreditMarkSVG,
+  getCreditRebrandBadgeSVG,
+  getCreditRebrandPPBadgeSVG,
   getCreditSVG,
   getCUPSVG,
   getDinersSVG,
@@ -46,6 +52,7 @@ import {
   getP24SVG,
   getPaidySVG,
   getPayPalMarkSVG,
+  getPayPalRebrandSVG,
   getPayPalSVG,
   getPayuSVG,
   getPPMonochromeSVG,
@@ -59,12 +66,12 @@ import {
   getVenmoRebrandSVG,
   getVisaSVG,
   getWechatpaySVG,
-  getPayPalRebrandSVG,
-  getBancontactMarkRebrandSVG,
   getPaylaterMarkRebrandSVG,
-  getCreditMarkRebrandSVG,
+  getPayPalCreditRebrandSVG,
+  getPayPalRebrandBadgeSVG,
   GIROPAY_LOGO_COLORS,
   GLYPH_BANK_LOGO_COLORS,
+  GLYPH_CARD_REBRAND_LOGO_COLORS,
   GLYPH_CARD_LOGO_COLORS,
   IDEAL_LOGO_COLORS,
   ITAU_LOGO_COLORS,
@@ -75,9 +82,12 @@ import {
   P24_LOGO_COLORS,
   PAIDY_LOGO_COLORS,
   PAYPAL_LOGO_COLORS,
+  PAYPAL_CREDIT_REBRAND_LOGO_COLORS,
+  PAYPAL_REBRAND_BADGE_COLORS,
   PAYU_LOGO_COLORS,
-  PPMONOCHROME_LOGO_COLORS,
   PP_LOGO_COLORS,
+  PP_REBRAND_LOGO_COLORS,
+  PPMONOCHROME_LOGO_COLORS,
   SATISPAY_LOGO_COLORS,
   SEPA_LOGO_COLORS,
   SOFORT_LOGO_COLORS,
@@ -86,14 +96,15 @@ import {
   WECHATPAY_LOGO_COLORS,
   PAYPAL_REBRAND_LOGO_COLORS,
   VENMO_REBRAND_LOGO_COLORS,
-  PP_REBRAND_LOGO_COLORS,
-  GLYPH_CARD_REBRAND_LOGO_COLORS,
 } from "../src/logos";
 import { version } from "../package.json";
 
 import { getNodeOps, updateCDNUrl } from "./utils";
 
 const LOGO_GETTERS = {
+  [BADGE.CREDIT_REBRAND]: getCreditRebrandBadgeSVG,
+  [BADGE.CREDIT_REBRAND_PP]: getCreditRebrandPPBadgeSVG,
+  [BADGE.PAYPAL_REBRAND]: getPayPalRebrandBadgeSVG,
   [LOGO.APPLEPAY]: getApplepaySVG,
   [LOGO.BANCONTACT]: getBancontactSVG,
   [LOGO.BANK]: getGlyphBankSVG,
@@ -116,6 +127,7 @@ const LOGO_GETTERS = {
   [LOGO.P24]: getP24SVG,
   [LOGO.PAIDY]: getPaidySVG,
   [LOGO.PAYPAL]: getPayPalSVG,
+  [LOGO.PAYPAL_CREDIT_REBRAND]: getPayPalCreditRebrandSVG,
   [LOGO.PAYPAL_REBRAND]: getPayPalRebrandSVG,
   [LOGO.PAYU]: getPayuSVG,
   [LOGO.PP]: getPPSVG,
@@ -148,6 +160,9 @@ const LOGO_GETTERS = {
 };
 
 const LOGO_COLOR_MAPS = {
+  [BADGE.CREDIT_REBRAND]: CREDIT_REBRAND_BADGE_COLORS,
+  [BADGE.CREDIT_REBRAND_PP]: CREDIT_REBRAND_PP_BADGE_COLORS,
+  [BADGE.PAYPAL_REBRAND]: PAYPAL_REBRAND_BADGE_COLORS,
   [LOGO.APPLEPAY]: APPLEPAY_LOGO_COLORS,
   [LOGO.BANCONTACT]: BANCONTACT_LOGO_COLORS,
   [LOGO.BANK]: GLYPH_BANK_LOGO_COLORS,
@@ -168,6 +183,7 @@ const LOGO_COLOR_MAPS = {
   [LOGO.P24]: P24_LOGO_COLORS,
   [LOGO.PAIDY]: PAIDY_LOGO_COLORS,
   [LOGO.PAYPAL]: PAYPAL_LOGO_COLORS,
+  [LOGO.PAYPAL_CREDIT_REBRAND]: PAYPAL_CREDIT_REBRAND_LOGO_COLORS,
   [LOGO.PAYPAL_REBRAND]: PAYPAL_REBRAND_LOGO_COLORS,
   [LOGO.PAYU]: PAYU_LOGO_COLORS,
   [LOGO.PP]: PP_LOGO_COLORS,
