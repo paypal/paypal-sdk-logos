@@ -28,6 +28,9 @@ export const PAYPAL_CREDIT_REBRAND_LOGO_COLORS: LogoColorMap = {
   [LOGO_COLOR.WHITE]: {
     primary: "#FFFFFF",
   },
+  [LOGO_COLOR.BLUE]: {
+    primary: "#60CDFF",
+  },
 };
 
 export const getPayPalCreditRebrandSVG = ({
