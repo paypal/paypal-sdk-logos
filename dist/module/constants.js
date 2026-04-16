@@ -31,7 +31,13 @@ export var LOGO = {
   PAYPAL_REBRAND: "paypal-rebrand",
   VENMO_REBRAND: "venmo-rebrand",
   PP_REBRAND: "pp-rebrand",
-  CARD_REBRAND: "card-rebrand"
+  CARD_REBRAND: "card-rebrand",
+  PAYPAL_CREDIT_REBRAND: "paypal-credit-rebrand"
+};
+export var BADGE = {
+  PAYPAL_REBRAND: "paypal-rebrand-badge",
+  CREDIT_REBRAND: "credit-rebrand-badge",
+  CREDIT_REBRAND_PP: "credit-rebrand-pp-badge"
 };
 export var MARK = {
   APPLEPAY: "applepay-mark",
@@ -53,5 +59,5 @@ export var LOGO_CLASS = {
   CARD: "paypal-logo-card",
   LOGO_COLOR: "paypal-logo-color"
 };
-var PACKAGE_VERSION = "2.3.2";
+var PACKAGE_VERSION = "2.3.3";
 export var CDN_BASE_URL = "https://www.paypalobjects.com/js-sdk-logos/" + PACKAGE_VERSION;

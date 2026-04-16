@@ -1,5 +1,5 @@
 import { CARD } from "@paypal/sdk-constants/src";
-import { CDN_BASE_URL, LOGO, LOGO_COLOR, MARK } from "../constants";
+import { CDN_BASE_URL, LOGO, LOGO_COLOR, MARK, BADGE } from "../constants";
 export function getLogoColors(name, logoColorMap, logoColor) {
   var colors;
   if (logoColor) {
