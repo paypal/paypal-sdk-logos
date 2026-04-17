@@ -35,8 +35,8 @@ export const getGlyphCardRebrandSVG = ({
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="34"
-      height="34"
-      viewBox="0 0 34 34"
+      height="22.37"
+      viewBox="0 5.81 34 22.37"
       fill="none"
     >
       <path
