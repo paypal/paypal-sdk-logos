@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 2.3.6 (2026-04-20)
+
+
+### Features
+
+* update venmo whitespace ([#137](https://github.com/paypal/paypal-sdk-logos/issues/137)) ([7a234fa](https://github.com/paypal/paypal-sdk-logos/commit/7a234fadee2061be29268f94e0c7f4f4736708c9))
+
+
+* generate CDN packages ([5796bb9](https://github.com/paypal/paypal-sdk-logos/commit/5796bb9b70a3d7476ef43ef01c72473457760d1f))
+
 ### 2.3.5 (2026-04-17)
 
 
