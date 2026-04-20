@@ -18,8 +18,8 @@ export var getVenmoRebrandSVG = function getVenmoRebrandSVG(_ref) {
   return node("svg", {
     xmlns: "http://www.w3.org/2000/svg",
     width: "67",
-    height: "22.52",
-    viewBox: "0 -5.13 67 22.52",
+    height: "23",
+    viewBox: "0 -5.3743 67 23",
     fill: "none"
   }, node("g", {
     "clip-path": "url(#clip0_7373_2810)"
