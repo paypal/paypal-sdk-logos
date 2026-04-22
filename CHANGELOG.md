@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 2.3.7 (2026-04-22)
+
+
+### Features
+
+* remove some whitespace from PP monogram logo ([#138](https://github.com/paypal/paypal-sdk-logos/issues/138)) ([610bc77](https://github.com/paypal/paypal-sdk-logos/commit/610bc77423e973f02efcd6434cd342d544ccf958))
+
+
+* generate CDN packages ([4c8d975](https://github.com/paypal/paypal-sdk-logos/commit/4c8d975fbfdb7670e22a17281a2dade6fa6be840))
+
 ### 2.3.6 (2026-04-20)
 
 
