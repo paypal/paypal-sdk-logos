@@ -98,8 +98,8 @@ export var getPPRebrandSVG = function getPPRebrandSVG(_ref4) {
   return node("svg", {
     xmlns: "http://www.w3.org/2000/svg",
     width: "20",
-    height: "34",
-    viewBox: "0 0 20 34",
+    height: "26.15",
+    viewBox: "0 3.925 20 26.15",
     fill: "none"
   }, node("g", {
     "clip-path": "url(#clip0_4189_85875)"
